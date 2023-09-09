@@ -1,0 +1,383 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &118890
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 441444}
+  - component: {fileID: 11433944}
+  - component: {fileID: 8206434}
+  m_Layer: 0
+  m_Name: AudioPlayer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &441444
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 118890}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.49, y: 0.56, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &11433944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 118890}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e5d31182863e03498403eb80239b3fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AudioList:
+  - name: DefaultHit
+    volume: 1
+    MinTimeBetweenCall: 0
+    loop: 0
+    clip:
+    - {fileID: 8300000, guid: f1e98f248172e50449accf8250024db6, type: 3}
+    - {fileID: 8300000, guid: db7e04449420ee941b65fba9650034ec, type: 3}
+    - {fileID: 8300000, guid: 0903321bbf668f145bbac38a1daa6a25, type: 3}
+    - {fileID: 8300000, guid: dcc6a4902e158c5449518faa0b6e0d15, type: 3}
+    - {fileID: 8300000, guid: 39e91a04593f4b04da688edb16a16282, type: 3}
+    - {fileID: 8300000, guid: 01fa383d172acce46adb08508c605b8d, type: 3}
+    - {fileID: 8300000, guid: 01fa383d172acce46adb08508c605b8d, type: 3}
+    lastTimePlayed: 0
+  - name: GroundPunchHit
+    volume: 1
+    MinTimeBetweenCall: 0.1
+    loop: 0
+    clip:
+    - {fileID: 8300000, guid: deddbaf9abacdd943be96262d7b82ac8, type: 3}
+    lastTimePlayed: 0
+  - name: HeavyHit
+    volume: 1
+    MinTimeBetweenCall: 0.1
+    loop: 0
+    clip:
+    - {fileID: 8300000, guid: dc218a2a17b1e274681ef3fa707f50bc, type: 3}
+    - {fileID: 8300000, guid: 160a31cbfa4b33040a57aab9ca14b462, type: 3}
+    - {fileID: 8300000, guid: eb7c4583b97d10b4996b0327f5b2084d, type: 3}
+    lastTimePlayed: 0
+  - name: DefendHit
+    volume: 1
+    MinTimeBetweenCall: 0
+    loop: 0
+    clip:
+    - {fileID: 8300000, guid: 81ee350b7bb33ef4eab57ff1f0870754, type: 3}
+    lastTimePlayed: 0
+  - name: Drop
+    volume: 1
+    MinTimeBetweenCall: 0.1
+    loop: 0
+    clip:
+    - {fileID: 8300000, guid: 7df871bfd2e8eda428d826fa2bfa3eef, type: 3}
+    lastTimePlayed: 0
+  - name: ItemPickup
+    volume: 1
+    MinTimeBetweenCall: 0
+    loop: 0
+    clip:
+    - {fileID: 8300000, guid: 3214b3cf7144ab94cad4c53bbb2d1cb9, type: 3}
+    lastTimePlayed: 0
+  - name: Music
+    volume: 0.7
+    MinTimeBetweenCall: 0
+    loop: 0
+    clip:
+    - {fileID: 8300000, guid: e35664edcae75da49a1006143f507759, type: 3}
+    lastTimePlayed: 0
+  - name: Land
+    volume: 1
+    MinTimeBetweenCall: 0
+    loop: 0
+    clip:
+    - {fileID: 8300000, guid: 7df871bfd2e8eda428d826fa2bfa3eef, type: 3}
+    lastTimePlayed: 0
+  - name: Whoosh
+    volume: 0.5
+    MinTimeBetweenCall: 0
+    loop: 0
+    clip:
+    - {fileID: 8300000, guid: e847fd82c67d89c4fbc267c8cd96a684, type: 3}
+    lastTimePlayed: 0
+  - name: ButtonStart
+    volume: 0.9
+    MinTimeBetweenCall: 0
+    loop: 0
+    clip:
+    - {fileID: 8300000, guid: 3214b3cf7144ab94cad4c53bbb2d1cb9, type: 3}
+    lastTimePlayed: 0
+  - name: DrumBarrelHit
+    volume: 1
+    MinTimeBetweenCall: 0
+    loop: 0
+    clip:
+    - {fileID: 8300000, guid: cb7e5f17157dc4e458ae5dabeed42ace, type: 3}
+    lastTimePlayed: 0
+  - name: CrateHit
+    volume: 1
+    MinTimeBetweenCall: 0
+    loop: 0
+    clip:
+    - {fileID: 8300000, guid: 170c8d0ea41733242910cd98a832bd9b, type: 3}
+    lastTimePlayed: 0
+  - name: DummyHit
+    volume: 1
+    MinTimeBetweenCall: 0
+    loop: 0
+    clip:
+    - {fileID: 8300000, guid: 01fa383d172acce46adb08508c605b8d, type: 3}
+    lastTimePlayed: 0
+  - name: FootStep
+    volume: 0.15
+    MinTimeBetweenCall: 0
+    loop: 0
+    clip:
+    - {fileID: 8300000, guid: e2ea5c7996fa1c249b0e7c800aa86f1a, type: 3}
+    - {fileID: 8300000, guid: d9d3d738834902d4da8c2e029df0df08, type: 3}
+    - {fileID: 8300000, guid: baa5b6e7b1a045a46a623364867395c5, type: 3}
+    - {fileID: 8300000, guid: 8b2a3e572b7fa9c47ba81d142c669471, type: 3}
+    - {fileID: 8300000, guid: 730dd78dfebc75845b02eb75f0506b1a, type: 3}
+    lastTimePlayed: 0
+  - name: PlayerDeath
+    volume: 1
+    MinTimeBetweenCall: 0.1
+    loop: 0
+    clip:
+    - {fileID: 8300000, guid: 9f61c892a41d0da4f97a082c477aae17, type: 3}
+    lastTimePlayed: 0
+  - name: PlayerJump
+    volume: 0.4
+    MinTimeBetweenCall: 0
+    loop: 0
+    clip:
+    - {fileID: 8300000, guid: f2ab68febfeb27647840c5486ab2096e, type: 3}
+    lastTimePlayed: 0
+  - name: PlayerLand
+    volume: 0.3
+    MinTimeBetweenCall: 0
+    loop: 0
+    clip:
+    - {fileID: 8300000, guid: 5dde4e588be4b1f499d885f454d225c0, type: 3}
+    lastTimePlayed: 0
+  - name: PlayerHit
+    volume: 0.4
+    MinTimeBetweenCall: 0
+    loop: 0
+    clip:
+    - {fileID: 8300000, guid: 76131f3745835784eb6660eabf4fe83f, type: 3}
+    - {fileID: 8300000, guid: 136d42ebafee51a4fa2ffe373c1e9a81, type: 3}
+    - {fileID: 8300000, guid: 4742e52c304f61644a1938bb76791b62, type: 3}
+    - {fileID: 8300000, guid: aa4859581ea205649979dfffe1b6a654, type: 3}
+    lastTimePlayed: 0
+  - name: PlayerKnockDownVoice
+    volume: 0.3
+    MinTimeBetweenCall: 0
+    loop: 0
+    clip:
+    - {fileID: 8300000, guid: f9cb9efb7e932d044a61aaca4829e247, type: 3}
+    lastTimePlayed: 0
+  - name: FireLoop
+    volume: 0.1
+    MinTimeBetweenCall: 0
+    loop: 1
+    clip:
+    - {fileID: 8300000, guid: 48cdc1707bd95194bbde78c587fae1e7, type: 3}
+    lastTimePlayed: 0
+  - name: EnemyGroundPunchHit
+    volume: 0.3
+    MinTimeBetweenCall: 0.1
+    loop: 0
+    clip:
+    - {fileID: 8300000, guid: 4742e52c304f61644a1938bb76791b62, type: 3}
+    lastTimePlayed: 0
+  - name: EnemyKnockDownHit
+    volume: 0.3
+    MinTimeBetweenCall: 0.1
+    loop: 0
+    clip:
+    - {fileID: 8300000, guid: ef01c64294f7ead4c945693785021c3d, type: 3}
+    lastTimePlayed: 0
+  - name: EnemyDeath
+    volume: 0.3
+    MinTimeBetweenCall: 0.1
+    loop: 0
+    clip:
+    - {fileID: 8300000, guid: 025baad537b7b314789e22d25532638c, type: 3}
+    lastTimePlayed: 0
+  - name: KnifeHit
+    volume: 1
+    MinTimeBetweenCall: 0
+    loop: 0
+    clip:
+    - {fileID: 8300000, guid: 3cca6d725bd50dc4e823dd48c02c69df, type: 3}
+    lastTimePlayed: 0
+  - name: HandPointer
+    volume: 1
+    MinTimeBetweenCall: 0
+    loop: 0
+    clip:
+    - {fileID: 8300000, guid: dc62a2070db667842b873f346722d971, type: 3}
+    lastTimePlayed: 0
+  - name: UIItemSelect
+    volume: 1
+    MinTimeBetweenCall: 0
+    loop: 0
+    clip:
+    - {fileID: 8300000, guid: 08be763e9060c8a49bf86e9220b97573, type: 3}
+    lastTimePlayed: 0
+  - name: UIButtonPress
+    volume: 1
+    MinTimeBetweenCall: 0
+    loop: 0
+    clip:
+    - {fileID: 8300000, guid: 3214b3cf7144ab94cad4c53bbb2d1cb9, type: 3}
+    lastTimePlayed: 0
+  - name: GunShot
+    volume: 1
+    MinTimeBetweenCall: 0
+    loop: 0
+    clip:
+    - {fileID: 8300000, guid: 39c02f7f416c1e84687b45435ee1cb8d, type: 3}
+    lastTimePlayed: 0
+  - name: GunEmpty
+    volume: 1
+    MinTimeBetweenCall: 0
+    loop: 0
+    clip:
+    - {fileID: 8300000, guid: cdc931c9d52d3194f8ac6937af72d421, type: 3}
+    lastTimePlayed: 0
+  - name: BulletHit
+    volume: 0.5
+    MinTimeBetweenCall: 0
+    loop: 0
+    clip:
+    - {fileID: 8300000, guid: d9f55764a95aa164882c8b163a58265a, type: 3}
+    lastTimePlayed: 0
+  - name: BaseballBatHit
+    volume: 1
+    MinTimeBetweenCall: 0
+    loop: 0
+    clip:
+    - {fileID: 8300000, guid: 4c87943edf2fbd04a8d2dc52feab7bc7, type: 3}
+    lastTimePlayed: 0
+  - name: BaseballBatBreak
+    volume: 1
+    MinTimeBetweenCall: 0
+    loop: 0
+    clip:
+    - {fileID: 8300000, guid: b694c0b5441521746a2b5319cf14f694, type: 3}
+    lastTimePlayed: 0
+--- !u!82 &8206434
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 118890}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 24300001, guid: 4220e2ed04dac404eb35d79a7a12ead9, type: 2}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 5000
+  Pan2D: 0
+  rolloffMode: 1
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0

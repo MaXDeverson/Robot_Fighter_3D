@@ -1,0 +1,151 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3615143875835414979
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3615143875835697661}
+  - component: {fileID: 3728576262545303997}
+  - component: {fileID: 3728576262587598445}
+  m_Layer: 0
+  m_Name: ConsoliAds
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3615143875835697661
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3615143875835414979}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 222, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3728576262545303997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3615143875835414979}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3338a8d2d07526941aaa1f0730c08288, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  userSignature: 1d5705152986a2f53acd098d0d83b37c
+  appName: Sumo Wrestling
+  platform: 41
+  bundleIdentifier: com.fg.sumo.wrestling.sumotori.fighting.live.arena
+  moreAppsURL: https://play.google.com/store/apps/developer?id=Fighting+Gamerz
+  rateUsURL: 
+  supportEmail: shinnyappstudio@gmail.com
+  showAdMechanism: 1
+  isHideAds: 0
+  ShowLog: 0
+  ChildDirected: 0
+  DevMode: 0
+  scenesArray:
+  - placeholderName: 1
+    interstitialAndVideoDetails:
+      skipFirst: 0
+      networkList: 000000000a00000021000000
+      failOver: -1
+    rewardedVideoDetails:
+      skipFirst: 0
+      networkList: 
+      failOver: -1
+    nativeDetails:
+      enabled: 0
+      networkList: 
+      failOver: -1
+      width: 0
+      height: 0
+    bannerDetails:
+      enabled: 1
+      networkList: 1c0000002b000000
+      failOver: -1
+      size: 1
+      position: 0
+    iconDetails:
+      enabled: 1
+      adType: 59
+      size: 0
+  - placeholderName: 8
+    interstitialAndVideoDetails:
+      skipFirst: 0
+      networkList: 000000000a00000021000000
+      failOver: -1
+    rewardedVideoDetails:
+      skipFirst: 0
+      networkList: 
+      failOver: -1
+    nativeDetails:
+      enabled: 0
+      networkList: 
+      failOver: -1
+      width: 0
+      height: 0
+    bannerDetails:
+      enabled: 1
+      networkList: 1c0000002b000000
+      failOver: -1
+      size: 1
+      position: 0
+    iconDetails:
+      enabled: 1
+      adType: 59
+      size: 0
+  adIDList:
+    Admob:
+      AdmobAppID: ca-app-pub-3940256099942544~3347511713
+      AdmobBannerAdUnitID: ca-app-pub-3940256099942544/6300978111
+      AdmobInterstitialAdUnitID: ca-app-pub-3940256099942544/1033173712
+      AdmobRewardedVideoAdUnitID: ca-app-pub-3940256099942544/5224354917
+      AdmobNativeAdUnitID: ca-app-pub-3940256099942544/2247696110
+    Chartboost:
+      ChartboostAppID: 
+      ChartboostAppSignature: 
+    Facebook:
+      FacebookBannerId: IMG_16_9_APP_INSTALL#2014270578816512_2276820195894881
+      FacebookInterstitialUnitId: VID_HD_16_9_46S_LINK#2014270578816512_2014802278763342
+      FacebookRewardedUnitId: VID_HD_16_9_46S_LINK#2014270578816512_2276819452561622
+      FacebookNativeId: VID_HD_16_9_46S_LINK#2014270578816512_2276821112561456
+    Ogury:
+      OguryInterstitialAdUnit: 
+      OguryRewardedVideoAdUnit: 
+      OguryAPIKey: 
+    MyTarget:
+      MyTargetInterstitialSlotID: 
+      MyTargetBannerAdSlotID: 
+      myTargetRewardedAdSlotID: 
+    Mintegral:
+      MintegralAppKey: 
+      MintegralAPPID: 
+      MintegralInterstitialID: 
+      MintegralRewardedID: 
+      MintegralVideoID: 
+    LeadboltAppKey: 
+--- !u!114 &3728576262587598445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3615143875835414979}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 636894519, guid: 223a9827ca8cf42c297678cc74102b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

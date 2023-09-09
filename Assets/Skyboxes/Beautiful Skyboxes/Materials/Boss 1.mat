@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Boss 1
+  m_Shader: {fileID: 4800000, guid: 82881a2d011b0964696411c822cdd00b, type: 3}
+  m_ShaderKeywords: _ENABLEFOG_ON _ENABLEROTATION_ON
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _Tex:
+        m_Texture: {fileID: 8900000, guid: fa41734a337674542975482c8fe96ea1, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Tex_Blend:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _CubemapPosition: -0.1
+    - _CubemapTransition: 0.03
+    - _Cubemapp: 1
+    - _EnableFog: 1
+    - _EnableRotation: 1
+    - _Exposure: 1.36
+    - _FogFill: 0.166
+    - _FogHeight: 0.437
+    - _FogIntensity: 0.85
+    - _FogMessage: 0
+    - _FogPosition: -0.1
+    - _FogSmoothness: 0.373
+    - _Fogg: 1
+    - _Rotation: 239
+    - _RotationSpeed: 2
+    - _Rotationn: 1
+    - _SkyboxExtended: 1
+    m_Colors:
+    - _Tint: {r: 0.34794268, g: 0.062745094, b: 1, a: 1}
+    - _TintColor: {r: 0.5754717, g: 0.17980349, b: 0.12215203, a: 1}
+  m_BuildTextureStacks: []

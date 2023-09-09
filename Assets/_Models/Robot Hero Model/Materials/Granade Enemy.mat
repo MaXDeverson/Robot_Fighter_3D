@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Granade Enemy
+  m_Shader: {fileID: 4800000, guid: f05ac093b4f76fc4086e83eb51d0f913, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _Albedo:
+        m_Texture: {fileID: 2800000, guid: 66f655c861c7a4f4d988f697737cea05, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionTex:
+        m_Texture: {fileID: 2800000, guid: d4a67c7983dac6b48983e1d35b2726e8, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Mask:
+        m_Texture: {fileID: 2800000, guid: 247d8de0083445f448a1fab58b6d72c7, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Normal:
+        m_Texture: {fileID: 2800000, guid: 879c49139ee46a146bd36df9ae55a133, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _Color01Power: 1.66
+    - _Color02Power: 1.86
+    - _Color03Power: 3
+    - _EmissionPower: 4.76
+    - _NormalPower: 1
+    - _OverallPower: 1.3
+    - _Smoothness: 0
+    - __dirty: 1
+    m_Colors:
+    - _Color01: {r: 0.8308824, g: 0.45336175, b: 0.048875432, a: 0}
+    - _Color02: {r: 0.3455882, g: 0.22158304, b: 0.03557525, a: 0}
+    - _Color03: {r: 0.3166686, g: 0.024221446, b: 0.4705882, a: 0}
+    - _EmissionColor: {r: 0.6320754, g: 0.006003985, b: 0, a: 0}
+    - _Specular: {r: 0, g: 0, b: 0, a: 0}
+  m_BuildTextureStacks: []
