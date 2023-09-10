@@ -29,10 +29,10 @@ public class InputManager : MonoBehaviour {
 
 	void Start(){
 
-		//automatically enable touch controls on IOS or android
-		#if UNITY_IOS || UNITY_ANDROID
-			inputType = INPUTTYPE.TOUCHSCREEN;
-		#endif
+		////automatically enable touch controls on IOS or android
+		//#if UNITY_IOS || UNITY_ANDROID
+		//	inputType = INPUTTYPE.TOUCHSCREEN;
+		//#endif
 	}
 
 	public static void DirectionEvent(Vector2 dir, bool doubleTapActive){
@@ -40,12 +40,9 @@ public class InputManager : MonoBehaviour {
 	}
 		
 	void Update(){
+        if(Application.isEditor) KeyboardControls();
 
-		//use keyboard
-		if (inputType == INPUTTYPE.KEYBOARD) KeyboardControls();
-
-		//use joypad
-		if (inputType == INPUTTYPE.JOYPAD) JoyPadControls();
+		///if (inputType == INPUTTYPE.JOYPAD) JoyPadControls();
 
 	}
 
@@ -54,34 +51,70 @@ public class InputManager : MonoBehaviour {
 		float y = 0;
 		bool doubleTapState = false;
 
-		foreach(InputControl inputControl in keyBoardControls){
-			if(onInputEvent == null) return;
+        foreach (InputControl inputControl in keyBoardControls)
+        {
+            if (onInputEvent == null) return;
 
-			//on keyboard key down
-			if(Input.GetKeyDown(inputControl.key)){
-				doubleTapState = DetectDoubleTap(inputControl.Action);
-				onInputEvent(inputControl.Action, BUTTONSTATE.PRESS);
-			}
+            //on keyboard key down
 
-			//on keyboard key up
-			if(Input.GetKeyUp(inputControl.key)){
-				onInputEvent(inputControl.Action, BUTTONSTATE.RELEASE);
-			}
-				
-			//convert keyboard direction keys to x,y values (every frame)
-			if(Input.GetKey(inputControl.key)){
-				if(inputControl.Action == "Left") x = -1f;
-				else if(inputControl.Action == "Right") x = 1f;
-				else if(inputControl.Action == "Up") y = 1;
-				else if(inputControl.Action == "Down") y = -1;
-			}
+            if (Input.GetKeyDown(inputControl.key))
+            {
+                doubleTapState = DetectDoubleTap(inputControl.Action);
+                onInputEvent(inputControl.Action, BUTTONSTATE.PRESS);
+            }
 
-			//defend key exception (checks the defend state every frame)
-			if(inputControl.Action == "Defend") defendKeyDown = Input.GetKey(inputControl.key);
+            // on keyboard key up
+
+            if (Input.GetKeyUp(inputControl.key))
+            {
+                onInputEvent(inputControl.Action, BUTTONSTATE.RELEASE);
+            }
+
+            //  convert keyboard direction keys to x, y values(every frame)
+
+            if (Input.GetKey(inputControl.key))
+            {
+                if (inputControl.Action == "Left") x = -1f;
+                else if (inputControl.Action == "Right") x = 1f;
+                else if (inputControl.Action == "Up") y = 1;
+                else if (inputControl.Action == "Down") y = -1;
+            }
+
+            //  defend key exception(checks the defend state every frame)
+
+            if (inputControl.Action == "Defend") defendKeyDown = Input.GetKey(inputControl.key);
+        }
+        if (Input.GetKey(KeyCode.W))
+        {
+            y = 1;
+        }
+        else if (Input.GetKey(KeyCode.S))
+        {
+            y = -1;
+        }
+        if (Input.GetKey(KeyCode.D))
+        {
+            x = 1;
+        }
+        else if (Input.GetKey(KeyCode.A))
+        {
+            x = -1;
+        }
+
+
+        if (Input.GetKey(KeyCode.J))
+        {
+			onInputEvent("Punch",BUTTONSTATE.PRESS);
+        }
+		if (Input.GetKey(KeyCode.U))
+		{
+			onInputEvent("Kick", BUTTONSTATE.PRESS);
 		}
-
-		//send a direction event
-		DirectionEvent(new Vector2(x,y), doubleTapState);
+		if (Input.GetKey(KeyCode.Space))
+		{
+			onInputEvent("Jump", BUTTONSTATE.PRESS);
+		}
+    	DirectionEvent(new Vector2(x,y), doubleTapState);
 	}
 
 	void JoyPadControls(){

@@ -3,11 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 
-[RequireComponent (typeof(Rigidbody))]
-[RequireComponent (typeof(UnitState))]
+[RequireComponent(typeof(Rigidbody))]
+[RequireComponent(typeof(UnitState))]
 public class PlayerCombat : MonoBehaviour, IDamagable<DamageObject> {
 
-	[Header ("Linked Components")]
+	[Header("Linked Components")]
 	public Transform weaponBone; //the bone were weapon will be parented on
 	public GameObject newweapon;
 	private UnitAnimator animator; //link to the animator component
@@ -17,8 +17,8 @@ public class PlayerCombat : MonoBehaviour, IDamagable<DamageObject> {
 	[Header("Attack Data & Combos")]
 	public float hitZRange = 2f; //the z range of attacks
 	private int attackNum = -1; //the current attack combo number
-    [Space(5)]
-    public bool is_used_slow_camera = false;
+	[Space(5)]
+	public bool is_used_slow_camera = false;
 	public DamageObject[] PunchCombo; //a list of punch attacks
 	public DamageObject[] KickCombo; //a list of kick Attacks
 	public DamageObject JumpKickData; //jump kick Attack
@@ -50,7 +50,7 @@ public class PlayerCombat : MonoBehaviour, IDamagable<DamageObject> {
 	public string defenceHitSFX = "";
 	public string dropSFX = "";
 
-	[Header ("Stats")]
+	[Header("Stats")]
 	public DIRECTION currentDirection; //the current direction
 	public GameObject itemInRange; //an item that is currently in interactable range
 	private Weapon currentWeapon; //the current weapon the player is holding
@@ -73,16 +73,16 @@ public class PlayerCombat : MonoBehaviour, IDamagable<DamageObject> {
 	private bool updateVelocity;
 	private string lastAttackInput;
 	private DIRECTION lastAttackDirection;
-    private CameraFollow slow_cam;
+	private CameraFollow slow_cam;
 
 	//a list of states when the player can attack
 	private List<UNITSTATE> AttackStates = new List<UNITSTATE> {
-		UNITSTATE.IDLE, 
-		UNITSTATE.WALK, 
-		UNITSTATE.RUN, 
-		UNITSTATE.JUMPING, 
+		UNITSTATE.IDLE,
+		UNITSTATE.WALK,
+		UNITSTATE.RUN,
+		UNITSTATE.JUMPING,
 		UNITSTATE.PUNCH,
-		UNITSTATE.KICK, 
+		UNITSTATE.KICK,
 		UNITSTATE.DEFEND,
 	};
 
@@ -122,7 +122,7 @@ public class PlayerCombat : MonoBehaviour, IDamagable<DamageObject> {
 
 	//---
 
-	void OnEnable(){
+	void OnEnable() {
 		InputManager.onInputEvent += OnInputEvent;
 		InputManager.onDirectionInputEvent += OnDirectionInputEvent;
 	}
@@ -137,7 +137,7 @@ public class PlayerCombat : MonoBehaviour, IDamagable<DamageObject> {
 		animator = GetComponentInChildren<UnitAnimator>();
 		playerState = GetComponent<UnitState>();
 		rb = GetComponent<Rigidbody>();
-        slow_cam = GameObject.FindGameObjectWithTag("playercamera").GetComponent<CameraFollow>();
+		slow_cam = GameObject.FindGameObjectWithTag("playercamera").GetComponent<CameraFollow>();
 		//assign layers and layermasks
 		EnemyLayer = LayerMask.NameToLayer("Enemy");
 		DestroyableObjectLayer = LayerMask.NameToLayer("DestroyableObject");
@@ -145,24 +145,24 @@ public class PlayerCombat : MonoBehaviour, IDamagable<DamageObject> {
 		HitLayerMask = (1 << EnemyLayer) | (1 << DestroyableObjectLayer);
 
 		//display error messages for missing components
-		if (!animator) Debug.LogError ("No player animator found inside " + gameObject.name);
-		if (!playerState) Debug.LogError ("No playerState component found on " + gameObject.name);
-		if (!rb) Debug.LogError ("No rigidbody component found on " + gameObject.name);
+		if (!animator) Debug.LogError("No player animator found inside " + gameObject.name);
+		if (!playerState) Debug.LogError("No playerState component found on " + gameObject.name);
+		if (!rb) Debug.LogError("No rigidbody component found on " + gameObject.name);
 
 		//set invulnerable during jump
 		if (!invulnerableDuringJump) {
-			HitableStates.Add (UNITSTATE.JUMPING);
-			HitableStates.Add (UNITSTATE.JUMPKICK);
+			HitableStates.Add(UNITSTATE.JUMPING);
+			HitableStates.Add(UNITSTATE.JUMPKICK);
 		}
 	}
 
 	void Update() {
-		
+
 		//the player is colliding with the ground
-		if(animator) isGrounded = animator.animator.GetBool("isGrounded");
+		if (animator) isGrounded = animator.animator.GetBool("isGrounded");
 
 		//update defence state every frame
-		Defend(InputManager.defendKeyDown);
+		Defend(Input.GetKey(KeyCode.K) || InputManager.defendKeyDown);
 	}
 
 	//physics update
