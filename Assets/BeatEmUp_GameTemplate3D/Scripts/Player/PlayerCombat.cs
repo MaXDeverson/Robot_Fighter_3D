@@ -218,10 +218,11 @@ public class PlayerCombat : MonoBehaviour, IDamagable<DamageObject> {
 			}
 
 			//pick up an item
-			if (action == "Punch" && buttonState == BUTTONSTATE.PRESS && itemInRange != null && isGrounded && currentWeapon == null) {
+			if (action == "Punch" && buttonState == BUTTONSTATE.PRESS && itemInRange != null && isGrounded) {
 				interactWithItem();
 				return;
 			}
+			
 
 			//use an weapon
 			if (action == "Punch" && buttonState == BUTTONSTATE.PRESS && isGrounded && currentWeapon != null) {
@@ -618,12 +619,16 @@ public class PlayerCombat : MonoBehaviour, IDamagable<DamageObject> {
 
 	//interact with an item in range
 	public void interactWithItem(){
-		if (itemInRange != null){
-			animator.SetAnimatorTrigger ("Pickup");
-			playerState.SetState(UNITSTATE.PICKUPITEM);
-			SetVelocity(Vector3.zero);
-			Invoke ("Ready", .3f);
-			Invoke ("pickupItem", .2f);
+		if (currentWeapon == null)
+        {
+			if (itemInRange != null)
+			{
+				animator.SetAnimatorTrigger("Pickup");
+				playerState.SetState(UNITSTATE.PICKUPITEM);
+				SetVelocity(Vector3.zero);
+				Invoke("Ready", .3f);
+				Invoke("pickupItem", .2f);
+			}
 		}
 	}
 

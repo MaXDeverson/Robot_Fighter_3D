@@ -360,6 +360,7 @@ public class EnemyActions : MonoBehaviour {
 
 		//look towards the direction of the incoming attack
 		int dir = 1;
+		_lastInflictor = inflictor;
 		if(inflictor != null) dir = inflictor.transform.position.x > transform.position.x? 1 : -1;
 		currentDirection = (DIRECTION)dir;
 		animator.SetDirection(currentDirection);
@@ -528,7 +529,7 @@ public class EnemyActions : MonoBehaviour {
 
 	//turn towards a direction
 	public void TurnToDir(DIRECTION dir) {
-		transform.rotation = Quaternion.LookRotation(Vector3.forward * (int)dir);
+		//transform.rotation = Quaternion.LookRotation(Vector3.forward * (int)dir);
 	}
 
 	#endregion
@@ -539,10 +540,18 @@ public class EnemyActions : MonoBehaviour {
 	}
 
 	//unit is ready for new actions
+	GameObject _lastInflictor;
 	public void Ready()	{
 		enemyState = UNITSTATE.IDLE;
 		animator.SetAnimatorTrigger("Idle");
 		animator.SetAnimatorFloat ("MovementSpeed", 0f);
+		if (_lastInflictor != null)
+		{
+			int dir = _lastInflictor.transform.position.x > transform.position.x ? 1 : -1;
+			currentDirection = (DIRECTION)dir;
+			animator.SetDirection(currentDirection);
+			Debug.Log("SET DIRECTIon");
+		}
 		Move(Vector3.zero, 0f);
 	}
 
