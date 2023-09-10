@@ -617,17 +617,22 @@ public class PlayerCombat : MonoBehaviour, IDamagable<DamageObject> {
 		if(itemInRange == item) itemInRange = null;
 	}
 
+	public void GetMoney(int count)
+    {
+		PlayerPrefs.SetInt("TotalScore", PlayerPrefs.GetInt("TotalScore") + count);
+    }
 	//interact with an item in range
 	public void interactWithItem(){
 		if (currentWeapon == null)
         {
-			if (itemInRange != null)
+			if (itemInRange != null )
 			{
 				animator.SetAnimatorTrigger("Pickup");
 				playerState.SetState(UNITSTATE.PICKUPITEM);
 				SetVelocity(Vector3.zero);
 				Invoke("Ready", .3f);
 				Invoke("pickupItem", .2f);
+
 			}
 		}
 	}

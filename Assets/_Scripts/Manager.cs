@@ -32,7 +32,7 @@ public class Manager : MonoBehaviour
     {
         instance = this;
         Time.timeScale = 0f;
-
+        if (levels.Length == 0) return;
         RenderSettings.skybox = skyboxArr[General.CurrentLevel];
         Instantiate(environments[General.CurrentLevel], environments[General.CurrentLevel].transform.position, environments[General.CurrentLevel].transform.rotation);
 
