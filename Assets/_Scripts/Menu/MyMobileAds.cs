@@ -13,8 +13,6 @@ public static class MyMobileAds
     private static bool _isError;
     private static bool _isRewardError;
 
-    private static bool _interstitialIsShowed;
-
     private static Action _interstitialAction;
     private static Action _rewardAction;
 
@@ -28,7 +26,6 @@ public static class MyMobileAds
     private static void LoadInterstitialAd()
     {
         // Clean up the old ad before loading a new one.
-        
         if (interstitialAd != null)
         {
             interstitialAd.Destroy();
