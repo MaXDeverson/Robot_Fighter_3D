@@ -6,9 +6,9 @@ using UnityEngine.UI;
 public class Coins_Value : MonoBehaviour
 {
     // Start is called before the first frame update
-    public Text coins_text;
+    [SerializeField] private Text coins_text;
     private void OnEnable()
     {
-        coins_text.text = PlayerPrefs.GetInt("TotalScore").ToString();
+        coins_text.text = "text";// +  PlayerPrefs.GetInt("TotalScore");
     }
 }

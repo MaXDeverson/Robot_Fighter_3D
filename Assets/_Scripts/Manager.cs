@@ -8,7 +8,7 @@ public class Manager : MonoBehaviour
     public GameObject barish;
     public static Manager instance;
     public GameObject iconAd;
-    public GameObject HUD, TouchPanel, dia_pause, objective, loadingScreenBG, LevelsParent, btn_pause, btn_okay, completeSound, failSound;
+    public GameObject HUD, TouchPanel, dia_pause, objective, loadingScreenBG, LevelsParent, btn_pause, btn_okay, completeSound, failSound,weaponChoise;
     public Text objText, scoreText;
 
     public AudioSource tictic;
@@ -69,7 +69,8 @@ public class Manager : MonoBehaviour
         textComp.text = "";
         tictic = GetComponent<AudioSource>();
         btn_okay.GetComponent<Button>().interactable = false;
-        ShowObjective();
+        //ShowObjective();
+        ShowWeaponChoise();
     }
 
     void MissionCompleteSound()
@@ -100,6 +101,11 @@ public class Manager : MonoBehaviour
     {
         StartCoroutine(TypeText());
         objective.SetActive(true);
+    }
+
+    void ShowWeaponChoise()
+    {
+        weaponChoise.SetActive(true);
     }
 
     IEnumerator TypeText()
@@ -172,6 +178,12 @@ public class Manager : MonoBehaviour
             AudioListener.pause = false;
         });
 
+    }
+    public void HideWeaponChoice()
+    {
+        Time.timeScale = 1;
+        weaponChoise.SetActive(false);
+        //GameObject.Find("AudioSource").GetComponent<AudioSource>().enabled = true;
     }
 
     public void BtnOk()

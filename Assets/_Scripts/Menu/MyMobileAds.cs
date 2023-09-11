@@ -20,7 +20,7 @@ public static class MyMobileAds
     {
         MobileAds.Initialize(initStatus => { });
         LoadInterstitialAd();
-        LoadRewardedAd();
+        //LoadRewardedAd();
 
     }
     private static void LoadInterstitialAd()
@@ -99,7 +99,7 @@ public static class MyMobileAds
                 }
                 else
                 {
-                    LoadInterstitialAd();
+                    //LoadInterstitialAd();
                     afterAd?.Invoke();
                 }
             }

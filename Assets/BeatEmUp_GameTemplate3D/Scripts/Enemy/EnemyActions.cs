@@ -370,7 +370,6 @@ public class EnemyActions : MonoBehaviour {
 		animator.SetAnimatorTrigger("KnockDown_Up");
 		while(IsGrounded()){
 			SetVelocity(new Vector3(KnockbackForce * -dir, KnockdownUpForce, 0));
-			Debug.Log("Is Grounded" + IsGrounded());
 			yield return new WaitForFixedUpdate();
 		}
 
@@ -379,7 +378,6 @@ public class EnemyActions : MonoBehaviour {
 
 		//going down
 		animator.SetAnimatorTrigger ("KnockDown_Down");
-		Debug.Log("Is Grounded" + IsGrounded());
 		while (!IsGrounded()) yield return new WaitForFixedUpdate();
 
 		//hit ground

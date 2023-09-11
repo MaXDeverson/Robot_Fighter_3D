@@ -16,7 +16,6 @@ public class WeaponPickup : PickUpable{
 	}
 
 	public void GiveWeaponToPlayer(GameObject player){
-		Debug.LogError("GIVE WEAPON");
 		PlayerCombat pc = player.GetComponent<PlayerCombat>();
 		if(pc) pc.equipWeapon(weapon);
 	}

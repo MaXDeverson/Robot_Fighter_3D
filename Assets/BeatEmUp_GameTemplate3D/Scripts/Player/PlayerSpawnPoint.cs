@@ -4,7 +4,8 @@ public class PlayerSpawnPoint : MonoBehaviour {
 
 	//public GameObject defaultPlayerPrefab;
 	public GameObject[] Players;
-
+    public Weapon[] _weapons;
+    private GameObject _currentPlayer;
 	void Awake(){
         //PlayerPrefs.SetInt("SelectedCharacter", 1);//////////////////.....................
 
@@ -33,7 +34,12 @@ public class PlayerSpawnPoint : MonoBehaviour {
 
 	//load a player prefab
 	void loadPlayer(GameObject playerPrefab){
-		GameObject player = GameObject.Instantiate(playerPrefab) as GameObject;
-		player.transform.position = transform.position;
+		_currentPlayer = GameObject.Instantiate(playerPrefab) as GameObject;
+		_currentPlayer.transform.position = transform.position;
 	}
+
+    public void TakeWeapon(int index)
+    {
+        _currentPlayer.GetComponent<PlayerCombat>().equipWeapon(_weapons[index]);
+    }
 }
