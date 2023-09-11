@@ -99,7 +99,7 @@ public class Main_Menu : MonoBehaviour {
         PlayerPrefs.SetFloat("Volume", soundB.fillAmount);
         PlayerPrefs.SetFloat("Music", musicB.fillAmount);
 
-        TotalEarning.text = PlayerPrefs.GetInt ("TotalScore").ToString ();
+        TotalEarning.text = PlayerPrefs.GetInt ("TotalScore").ToString () + "$";
 	}
 	
 	public void Play()

@@ -53,7 +53,7 @@ public class Garrage : MonoBehaviour {
 
             //GameObject.Find("Canvas").gameObject.GetComponent<Canvas>().renderMode = RenderMode.ScreenSpaceOverlay;
         }
-		TotalEarning.text = PlayerPrefs.GetInt ("TotalScore").ToString ();
+		TotalEarning.text = PlayerPrefs.GetInt ("TotalScore").ToString () + "$";
         prices[0] = 0; prices[1] = PlayerPrefs.GetInt("jetPrice_01"); prices[2] = PlayerPrefs.GetInt("jetPrice_02");
         prices[3] = PlayerPrefs.GetInt("jetPrice_03");
         prices[4] = PlayerPrefs.GetInt("jetPrice_04");
