@@ -189,7 +189,7 @@ public class Garrage : MonoBehaviour {
                 characters[i].SetActive (true);
                 active_characters[i].SetActive(true);
                 specs[i].SetActive(true);
-                Debug.Log(specs[i].name);
+               // Debug.Log(specs[i].name);
 			} else {
                 characters[i].SetActive (false);
                 active_characters[i].SetActive(false);

@@ -1,9 +1,25 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour {
 
+	[SerializeField] private Text _cashBalance;
 	public UIFader UI_fader;
 	public UI_Screen[] UIMenus;
+
+	[Header("LevelComplate UI")]
+	[SerializeField] private Text _finishLevelCash;
+    private void Start()
+    {
+		_cashBalance.text = PlayerData.GetPlayerData().AllCash + "$";
+		PlayerData.GetPlayerData().SetActionCashUpdate(OnCashUpdate);
+    }
+
+	private void OnCashUpdate(int count, int current)
+	{
+		Debug.Log("Cash Update:" + count);
+		_cashBalance.text = count + "$";
+	}
 
 	void Awake(){
 		DisableAllScreens();
@@ -31,6 +47,20 @@ public class UIManager : MonoBehaviour {
 		//fadeIn
 		if (UI_fader != null) UI_fader.gameObject.SetActive (true);
 		UI_fader.Fade (UIFader.FADE.FadeIn, .5f, .3f);
+
+        switch (name)
+        {
+			case "LevelComplete":
+				_finishLevelCash.text = "COLLECTED:" + PlayerData.GetPlayerData().CurrentCash + "$";
+				PlayerData.GetPlayerData().SetActionCashUpdate(UpdateCollectedCash);
+				break;
+
+		}
+	}
+
+	private void UpdateCollectedCash(int all, int current)
+    {
+		_finishLevelCash.text = "COLLECTED:" + current + "$";
 	}
 
 	public void ShowMenu(string name){
@@ -65,6 +95,12 @@ public class UIManager : MonoBehaviour {
 				CloseMenu("TouchScreenControls");
 			}
 		}
+	}
+
+    private void OnDestroy()
+    {
+		PlayerData.GetPlayerData().RemoveActionCashUpdate(UpdateCollectedCash);
+		PlayerData.GetPlayerData().RemoveActionCashUpdate(OnCashUpdate);
 	}
 }
 	

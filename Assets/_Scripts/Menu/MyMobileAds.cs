@@ -20,7 +20,7 @@ public static class MyMobileAds
     {
         MobileAds.Initialize(initStatus => { });
         LoadInterstitialAd();
-        //LoadRewardedAd();
+        LoadRewardedAd();
 
     }
     private static void LoadInterstitialAd()
@@ -116,6 +116,8 @@ public static class MyMobileAds
 
     public static void ShowRewarded(Action afterAdAction)
     {
+
+        Debug.Log("Show Rewarded invoke");
         if(PlayerPrefs.GetInt("ADSUNLOCK") == 0){
             _rewardAction = afterAdAction;
             if (_isRewardError)
@@ -131,6 +133,7 @@ public static class MyMobileAds
                 {
 
                 });
+                Debug.Log("Show AD");
             }
             else
             {
@@ -140,6 +143,7 @@ public static class MyMobileAds
         }
         else
         {
+            Debug.Log("ADBLOCK");
             afterAdAction?.Invoke();
         }
        

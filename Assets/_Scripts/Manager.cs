@@ -47,7 +47,6 @@ public class Manager : MonoBehaviour
 
         score = scoreArray[General.CurrentLevel];
         objText.text = objTextArray[General.CurrentLevel];
-        scoreText.text = score.ToString();
 
     }
 
@@ -178,6 +177,10 @@ public class Manager : MonoBehaviour
             AudioListener.pause = false;
         });
 
+    }
+    public void DoubleCash()
+    {
+        MyMobileAds.ShowRewarded(() => PlayerData.GetPlayerData().DoubleCash());
     }
     public void HideWeaponChoice()
     {

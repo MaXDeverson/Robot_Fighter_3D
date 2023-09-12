@@ -173,6 +173,12 @@ public class Main_Menu : MonoBehaviour {
     {
          PlayerPrefs.SetInt("TotalScore", PlayerPrefs.GetInt("TotalScore") + 10000);
     }
+
+    public void ResetGame()
+    {
+        PlayerPrefs.DeleteAll();
+        SceneManager.LoadScene(0);
+    }
     public void IncSound()
     {
         GameObject.Find("ClickSound").GetComponent<AudioSource>().Play();

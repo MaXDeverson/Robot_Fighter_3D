@@ -46,7 +46,6 @@ public class PickUpMoney : PickUpable
 
 	private void GiveMoneyToPlayer(GameObject player)
 	{
-		PlayerCombat pc = player.GetComponent<PlayerCombat>();
-		if (pc) pc.GetMoney(_moneyCount);
+		PlayerData.GetPlayerData().AddCash(_moneyCount);
 	}
 }

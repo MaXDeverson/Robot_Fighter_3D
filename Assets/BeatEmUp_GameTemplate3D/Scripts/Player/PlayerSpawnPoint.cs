@@ -1,10 +1,12 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerSpawnPoint : MonoBehaviour {
 
 	//public GameObject defaultPlayerPrefab;
 	public GameObject[] Players;
     public Weapon[] _weapons;
+    public Text[] _choisesText;
     private GameObject _currentPlayer;
 	void Awake(){
         //PlayerPrefs.SetInt("SelectedCharacter", 1);//////////////////.....................
@@ -31,15 +33,26 @@ public class PlayerSpawnPoint : MonoBehaviour {
         //	Debug.Log("Please assign a default player prefab in the  playerSpawnPoint");
         //}
     }
-
-	//load a player prefab
-	void loadPlayer(GameObject playerPrefab){
+    private void Start()
+    {
+        for(int i = 0; i < _choisesText.Length; i++)
+        {
+            _choisesText[i].text = _weapons[i].weaponName;
+        }
+    }
+    //load a player prefab
+    void loadPlayer(GameObject playerPrefab){
 		_currentPlayer = GameObject.Instantiate(playerPrefab) as GameObject;
 		_currentPlayer.transform.position = transform.position;
 	}
 
     public void TakeWeapon(int index)
     {
-        _currentPlayer.GetComponent<PlayerCombat>().equipWeapon(_weapons[index]);
+        MyMobileAds.ShowRewarded(() =>
+        {
+            Debug.Log("Take Weapon:" + index);
+            _currentPlayer.GetComponent<PlayerCombat>().equipWeapon(_weapons[index]);
+        });
+
     }
 }

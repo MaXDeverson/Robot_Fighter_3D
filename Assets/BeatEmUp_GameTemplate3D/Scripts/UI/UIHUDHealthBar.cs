@@ -21,7 +21,6 @@ public class UIHUDHealthBar : MonoBehaviour {
 		if(!isPlayer) Invoke("HideOnDestroy", Time.deltaTime); //hide enemy healthbar at start
 		if(isPlayer) SetPlayerPortraitAndName();
 	}
-
 	void UpdateHealth(float percentage, GameObject go){
 		if(isPlayer && go.CompareTag("Player")){
 			HpSlider.value = percentage;
@@ -57,4 +56,5 @@ public class UIHUDHealthBar : MonoBehaviour {
 			}
 		}
 	}
+
 }
