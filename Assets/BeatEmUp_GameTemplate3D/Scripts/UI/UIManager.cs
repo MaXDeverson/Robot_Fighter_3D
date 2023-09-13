@@ -4,6 +4,7 @@ using UnityEngine.UI;
 public class UIManager : MonoBehaviour {
 
 	[SerializeField] private Text _cashBalance;
+	[SerializeField] private GameObject _doubleCash;
 	public UIFader UI_fader;
 	public UI_Screen[] UIMenus;
 
@@ -20,7 +21,7 @@ public class UIManager : MonoBehaviour {
 		Debug.Log("Cash Update:" + count);
 		_cashBalance.text = count + "$";
 	}
-
+	public void DisableDoubleCash() => _doubleCash.SetActive(false);
 	void Awake(){
 		DisableAllScreens();
 

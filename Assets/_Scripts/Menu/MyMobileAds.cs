@@ -149,6 +149,39 @@ public static class MyMobileAds
        
     }
 
+    public static bool ShowRewardedSucssesCheck(Action afterAdAction)
+    {
+
+        Debug.Log("Show Rewarded invoke");
+        if (PlayerPrefs.GetInt("ADSUNLOCK") == 0)
+        {
+            _rewardAction = afterAdAction;
+            if (_isRewardError)
+            {
+                LoadRewardedAd();
+                return false;
+            }
+            if (rewardedAd != null && rewardedAd.CanShowAd())
+            {
+                rewardedAd.Show((Reward reward) =>
+                {
+
+                });
+                Debug.Log("Show AD");
+            }
+            else
+            {
+                LoadRewardedAd();
+                return false;
+            }
+        }
+        else
+        {
+            Debug.Log("ADBLOCK");
+            afterAdAction?.Invoke();
+        }
+        return true;
+    }
 
 
     private static void RegisterEventHandlers(InterstitialAd ad)

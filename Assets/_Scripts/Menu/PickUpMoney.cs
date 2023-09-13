@@ -36,6 +36,7 @@ public class PickUpMoney : PickUpable
 	{
 		_animationObj.gameObject.SetActive(true);
 		_animationObj.SetParent(null);
+		_animationObj.transform.eulerAngles = new Vector3(0, 215, 0);
 		_moneyText.text = _moneyCount + "$";
 		_pickUpMoneyAnimation.Play();
 		Destroy(_animationObj.gameObject, 5);

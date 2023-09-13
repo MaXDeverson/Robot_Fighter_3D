@@ -524,8 +524,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7932849200390926925}
-  m_LocalRotation: {x: -0, y: 0.2916803, z: -0, w: 0.9565159}
-  m_LocalPosition: {x: 12.25, y: 0, z: -2.44}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.09583589, z: -2.379788}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -533,7 +533,7 @@ Transform:
   - {fileID: 1513536814313080716}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 30, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &699133818148170519
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -553,8 +553,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.5, y: 0.1, z: 0.1}
-  m_Center: {x: 0, y: 0.045, z: 0}
+  m_Size: {x: 0.9404162, y: 0.32514948, z: 0.060770273}
+  m_Center: {x: -0.004453182, y: -0.011560023, z: 0.11639917}
 --- !u!54 &5392301586978755254
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -580,7 +580,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 122
+  m_Constraints: 42
   m_CollisionDetection: 0
 --- !u!114 &2900712260079458951
 MonoBehaviour:
@@ -594,6 +594,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efddfbdf85d73c5448fed29aaeb0fb52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SFX: ItemPickup
+  pickupEffect: {fileID: 0}
+  pickUpRange: 1
+  type: 0
   weapon:
     weaponName: BaseballBat
     playerHandPrefab: {fileID: 1991082699172813877, guid: d5be23517f29fef4ca0c09a443a2eacb, type: 3}
@@ -621,9 +625,6 @@ MonoBehaviour:
       inflictor: {fileID: 0}
     useSound: GunShot
     breakSound: BaseballBatBreak
-  SFX: ItemPickup
-  pickupEffect: {fileID: 0}
-  pickUpRange: 1
 --- !u!1 &8867436288748992046
 GameObject:
   m_ObjectHideFlags: 0
@@ -737,43 +738,43 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 76b5d8fe828895d4eb108244fdc1b6f2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.006
+      value: 0.01801928
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 76b5d8fe828895d4eb108244fdc1b6f2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.017
+      value: -0.05236972
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 76b5d8fe828895d4eb108244fdc1b6f2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.03
+      value: 0.12132311
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 76b5d8fe828895d4eb108244fdc1b6f2, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.054180488
+      value: -0.0059803324
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 76b5d8fe828895d4eb108244fdc1b6f2, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.04750958
+      value: -0.01835449
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 76b5d8fe828895d4eb108244fdc1b6f2, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.70833886
+      value: 0.99981093
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 76b5d8fe828895d4eb108244fdc1b6f2, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.70218474
+      value: -0.0023324117
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 76b5d8fe828895d4eb108244fdc1b6f2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -89.264
+      value: 0.28
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 76b5d8fe828895d4eb108244fdc1b6f2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 39.718
+      value: -179.32
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 76b5d8fe828895d4eb108244fdc1b6f2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -43.189
+      value: -2.102
       objectReference: {fileID: 0}
     - target: {fileID: -7918335002988649766, guid: 76b5d8fe828895d4eb108244fdc1b6f2, type: 3}
       propertyPath: m_Materials.Array.data[0]

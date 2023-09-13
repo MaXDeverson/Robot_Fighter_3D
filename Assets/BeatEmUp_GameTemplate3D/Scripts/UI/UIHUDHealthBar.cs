@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-[RequireComponent(typeof(Slider))]
 public class UIHUDHealthBar : MonoBehaviour {
 
+	[SerializeField] private GameObject _enableObj;
 	public Text nameField;
 	public Image playerPortrait;
 	public Slider HpSlider;
@@ -28,15 +28,23 @@ public class UIHUDHealthBar : MonoBehaviour {
 
 		if(!isPlayer && go.CompareTag("Enemy")){
 			HpSlider.gameObject.SetActive(true);
+			playerPortrait.gameObject.SetActive(true);
+			if (_enableObj != null) _enableObj.SetActive(true);
 			HpSlider.value = percentage;
 			nameField.text = go.GetComponent<EnemyActions>().enemyName;
-			if(percentage == 0) Invoke("HideOnDestroy", 2);
+			playerPortrait.overrideSprite = go.GetComponent<HealthSystem>().HUDPortrait;
+			if (percentage == 0)
+			{
+				Invoke("HideOnDestroy", 2);
+			}
 		}
 	}
 
 	void HideOnDestroy(){
 		HpSlider.gameObject.SetActive(false);
 		nameField.text = "";
+	    playerPortrait.gameObject.SetActive(false);
+		if(_enableObj != null) _enableObj.SetActive(false);
 	}
 
 	//loads the HUD icon of the player from the player prefab (Healthsystem)
