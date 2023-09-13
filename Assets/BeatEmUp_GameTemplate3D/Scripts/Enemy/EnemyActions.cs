@@ -548,7 +548,6 @@ public class EnemyActions : MonoBehaviour {
 			int dir = _lastInflictor.transform.position.x > transform.position.x ? 1 : -1;
 			currentDirection = (DIRECTION)dir;
 			animator.SetDirection(currentDirection);
-			Debug.Log("SET DIRECTIon");
 		}
 		Move(Vector3.zero, 0f);
 	}

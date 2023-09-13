@@ -83,7 +83,7 @@ public class MissionSelection : MonoBehaviour {
             }
             //GameObject.Find("Canvas").gameObject.GetComponent<Canvas>().renderMode = RenderMode.ScreenSpaceCamera;
         }
-		TotalEarning.text = PlayerPrefs.GetInt ("TotalScore").ToString ();
+		TotalEarning.text = PlayerPrefs.GetInt ("TotalScore").ToString () + "$";
 
         foreach (var item in characters)
         {

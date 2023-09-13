@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 public class Manager : MonoBehaviour
 {
+    [SerializeField] private UIManager _uiManager;
     public GameObject barish;
     public static Manager instance;
     public GameObject iconAd;
@@ -26,7 +27,9 @@ public class Manager : MonoBehaviour
 
     public int score;
     AsyncOperation ao;
-
+    [Header("Dialog Window")]
+    [SerializeField] private Transform _dialogWindow;
+    [SerializeField] private Text _dialogWindowText;
 
     void Awake()
     {
@@ -47,7 +50,6 @@ public class Manager : MonoBehaviour
 
         score = scoreArray[General.CurrentLevel];
         objText.text = objTextArray[General.CurrentLevel];
-        scoreText.text = score.ToString();
 
     }
 
@@ -80,6 +82,17 @@ public class Manager : MonoBehaviour
     void MissionFailSound()
     {
         Instantiate(failSound, failSound.transform.position, failSound.transform.rotation);
+    }
+
+    public void ShowDialogWindow(string text)
+    {
+        _dialogWindow.gameObject.SetActive(true);
+        _dialogWindowText.text = text;
+    }
+
+    public void HideDialogWindow()
+    {
+        _dialogWindow.gameObject.SetActive(false);
     }
 
     public void PauseFunction()
@@ -178,6 +191,13 @@ public class Manager : MonoBehaviour
             AudioListener.pause = false;
         });
 
+    }
+    public void DoubleCash()
+    {
+        if(!MyMobileAds.ShowRewardedSucssesCheck(() => { _uiManager.DisableDoubleCash(); PlayerData.GetPlayerData().DoubleCash(); }))
+        {
+            ShowDialogWindow("No Internet connection :(");
+        }
     }
     public void HideWeaponChoice()
     {

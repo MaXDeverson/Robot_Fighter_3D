@@ -9,6 +9,6 @@ public class Coins_Value : MonoBehaviour
     [SerializeField] private Text coins_text;
     private void OnEnable()
     {
-        coins_text.text = "text";// +  PlayerPrefs.GetInt("TotalScore");
+        coins_text.text = PlayerPrefs.GetInt("TotalScore") + "$";
     }
 }

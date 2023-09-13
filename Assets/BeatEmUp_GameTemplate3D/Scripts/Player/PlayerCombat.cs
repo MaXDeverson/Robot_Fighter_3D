@@ -395,7 +395,15 @@ public class PlayerCombat : MonoBehaviour, IDamagable<DamageObject> {
 	//remove the current weapon
 	IEnumerator destroyCurrentWeapon(float delay){
 		yield return new WaitForSeconds(delay);
-		if(currentWeapon.degenerateType == DEGENERATETYPE.DEGENERATEONUSE) GlobalAudioPlayer.PlaySFX(currentWeapon.breakSound);
+        try
+        {
+			if (currentWeapon.degenerateType == DEGENERATETYPE.DEGENERATEONUSE) GlobalAudioPlayer.PlaySFX(currentWeapon.breakSound);
+		}
+        catch(System.Exception ex)
+        {
+			Debug.LogError("NULL:" + ex);
+        }
+
 		Destroy(currentWeapon.playerHandPrefab);
 		currentWeapon.BreakWeapon();
 		currentWeapon = null;
@@ -732,7 +740,7 @@ public class PlayerCombat : MonoBehaviour, IDamagable<DamageObject> {
 		foreach (GameObject enemy in EnemyManager.activeEnemies) {
 
 			//only check enemies in front of us
-			if(isFacingTarget(enemy)){
+			if( enemy!= null && isFacingTarget(enemy)){
 
 				//find closest enemy
 				float dist2enemy = (enemy.transform.position - transform.position).magnitude;
