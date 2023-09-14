@@ -12,14 +12,14 @@ public class UIManager : MonoBehaviour {
 	[SerializeField] private Text _finishLevelCash;
     private void Start()
     {
-		_cashBalance.text = PlayerData.GetPlayerData().AllCash + "$";
+	    if(_cashBalance != null)_cashBalance.text = PlayerData.GetPlayerData().AllCash + "$";
 		PlayerData.GetPlayerData().SetActionCashUpdate(OnCashUpdate);
     }
 
 	private void OnCashUpdate(int count, int current)
 	{
 		Debug.Log("Cash Update:" + count);
-		_cashBalance.text = count + "$";
+	  if(_cashBalance != null)	_cashBalance.text = count + "$";
 	}
 	public void DisableDoubleCash() => _doubleCash.SetActive(false);
 	void Awake(){
