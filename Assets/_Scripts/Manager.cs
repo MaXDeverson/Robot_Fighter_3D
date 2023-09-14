@@ -30,21 +30,26 @@ public class Manager : MonoBehaviour
     [Header("Dialog Window")]
     [SerializeField] private Transform _dialogWindow;
     [SerializeField] private Text _dialogWindowText;
+    [Header("Settings")]
+    [SerializeField] private bool _spawnLevel = true;
 
     void Awake()
     {
         instance = this;
         Time.timeScale = 0f;
-        if (levels.Length == 0) return;
-        RenderSettings.skybox = skyboxArr[General.CurrentLevel];
-        Instantiate(environments[General.CurrentLevel], environments[General.CurrentLevel].transform.position, environments[General.CurrentLevel].transform.rotation);
-
-        levels = new GameObject[LevelsParent.transform.childCount];
-        for (int i = 0; i < LevelsParent.transform.childCount; i++)
+        if (_spawnLevel)
         {
-            levels[i] = LevelsParent.transform.GetChild(i).gameObject;
+            if (levels.Length == 0) return;
+            RenderSettings.skybox = skyboxArr[General.CurrentLevel];
+            Instantiate(environments[General.CurrentLevel], environments[General.CurrentLevel].transform.position, environments[General.CurrentLevel].transform.rotation);
+
+            levels = new GameObject[LevelsParent.transform.childCount];
+            for (int i = 0; i < LevelsParent.transform.childCount; i++)
+            {
+                levels[i] = LevelsParent.transform.GetChild(i).gameObject;
+            }
+            levels[General.CurrentLevel].SetActive(true);
         }
-        levels[General.CurrentLevel].SetActive(true);
         barish.SetActive(General.CurrentLevel % 2 != 0);
         health = totalHealth = healthArray[General.CurrentLevel];
 
