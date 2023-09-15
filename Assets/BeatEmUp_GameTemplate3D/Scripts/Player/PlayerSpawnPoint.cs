@@ -1,10 +1,12 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class PlayerSpawnPoint : MonoBehaviour
 {
 
     //public GameObject defaultPlayerPrefab;
+    [SerializeField] private Transform _playerSpawnPosiiton;
     [SerializeField] private Manager _manager;
     public GameObject[] Players;
     public Weapon[] _weapons;
@@ -42,12 +44,19 @@ public class PlayerSpawnPoint : MonoBehaviour
         {
             _choisesText[i].text = _weapons[i].weaponName;
         }
+        StartCoroutine(ReplaceHero(new Vector3(0, 0, 0)));
+    }
+
+    private IEnumerator ReplaceHero(Vector3 point)
+    {
+        yield return new WaitForSeconds(3f);
+        _currentPlayer.transform.position = point;
+       
     }
     //load a player prefab
     void loadPlayer(GameObject playerPrefab)
     {
         _currentPlayer = GameObject.Instantiate(playerPrefab) as GameObject;
-        _currentPlayer.transform.position = transform.position;
     }
 
     public void TakeWeapon(int index)
