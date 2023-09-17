@@ -44,19 +44,12 @@ public class PlayerSpawnPoint : MonoBehaviour
         {
             _choisesText[i].text = _weapons[i].weaponName;
         }
-        StartCoroutine(ReplaceHero(new Vector3(0, 0, 0)));
     }
 
-    private IEnumerator ReplaceHero(Vector3 point)
-    {
-        yield return new WaitForSeconds(3f);
-        _currentPlayer.transform.position = point;
-       
-    }
-    //load a player prefab
     void loadPlayer(GameObject playerPrefab)
     {
-        _currentPlayer = GameObject.Instantiate(playerPrefab) as GameObject;
+        _currentPlayer = GameObject.Instantiate(playerPrefab, _playerSpawnPosiiton.position,Quaternion.identity) as GameObject;
+       // _currentPlayer.transform.position = _playerSpawnPosiiton.position;
     }
 
     public void TakeWeapon(int index)

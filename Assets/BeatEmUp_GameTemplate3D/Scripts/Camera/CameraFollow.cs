@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 public class CameraFollow : MonoBehaviour {
 
@@ -28,6 +29,7 @@ public class CameraFollow : MonoBehaviour {
 	public BoxCollider CurrentAreaCollider;
 	public float AreaColliderViewOffset;
 	private bool firstFrameActive;
+
 
 	void Start(){
 		UpdatePlayerTargets();
