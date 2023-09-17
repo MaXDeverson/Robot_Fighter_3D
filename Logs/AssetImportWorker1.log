@@ -1,23 +1,23 @@
 Using pre-set license
 Built from '2022.3/staging' branch; Version is '2022.3.2f1 (d74737c6db50) revision 14108471'; Using compiler version '192829333'; Build Type 'Release'
-OS: 'Windows 11  (10.0.22621) 64bit Core' Language: 'en' Physical Memory: 16239 MB
+OS: 'Windows 11  (10.0.22621) 64bit Professional' Language: 'uk' Physical Memory: 15775 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
 
 COMMAND LINE ARGUMENTS:
-C:\Program Files\Unity\Hub\Editor\2022.3.2f1\Editor\Unity.exe
+F:\Unity Hub\Editors\2022.3.2f1\Editor\Unity.exe
 -adb2
 -batchMode
 -noUpm
 -name
 AssetImportWorker1
 -projectPath
-C:/Users/max79/Unity projects/Robot_Fighter_3D
+F:/Unity Projects/Robot_Fighter_3D
 -logFile
 Logs/AssetImportWorker1.log
 -srvPort
-51067
-Successfully changed project path to: C:/Users/max79/Unity projects/Robot_Fighter_3D
-C:/Users/max79/Unity projects/Robot_Fighter_3D
+50676
+Successfully changed project path to: F:/Unity Projects/Robot_Fighter_3D
+F:/Unity Projects/Robot_Fighter_3D
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
     "memorysetup-bucket-allocator-granularity=16"
     "memorysetup-bucket-allocator-bucket-count=8"
@@ -49,81 +49,80 @@ C:/Users/max79/Unity projects/Robot_Fighter_3D
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [21288] Host "[IP] 192.168.50.5 [Port] 0 [Flags] 2 [Guid] 1603517003 [EditorId] 1603517003 [Version] 1048832 [Id] WindowsEditor(7,admin) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [22292] Host "[IP] 26.156.60.155 [Port] 0 [Flags] 2 [Guid] 1972139938 [EditorId] 1972139938 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-G4HEV41) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [21288] Host "[IP] 192.168.50.5 [Port] 0 [Flags] 2 [Guid] 1603517003 [EditorId] 1603517003 [Version] 1048832 [Id] WindowsEditor(7,admin) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [22292] Host "[IP] 26.156.60.155 [Port] 0 [Flags] 2 [Guid] 1972139938 [EditorId] 1972139938 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-G4HEV41) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
-Refreshing native plugins compatible for Editor in 89.41 ms, found 6 plugins.
+Refreshing native plugins compatible for Editor in 3912.24 ms, found 6 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.3.2f1 (d74737c6db50)
-[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.3.2f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path C:/Users/max79/Unity projects/Robot_Fighter_3D/Assets
+[Subsystems] Discovering subsystems at path F:/Unity Hub/Editors/2022.3.2f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path F:/Unity Projects/Robot_Fighter_3D/Assets
 GfxDevice: creating device client; threaded=0; jobified=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
-    Renderer: NVIDIA GeForce GTX 1050 (ID=0x1c8d)
-    Vendor:   NVIDIA
-    VRAM:     4020 MB
-    Driver:   31.0.15.3667
+    Renderer: AMD Radeon(TM) Graphics (ID=0x1638)
+    Vendor:   ATI
+    VRAM:     7887 MB
+    Driver:   30.0.13044.14002
+Shader 'RealCar/RealCarGlass': fallback shader 'Transparent' not found
 Initialize mono
-Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.3.2f1/Editor/Data/Managed'
-Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.3.2f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
-Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.3.2f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56400
+Mono path[0] = 'F:/Unity Hub/Editors/2022.3.2f1/Editor/Data/Managed'
+Mono path[1] = 'F:/Unity Hub/Editors/2022.3.2f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'F:/Unity Hub/Editors/2022.3.2f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56784
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
-Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.2f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
-Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.2f1/Editor/Data/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
-Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.2f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
-Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.2f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll
-Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.2f1/Editor/Data/PlaybackEngines/AppleTVSupport/UnityEditor.AppleTV.Extensions.dll
-Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.2f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.2f1/Editor/Data/PlaybackEngines/MetroSupport/UnityEditor.UWP.Extensions.dll
-Registered in 0.027946 seconds.
-- Loaded All Assemblies, in  0.687 seconds
+Register platform support module: F:/Unity Hub/Editors/2022.3.2f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: F:/Unity Hub/Editors/2022.3.2f1/Editor/Data/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
+Register platform support module: F:/Unity Hub/Editors/2022.3.2f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
+Register platform support module: F:/Unity Hub/Editors/2022.3.2f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll
+Register platform support module: F:/Unity Hub/Editors/2022.3.2f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Register platform support module: F:/Unity Hub/Editors/2022.3.2f1/Editor/Data/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll
+Register platform support module: F:/Unity Hub/Editors/2022.3.2f1/Editor/Data/PlaybackEngines/MetroSupport/UnityEditor.UWP.Extensions.dll
+Registered in 0.863990 seconds.
+- Loaded All Assemblies, in  8.161 seconds
 Native extension for UWP target not found
+Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
-[usbmuxd] Start listen thread
-[usbmuxd] Listen thread started
-Native extension for AppleTV target not found
 [usbmuxd] Start listen thread
 [usbmuxd] Listen thread started
 Native extension for iOS target not found
 Native extension for Android target not found
-Android Extension - Scanning For ADB Devices 436 ms
+Android Extension - Scanning For ADB Devices 509 ms
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.050 seconds
-Domain Reload Profiling: 1734ms
-	BeginReloadAssembly (159ms)
+- Finished resetting the current domain, in  1.250 seconds
+Domain Reload Profiling: 9411ms
+	BeginReloadAssembly (5047ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (67ms)
-	RebuildNativeTypeToScriptingClass (21ms)
-	initialDomainReloadingComplete (126ms)
-	LoadAllAssembliesAndSetupDomain (311ms)
-		LoadAssemblies (158ms)
+	RebuildCommonClasses (452ms)
+	RebuildNativeTypeToScriptingClass (11ms)
+	initialDomainReloadingComplete (923ms)
+	LoadAllAssembliesAndSetupDomain (1727ms)
+		LoadAssemblies (5048ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (301ms)
-			TypeCache.Refresh (300ms)
-				TypeCache.ScanAssembly (275ms)
+		AnalyzeDomain (1722ms)
+			TypeCache.Refresh (1721ms)
+				TypeCache.ScanAssembly (1419ms)
 			ScanForSourceGeneratedMonoScriptInfo (1ms)
 			ResolveRequiredComponents (1ms)
-	FinalizeReload (1050ms)
+	FinalizeReload (1251ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (939ms)
+		SetupLoadedEditorAssemblies (1177ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (702ms)
-			SetLoadedEditorAssemblies (6ms)
+			InitializePlatformSupportModulesInManaged (971ms)
+			SetLoadedEditorAssemblies (5ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (5ms)
-			ProcessInitializeOnLoadAttributes (159ms)
-			ProcessInitializeOnLoadMethodAttributes (68ms)
+			BeforeProcessingInitializeOnLoad (3ms)
+			ProcessInitializeOnLoadAttributes (132ms)
+			ProcessInitializeOnLoadMethodAttributes (66ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -131,90 +130,69 @@ Domain Reload Profiling: 1734ms
 ========================================================================
 Worker process is ready to serve import requests
 Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\max79\Unity projects\Robot_Fighter_3D\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image F:\Unity Projects\Robot_Fighter_3D\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory is not a mono symbol file
 Symbol file LoadedFromMemory is not a mono symbol file
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file LoadedFromMemory doesn't match image C:\Users\max79\Unity projects\Robot_Fighter_3D\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image F:\Unity Projects\Robot_Fighter_3D\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Symbol file LoadedFromMemory is not a mono symbol file
 Symbol file LoadedFromMemory is not a mono symbol file
-- Loaded All Assemblies, in  1.566 seconds
-Refreshing native plugins compatible for Editor in 39.73 ms, found 6 plugins.
+- Loaded All Assemblies, in 12.218 seconds
+Refreshing native plugins compatible for Editor in 20.15 ms, found 6 plugins.
 Native extension for UWP target not found
+Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
-Native extension for AppleTV target not found
 Native extension for iOS target not found
 Native extension for Android target not found
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
-Unable to write to 'ProjectSettings\GvhProjectSettings.xml' (System.IO.IOException: Sharing violation on path C:\Users\max79\Unity projects\Robot_Fighter_3D\ProjectSettings\GvhProjectSettings.xml
-  at System.IO.FileStream..ctor (System.String path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share, System.Int32 bufferSize, System.Boolean anonymous, System.IO.FileOptions options) [0x0019e] in <605bf8b31fcb444b85176da963870aa7>:0 
-  at System.IO.FileStream..ctor (System.String path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share, System.Int32 bufferSize, System.IO.FileOptions options) [0x00000] in <605bf8b31fcb444b85176da963870aa7>:0 
-  at System.IO.FileStream..ctor (System.String path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share, System.Int32 bufferSize, System.Boolean useAsync) [0x00000] in <605bf8b31fcb444b85176da963870aa7>:0 
-  at (wrapper remoting-invoke-with-check) System.IO.FileStream..ctor(string,System.IO.FileMode,System.IO.FileAccess,System.IO.FileShare,int,bool)
-  at System.Xml.XmlWriterSettings.CreateWriter (System.String outputFileName) [0x00051] in <9a0f277cf5334b3bbc854d5936c11028>:0 
-  at System.Xml.XmlWriter.Create (System.String outputFileName, System.Xml.XmlWriterSettings settings) [0x0000a] in <9a0f277cf5334b3bbc854d5936c11028>:0 
-  at Google.ProjectSettings.Save () [0x0006d] in /Users/chkuang/Workspace/git/unity-jar-resolver/source/VersionHandlerImpl/src/ProjectSettings.cs:821 , Project settings were not saved!
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogError (object)
-Google.Logger:Log (string,Google.LogLevel) (at /Users/chkuang/Workspace/git/unity-jar-resolver/source/VersionHandlerImpl/src/Logger.cs:136)
-Google.ProjectSettings:Save () (at /Users/chkuang/Workspace/git/unity-jar-resolver/source/VersionHandlerImpl/src/ProjectSettings.cs:844)
-Google.ProjectSettings:SetBool (string,bool,Google.SettingsLocation) (at /Users/chkuang/Workspace/git/unity-jar-resolver/source/VersionHandlerImpl/src/ProjectSettings.cs:485)
-Google.ProjectSettings:SetBool (string,bool) (at /Users/chkuang/Workspace/git/unity-jar-resolver/source/VersionHandlerImpl/src/ProjectSettings.cs:497)
-Google.IOSResolver:set_VerboseLoggingEnabled (bool) (at /Users/chkuang/Workspace/git/unity-jar-resolver/source/IOSResolver/src/IOSResolver.cs:1040)
-Google.IOSResolver:.cctor () (at /Users/chkuang/Workspace/git/unity-jar-resolver/source/IOSResolver/src/IOSResolver.cs:726)
-System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
-
-(Filename: /Users/chkuang/Workspace/git/unity-jar-resolver/source/VersionHandlerImpl/src/ProjectSettings.cs Line: 844)
-
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.629 seconds
-Domain Reload Profiling: 3187ms
-	BeginReloadAssembly (184ms)
+- Finished resetting the current domain, in  1.070 seconds
+Domain Reload Profiling: 13287ms
+	BeginReloadAssembly (148ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (9ms)
+		DisableScriptedObjects (6ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (29ms)
-	RebuildCommonClasses (53ms)
-	RebuildNativeTypeToScriptingClass (19ms)
-	initialDomainReloadingComplete (89ms)
-	LoadAllAssembliesAndSetupDomain (1212ms)
-		LoadAssemblies (654ms)
+		CreateAndSetChildDomain (30ms)
+	RebuildCommonClasses (39ms)
+	RebuildNativeTypeToScriptingClass (12ms)
+	initialDomainReloadingComplete (56ms)
+	LoadAllAssembliesAndSetupDomain (11962ms)
+		LoadAssemblies (11115ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (647ms)
-			TypeCache.Refresh (582ms)
-				TypeCache.ScanAssembly (558ms)
-			ScanForSourceGeneratedMonoScriptInfo (51ms)
+		AnalyzeDomain (916ms)
+			TypeCache.Refresh (864ms)
+				TypeCache.ScanAssembly (797ms)
+			ScanForSourceGeneratedMonoScriptInfo (39ms)
 			ResolveRequiredComponents (13ms)
-	FinalizeReload (1630ms)
+	FinalizeReload (1070ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (1316ms)
+		SetupLoadedEditorAssemblies (838ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (54ms)
-			SetLoadedEditorAssemblies (13ms)
+			InitializePlatformSupportModulesInManaged (47ms)
+			SetLoadedEditorAssemblies (5ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (248ms)
-			ProcessInitializeOnLoadAttributes (746ms)
-			ProcessInitializeOnLoadMethodAttributes (246ms)
-			AfterProcessingInitializeOnLoad (8ms)
+			BeforeProcessingInitializeOnLoad (99ms)
+			ProcessInitializeOnLoadAttributes (511ms)
+			ProcessInitializeOnLoadMethodAttributes (174ms)
+			AfterProcessingInitializeOnLoad (2ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (11ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.18 seconds
-Refreshing native plugins compatible for Editor in 66.33 ms, found 6 plugins.
+		AwakeInstancesAfterBackupRestoration (10ms)
+Shader 'RealCar/RealCarGlass': fallback shader 'Transparent' not found
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.09 seconds
+Refreshing native plugins compatible for Editor in 16.53 ms, found 6 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 5522 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 274 unused Assets / (1.6 MB). Loaded Objects now: 5837.
-Memory consumption went from 247.3 MB to 245.7 MB.
-Total: 11.348700 ms (FindLiveObjects: 0.465800 ms CreateObjectMapping: 0.536300 ms MarkObjects: 9.546300 ms  DeleteObjects: 0.798900 ms)
+Unloading 5525 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 274 unused Assets / (1.6 MB). Loaded Objects now: 5839.
+Memory consumption went from 249.4 MB to 247.7 MB.
+Total: 15.721300 ms (FindLiveObjects: 0.762700 ms CreateObjectMapping: 0.287000 ms MarkObjects: 13.874800 ms  DeleteObjects: 0.794700 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
   custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
@@ -226,82 +204,283 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 71179.874724 seconds.
-  path: Assets/Basov/Basov Gameplay.unity
-  artifactKey: Guid(ac0c7c1904bdc964b92886a6d829823d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Basov/Basov Gameplay.unity using Guid(ac0c7c1904bdc964b92886a6d829823d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ea663caf270c73f783969f1cb936e8e6') in 0.006102 seconds
+  Time since last request: 3187.375976 seconds.
+  path: Assets/Basov/new models/stations.fbx
+  artifactKey: Guid(68afc8c8c35f05d43ad1df13fb5e6f9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Basov/new models/stations.fbx using Guid(68afc8c8c35f05d43ad1df13fb5e6f9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ffa68feaba9163e0d747e32e73d4fb80') in 2.186046 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
+Number of asset objects unloaded after import = 985
 ========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\max79\Unity projects\Robot_Fighter_3D\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file LoadedFromMemory doesn't match image C:\Users\max79\Unity projects\Robot_Fighter_3D\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file LoadedFromMemory is not a mono symbol file
-- Loaded All Assemblies, in  2.171 seconds
-Refreshing native plugins compatible for Editor in 48.51 ms, found 6 plugins.
-Native extension for UWP target not found
-Native extension for WindowsStandalone target not found
-Native extension for AppleTV target not found
-Native extension for iOS target not found
-Native extension for Android target not found
-Native extension for OSXStandalone target not found
-Native extension for WebGL target not found
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  2.607 seconds
-Domain Reload Profiling: 4767ms
-	BeginReloadAssembly (335ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (28ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (103ms)
-	RebuildCommonClasses (67ms)
-	RebuildNativeTypeToScriptingClass (36ms)
-	initialDomainReloadingComplete (94ms)
-	LoadAllAssembliesAndSetupDomain (1628ms)
-		LoadAssemblies (955ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (801ms)
-			TypeCache.Refresh (766ms)
-				TypeCache.ScanAssembly (739ms)
-			ScanForSourceGeneratedMonoScriptInfo (10ms)
-			ResolveRequiredComponents (26ms)
-	FinalizeReload (2607ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (1445ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (92ms)
-			SetLoadedEditorAssemblies (14ms)
-			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (257ms)
-			ProcessInitializeOnLoadAttributes (806ms)
-			ProcessInitializeOnLoadMethodAttributes (265ms)
-			AfterProcessingInitializeOnLoad (10ms)
-			EditorAssembliesLoaded (1ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (25ms)
-Refreshing native plugins compatible for Editor in 57.54 ms, found 6 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 5369 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 262 unused Assets / (1.6 MB). Loaded Objects now: 5842.
-Memory consumption went from 207.2 MB to 205.6 MB.
-Total: 19.658200 ms (FindLiveObjects: 0.792800 ms CreateObjectMapping: 0.719000 ms MarkObjects: 17.125700 ms  DeleteObjects: 1.018800 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+Received Import Request.
+  Time since last request: 4751.004428 seconds.
+  path: Assets/_Materials/city_wall.mat
+  artifactKey: Guid(fb69510061252384b8a05415b9e101a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Materials/city_wall.mat using Guid(fb69510061252384b8a05415b9e101a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '94b7b2a9ca75e151c7df10614d04d273') in 0.344081 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 2.638805 seconds.
+  path: Assets/_Materials/In Game/Barrel.mat
+  artifactKey: Guid(86feba0259c6302498cdc1276644f3f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Materials/In Game/Barrel.mat using Guid(86feba0259c6302498cdc1276644f3f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7459eba59eae30083f03cb2aa8c62de7') in 0.030884 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/_Materials/In Game/White.mat
+  artifactKey: Guid(bfd7f1bd9f1902b498e2aed2a185d42a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Materials/In Game/White.mat using Guid(bfd7f1bd9f1902b498e2aed2a185d42a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c21f66256e387183020f0fff541c1b0e') in 0.017375 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/_Materials/In Game/Earth.mat
+  artifactKey: Guid(acf8a20e3dd584642a6cf7697045556b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Materials/In Game/Earth.mat using Guid(acf8a20e3dd584642a6cf7697045556b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0b82c79502afd186892409b821f5149c') in 0.102047 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000047 seconds.
+  path: Assets/_Materials/In Game/New Material.mat
+  artifactKey: Guid(89f9cf7e074014c428342039271a7ed7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Materials/In Game/New Material.mat using Guid(89f9cf7e074014c428342039271a7ed7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6c29277541a7fabf042c11137f59ed60') in 0.023726 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/_Materials/In Game/Black.mat
+  artifactKey: Guid(825d5ee47dce13641ab15e5a633b5ae1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Materials/In Game/Black.mat using Guid(825d5ee47dce13641ab15e5a633b5ae1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '26bfc4e60812d307bba0d8e9a55b7b30') in 0.029015 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/_Materials/In Game/Wall Red.mat
+  artifactKey: Guid(c195419ad56cc684593dc9f3a037e060) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Materials/In Game/Wall Red.mat using Guid(c195419ad56cc684593dc9f3a037e060) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '913f658211c35afdd73fdd3c26a7b4b4') in 0.111704 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.481276 seconds.
+  path: Assets/_Materials/In Game/Buildings/Blue Steel.mat
+  artifactKey: Guid(b53d785bb63989f458fbb54e90eb4610) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Materials/In Game/Buildings/Blue Steel.mat using Guid(b53d785bb63989f458fbb54e90eb4610) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1074d24ce4fcc18fed66c94fbaed2e97') in 0.018795 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/_Materials/In Game/Buildings/Orange Steel.mat
+  artifactKey: Guid(b911664a3d173ad4c9e92d99273373bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Materials/In Game/Buildings/Orange Steel.mat using Guid(b911664a3d173ad4c9e92d99273373bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fb2e20c9c271400e1829e23be55f0ba4') in 0.020624 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/_Materials/In Game/Buildings/Green Steel.mat
+  artifactKey: Guid(295259731d5b76a4ebbb6e5dd9b834cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Materials/In Game/Buildings/Green Steel.mat using Guid(295259731d5b76a4ebbb6e5dd9b834cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0532f4d84eb22c5d03b136c9c0e6ca88') in 0.014601 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/_Materials/In Game/Buildings/Stell.mat
+  artifactKey: Guid(71ee0fa7d5e1a884997a49d8b25a097b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Materials/In Game/Buildings/Stell.mat using Guid(71ee0fa7d5e1a884997a49d8b25a097b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9da00c80de236f56e5d874f02466dffa') in 0.038152 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 1.655341 seconds.
+  path: Assets/_Materials/In Game/Flor/Dark Purple 2.mat
+  artifactKey: Guid(f19c868ff42a06244b8b8871b7086b35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Materials/In Game/Flor/Dark Purple 2.mat using Guid(f19c868ff42a06244b8b8871b7086b35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5aeb56294ffc504a52729895144aca19') in 0.071688 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/_Materials/In Game/Flor/Ground.mat
+  artifactKey: Guid(4f68d00318e27a24eb00ce131eb6c173) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Materials/In Game/Flor/Ground.mat using Guid(4f68d00318e27a24eb00ce131eb6c173) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '064037691e6b1192a6c7b1fb1ef40453') in 0.036762 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/_Materials/In Game/Flor/Orange.mat
+  artifactKey: Guid(220139d4faa66da43924cf039dbdd3b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Materials/In Game/Flor/Orange.mat using Guid(220139d4faa66da43924cf039dbdd3b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'faf54239f1bdde1b78e59a6e2cc7bd4a') in 0.058481 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/_Materials/In Game/Flor/Flor 3.mat
+  artifactKey: Guid(4fb707fbd3ba8fd4cbff02a4b92ba9e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Materials/In Game/Flor/Flor 3.mat using Guid(4fb707fbd3ba8fd4cbff02a4b92ba9e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '53fee5d2679a85a82bb47fa9109b8d37') in 0.018947 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/_Materials/In Game/Flor/Flor 2 Optimize.mat
+  artifactKey: Guid(f644a223557b89543af93320820ecc8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Materials/In Game/Flor/Flor 2 Optimize.mat using Guid(f644a223557b89543af93320820ecc8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2c5ee0d3e2b969a80ab50fc27c6e1406') in 0.031846 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.622890 seconds.
+  path: Assets/_Materials/In Game/Mine/Fly down mine.mat
+  artifactKey: Guid(815fb4dc35c50384c8ccc2ad1dbd0589) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Materials/In Game/Mine/Fly down mine.mat using Guid(815fb4dc35c50384c8ccc2ad1dbd0589) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a2dfe47c66a34c4d1c950f8294fc13cf') in 0.027995 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/_Materials/In Game/Mine/Keg Yellow.mat
+  artifactKey: Guid(d0394c541f5cde441920d71903beed30) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Materials/In Game/Mine/Keg Yellow.mat using Guid(d0394c541f5cde441920d71903beed30) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9192ed394ba242655599b959b0e824fd') in 0.037206 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/_Materials/In Game/Mine/Keg Purple.mat
+  artifactKey: Guid(7cb98ac22059ef648805e59bf96ec9e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Materials/In Game/Mine/Keg Purple.mat using Guid(7cb98ac22059ef648805e59bf96ec9e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a29aab6d0a714c293929e8fe1008913') in 0.029881 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.475486 seconds.
+  path: Assets/_Materials/In Game/Tree/Green.mat
+  artifactKey: Guid(2fb14c33dcb89e6429992ac610b01acf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Materials/In Game/Tree/Green.mat using Guid(2fb14c33dcb89e6429992ac610b01acf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ea3349941826a5a9b4f773408631dbec') in 0.025142 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/_Materials/In Game/Tree/Tree orange.mat
+  artifactKey: Guid(68c5d26a04811ae4e9fd04f592ab773b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Materials/In Game/Tree/Tree orange.mat using Guid(68c5d26a04811ae4e9fd04f592ab773b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '81d4c1493787bc92e97a0825acded64d') in 0.032599 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000051 seconds.
+  path: Assets/_Materials/In Game/Tree/Stone.mat
+  artifactKey: Guid(d43259cf91adb0646b5c10a79bcabb2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Materials/In Game/Tree/Stone.mat using Guid(d43259cf91adb0646b5c10a79bcabb2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a8f56ef5f939a617b04a0cd41a9609b4') in 0.017475 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 5023.376228 seconds.
+  path: Assets/_Prefabs/GamePlay_UI.prefab
+  artifactKey: Guid(eaaa1e13fa48c33499ce4bec8f89abc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Prefabs/GamePlay_UI.prefab using Guid(eaaa1e13fa48c33499ce4bec8f89abc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5c6d47701b65ef27496094183f2f4a06') in 0.204402 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 214
+========================================================================
+Received Import Request.
+  Time since last request: 0.000100 seconds.
+  path: Assets/_Prefabs/Vampire Hunter.prefab
+  artifactKey: Guid(de7982ee54df7614b82270f6d0d8ca9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Prefabs/Vampire Hunter.prefab using Guid(de7982ee54df7614b82270f6d0d8ca9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f4048a4d8e6f00a45655d8defbd2e464') in 0.193367 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 191
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/_Prefabs/Wasp Robot.prefab
+  artifactKey: Guid(bbd70a7ba3268be48af4c1e913b1f95f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Prefabs/Wasp Robot.prefab using Guid(bbd70a7ba3268be48af4c1e913b1f95f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '034c7d2f89f895623812084e0f61f8f0') in 0.200232 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 537
+========================================================================
+Received Import Request.
+  Time since last request: 0.197935 seconds.
+  path: Assets/_Models/Destroyed ATM.fbx
+  artifactKey: Guid(4b397a8b1d1529141a70579602aaa42e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Models/Destroyed ATM.fbx using Guid(4b397a8b1d1529141a70579602aaa42e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ab3e5a0802ec034a6489c77db4327cb5') in 0.176942 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 44
+========================================================================
+Received Import Request.
+  Time since last request: 0.205909 seconds.
+  path: Assets/_Materials/Materials/Sign01_emissive.mat
+  artifactKey: Guid(0c1ce3d4583b5bb43a65830b03fc76cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Materials/Materials/Sign01_emissive.mat using Guid(0c1ce3d4583b5bb43a65830b03fc76cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a2f83f4521d2c7ee48f7fe01d3f71c92') in 0.031406 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 2133.647787 seconds.
+  path: Assets/_Prefabs/Enemies/Enemy Characters/Characters/Chinese Female/Materials/1d66a3c0.mat
+  artifactKey: Guid(dde4a139165c79941bfb961671ccd5d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Prefabs/Enemies/Enemy Characters/Characters/Chinese Female/Materials/1d66a3c0.mat using Guid(dde4a139165c79941bfb961671ccd5d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'de18de1281a404b016b6263db71ae178') in 0.140390 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000066 seconds.
+  path: Assets/_Effects/Realistic Effects Pack/Materials/Projectiles/BlueFireball2/Ball.mat
+  artifactKey: Guid(34f18ceef5d39f2469d4866122e252bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Effects/Realistic Effects Pack/Materials/Projectiles/BlueFireball2/Ball.mat using Guid(34f18ceef5d39f2469d4866122e252bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b60c34bedf58e1f7887fd3bfe5488fa7') in 0.045759 seconds
+Internal: JobTempAlloc has allocations that are more than the maximum lifespan of 4 frames old - this is not allowed and likely a leak
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/_Materials/In Game/Materials/ArcadeMachine01_WWF_metallic.mat
+  artifactKey: Guid(2cc0e0602ad0ae84d87787d35b8133e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Materials/In Game/Materials/ArcadeMachine01_WWF_metallic.mat using Guid(2cc0e0602ad0ae84d87787d35b8133e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '239413f8fef0fce21204cfd0fd766531') in 0.018887 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.942531 seconds.
+  path: Assets/_Effects/EffectExamples/Blood/Materials/BloodPoolParticle.mat
+  artifactKey: Guid(95be4df36eca6eb4b821dcab4acd4a1e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Effects/EffectExamples/Blood/Materials/BloodPoolParticle.mat using Guid(95be4df36eca6eb4b821dcab4acd4a1e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '10de997fc9ecbe4595788f7f47934b21') in 0.093402 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Skyboxes/Beautiful Skyboxes/Materials/Boss 1.mat
+  artifactKey: Guid(fc28aed907c141948a8624b292c9fc5a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Skyboxes/Beautiful Skyboxes/Materials/Boss 1.mat using Guid(fc28aed907c141948a8624b292c9fc5a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00611a9e6d3c45dd09c883b647d0225e') in 0.238632 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
