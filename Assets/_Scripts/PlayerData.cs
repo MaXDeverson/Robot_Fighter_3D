@@ -13,7 +13,7 @@ public class PlayerData
     private int _currentLevelCash;
     private PlayerData()
     {
-        Debug.Log("Player Data Init");
+       
     }
 
     public static PlayerData GetPlayerData()

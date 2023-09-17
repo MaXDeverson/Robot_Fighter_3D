@@ -32,27 +32,34 @@ public class Manager : MonoBehaviour
     [SerializeField] private Text _dialogWindowText;
     [Header("Settings")]
     [SerializeField] private bool _spawnLevel = true;
+    [SerializeField] private bool _spawnEnviroment = false;
+    [SerializeField] private int _currentLevelIndex;
 
     void Awake()
     {
+        if(_currentLevelIndex>=0)General.CurrentLevel = _currentLevelIndex;
         instance = this;
         Time.timeScale = 0f;
         if (_spawnLevel)
         {
             if (levels.Length == 0) return;
             RenderSettings.skybox = skyboxArr[General.CurrentLevel];
-            Instantiate(environments[General.CurrentLevel], environments[General.CurrentLevel].transform.position, environments[General.CurrentLevel].transform.rotation);
+            if(_spawnEnviroment) Instantiate(environments[General.CurrentLevel], environments[General.CurrentLevel].transform.position, environments[General.CurrentLevel].transform.rotation);
 
             levels = new GameObject[LevelsParent.transform.childCount];
             for (int i = 0; i < LevelsParent.transform.childCount; i++)
             {
                 levels[i] = LevelsParent.transform.GetChild(i).gameObject;
             }
+            for(int i = 0;i < levels.Length; i++)
+            {
+                levels[i].gameObject.SetActive(i == General.CurrentLevel);
+            }
             levels[General.CurrentLevel].SetActive(true);
+            levels[General.CurrentLevel].transform.GetChild(0).GetComponent<EnemyWaveSystem>().Init();
         }
         barish.SetActive(General.CurrentLevel % 2 != 0);
         health = totalHealth = healthArray[General.CurrentLevel];
-
         score = scoreArray[General.CurrentLevel];
         objText.text = objTextArray[General.CurrentLevel];
 
@@ -78,6 +85,7 @@ public class Manager : MonoBehaviour
         btn_okay.GetComponent<Button>().interactable = false;
         //ShowObjective();
         ShowWeaponChoise();
+        Debug.Log("Current Level:" + General.CurrentLevel);
     }
 
     void MissionCompleteSound()
