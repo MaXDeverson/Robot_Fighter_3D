@@ -22,7 +22,8 @@ public class EnemyWaveSystem : MonoBehaviour
     [Header("Dor Animation")]
     [SerializeField] private Openable _openable;
     [SerializeField] private CameraFollow _camera;
-    [SerializeField] private List<float> _maxValues;
+    [SerializeField] private BoxCollider _finishCollider;
+   // [SerializeField] private List<float> _maxValues;
     void OnEnable()
     {
         EnemyActions.OnUnitDestroy += onUnitDestroy;
@@ -40,21 +41,27 @@ public class EnemyWaveSystem : MonoBehaviour
 
     public void Init()
     {
-        _camera.MaxRight = _maxValues[0];
+       // _camera.MaxRight = _maxValues[0];
     }
-
+    public void SetFinishOpenable(Openable op)
+    {
+        _openable = op;
+    }
     void Start()
     {
-        currentWave = 0;
-        UpdateAreaColliders();
-        StartNewWave();
         if (_openable != null)
         {
             _openable.OnEntered += obj =>
             {
                 StartCoroutine(LevelComplete());
             };
+            _openable.PhysicRestriction = _finishCollider.gameObject;
         }
+        currentWave = 0;
+        if(_openable)
+        UpdateAreaColliders();
+        StartNewWave();
+       
     }
 
     //Disable all the enemies
@@ -119,14 +126,17 @@ public class EnemyWaveSystem : MonoBehaviour
         }
 
         //set next collider as camera area restrictor
+        CameraFollow cf = GameObject.FindObjectOfType<CameraFollow>();
         if (EnemyWaves[currentWave].AreaCollider != null)
         {
             EnemyWaves[currentWave].AreaCollider.gameObject.SetActive(true);
+            
+            cf.SetRestrictionCollider(EnemyWaves[currentWave].AreaCollider);
         }
-
-        CameraFollow cf = GameObject.FindObjectOfType<CameraFollow>();
-        if (cf != null) cf.CurrentAreaCollider = EnemyWaves[currentWave].AreaCollider;
-
+        else
+        {
+            cf.SetRestrictionCollider(_openable.PhysicRestriction.GetComponent<BoxCollider>());
+        }
         //show UI hand pointer
         HandPointer hp = GameObject.FindObjectOfType<HandPointer>();
         if (hp != null) hp.ActivateHandPointer();

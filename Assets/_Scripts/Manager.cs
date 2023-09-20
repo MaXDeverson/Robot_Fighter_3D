@@ -44,7 +44,14 @@ public class Manager : MonoBehaviour
         {
             if (levels.Length == 0) return;
             RenderSettings.skybox = skyboxArr[General.CurrentLevel];
-            if(_spawnEnviroment) Instantiate(environments[General.CurrentLevel], environments[General.CurrentLevel].transform.position, environments[General.CurrentLevel].transform.rotation);
+            if (_spawnEnviroment)
+            {
+               GameObject env = Instantiate(environments[General.CurrentLevel], environments[General.CurrentLevel].transform.position, environments[General.CurrentLevel].transform.rotation);
+               if(env.transform.GetChild(0).TryGetComponent<Openable>(out Openable openable))
+                {
+                    levels[General.CurrentLevel].transform.GetChild(0).GetComponent<EnemyWaveSystem>().SetFinishOpenable(openable);
+                }
+            }
 
             levels = new GameObject[LevelsParent.transform.childCount];
             for (int i = 0; i < LevelsParent.transform.childCount; i++)

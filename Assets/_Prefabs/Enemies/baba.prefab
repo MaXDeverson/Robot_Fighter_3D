@@ -30,6 +30,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.30999994, y: 0, z: -0.48000002}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2218331449707165893}
   - {fileID: 8455740311915959462}
@@ -45,8 +46,17 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2223512542933444961}
   m_Material: {fileID: 13400000, guid: c3496fc1bd7a3d140810de56cc293ce6, type: 2}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
   m_Enabled: 1
+  serializedVersion: 2
   m_Radius: 0.4
   m_Height: 2
   m_Direction: 1
@@ -58,10 +68,21 @@ Rigidbody:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2223512542933444961}
-  serializedVersion: 2
+  serializedVersion: 4
   m_Mass: 3
   m_Drag: 0
   m_AngularDrag: 0
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -82,8 +103,8 @@ MonoBehaviour:
   MaxHp: 35
   CurrentHp: 35
   invulnerable: 0
-  HUDPortrait: {fileID: 0}
-  PlayerName: 
+  HUDPortrait: {fileID: 21300000, guid: 8c07eaf22e0c1da4e84343aaa1b16eac, type: 3}
+  PlayerName: Hachumachi Hatama
 --- !u!114 &2251858411648179311
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -231,6 +252,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2222202344077949709}
   m_RootOrder: 0
@@ -254,6 +276,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -309,6 +332,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 2222202344077949709}
     m_Modifications:
     - target: {fileID: 8608439370983034532, guid: e11b7d6645ced0b4fb70b9b015fcc1d4, type: 3}
@@ -360,12 +384,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e11b7d6645ced0b4fb70b9b015fcc1d4, type: 3}
---- !u!4 &8455740311915959462 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8952172352844469278, guid: e11b7d6645ced0b4fb70b9b015fcc1d4, type: 3}
-  m_PrefabInstance: {fileID: 676756349306896568}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &7497138753434863449 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7020968512682280929, guid: e11b7d6645ced0b4fb70b9b015fcc1d4, type: 3}
@@ -377,11 +399,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3823eadb584051942908677b03d951e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &8455740311915959462 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8952172352844469278, guid: e11b7d6645ced0b4fb70b9b015fcc1d4, type: 3}
+  m_PrefabInstance: {fileID: 676756349306896568}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8196531827419141085
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 2222202344077949709}
     m_Modifications:
     - target: {fileID: 100000, guid: aa1efb3a7907b29429fd579f2d811fcf, type: 3}
@@ -445,15 +473,16 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: aa1efb3a7907b29429fd579f2d811fcf, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8196531827419141072}
   m_SourcePrefab: {fileID: 100100000, guid: aa1efb3a7907b29429fd579f2d811fcf, type: 3}
 --- !u!1 &8196531827419239805 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: aa1efb3a7907b29429fd579f2d811fcf, type: 3}
-  m_PrefabInstance: {fileID: 8196531827419141085}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &8196531827419531613 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 400000, guid: aa1efb3a7907b29429fd579f2d811fcf, type: 3}
   m_PrefabInstance: {fileID: 8196531827419141085}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &8196531827419141072
@@ -474,3 +503,8 @@ MonoBehaviour:
   HitEffect: {fileID: 115594, guid: efd3011863918584d94591e177fa8d29, type: 3}
   DefendEffect: {fileID: 194486, guid: 103ca3ac1720c8445935db20b30e3305, type: 3}
   animator: {fileID: 0}
+--- !u!4 &8196531827419531613 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: aa1efb3a7907b29429fd579f2d811fcf, type: 3}
+  m_PrefabInstance: {fileID: 8196531827419141085}
+  m_PrefabAsset: {fileID: 0}

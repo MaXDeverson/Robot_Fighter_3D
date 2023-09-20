@@ -1,5 +1,38 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5019077347492575400
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 100082, guid: ccdacf394eb9d404ca9fbc5a39aa0fb4, type: 3}
+  m_PrefabInstance: {fileID: 5019077347492544090}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5019077347492930696}
+  - component: {fileID: 5019077347656092997}
+  - component: {fileID: 7911270536669342243}
+  m_Layer: 0
+  m_Name: 'Vampire Hunter (Missing Prefab with guid: ccdacf394eb9d404ca9fbc5a39aa0fb4)'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5019077347492930696
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 400082, guid: ccdacf394eb9d404ca9fbc5a39aa0fb4, type: 3}
+  m_PrefabInstance: {fileID: 5019077347492544090}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5019077347492575400}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.89757, y: 0.89757, z: 0.89757}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6589189580339823108}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &6591480889892011760
 GameObject:
   m_ObjectHideFlags: 0
@@ -207,8 +240,8 @@ MonoBehaviour:
   MaxHp: 28
   CurrentHp: 28
   invulnerable: 0
-  HUDPortrait: {fileID: 0}
-  PlayerName: 
+  HUDPortrait: {fileID: 21300000, guid: e92152c97554ab743bf40239e9220438, type: 3}
+  PlayerName: Pinky
 --- !u!114 &6550324074274481510
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -684,12 +717,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100082, guid: ccdacf394eb9d404ca9fbc5a39aa0fb4, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5019077347656092997}
+    - targetCorrespondingSourceObject: {fileID: 100082, guid: ccdacf394eb9d404ca9fbc5a39aa0fb4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7911270536669342243}
   m_SourcePrefab: {fileID: 100100000, guid: ccdacf394eb9d404ca9fbc5a39aa0fb4, type: 3}
---- !u!1 &5019077347492575400 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 100082, guid: ccdacf394eb9d404ca9fbc5a39aa0fb4, type: 3}
-  m_PrefabInstance: {fileID: 5019077347492544090}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &5019077347656092997
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -708,8 +739,24 @@ MonoBehaviour:
   HitEffect: {fileID: 115594, guid: efd3011863918584d94591e177fa8d29, type: 3}
   DefendEffect: {fileID: 194486, guid: 103ca3ac1720c8445935db20b30e3305, type: 3}
   animator: {fileID: 0}
---- !u!4 &5019077347492930696 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 400082, guid: ccdacf394eb9d404ca9fbc5a39aa0fb4, type: 3}
-  m_PrefabInstance: {fileID: 5019077347492544090}
+--- !u!95 &7911270536669342243
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5019077347492575400}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

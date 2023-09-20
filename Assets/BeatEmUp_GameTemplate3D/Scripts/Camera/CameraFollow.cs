@@ -22,11 +22,11 @@ public class CameraFollow : MonoBehaviour {
 
 	[Header ("View Area")]
 	public float MinLeft;
-	public float MaxRight;
+	//public float MaxRight { get; set; }
 
 	[Header ("Wave Area collider")]
 	public bool UseWaveAreaCollider;
-	public BoxCollider CurrentAreaCollider;
+	private BoxCollider _currentAreaCollider { get; set; }
 	public float AreaColliderViewOffset;
 	private bool firstFrameActive;
 
@@ -36,7 +36,7 @@ public class CameraFollow : MonoBehaviour {
 		firstFrameActive = true;
 	}
 
-	void Update () {
+	void  LateUpdate () {
 		if (targets.Length > 0){
 			MiddlePosition = Vector3.zero;
 
@@ -84,19 +84,24 @@ public class CameraFollow : MonoBehaviour {
 				currentZ = FollowZAxis? (MiddlePosition.z + distanceToTarget) : distanceToTarget;
 			}
 
-			//Set cam position
-			if(CurrentAreaCollider == null) UseWaveAreaCollider = false;
-			if (!UseWaveAreaCollider) {
-				transform.position = new Vector3 (Mathf.Clamp (currentX, MaxRight, MinLeft), currentY, currentZ) + AdditionalOffset;
-			} else {
-				transform.position = new Vector3 (Mathf.Clamp (currentX, CurrentAreaCollider.transform.position.x + AreaColliderViewOffset, MinLeft), currentY, currentZ) + AdditionalOffset;
-			}
+            //Set cam position
+            transform.position = new Vector3(Mathf.Clamp(currentX, _currentAreaCollider.transform.position.x + AreaColliderViewOffset, MinLeft), currentY, currentZ) + AdditionalOffset;
+   //         if (_currentAreaCollider == null) UseWaveAreaCollider = false;
+			//if (!UseWaveAreaCollider) {
+			//	transform.position = new Vector3 (Mathf.Clamp (currentX, MaxRight, MinLeft), currentY, currentZ) + AdditionalOffset;
+			//} else {
+			//	transform.position = new Vector3 (Mathf.Clamp (currentX, _currentAreaCollider.transform.position.x + AreaColliderViewOffset, MinLeft), currentY, currentZ) + AdditionalOffset;
+			//}
 
 			//Set cam rotation
 			transform.rotation = new Quaternion(0,180f,viewAngle,0);
 		}
 	}
 
+	public void SetRestrictionCollider(BoxCollider collider) 
+	{ 
+		_currentAreaCollider = collider;
+	}
 	//updates the targets to follow
 	public void UpdatePlayerTargets(){
 		targets = GameObject.FindGameObjectsWithTag ("Player");

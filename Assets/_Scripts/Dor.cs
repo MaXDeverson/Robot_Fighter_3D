@@ -5,7 +5,6 @@ using UnityEngine;
 public class Dor : Openable
 {
     [SerializeField] private Animation _openAnimation;
-    [SerializeField] private GameObject _physicRestriction;
     [SerializeField] private bool _autoOpen;
     public override void Open()
     {
@@ -16,7 +15,7 @@ public class Dor : Openable
     private IEnumerator OffPhysic()
     {
         yield return new WaitForSeconds(3);
-        _physicRestriction.SetActive(false);
+        PhysicRestriction.SetActive(false);
     }
 
     private void OnTriggerEnter(Collider other)
