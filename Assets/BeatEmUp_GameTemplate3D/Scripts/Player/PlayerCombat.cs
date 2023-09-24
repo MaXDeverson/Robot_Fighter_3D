@@ -218,7 +218,7 @@ public class PlayerCombat : MonoBehaviour, IDamagable<DamageObject> {
 			}
 
 			//pick up an item
-			if (action == "Punch" && buttonState == BUTTONSTATE.PRESS && itemInRange != null && isGrounded) {
+			if (action == "Punch" && buttonState == BUTTONSTATE.PRESS && itemInRange != null && currentWeapon == null && isGrounded) {
 				interactWithItem();
 				return;
 			}

@@ -207,7 +207,8 @@ public class Manager : MonoBehaviour
         {
             Time.timeScale = 1;
             EnableRespectivePanel.menuPanelNum = 3;
-            StartCoroutine(AsynchronousLoad("Menu"));
+            General.CurrentLevel++;
+            StartCoroutine(AsynchronousLoad("GamePlay"));
             AudioListener.pause = false;
         });
 
