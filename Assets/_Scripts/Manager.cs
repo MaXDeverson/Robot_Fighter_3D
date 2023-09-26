@@ -210,6 +210,7 @@ public class Manager : MonoBehaviour
             General.CurrentLevel++;
             StartCoroutine(AsynchronousLoad("GamePlay"));
             AudioListener.pause = false;
+            PlayerData.GetPlayerData().RessetLevelCash();
         });
 
     }

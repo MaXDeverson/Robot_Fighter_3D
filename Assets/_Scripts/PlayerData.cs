@@ -7,13 +7,13 @@ public class PlayerData
 {
     public int AllCash { get => PlayerPrefs.GetInt("TotalScore"); private set => PlayerPrefs.SetInt("TotalScore", value); }
     public int CurrentCash { get => _currentLevelCash; }
-    private Action<int,int> _currentCashUpdate;
+    private Action<int, int> _currentCashUpdate;
     private static PlayerData _currentPlayerData;
-  
+
     private int _currentLevelCash;
     private PlayerData()
     {
-       
+
     }
 
     public static PlayerData GetPlayerData()
@@ -35,10 +35,13 @@ public class PlayerData
     {
         AllCash += cashCount;
         _currentLevelCash += cashCount;
-        _currentCashUpdate.Invoke(AllCash,_currentLevelCash);
+        _currentCashUpdate.Invoke(AllCash, _currentLevelCash);
         Debug.Log("Add Cash");
     }
-
+    public void SpendMoney(int count)
+    {
+        AllCash -= count;
+    }
     public void SetActionCashUpdate(Action<int,int> action)
     {
         Debug.Log("Set Action");
@@ -49,4 +52,6 @@ public class PlayerData
         Debug.Log("Remove acton");
         _currentCashUpdate -= action;
     }
+
+    public void RessetLevelCash() => _currentLevelCash = 0;
 }

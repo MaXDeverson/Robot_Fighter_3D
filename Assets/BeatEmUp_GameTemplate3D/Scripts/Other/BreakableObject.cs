@@ -45,7 +45,6 @@ public class BreakableObject : MonoBehaviour, IDamagable<DamageObject> {
 			if (Random.Range (0, 100) < spawnChance) {
 				GameObject item = GameObject.Instantiate (spawnItem, transform.position,Quaternion.identity);
 				//item.transform.localPosition = transform.position;
-				Debug.Log("Drop position:" + item.transform.position);
 				//add up force to object
 				item.GetComponent<Rigidbody>().velocity = Vector3.up * 8f;
 			}

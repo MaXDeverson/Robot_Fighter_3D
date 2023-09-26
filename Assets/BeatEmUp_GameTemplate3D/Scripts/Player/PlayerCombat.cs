@@ -258,7 +258,6 @@ public class PlayerCombat : MonoBehaviour, IDamagable<DamageObject> {
 				} else {
 					attackNum = 0;
 				}
-                Debug.Log("attack no" +attackNum+"   "+ PunchCombo[attackNum].animTrigger);
                 //attackNum = 4;
                 if (is_used_slow_camera)
                 {
@@ -625,10 +624,6 @@ public class PlayerCombat : MonoBehaviour, IDamagable<DamageObject> {
 		if(itemInRange == item) itemInRange = null;
 	}
 
-	public void GetMoney(int count)
-    {
-		PlayerPrefs.SetInt("TotalScore", PlayerPrefs.GetInt("TotalScore") + count);
-    }
 	//interact with an item in range
 	public void interactWithItem(){
 		if (currentWeapon == null)

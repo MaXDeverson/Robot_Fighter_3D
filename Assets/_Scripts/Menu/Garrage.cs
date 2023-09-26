@@ -53,7 +53,7 @@ public class Garrage : MonoBehaviour {
 
             //GameObject.Find("Canvas").gameObject.GetComponent<Canvas>().renderMode = RenderMode.ScreenSpaceOverlay;
         }
-		TotalEarning.text = PlayerPrefs.GetInt ("TotalScore").ToString () + "$";
+		TotalEarning.text = PlayerData.GetPlayerData().AllCash + "$";
         prices[0] = 0; prices[1] = PlayerPrefs.GetInt("jetPrice_01"); prices[2] = PlayerPrefs.GetInt("jetPrice_02");
         prices[3] = PlayerPrefs.GetInt("jetPrice_03");
         prices[4] = PlayerPrefs.GetInt("jetPrice_04");
@@ -122,8 +122,8 @@ public class Garrage : MonoBehaviour {
         characters[count].transform.GetChild(0).transform.eulerAngles = POS_ROT.transform.eulerAngles;
         characters[count].transform.GetChild(0).transform.localPosition = POS_ROT.transform.position;
 
-        if (PlayerPrefs.GetInt ("TotalScore") >= currCarPrice) {
-			PlayerPrefs.SetInt ("TotalScore", PlayerPrefs.GetInt ("TotalScore") - currCarPrice);
+        if (PlayerData.GetPlayerData().AllCash >= currCarPrice) {
+            PlayerData.GetPlayerData().SpendMoney(currCarPrice);
 			PlayerPrefs.SetInt ("Unlocked" + count, count);
 		} else {
 			HideAllVehicles ();

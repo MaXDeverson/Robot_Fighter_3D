@@ -70,6 +70,13 @@ public class EnemyActions : MonoBehaviour {
 	public float distance;
 	private Vector3 fixedVelocity;
 	private bool updateVelocity;
+	[Header("Drop")]
+	[SerializeField] protected Transform _dropObject;
+	[SerializeField] protected float _dropChance;
+	[SerializeField] private int _minHalfHundred;
+	[SerializeField] private int _maxHalfHundred;
+	private int _dropCounter;
+	private bool _isDropped;
 
 	//list of states where the enemy cannot move
 	private List<UNITSTATE> NoMovementStates = new List<UNITSTATE> {
@@ -114,6 +121,7 @@ public class EnemyActions : MonoBehaviour {
 
 	public void OnStart(){
 
+		_dropCounter = Random.Range(1, 4);
 		//assign a name to this enemy
 		if(pickARandomName) enemyName = GetRandomName();
 
@@ -357,7 +365,6 @@ public class EnemyActions : MonoBehaviour {
 	IEnumerator KnockDownSequence(GameObject inflictor) {
 		enemyState = UNITSTATE.KNOCKDOWN;
 		yield return new WaitForFixedUpdate();
-
 		//look towards the direction of the incoming attack
 		int dir = 1;
 		_lastInflictor = inflictor;
@@ -372,7 +379,15 @@ public class EnemyActions : MonoBehaviour {
 			SetVelocity(new Vector3(KnockbackForce * -dir, KnockdownUpForce, 0));
 			yield return new WaitForFixedUpdate();
 		}
-
+		if (!_isDropped && --_dropCounter<=0)
+		{
+			if(Random.Range(0f,1f) < _dropChance && _dropObject != null)
+			{
+				Transform drop = Instantiate(_dropObject,transform.position, Quaternion.identity);
+				drop.GetComponent<PickUpMoney>().SetCost(Random.Range(_minHalfHundred,_maxHalfHundred) * 50);
+			}
+			_isDropped = true;
+		}
 		//going up...
 		while(rb.velocity.y >= 0) yield return new WaitForFixedUpdate();
 

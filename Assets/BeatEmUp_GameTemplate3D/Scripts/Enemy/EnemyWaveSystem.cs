@@ -247,7 +247,6 @@ public class EnemyWaveSystem : MonoBehaviour
                     if (PlayerPrefs.GetInt("UnlockedLevels") >= 19)
                         PlayerPrefs.SetInt("UnlockedLevels", 19);
                 }
-                PlayerPrefs.SetInt("TotalScore", PlayerPrefs.GetInt("TotalScore") + Manager.instance.score);
                 if (PlayerPrefs.GetInt("ADSUNLOCK") == 0)
                 {
                     //UnityAdsManager.Instance.ShowUnityVideoAd();

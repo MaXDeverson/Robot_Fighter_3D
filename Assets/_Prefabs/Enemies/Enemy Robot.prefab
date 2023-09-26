@@ -35,7 +35,7 @@ Transform:
   - {fileID: 5144105198479008894}
   - {fileID: 3064040430937541000}
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!136 &5084887477775506046
 CapsuleCollider:
@@ -219,6 +219,10 @@ MonoBehaviour:
   isGrounded: 0
   isDead: 0
   distance: 0
+  _dropObject: {fileID: 8584760413601893381, guid: 469b4ac0db2e00442b3ef6f556917c66, type: 3}
+  _dropChance: 0.8
+  _minHalfHundred: 2
+  _maxHalfHundred: 4
   ZSpread: 0
   distanceToTarget: {x: 0, y: 0, z: 0}
   enableAI: 1
