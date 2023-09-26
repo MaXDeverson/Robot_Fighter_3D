@@ -228,7 +228,7 @@ MonoBehaviour:
   capsule: {fileID: 1524811191366270012}
   AttackList:
   - animTrigger: Attack1
-    damage: 2
+    damage: 5
     duration: 1
     comboResetTime: 0.5
     forwardForce: 0
@@ -240,13 +240,13 @@ MonoBehaviour:
     isGroundAttack: 0
     animationClip: {fileID: 0}
     animationSpeed: 0
-    CollSize: 1
-    collDistance: 0.8
-    collHeight: 1.4
+    CollSize: 2
+    collDistance: 2
+    collHeight: 2
     hitTime: 0
     inflictor: {fileID: 0}
   - animTrigger: Attack2
-    damage: 4
+    damage: 7
     duration: 1
     comboResetTime: 0.5
     forwardForce: 0
@@ -258,13 +258,13 @@ MonoBehaviour:
     isGroundAttack: 0
     animationClip: {fileID: 0}
     animationSpeed: 0
-    CollSize: 1
-    collDistance: 0.8
-    collHeight: 1.4
+    CollSize: 2
+    collDistance: 2
+    collHeight: 2
     hitTime: 0
     inflictor: {fileID: 0}
   - animTrigger: Attack3
-    damage: 3
+    damage: 6
     duration: 1
     comboResetTime: 0.5
     forwardForce: 0
@@ -276,14 +276,14 @@ MonoBehaviour:
     isGroundAttack: 0
     animationClip: {fileID: 0}
     animationSpeed: 0
-    CollSize: 1
-    collDistance: 0.8
-    collHeight: 1.4
+    CollSize: 2
+    collDistance: 2
+    collHeight: 2
     hitTime: 0
     inflictor: {fileID: 0}
   PickRandomAttack: 1
-  hitZRange: 2
-  defendChance: 45
+  hitZRange: 3
+  defendChance: 65
   hitRecoveryTime: 0.4
   standUpTime: 0.8
   canDefendDuringAttack: 1
@@ -294,7 +294,7 @@ MonoBehaviour:
   pickARandomName: 0
   enemyNamesList: {fileID: 4900000, guid: 48faffacd763b514599640f2b52243d2, type: 3}
   enemyName: YUTAKA MASARU
-  attackRangeDistance: 1.2
+  attackRangeDistance: 2
   closeRangeDistance: 2.4
   midRangeDistance: 3.5
   farRangeDistance: 4.5
@@ -302,7 +302,7 @@ MonoBehaviour:
   walkSpeed: 2
   walkBackwardSpeed: 1.2
   sightDistance: 5
-  attackInterval: 1.2
+  attackInterval: 2
   rotationSpeed: 8
   lookaheadDistance: 0.4
   ignoreCliffs: 0
