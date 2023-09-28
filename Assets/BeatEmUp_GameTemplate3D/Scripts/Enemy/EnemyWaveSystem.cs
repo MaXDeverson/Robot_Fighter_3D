@@ -58,8 +58,8 @@ public class EnemyWaveSystem : MonoBehaviour
             _openable.PhysicRestriction = _finishCollider.gameObject;
         }
         currentWave = 0;
-        if (_openable)
-            UpdateAreaColliders();
+       // if (_openable)
+        UpdateAreaColliders();
         StartNewWave();
 
     }
