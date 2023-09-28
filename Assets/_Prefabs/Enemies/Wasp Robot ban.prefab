@@ -66,7 +66,7 @@ Transform:
   - {fileID: 3044888439857737108}
   - {fileID: 8395872602197715425}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!136 &238142071772482576
 CapsuleCollider:
@@ -227,7 +227,7 @@ MonoBehaviour:
   RangeMarging: 1
   walkSpeed: 2.2
   walkBackwardSpeed: 1.2
-  sightDistance: 5
+  sightDistance: 4
   attackInterval: 1.2
   rotationSpeed: 10
   lookaheadDistance: 0.4

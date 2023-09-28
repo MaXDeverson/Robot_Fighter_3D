@@ -36,6 +36,7 @@ public class PickUpMoney : PickUpable
 	public void SetCost(int cost)=> _moneyCount = cost;
     public override void OnPickup(GameObject player)
 	{
+		if (_moneyText == null) return;
         if (!_isPickUpMoney)
         {
             _isPickUpMoney = true;

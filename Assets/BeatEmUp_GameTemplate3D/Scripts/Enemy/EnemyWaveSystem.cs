@@ -23,7 +23,7 @@ public class EnemyWaveSystem : MonoBehaviour
     [SerializeField] private Openable _openable;
     [SerializeField] private CameraFollow _camera;
     [SerializeField] private BoxCollider _finishCollider;
-   // [SerializeField] private List<float> _maxValues;
+    // [SerializeField] private List<float> _maxValues;
     void OnEnable()
     {
         EnemyActions.OnUnitDestroy += onUnitDestroy;
@@ -41,7 +41,7 @@ public class EnemyWaveSystem : MonoBehaviour
 
     public void Init()
     {
-       // _camera.MaxRight = _maxValues[0];
+        // _camera.MaxRight = _maxValues[0];
     }
     public void SetFinishOpenable(Openable op)
     {
@@ -58,10 +58,10 @@ public class EnemyWaveSystem : MonoBehaviour
             _openable.PhysicRestriction = _finishCollider.gameObject;
         }
         currentWave = 0;
-        if(_openable)
-        UpdateAreaColliders();
+        if (_openable)
+            UpdateAreaColliders();
         StartNewWave();
-       
+
     }
 
     //Disable all the enemies
@@ -122,6 +122,10 @@ public class EnemyWaveSystem : MonoBehaviour
                 areaCollider.gameObject.layer = 0;
                 AreaColliderTrigger act = areaCollider.gameObject.AddComponent<AreaColliderTrigger>();
                 act.EnemyWaveSystem = this;
+                for(int i = 0;i< areaCollider.transform.childCount;i++)
+                {
+                    areaCollider.transform.GetChild(i).gameObject.SetActive(false);
+                }
             }
         }
 
@@ -130,7 +134,7 @@ public class EnemyWaveSystem : MonoBehaviour
         if (EnemyWaves[currentWave].AreaCollider != null)
         {
             EnemyWaves[currentWave].AreaCollider.gameObject.SetActive(true);
-            
+
             cf.SetRestrictionCollider(EnemyWaves[currentWave].AreaCollider);
         }
         else
@@ -157,7 +161,12 @@ public class EnemyWaveSystem : MonoBehaviour
                 }
                 else
                 {
-                    if (_openable != null) _openable.Open();
+                    if (_openable != null)
+                    {
+                        HandPointer hp = GameObject.FindObjectOfType<HandPointer>();
+                        if (hp != null) hp.ActivateHandPointer();
+                        _openable.Open();
+                    }
                     else
                     {
                         StartCoroutine(LevelComplete());
@@ -195,6 +204,8 @@ public class EnemyWaveSystem : MonoBehaviour
     IEnumerator LevelComplete()
     {
 
+        HandPointer hp = GameObject.FindObjectOfType<HandPointer>();
+        if (hp != null) hp.DeActivateHandPointer();
         //activate slow motion effect
         if (activateSlowMotionOnLastHit)
         {
