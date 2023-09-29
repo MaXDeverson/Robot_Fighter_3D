@@ -26658,7 +26658,7 @@ MonoBehaviour:
   - {fileID: 897757504}
   - {fileID: 363448099}
   environments:
-  - {fileID: 5407060465582485702, guid: d93e6c4293f125f44bd8140a3845512d, type: 3}
+  - {fileID: 6003416140170407805, guid: d93e6c4293f125f44bd8140a3845512d, type: 3}
   - {fileID: 4669009653326967970, guid: f0adc83f35ede394ab5e3317651f205a, type: 3}
   - {fileID: 2125111023174034446, guid: c06557aa8be004b4fa20d8f3be66ee57, type: 3}
   - {fileID: 6044175724574607570, guid: 1786b802b6bcdad448bd4b3342a14f00, type: 3}
@@ -27306,6 +27306,10 @@ PrefabInstance:
       propertyPath: AreaColliderViewOffset
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 1197060837874028, guid: 36a2e3d21b9de1448891cdfb14223a15, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 20550194634016478, guid: 36a2e3d21b9de1448891cdfb14223a15, type: 3}
       propertyPath: m_ClearFlags
       value: 1
@@ -27326,6 +27330,18 @@ PrefabInstance:
       propertyPath: m_BackGroundColor.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114870926869580142, guid: 36a2e3d21b9de1448891cdfb14223a15, type: 3}
+      propertyPath: camShakeX.m_RotationOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114870926869580142, guid: 36a2e3d21b9de1448891cdfb14223a15, type: 3}
+      propertyPath: camShakeY.m_RotationOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114870926869580142, guid: 36a2e3d21b9de1448891cdfb14223a15, type: 3}
+      propertyPath: camShakeZ.m_RotationOrder
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -27336,6 +27352,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 171854, guid: 36a2e3d21b9de1448891cdfb14223a15, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1475440440}
+    - targetCorrespondingSourceObject: {fileID: 1197060837874028, guid: 36a2e3d21b9de1448891cdfb14223a15, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2080121806}
+    - targetCorrespondingSourceObject: {fileID: 1197060837874028, guid: 36a2e3d21b9de1448891cdfb14223a15, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2080121805}
   m_SourcePrefab: {fileID: 100100000, guid: 36a2e3d21b9de1448891cdfb14223a15, type: 3}
 --- !u!4 &980613715 stripped
 Transform:
@@ -66380,6 +66402,93 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2182021040091644248, guid: bbd70a7ba3268be48af4c1e913b1f95f, type: 3}
   m_PrefabInstance: {fileID: 2075571827}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2080121800 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1197060837874028, guid: 36a2e3d21b9de1448891cdfb14223a15, type: 3}
+  m_PrefabInstance: {fileID: 980539771}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2080121801 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4914548019038378, guid: 36a2e3d21b9de1448891cdfb14223a15, type: 3}
+  m_PrefabInstance: {fileID: 980539771}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2080121805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2080121800}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sharedProfile: {fileID: 11400000, guid: d85c4abe0f5b99b41a2f7e4c657af7b4, type: 2}
+  isGlobal: 1
+  blendDistance: 0
+  weight: 1
+  priority: 0
+--- !u!114 &2080121806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2080121800}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 948f4100a11a5c24981795d21301da5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumeTrigger: {fileID: 2080121801}
+  volumeLayer:
+    serializedVersion: 2
+    m_Bits: 256
+  stopNaNPropagation: 1
+  finalBlitToCameraTarget: 0
+  antialiasingMode: 0
+  temporalAntialiasing:
+    jitterSpread: 0.75
+    sharpness: 0.25
+    stationaryBlending: 0.95
+    motionBlending: 0.85
+  subpixelMorphologicalAntialiasing:
+    quality: 2
+  fastApproximateAntialiasing:
+    fastMode: 0
+    keepAlpha: 0
+  fog:
+    enabled: 1
+    excludeSkybox: 1
+  debugLayer:
+    lightMeter:
+      width: 512
+      height: 256
+      showCurves: 1
+    histogram:
+      width: 512
+      height: 256
+      channel: 3
+    waveform:
+      exposure: 0.12
+      height: 256
+    vectorscope:
+      size: 256
+      exposure: 0.12
+    overlaySettings:
+      linearDepth: 0
+      motionColorIntensity: 4
+      motionGridSize: 64
+      colorBlindnessType: 0
+      colorBlindnessStrength: 1
+  m_Resources: {fileID: 11400000, guid: d82512f9c8e5d4a4d938b575d47f88d4, type: 2}
+  m_ShowToolkit: 0
+  m_ShowCustomSorter: 0
+  breakBeforeColorGrading: 0
+  m_BeforeTransparentBundles: []
+  m_BeforeStackBundles: []
+  m_AfterStackBundles: []
 --- !u!1001 &2082303759
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -69180,6 +69289,7 @@ MonoBehaviour:
   handle: {fileID: 3632119597904244014}
   radius: 75
   autoReturnSpeed: 8
+  _withKeyboardVisualization: 0
 --- !u!114 &3525940463628347610
 MonoBehaviour:
   m_ObjectHideFlags: 0

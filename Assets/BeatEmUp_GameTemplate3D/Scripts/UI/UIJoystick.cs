@@ -12,6 +12,7 @@ public class UIJoystick : MonoBehaviour, IPointerDownHandler, IDragHandler, IPoi
     public float radius = 40f;
     public float autoReturnSpeed = 8f;
     private bool returnToStartPos;
+    [SerializeField] private bool _withKeyboardVisualization;
     private RectTransform parentRect;
     private InputManager inputmanager;
 
@@ -39,25 +40,27 @@ public class UIJoystick : MonoBehaviour, IPointerDownHandler, IDragHandler, IPoi
                 returnToStartPos = false;
             }
         }
-        Vector2 visualDirection = new Vector2();
-        if (Input.GetKey(KeyCode.S))
+        if (_withKeyboardVisualization)
         {
-            visualDirection.y = -1;
+            Vector2 visualDirection = new Vector2();
+            if (Input.GetKey(KeyCode.S))
+            {
+                visualDirection.y = -1;
+            }
+            if (Input.GetKey(KeyCode.W))
+            {
+                visualDirection.y = 1;
+            }
+            if (Input.GetKey(KeyCode.D))
+            {
+                visualDirection.x = 1;
+            }
+            if (Input.GetKey(KeyCode.A))
+            {
+                visualDirection.x = -1;
+            }
+            Visualizate(visualDirection);
         }
-        if (Input.GetKey(KeyCode.W))
-        {
-            visualDirection.y = 1;
-        }
-        if (Input.GetKey(KeyCode.D))
-        {
-            visualDirection.x = 1;
-        }
-        if (Input.GetKey(KeyCode.A))
-        {
-            visualDirection.x = -1;
-        }
-        Visualizate(visualDirection);
-
     }
 
     private void Visualizate(Vector2 direction)
