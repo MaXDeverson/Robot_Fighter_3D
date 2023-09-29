@@ -90,8 +90,8 @@ public class Manager : MonoBehaviour
         textComp.text = "";
         tictic = GetComponent<AudioSource>();
         btn_okay.GetComponent<Button>().interactable = false;
-        //ShowObjective();
-        ShowWeaponChoise();
+       // ShowObjective();
+        ShowWeaponChoice();
         Debug.Log("Current Level:" + General.CurrentLevel);
     }
 
@@ -136,7 +136,7 @@ public class Manager : MonoBehaviour
         objective.SetActive(true);
     }
 
-    void ShowWeaponChoise()
+    void ShowWeaponChoice()
     {
         weaponChoise.SetActive(true);
     }

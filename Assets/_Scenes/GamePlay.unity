@@ -4662,7 +4662,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 1520923474}
+  m_Material: {fileID: 526436782}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -8636,6 +8636,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Choice 2
       objectReference: {fileID: 0}
+    - target: {fileID: 3366927325346206844, guid: cdbfe15459a1d0c46b30b71761e1d64d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 8b0e7e2b98a35d9428b512c3ba1027c2, type: 3}
     - target: {fileID: 3746559644952193519, guid: cdbfe15459a1d0c46b30b71761e1d64d, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -8735,7 +8739,7 @@ PrefabInstance:
     - target: {fileID: 7145986328325978586, guid: cdbfe15459a1d0c46b30b71761e1d64d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2120167889}
     - target: {fileID: 7145986328325978586, guid: cdbfe15459a1d0c46b30b71761e1d64d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -12844,6 +12848,46 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5211614023317503315, guid: 75d7ed83510e3c9448cba02d20968238, type: 3}
   m_PrefabInstance: {fileID: 518442146}
   m_PrefabAsset: {fileID: 0}
+--- !u!21 &526436782
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Sprites/Default
+  m_Shader: {fileID: 10753, guid: 0000000000000000f000000000000000, type: 0}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _AlphaTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - PixelSnap: 0
+    - _EnableExternalAlpha: 0
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Flip: {r: 1, g: 1, b: 1, a: 1}
+    - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
+  m_BuildTextureStacks: []
 --- !u!1 &527185335
 GameObject:
   m_ObjectHideFlags: 0
@@ -24528,6 +24572,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Choice 2 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3366927325346206844, guid: cdbfe15459a1d0c46b30b71761e1d64d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ca2cc6a17dd2f984a9c693cb9f875d27, type: 3}
     - target: {fileID: 3746559644952193519, guid: cdbfe15459a1d0c46b30b71761e1d64d, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -24627,7 +24675,7 @@ PrefabInstance:
     - target: {fileID: 7145986328325978586, guid: cdbfe15459a1d0c46b30b71761e1d64d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2120167889}
     - target: {fileID: 7145986328325978586, guid: cdbfe15459a1d0c46b30b71761e1d64d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -26577,7 +26625,7 @@ MonoBehaviour:
   _dialogWindowText: {fileID: 532897796}
   _spawnLevel: 1
   _spawnEnviroment: 1
-  _currentLevelIndex: 13
+  _currentLevelIndex: -2
 --- !u!4 &947073807
 Transform:
   m_ObjectHideFlags: 0
@@ -27054,7 +27102,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.25866985, g: 1, b: 0, a: 1}
+  m_Color: {r: 0, g: 0.96299124, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -43528,46 +43576,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2223512542933444961, guid: 8d35e8e3e8cc97e419ce9a93e883af21, type: 3}
   m_PrefabInstance: {fileID: 1517505874}
   m_PrefabAsset: {fileID: 0}
---- !u!21 &1520923474
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Sprites/Default
-  m_Shader: {fileID: 10753, guid: 0000000000000000f000000000000000, type: 0}
-  m_Parent: {fileID: 0}
-  m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
-  m_InvalidKeywords: []
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_LockedProperties: 
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _AlphaTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Ints: []
-    m_Floats:
-    - PixelSnap: 0
-    - _EnableExternalAlpha: 0
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Flip: {r: 1, g: 1, b: 1, a: 1}
-    - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
-  m_BuildTextureStacks: []
 --- !u!1001 &1529565761
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -67211,7 +67219,7 @@ MonoBehaviour:
   - weaponName: Knife
     playerHandPrefab: {fileID: 1000013591963784, guid: 34ec71cc60bda8c41a246b3a8dd41b50, type: 3}
     WeaponEndState: {fileID: 0}
-    timesToUse: 1
+    timesToUse: 3
     degenerateType: 0
     damageObject:
       animTrigger: ThrowWeapon
@@ -67935,6 +67943,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Choice 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3366927325346206844, guid: cdbfe15459a1d0c46b30b71761e1d64d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a916ec342af7b674bad47b8f895e71a5, type: 3}
     - target: {fileID: 3746559644952193519, guid: cdbfe15459a1d0c46b30b71761e1d64d, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -68034,7 +68046,7 @@ PrefabInstance:
     - target: {fileID: 7145986328325978586, guid: cdbfe15459a1d0c46b30b71761e1d64d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2120167889}
     - target: {fileID: 7145986328325978586, guid: cdbfe15459a1d0c46b30b71761e1d64d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
