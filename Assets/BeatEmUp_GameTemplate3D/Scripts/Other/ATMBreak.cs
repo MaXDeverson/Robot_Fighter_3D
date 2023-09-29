@@ -1,3 +1,4 @@
+using Firebase.Analytics;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -48,7 +49,8 @@ public class ATMBreak : MonoBehaviour,IDamagable<DamageObject>
 				BrokenGO.transform.rotation = Quaternion.LookRotation(Vector3.forward * dir);
 			}
 		}
-		if (!_isSpawned)
+		FirebaseAnalytics.LogEvent("atm_crush", "atm_crush", 0);
+        if (!_isSpawned)
 		{
 			_isSpawned = true;
 			for (int i = 1; i <= _objectsCount; i++)

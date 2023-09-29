@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Firebase.Analytics;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -54,6 +55,8 @@ public class PlayerSpawnPoint : MonoBehaviour
 
     public void TakeWeapon(int index)
     {
+        string log = "weapon_" + index;
+        FirebaseAnalytics.LogEvent(log, log, 0);
         if (!MyMobileAds.ShowRewardedSucssesCheck(() => { _currentPlayer.GetComponent<PlayerCombat>().equipWeapon(_weapons[index]); _manager.HideWeaponChoice();}))
         {
             _manager.ShowDialogWindow("No internet connection :(");

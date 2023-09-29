@@ -1,6 +1,8 @@
-﻿using System.Collections;
+﻿using Firebase.Analytics;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.PostProcessing;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 public class Manager : MonoBehaviour
@@ -34,7 +36,7 @@ public class Manager : MonoBehaviour
     [SerializeField] private bool _spawnLevel = true;
     [SerializeField] private bool _spawnEnviroment = false;
     [SerializeField] private int _currentLevelIndex;
-
+    private static int _choiseCounter;
     void Awake()
     {
         if(_currentLevelIndex>=0)General.CurrentLevel = _currentLevelIndex;
@@ -90,8 +92,14 @@ public class Manager : MonoBehaviour
         textComp.text = "";
         tictic = GetComponent<AudioSource>();
         btn_okay.GetComponent<Button>().interactable = false;
-       // ShowObjective();
-        ShowWeaponChoice();
+        if(_choiseCounter++ % 2 == 0)
+        {
+            ShowObjective();
+        }
+        else
+        {
+            ShowWeaponChoice();
+        }
         Debug.Log("Current Level:" + General.CurrentLevel);
     }
 
@@ -216,7 +224,7 @@ public class Manager : MonoBehaviour
     }
     public void DoubleCash()
     {
-        if(!MyMobileAds.ShowRewardedSucssesCheck(() => { _uiManager.DisableDoubleCash(); PlayerData.GetPlayerData().DoubleCash(); }))
+        if(!MyMobileAds.ShowRewardedSucssesCheck(() => { _uiManager.DisableDoubleCash(); FirebaseAnalytics.LogEvent("double_cash", "double_cash", 0); PlayerData.GetPlayerData().DoubleCash(); }))
         {
             ShowDialogWindow("No Internet connection :(");
         }
