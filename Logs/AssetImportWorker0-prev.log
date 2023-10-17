@@ -15,7 +15,7 @@ C:/Users/max79/Unity projects/Robot_Fighter_3D
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-51066
+60776
 Successfully changed project path to: C:/Users/max79/Unity projects/Robot_Fighter_3D
 C:/Users/max79/Unity projects/Robot_Fighter_3D
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -49,11 +49,11 @@ C:/Users/max79/Unity projects/Robot_Fighter_3D
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [9356] Host "[IP] 192.168.50.5 [Port] 0 [Flags] 2 [Guid] 3153762876 [EditorId] 3153762876 [Version] 1048832 [Id] WindowsEditor(7,admin) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [16040] Host "[IP] 192.168.0.108 [Port] 0 [Flags] 2 [Guid] 3059983954 [EditorId] 3059983954 [Version] 1048832 [Id] WindowsEditor(7,admin) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [9356] Host "[IP] 192.168.50.5 [Port] 0 [Flags] 2 [Guid] 3153762876 [EditorId] 3153762876 [Version] 1048832 [Id] WindowsEditor(7,admin) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [16040] Host "[IP] 192.168.0.108 [Port] 0 [Flags] 2 [Guid] 3059983954 [EditorId] 3059983954 [Version] 1048832 [Id] WindowsEditor(7,admin) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
-Refreshing native plugins compatible for Editor in 58.22 ms, found 5 plugins.
+Refreshing native plugins compatible for Editor in 67.74 ms, found 5 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.3.2f1 (d74737c6db50)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.3.2f1/Editor/Data/Resources/UnitySubsystems
@@ -70,7 +70,7 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.3.2f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.3.2f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.3.2f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56124
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56604
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.2f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
@@ -80,8 +80,8 @@ Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.2f1/E
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.2f1/Editor/Data/PlaybackEngines/AppleTVSupport/UnityEditor.AppleTV.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.2f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.2f1/Editor/Data/PlaybackEngines/MetroSupport/UnityEditor.UWP.Extensions.dll
-Registered in 0.020874 seconds.
-- Loaded All Assemblies, in  0.599 seconds
+Registered in 0.027557 seconds.
+- Loaded All Assemblies, in  0.692 seconds
 Native extension for UWP target not found
 Native extension for WindowsStandalone target not found
 [usbmuxd] Start listen thread
@@ -91,40 +91,40 @@ Native extension for AppleTV target not found
 [usbmuxd] Listen thread started
 Native extension for iOS target not found
 Native extension for Android target not found
-Android Extension - Scanning For ADB Devices 430 ms
+Android Extension - Scanning For ADB Devices 499 ms
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.086 seconds
-Domain Reload Profiling: 1684ms
-	BeginReloadAssembly (158ms)
+- Finished resetting the current domain, in  1.128 seconds
+Domain Reload Profiling: 1817ms
+	BeginReloadAssembly (169ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (59ms)
-	RebuildNativeTypeToScriptingClass (19ms)
-	initialDomainReloadingComplete (102ms)
-	LoadAllAssembliesAndSetupDomain (259ms)
-		LoadAssemblies (158ms)
+		CreateAndSetChildDomain (2ms)
+	RebuildCommonClasses (69ms)
+	RebuildNativeTypeToScriptingClass (22ms)
+	initialDomainReloadingComplete (129ms)
+	LoadAllAssembliesAndSetupDomain (299ms)
+		LoadAssemblies (168ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (248ms)
-			TypeCache.Refresh (247ms)
-				TypeCache.ScanAssembly (229ms)
+		AnalyzeDomain (288ms)
+			TypeCache.Refresh (286ms)
+				TypeCache.ScanAssembly (260ms)
 			ScanForSourceGeneratedMonoScriptInfo (1ms)
 			ResolveRequiredComponents (1ms)
-	FinalizeReload (1087ms)
+	FinalizeReload (1128ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (962ms)
+		SetupLoadedEditorAssemblies (1009ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (683ms)
-			SetLoadedEditorAssemblies (8ms)
+			InitializePlatformSupportModulesInManaged (742ms)
+			SetLoadedEditorAssemblies (6ms)
 			RefreshPlugins (0ms)
 			BeforeProcessingInitializeOnLoad (4ms)
-			ProcessInitializeOnLoadAttributes (175ms)
-			ProcessInitializeOnLoadMethodAttributes (91ms)
+			ProcessInitializeOnLoadAttributes (169ms)
+			ProcessInitializeOnLoadMethodAttributes (89ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -139,8 +139,8 @@ Symbol file LoadedFromMemory is not a mono symbol file
 Symbol file LoadedFromMemory doesn't match image C:\Users\max79\Unity projects\Robot_Fighter_3D\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Symbol file LoadedFromMemory is not a mono symbol file
 Symbol file LoadedFromMemory is not a mono symbol file
-- Loaded All Assemblies, in  1.674 seconds
-Refreshing native plugins compatible for Editor in 36.14 ms, found 5 plugins.
+- Loaded All Assemblies, in  1.515 seconds
+Refreshing native plugins compatible for Editor in 38.06 ms, found 5 plugins.
 Native extension for UWP target not found
 Native extension for WindowsStandalone target not found
 Native extension for AppleTV target not found
@@ -149,48 +149,48 @@ Native extension for Android target not found
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.670 seconds
-Domain Reload Profiling: 3337ms
-	BeginReloadAssembly (246ms)
+- Finished resetting the current domain, in  1.641 seconds
+Domain Reload Profiling: 3153ms
+	BeginReloadAssembly (228ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (11ms)
+		DisableScriptedObjects (10ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (35ms)
-	RebuildCommonClasses (84ms)
-	RebuildNativeTypeToScriptingClass (27ms)
-	initialDomainReloadingComplete (93ms)
-	LoadAllAssembliesAndSetupDomain (1217ms)
-		LoadAssemblies (712ms)
+		CreateAndSetChildDomain (33ms)
+	RebuildCommonClasses (65ms)
+	RebuildNativeTypeToScriptingClass (17ms)
+	initialDomainReloadingComplete (87ms)
+	LoadAllAssembliesAndSetupDomain (1114ms)
+		LoadAssemblies (653ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (635ms)
-			TypeCache.Refresh (581ms)
-				TypeCache.ScanAssembly (553ms)
-			ScanForSourceGeneratedMonoScriptInfo (42ms)
-			ResolveRequiredComponents (12ms)
-	FinalizeReload (1671ms)
+		AnalyzeDomain (581ms)
+			TypeCache.Refresh (533ms)
+				TypeCache.ScanAssembly (506ms)
+			ScanForSourceGeneratedMonoScriptInfo (37ms)
+			ResolveRequiredComponents (11ms)
+	FinalizeReload (1643ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (1365ms)
+		SetupLoadedEditorAssemblies (1315ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (69ms)
+			InitializePlatformSupportModulesInManaged (66ms)
 			SetLoadedEditorAssemblies (10ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (203ms)
-			ProcessInitializeOnLoadAttributes (826ms)
-			ProcessInitializeOnLoadMethodAttributes (248ms)
-			AfterProcessingInitializeOnLoad (8ms)
-			EditorAssembliesLoaded (1ms)
+			BeforeProcessingInitializeOnLoad (195ms)
+			ProcessInitializeOnLoadAttributes (764ms)
+			ProcessInitializeOnLoadMethodAttributes (273ms)
+			AfterProcessingInitializeOnLoad (7ms)
+			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (13ms)
+		AwakeInstancesAfterBackupRestoration (12ms)
 Shader 'RealCar/RealCarGlass': fallback shader 'Transparent' not found
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
-Refreshing native plugins compatible for Editor in 61.62 ms, found 5 plugins.
+Refreshing native plugins compatible for Editor in 64.49 ms, found 5 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 4442 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 241 unused Assets / (1.6 MB). Loaded Objects now: 4757.
 Memory consumption went from 218.8 MB to 217.1 MB.
-Total: 12.907900 ms (FindLiveObjects: 0.659600 ms CreateObjectMapping: 0.490200 ms MarkObjects: 10.936900 ms  DeleteObjects: 0.820100 ms)
+Total: 18.150400 ms (FindLiveObjects: 0.565300 ms CreateObjectMapping: 0.489800 ms MarkObjects: 15.526000 ms  DeleteObjects: 1.567600 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
@@ -205,133 +205,416 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 32734.920259 seconds.
-  path: Assets/_Prefabs/Environments/ATM BREAK.prefab
-  artifactKey: Guid(3d6deb83f51476b4ba7bf630b18b988b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Prefabs/Environments/ATM BREAK.prefab using Guid(3d6deb83f51476b4ba7bf630b18b988b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd7e1fb768c70571179507880a64fd52c') in 0.323457 seconds
+  Time since last request: 268151.125567 seconds.
+  path: Assets/_Prefabs/Enemies/baba.prefab
+  artifactKey: Guid(8d35e8e3e8cc97e419ce9a93e883af21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Prefabs/Enemies/baba.prefab using Guid(8d35e8e3e8cc97e419ce9a93e883af21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4d1414cc1c637da5d3e32fdb4b04eb45') in 2.076317 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 232
+Number of asset objects unloaded after import = 1002
 ========================================================================
 Received Import Request.
-  Time since last request: 8.687821 seconds.
-  path: Assets/_Models/SCI_FI INDUSTRIAL/_SNAPS_PrototypingAssets/SciFi_Industrial/Prefabs/Decor/Crossbar_02_snaps002.prefab
-  artifactKey: Guid(7231588b9603215498bbcc3333b73fd4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Models/SCI_FI INDUSTRIAL/_SNAPS_PrototypingAssets/SciFi_Industrial/Prefabs/Decor/Crossbar_02_snaps002.prefab using Guid(7231588b9603215498bbcc3333b73fd4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5775230b652d990b9fc1002d19f6cd89') in 0.036758 seconds
+  Time since last request: 0.000032 seconds.
+  path: Assets/_Prefabs/Enemies/Wrestler.prefab
+  artifactKey: Guid(a881746e223daac49b63a3f41e3246fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Prefabs/Enemies/Wrestler.prefab using Guid(a881746e223daac49b63a3f41e3246fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dacefaeb131fc8704d8d1aa8dd83b7bb') in 1.056819 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 9
+Number of asset objects unloaded after import = 1139
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000018 seconds.
-  path: Assets/_Models/SCI_FI INDUSTRIAL/_SNAPS_PrototypingAssets/SciFi_Industrial/Prefabs/Props/D-Shell_02_snaps002.prefab
-  artifactKey: Guid(5b8f8fa316b8efb46bf59ae139b2b780) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Models/SCI_FI INDUSTRIAL/_SNAPS_PrototypingAssets/SciFi_Industrial/Prefabs/Props/D-Shell_02_snaps002.prefab using Guid(5b8f8fa316b8efb46bf59ae139b2b780) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '18317cb51e829021cfae5a03928c0a7d') in 0.025269 seconds
+  Time since last request: 0.000039 seconds.
+  path: Assets/_Prefabs/Enemies/Wasp Robot ban.prefab
+  artifactKey: Guid(bbd70a7ba3268be48af4c1e913b1f95f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Prefabs/Enemies/Wasp Robot ban.prefab using Guid(bbd70a7ba3268be48af4c1e913b1f95f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bf8db1fb09cedec97e2136101eb42e35') in 0.192550 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 8
+Number of asset objects unloaded after import = 401
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000019 seconds.
-  path: Assets/Basov/new models/cyber car.fbx
-  artifactKey: Guid(ac43c606fb89a10459810e6628018d15) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Basov/new models/cyber car.fbx using Guid(ac43c606fb89a10459810e6628018d15) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '538a6a910dd7337085bd3c7781ad38fc') in 0.161892 seconds
+  Time since last request: 0.000036 seconds.
+  path: Assets/_Prefabs/Enemies/Sumo.prefab
+  artifactKey: Guid(76f4a0356e0ea3245bf02364f06020ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Prefabs/Enemies/Sumo.prefab using Guid(76f4a0356e0ea3245bf02364f06020ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e64f1f53d9ce397e06bd92cef0b94aee') in 1.139830 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 40
+Number of asset objects unloaded after import = 993
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000030 seconds.
-  path: Assets/Basov/new models/Favoured Cars Pack - Low Poly (FREE)/Models/Disc_Rim_Tire_1_Free.fbx
-  artifactKey: Guid(6781919fcacbed44aa5a899a9281b8ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Basov/new models/Favoured Cars Pack - Low Poly (FREE)/Models/Disc_Rim_Tire_1_Free.fbx using Guid(6781919fcacbed44aa5a899a9281b8ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '739331250722f29f6640aec982b50d3e') in 0.035875 seconds
+  Time since last request: 3.048036 seconds.
+  path: Assets/_Prefabs/Enemies/Enemy Robot.prefab
+  artifactKey: Guid(1c37605a545afad439aeb74f092d4e22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Prefabs/Enemies/Enemy Robot.prefab using Guid(1c37605a545afad439aeb74f092d4e22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fd8238a730bbac6c0740d2831b064210') in 0.144690 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 10
+Number of asset objects unloaded after import = 405
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000033 seconds.
-  path: Assets/Basov/new models/Favoured Cars Pack - Low Poly (FREE)/Models/Disc_Rim_Tire_2_Free.fbx
-  artifactKey: Guid(722c360b3b6dcb24191c2050833078b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Basov/new models/Favoured Cars Pack - Low Poly (FREE)/Models/Disc_Rim_Tire_2_Free.fbx using Guid(722c360b3b6dcb24191c2050833078b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a08f6d3aeca79247023db7026b865ee3') in 0.038365 seconds
+  Time since last request: 0.143445 seconds.
+  path: Assets/_Prefabs/Enemies/Enemy Robot.prefab
+  artifactKey: Guid(1c37605a545afad439aeb74f092d4e22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Prefabs/Enemies/Enemy Robot.prefab using Guid(1c37605a545afad439aeb74f092d4e22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b8f2e954e7f98e16ac7120a141dc6b4b') in 0.144647 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 10
+Number of asset objects unloaded after import = 405
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000018 seconds.
-  path: Assets/Basov/new models/Favoured Cars Pack - Low Poly (FREE)/Models/Disc_Rim_Tire_3_Free.fbx
-  artifactKey: Guid(cb3f795bf23196642941bd17d93eab72) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Basov/new models/Favoured Cars Pack - Low Poly (FREE)/Models/Disc_Rim_Tire_3_Free.fbx using Guid(cb3f795bf23196642941bd17d93eab72) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '749ede642f3c69179c91f6563eb43b62') in 0.040757 seconds
+  Time since last request: 0.650973 seconds.
+  path: Assets/_Prefabs/Enemies/Enemy Robot.prefab
+  artifactKey: Guid(1c37605a545afad439aeb74f092d4e22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Prefabs/Enemies/Enemy Robot.prefab using Guid(1c37605a545afad439aeb74f092d4e22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0da5824048398fb69c229c44589f7621') in 0.132457 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 10
+Number of asset objects unloaded after import = 405
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000020 seconds.
-  path: Assets/_Models/SCI_FI INDUSTRIAL/_SNAPS_PrototypingAssets/SciFi_Industrial/Prefabs/Props/DClamp_02_snaps002.prefab
-  artifactKey: Guid(3e8a4d075f30b3b478dfb7a20f36e41b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Models/SCI_FI INDUSTRIAL/_SNAPS_PrototypingAssets/SciFi_Industrial/Prefabs/Props/DClamp_02_snaps002.prefab using Guid(3e8a4d075f30b3b478dfb7a20f36e41b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '70ccaf4273f143de153c2380f68c2fc6') in 0.027796 seconds
+  Time since last request: 0.225167 seconds.
+  path: Assets/_Prefabs/Enemies/Enemy Robot.prefab
+  artifactKey: Guid(1c37605a545afad439aeb74f092d4e22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Prefabs/Enemies/Enemy Robot.prefab using Guid(1c37605a545afad439aeb74f092d4e22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b83c0b12687be561b6200c4bb8eacef7') in 0.139039 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 10
+Number of asset objects unloaded after import = 405
 ========================================================================
 Received Import Request.
-  Time since last request: 0.001754 seconds.
-  path: Assets/Basov/new models/Down Town Pack/Prefab/ElectricPostC.prefab
-  artifactKey: Guid(6b45f765d87279f418a93f735bb6d910) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Basov/new models/Down Town Pack/Prefab/ElectricPostC.prefab using Guid(6b45f765d87279f418a93f735bb6d910) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '310eab62b2a4673d18fd58d9d4c7b65a') in 0.003026 seconds
+  Time since last request: 412.865955 seconds.
+  path: Assets/_Prefabs/Enemies/Peoples/ArmyMan.prefab
+  artifactKey: Guid(42172fd4177598742963923ff06e2657) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Prefabs/Enemies/Peoples/ArmyMan.prefab using Guid(42172fd4177598742963923ff06e2657) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '21b53d22c9bd143e36e9db6096b4abea') in 0.180591 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 7
+Number of asset objects unloaded after import = 340
 ========================================================================
 Received Import Request.
-  Time since last request: 0.009968 seconds.
-  path: Assets/_Effects/My Effects/Electro Boom.prefab
-  artifactKey: Guid(7b1ce61b757af9d439b79fe4a9fa2160) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Effects/My Effects/Electro Boom.prefab using Guid(7b1ce61b757af9d439b79fe4a9fa2160) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '24046072b08c0cb1eb2215baab6cbb8e') in 0.071198 seconds
+  Time since last request: 29.700720 seconds.
+  path: Assets/_Scripts/Menu/MyMobileAds.cs
+  artifactKey: Guid(0f997c7ec4ebf304087686e0ae0f14a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Scripts/Menu/MyMobileAds.cs using Guid(0f997c7ec4ebf304087686e0ae0f14a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3192f27a8a301a321c1bf4adb6a31b1d') in 0.000923 seconds
+Internal: JobTempAlloc has allocations that are more than the maximum lifespan of 4 frames old - this is not allowed and likely a leak
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 26
+Number of asset objects unloaded after import = 0
 ========================================================================
 Received Import Request.
-  Time since last request: 1.040627 seconds.
-  path: Assets/_Prefabs/Modern Enviroment/Industrial.prefab
-  artifactKey: Guid(d7f3171fafa04994abe73ded471c5c24) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Prefabs/Modern Enviroment/Industrial.prefab using Guid(d7f3171fafa04994abe73ded471c5c24) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '81598e60489970206de8b04c49a4be6b') in 0.784828 seconds
+  Time since last request: 57.953818 seconds.
+  path: Assets/_Scripts/Menu/MyMobileAds.cs
+  artifactKey: Guid(0f997c7ec4ebf304087686e0ae0f14a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Scripts/Menu/MyMobileAds.cs using Guid(0f997c7ec4ebf304087686e0ae0f14a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5076f4f3b60679c0f9669294d5be55f6') in 0.000930 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3679
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Internal: deleting an allocation that is older than its permitted lifetime of 4 frames (age = 5)
+Internal: deleting an allocation that is older than its permitted lifetime of 4 frames (age = 5)
+Internal: deleting an allocation that is older than its permitted lifetime of 4 frames (age = 6)
+Internal: deleting an allocation that is older than its permitted lifetime of 4 frames (age = 6)
+Internal: deleting an allocation that is older than its permitted lifetime of 4 frames (age = 7)
+Internal: deleting an allocation that is older than its permitted lifetime of 4 frames (age = 7)
+Internal: deleting an allocation that is older than its permitted lifetime of 4 frames (age = 8)
+Internal: deleting an allocation that is older than its permitted lifetime of 4 frames (age = 8)
+Internal: deleting an allocation that is older than its permitted lifetime of 4 frames (age = 9)
+Internal: deleting an allocation that is older than its permitted lifetime of 4 frames (age = 9)
+Internal: deleting an allocation that is older than its permitted lifetime of 4 frames (age = 10)
+Internal: deleting an allocation that is older than its permitted lifetime of 4 frames (age = 10)
+Internal: deleting an allocation that is older than its permitted lifetime of 4 frames (age = 11)
+Internal: deleting an allocation that is older than its permitted lifetime of 4 frames (age = 11)
+Symbol file LoadedFromMemory doesn't match image C:\Users\max79\Unity projects\Robot_Fighter_3D\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory doesn't match image C:\Users\max79\Unity projects\Robot_Fighter_3D\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  5.642 seconds
+Refreshing native plugins compatible for Editor in 36.52 ms, found 5 plugins.
+Native extension for UWP target not found
+Native extension for WindowsStandalone target not found
+Native extension for AppleTV target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in 12.074 seconds
+Domain Reload Profiling: 17711ms
+	BeginReloadAssembly (315ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (12ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (93ms)
+	RebuildCommonClasses (57ms)
+	RebuildNativeTypeToScriptingClass (17ms)
+	initialDomainReloadingComplete (60ms)
+	LoadAllAssembliesAndSetupDomain (5187ms)
+		LoadAssemblies (4878ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (449ms)
+			TypeCache.Refresh (435ms)
+				TypeCache.ScanAssembly (416ms)
+			ScanForSourceGeneratedMonoScriptInfo (3ms)
+			ResolveRequiredComponents (11ms)
+	FinalizeReload (12075ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (1039ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (60ms)
+			SetLoadedEditorAssemblies (9ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (166ms)
+			ProcessInitializeOnLoadAttributes (630ms)
+			ProcessInitializeOnLoadMethodAttributes (168ms)
+			AfterProcessingInitializeOnLoad (5ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (8ms)
+Shader 'RealCar/RealCarGlass': fallback shader 'Transparent' not found
+Refreshing native plugins compatible for Editor in 29.51 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4291 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 248 unused Assets / (1.6 MB). Loaded Objects now: 4773.
+Memory consumption went from 182.6 MB to 181.0 MB.
+Total: 9.459100 ms (FindLiveObjects: 0.456900 ms CreateObjectMapping: 0.377700 ms MarkObjects: 7.823600 ms  DeleteObjects: 0.799700 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000025 seconds.
-  path: Assets/_Effects/My Effects/Effects/StylizedExplosion/models/quad4point.obj
-  artifactKey: Guid(8ba9055af328ac24dab169dadb790218) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Effects/My Effects/Effects/StylizedExplosion/models/quad4point.obj using Guid(8ba9055af328ac24dab169dadb790218) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2b31b99083b10d7ae64864f3330468c3') in 0.065806 seconds
+  Time since last request: 401.555805 seconds.
+  path: Assets/_Scenes/Menu.unity
+  artifactKey: Guid(8ddaccbd0d98d1d4f94d9229248400eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Scenes/Menu.unity using Guid(8ddaccbd0d98d1d4f94d9229248400eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2c192e08f38e43e62d9c7e7e0dd53672') in 0.019828 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 9
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\max79\Unity projects\Robot_Fighter_3D\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory doesn't match image C:\Users\max79\Unity projects\Robot_Fighter_3D\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  1.674 seconds
+Refreshing native plugins compatible for Editor in 37.94 ms, found 5 plugins.
+Native extension for UWP target not found
+Native extension for WindowsStandalone target not found
+Native extension for AppleTV target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  2.231 seconds
+Domain Reload Profiling: 3898ms
+	BeginReloadAssembly (259ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (8ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (84ms)
+	RebuildCommonClasses (72ms)
+	RebuildNativeTypeToScriptingClass (27ms)
+	initialDomainReloadingComplete (70ms)
+	LoadAllAssembliesAndSetupDomain (1238ms)
+		LoadAssemblies (752ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (593ms)
+			TypeCache.Refresh (571ms)
+				TypeCache.ScanAssembly (549ms)
+			ScanForSourceGeneratedMonoScriptInfo (6ms)
+			ResolveRequiredComponents (16ms)
+	FinalizeReload (2232ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (1310ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (72ms)
+			SetLoadedEditorAssemblies (12ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (254ms)
+			ProcessInitializeOnLoadAttributes (683ms)
+			ProcessInitializeOnLoadMethodAttributes (282ms)
+			AfterProcessingInitializeOnLoad (8ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (11ms)
+Shader 'RealCar/RealCarGlass': fallback shader 'Transparent' not found
+Refreshing native plugins compatible for Editor in 41.74 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4291 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 248 unused Assets / (1.6 MB). Loaded Objects now: 4776.
+Memory consumption went from 182.6 MB to 181.0 MB.
+Total: 9.037200 ms (FindLiveObjects: 0.465500 ms CreateObjectMapping: 0.337200 ms MarkObjects: 7.552200 ms  DeleteObjects: 0.681000 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000041 seconds.
-  path: Assets/_Effects/EffectExamples/Shared/Prefabs/WaterFilled.prefab
-  artifactKey: Guid(b3310980331fa134d82770127f640471) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Effects/EffectExamples/Shared/Prefabs/WaterFilled.prefab using Guid(b3310980331fa134d82770127f640471) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '09528ee774e2605e9a9a84b38af9f0e4') in 0.043546 seconds
+  Time since last request: 65.660909 seconds.
+  path: Assets/_Scenes/GamePlay.unity
+  artifactKey: Guid(039741d191f294d40ad14c22ac95eec0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Scenes/GamePlay.unity using Guid(039741d191f294d40ad14c22ac95eec0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fb32d875886e332d07088da32f020efc') in 0.019443 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 15
+Number of asset objects unloaded after import = 0
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000026 seconds.
-  path: Assets/_Effects/EffectExamples/WaterEffects/Prefabs/StormCloudEffect.prefab
-  artifactKey: Guid(ca55dd9d7d291014a8b13aaf95318a3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Effects/EffectExamples/WaterEffects/Prefabs/StormCloudEffect.prefab using Guid(ca55dd9d7d291014a8b13aaf95318a3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a531ccb91e5d9a5f850f616e1d2b8b3') in 0.211975 seconds
+  Time since last request: 78.204322 seconds.
+  path: Assets/_Scenes/GamePlay.unity
+  artifactKey: Guid(039741d191f294d40ad14c22ac95eec0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Scenes/GamePlay.unity using Guid(039741d191f294d40ad14c22ac95eec0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd8ef1a11df855326d13db2b105e0bd7b') in 0.000722 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 20
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\max79\Unity projects\Robot_Fighter_3D\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory doesn't match image C:\Users\max79\Unity projects\Robot_Fighter_3D\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  1.956 seconds
+Refreshing native plugins compatible for Editor in 52.13 ms, found 5 plugins.
+Native extension for UWP target not found
+Native extension for WindowsStandalone target not found
+Native extension for AppleTV target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Unable to write to 'ProjectSettings\GvhProjectSettings.xml' (System.IO.IOException: Sharing violation on path C:\Users\max79\Unity projects\Robot_Fighter_3D\ProjectSettings\GvhProjectSettings.xml
+  at System.IO.FileStream..ctor (System.String path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share, System.Int32 bufferSize, System.Boolean anonymous, System.IO.FileOptions options) [0x0019e] in <605bf8b31fcb444b85176da963870aa7>:0 
+  at System.IO.FileStream..ctor (System.String path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share, System.Int32 bufferSize, System.IO.FileOptions options) [0x00000] in <605bf8b31fcb444b85176da963870aa7>:0 
+  at System.IO.FileStream..ctor (System.String path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share, System.Int32 bufferSize, System.Boolean useAsync) [0x00000] in <605bf8b31fcb444b85176da963870aa7>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.FileStream..ctor(string,System.IO.FileMode,System.IO.FileAccess,System.IO.FileShare,int,bool)
+  at System.Xml.XmlWriterSettings.CreateWriter (System.String outputFileName) [0x00051] in <9a0f277cf5334b3bbc854d5936c11028>:0 
+  at System.Xml.XmlWriter.Create (System.String outputFileName, System.Xml.XmlWriterSettings settings) [0x0000a] in <9a0f277cf5334b3bbc854d5936c11028>:0 
+  at Google.ProjectSettings.Save () [0x0006d] in /Users/chkuang/Workspace/git/unity-jar-resolver/source/VersionHandlerImpl/src/ProjectSettings.cs:821 , Project settings were not saved!
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+Google.Logger:Log (string,Google.LogLevel) (at /Users/chkuang/Workspace/git/unity-jar-resolver/source/VersionHandlerImpl/src/Logger.cs:136)
+Google.ProjectSettings:Save () (at /Users/chkuang/Workspace/git/unity-jar-resolver/source/VersionHandlerImpl/src/ProjectSettings.cs:844)
+Google.ProjectSettings:SetBool (string,bool,Google.SettingsLocation) (at /Users/chkuang/Workspace/git/unity-jar-resolver/source/VersionHandlerImpl/src/ProjectSettings.cs:485)
+Google.ProjectSettings:SetBool (string,bool) (at /Users/chkuang/Workspace/git/unity-jar-resolver/source/VersionHandlerImpl/src/ProjectSettings.cs:497)
+Google.IOSResolver:set_VerboseLoggingEnabled (bool) (at /Users/chkuang/Workspace/git/unity-jar-resolver/source/IOSResolver/src/IOSResolver.cs:1040)
+Google.IOSResolver:.cctor () (at /Users/chkuang/Workspace/git/unity-jar-resolver/source/IOSResolver/src/IOSResolver.cs:726)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: /Users/chkuang/Workspace/git/unity-jar-resolver/source/VersionHandlerImpl/src/ProjectSettings.cs Line: 844)
+
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  9.017 seconds
+Domain Reload Profiling: 10965ms
+	BeginReloadAssembly (241ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (8ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (70ms)
+	RebuildCommonClasses (65ms)
+	RebuildNativeTypeToScriptingClass (25ms)
+	initialDomainReloadingComplete (86ms)
+	LoadAllAssembliesAndSetupDomain (1531ms)
+		LoadAssemblies (1028ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (606ms)
+			TypeCache.Refresh (584ms)
+				TypeCache.ScanAssembly (559ms)
+			ScanForSourceGeneratedMonoScriptInfo (4ms)
+			ResolveRequiredComponents (17ms)
+	FinalizeReload (9017ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (1497ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (73ms)
+			SetLoadedEditorAssemblies (10ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (201ms)
+			ProcessInitializeOnLoadAttributes (884ms)
+			ProcessInitializeOnLoadMethodAttributes (320ms)
+			AfterProcessingInitializeOnLoad (9ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (11ms)
+Shader 'RealCar/RealCarGlass': fallback shader 'Transparent' not found
+Refreshing native plugins compatible for Editor in 39.25 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4291 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 248 unused Assets / (1.6 MB). Loaded Objects now: 4779.
+Memory consumption went from 182.6 MB to 181.0 MB.
+Total: 12.177600 ms (FindLiveObjects: 0.516600 ms CreateObjectMapping: 0.466400 ms MarkObjects: 10.257800 ms  DeleteObjects: 0.935000 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 20.532154 seconds.
-  path: Assets/_Prefabs/Environments/ATM BREAK.prefab
-  artifactKey: Guid(3d6deb83f51476b4ba7bf630b18b988b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Prefabs/Environments/ATM BREAK.prefab using Guid(3d6deb83f51476b4ba7bf630b18b988b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0870b0cfcb58a3bcf605d04dc31189e5') in 0.048359 seconds
+  Time since last request: 160.841114 seconds.
+  path: Assets/_Scenes/GamePlay.unity
+  artifactKey: Guid(039741d191f294d40ad14c22ac95eec0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Scenes/GamePlay.unity using Guid(039741d191f294d40ad14c22ac95eec0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '22604516b6d30300d59676fe24b82b82') in 0.022068 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 274
+Number of asset objects unloaded after import = 0
 ========================================================================
 Received Prepare
 Shader 'RealCar/RealCarGlass': fallback shader 'Transparent' not found
-Refreshing native plugins compatible for Editor in 59.75 ms, found 5 plugins.
+Refreshing native plugins compatible for Editor in 52.75 ms, found 5 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 15 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 16 unused Assets / (1.5 MB). Loaded Objects now: 4810.
-Memory consumption went from 110.5 MB to 109.0 MB.
-Total: 14.227000 ms (FindLiveObjects: 0.492800 ms CreateObjectMapping: 0.464800 ms MarkObjects: 12.689900 ms  DeleteObjects: 0.578200 ms)
+Unloading 16 unused Assets / (1.5 MB). Loaded Objects now: 4779.
+Memory consumption went from 110.9 MB to 109.4 MB.
+Total: 14.349400 ms (FindLiveObjects: 0.517300 ms CreateObjectMapping: 0.460600 ms MarkObjects: 12.693500 ms  DeleteObjects: 0.676400 ms)
 
 Prepare: number of updated asset objects reloaded= 0
 AssetImportParameters requested are different than current active one (requested -> active):

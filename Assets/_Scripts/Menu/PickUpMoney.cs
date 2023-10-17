@@ -47,7 +47,14 @@ public class PickUpMoney : PickUpable
             _pickUpMoneyAnimation.Play();
             Destroy(_animationObj.gameObject, 5);
             GiveMoneyToPlayer(player);
-            base.OnPickup(player);
+            // base.OnPickup(player);
+            //if (pickupEffect)
+            //{
+            //    GameObject effect = GameObject.Instantiate(pickupEffect);
+            //    effect.transform.position = transform.position;
+            //}
+            if (SFX != null) GlobalAudioPlayer.PlaySFX(SFX);
+            Destroy(gameObject);
         }
 	}
 

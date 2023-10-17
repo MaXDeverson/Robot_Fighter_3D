@@ -7,9 +7,11 @@ using GoogleMobileAds.Api;
 public static class MyMobileAds
 {
     private static string _adUnitId = "ca-app-pub-9558178408201758/2219575169";
-    private static string _adRevardID = "ca-app-pub-9558178408201758/1246308808";
+    private static string _adRewardID = "ca-app-pub-9558178408201758/1246308808";
+    private static string _adBannerID = "ca-app-pub-9558178408201758/4595449650";
     private static InterstitialAd interstitialAd;
     private static RewardedAd rewardedAd;
+    private static BannerView _bannerView;
     private static bool _isError;
     private static bool _isRewardError;
 
@@ -21,7 +23,23 @@ public static class MyMobileAds
         MobileAds.Initialize(initStatus => { });
         LoadInterstitialAd();
         LoadRewardedAd();
+    }
+    public static void LoadBannerAd()
+    {
+        if (_bannerView != null)
+        {
+            _bannerView.Destroy();
+        }
 
+        // Create a 320x50 banner at top of the screen
+        _bannerView = new BannerView(_adBannerID, AdSize.Banner, AdPosition.Top);
+
+        // create our request used to load the ad.
+        var adRequest = new AdRequest();
+
+        // send the request to load the ad.
+        Debug.Log("Loading banner ad.");
+        _bannerView.LoadAd(adRequest);
     }
     private static void LoadInterstitialAd()
     {
@@ -62,7 +80,7 @@ public static class MyMobileAds
         }
         var adRequest = new AdRequest();
         adRequest.Keywords.Add("unity-admob-sample");
-        RewardedAd.Load(_adRevardID, adRequest,
+        RewardedAd.Load(_adRewardID, adRequest,
             (RewardedAd ad, LoadAdError error) =>
             {
                 if (error != null || ad == null)

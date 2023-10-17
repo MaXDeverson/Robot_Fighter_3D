@@ -48,6 +48,6 @@ public class LevelInit : MonoBehaviour {
 
 
 	void ShowMenuAtStart() {
-		 GameObject.FindObjectOfType<UIManager>().ShowMenu(showMenuAtStart);
+		 //GameObject.FindObjectOfType<UIManager>().ShowMenu(showMenuAtStart);
 	}
 }

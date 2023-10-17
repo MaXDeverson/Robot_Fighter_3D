@@ -72,14 +72,14 @@ public class Manager : MonoBehaviour
         score = scoreArray[General.CurrentLevel];
         objText.text = objTextArray[General.CurrentLevel];
 
+
     }
 
     void Start()
     {
-        if (PlayerPrefs.GetInt("ADSUNLOCK") == 0)
+        if(General.CurrentLevel > 0)
         {
-            //McFairyAdsMediation.Instance.HideBanner();
-            //McFairyAdsMediation.Instance.ShowBanner(1);
+            MyMobileAds.LoadBannerAd();
         }
         HUD.SetActive(true);
         TouchPanel.SetActive(true);
