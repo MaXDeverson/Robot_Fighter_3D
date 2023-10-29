@@ -80,8 +80,8 @@ public class Main_Menu : MonoBehaviour {
         PlayerPrefs.SetInt("UnlockedLevels", 0);
         PlayerPrefs.SetFloat("Volume", 1f);
         PlayerPrefs.SetFloat("Music", 1f);
-        PlayerPrefs.SetInt("jetPrice_01", 15000); PlayerPrefs.SetInt("jetPrice_02", 25500);
-        PlayerPrefs.SetInt("jetPrice_03", 32000); PlayerPrefs.SetInt("jetPrice_04", 45500);
+        PlayerPrefs.SetInt("jetPrice_01", 7000); PlayerPrefs.SetInt("jetPrice_02", 13500);
+        PlayerPrefs.SetInt("jetPrice_03", 16000); PlayerPrefs.SetInt("jetPrice_04", 20000);
         //PlayerPrefs.SetInt("jetPrice_03", 18000);
         //PlayerPrefs.SetInt("jetPrice_04", 28500); PlayerPrefs.SetInt("jetPrice_05", 35000);
     }
@@ -173,7 +173,11 @@ public class Main_Menu : MonoBehaviour {
     {
          PlayerPrefs.SetInt("TotalScore", PlayerPrefs.GetInt("TotalScore") + 10000);
     }
-
+    public void RemoveAds()
+    {
+        PlayerPrefs.SetInt("ADSUNLOCK", 1);
+        Debug.Log("Remove ads");
+    }
     public void ResetGame()
     {
         PlayerPrefs.DeleteAll();

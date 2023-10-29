@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using GoogleMobileAds.Api;
+using Firebase.Analytics;
 
 public static class MyMobileAds
 {
@@ -22,7 +23,11 @@ public static class MyMobileAds
     {
         MobileAds.Initialize(initStatus => { });
         LoadInterstitialAd();
-        LoadRewardedAd();
+        if (PlayerPrefs.GetInt("ADSUNLOCK") == 0)
+        {
+            LoadRewardedAd();
+        }
+     
     }
     public static void LoadBannerAd()
     {
@@ -40,6 +45,7 @@ public static class MyMobileAds
         // send the request to load the ad.
         Debug.Log("Loading banner ad.");
         _bannerView.LoadAd(adRequest);
+        _bannerView.Show();
     }
     private static void LoadInterstitialAd()
     {
@@ -63,10 +69,11 @@ public static class MyMobileAds
                 if (error != null || ad == null)
                 {
                     _isError = true;
+                    FirebaseAnalytics.LogEvent("interstitial_load_isError", "interstitial_load_isError", 0);
                     return;
                 }
                 interstitialAd = ad;
-                RegisterEventHandlers(interstitialAd);
+                RegisterInterstitialEventHandlers(interstitialAd);
                 _isError = false;
             });
     }
@@ -86,6 +93,7 @@ public static class MyMobileAds
                 if (error != null || ad == null)
                 {
                     _isRewardError = true;
+                    FirebaseAnalytics.LogEvent("rewarded_load_isError", "rewarded_load_isError", 0);
                     return;
                 }
                 _isRewardError = false;
@@ -202,7 +210,7 @@ public static class MyMobileAds
     }
 
 
-    private static void RegisterEventHandlers(InterstitialAd ad)
+    private static void RegisterInterstitialEventHandlers(InterstitialAd ad)
     {
         // Raised when the ad is estimated to have earned money.
         ad.OnAdPaid += (AdValue adValue) =>
@@ -229,12 +237,14 @@ public static class MyMobileAds
         // Raised when the ad closed full screen content.
         ad.OnAdFullScreenContentClosed += () =>
         {
+            FirebaseAnalytics.LogEvent("interstitial_closed", "interstitial_closed", 0);
             LoadInterstitialAd();
             _interstitialAction?.Invoke();
         };
         // Raised when the ad failed to open full screen content.
         ad.OnAdFullScreenContentFailed += (AdError error) =>
         {
+            FirebaseAnalytics.LogEvent("interstitial_content_failed", "interstitial_content_failed", 0);
             LoadInterstitialAd();
             _interstitialAction?.Invoke();
         };
@@ -244,12 +254,14 @@ public static class MyMobileAds
         // Raised when the ad closed full screen content.
         ad.OnAdFullScreenContentClosed += () =>
         {
+            FirebaseAnalytics.LogEvent("rewarded_closed", "rewarded_closed", 0);
             LoadRewardedAd();
             _rewardAction?.Invoke();
         };
         //// Raised when the ad failed to open full screen content.
         ad.OnAdFullScreenContentFailed += (AdError error) =>
         {
+            FirebaseAnalytics.LogEvent("rewarded_content_failed", "rewarded_content_failed", 0);
             _rewardAction?.Invoke();
             LoadRewardedAd();
         };

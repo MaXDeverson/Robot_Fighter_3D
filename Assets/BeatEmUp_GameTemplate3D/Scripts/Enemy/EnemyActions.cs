@@ -418,6 +418,24 @@ public class EnemyActions : MonoBehaviour
             SetVelocity(new Vector3(KnockbackForce * -dir, KnockdownUpForce, 0));
             yield return new WaitForFixedUpdate();
         }
+        //if (!_isDropped && --_dropCounter <= 0)
+        //{
+        //    if (Random.Range(0f, 1f) < _dropChance && _dropObject != null)
+        //    {
+        //        Transform drop = Instantiate(_dropObject, transform.position, Quaternion.identity);
+        //        drop.GetComponent<PickUpMoney>().SetCost(Random.Range(_minHalfHundred, _maxHalfHundred) * 50);
+        //    }
+        //    _isDropped = true;
+        //}
+        //going up...
+        while (rb.velocity.y >= 0) yield return new WaitForFixedUpdate();
+
+        //going down
+       
+        animator.SetAnimatorTrigger("KnockDown_Down");
+        while (!IsGrounded()) yield return new WaitForFixedUpdate();
+
+        //hit ground
         if (!_isDropped && --_dropCounter <= 0)
         {
             if (Random.Range(0f, 1f) < _dropChance && _dropObject != null)
@@ -427,14 +445,6 @@ public class EnemyActions : MonoBehaviour
             }
             _isDropped = true;
         }
-        //going up...
-        while (rb.velocity.y >= 0) yield return new WaitForFixedUpdate();
-
-        //going down
-        animator.SetAnimatorTrigger("KnockDown_Down");
-        while (!IsGrounded()) yield return new WaitForFixedUpdate();
-
-        //hit ground
         animator.SetAnimatorTrigger("KnockDown_End");
         GlobalAudioPlayer.PlaySFXAtPosition("Drop", transform.position);
         animator.SetAnimatorFloat("MovementSpeed", 0f);

@@ -14,7 +14,8 @@ public class UIFader : MonoBehaviour {
 				StartCoroutine(FadeCoroutine(1f, 0f, fadeDuration, StartDelay, true));
 			}
 
-			if (fadeDir == FADE.FadeOut){ 
+			if (fadeDir == FADE.FadeOut){
+				gameObject.SetActive(true);
 				StartCoroutine(FadeCoroutine(0f, 1f, fadeDuration, StartDelay, false));
 
 			}
