@@ -4,7 +4,7 @@ using Game.Gameplay.Events;
 namespace Game.Analytics.Gameplay
 {
     /// <summary>
-    /// Levels started and completed, as progression events on <c>Level_Start&lt;index&gt;</c> and
+    /// Levels started and completed, as progression events on <c>Level_Start_&lt;index&gt;</c> and
     /// <c>Level_Complete&lt;index&gt;</c>.
     /// </summary>
     public sealed class LevelAnalyticsTracker : AnalyticsTracker

@@ -2,21 +2,21 @@
 Built from '6000.3/staging' branch; Version is '6000.3.24f1 (4e7b9b5b6244) revision 5143451'; Using compiler version '194234433'; Build Type 'Release'
 OS: 'Windows 11  (10.0.26200) Core' Language: 'en' Physical Memory: 15553 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Maksym" at "2026-10-20T12:54:18.4603506Z"
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Maksym" at "2026-10-20T13:50:08.5212538Z"
 System  architecture: x64
 Process architecture: x64
-Date: 2026-10-20T12:54:18Z
+Date: 2026-10-20T13:50:08Z
 [Licensing::Client] Code 10 while verifying Licensing Client signature (process Id: 478516, path: "C:/Program Files/Unity Hub/UnityLicensingClient_V1/Unity.Licensing.Client.exe")
 [Licensing::Module] LicensingClient has failed validation; ignoring
 [Licensing::Client] Handshaking with LicensingClient:
   Version:                 1.18.3+d7ffd15
-  Session Id:              baf17ecae6a64cd0a42364a4cac85393
+  Session Id:              d567b693f54c4ce0b387c66b49a3d965
   Correlation Id:          d00ea703e31f99b74d4890cdd7a6ac1f
-  External correlation Id: 6510578603694407681
+  External correlation Id: 5307424784441230246
   Machine Id:              9dAyZJt7ER9m5L3il4Ft29gyONk=
-[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-Maksym" (connect: 0.00s, validation: 0.00s, handshake: 0.03s)
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Maksym-notifications" at "2026-10-20T12:54:18.4914768Z"
-[Licensing::Module] Licensing Background thread has ended after 0.03s
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-Maksym" (connect: 0.00s, validation: 0.01s, handshake: 0.06s)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Maksym-notifications" at "2026-10-20T13:50:08.5886683Z"
+[Licensing::Module] Licensing Background thread has ended after 0.07s
 
 COMMAND LINE ARGUMENTS:
 C:\Program Files\Unity\Hub\Editor\6000.3.24f1\Editor\Unity.exe
@@ -30,9 +30,9 @@ C:/Users/Maksym/Projects/UnityProjects/Robot_Fighter_3D
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-65094
+55170
 -parentPid
-486440
+478212
 -analyticsCloudUserId
 7971725863119
 -analyticsCloudProjectId
@@ -93,12 +93,12 @@ C:/Users/Maksym/Projects/UnityProjects/Robot_Fighter_3D
     "memorysetup-job-temp-allocator-block-size-background=1048576"
     "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
     "memorysetup-temp-allocator-size-cloud-worker=32768"
-Player connection [392148]  Target information:
+Player connection [519840]  Target information:
 
-Player connection [392148]  * "[IP] 10.50.164.98 [Port] 0 [Flags] 2 [Guid] 3589617673 [EditorId] 3589617673 [Version] 1048832 [Id] WindowsEditor(7,Maksym) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [519840]  * "[IP] 10.50.164.98 [Port] 0 [Flags] 2 [Guid] 2024673266 [EditorId] 2024673266 [Version] 1048832 [Id] WindowsEditor(7,Maksym) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [392148] Host joined multi-casting on [225.0.0.222:54997]...
-Player connection [392148] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [519840] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [519840] Host joined alternative multi-casting on [225.0.0.222:34997]...
 JobSystem: Creating JobQueue using job-worker-count value 7
 Input System module state changed to: Initialized.
 [Physics::Module] Initialized fallback backend.
@@ -116,7 +116,7 @@ Library Redirect Path: Library/
   Product: Unity Personal
   Type: Assigned
   Expiration: Unlimited
-Refreshing native plugins compatible for Editor in 34.17 ms, found 6 plugins.
+Refreshing native plugins compatible for Editor in 96.19 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 6000.3.24f1 (4e7b9b5b6244)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/6000.3.24f1/Editor/Data/Resources/UnitySubsystems
@@ -132,7 +132,7 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/6000.3.24f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/6000.3.24f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/6000.3.24f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56512
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56920
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.3.24f1/Editor/Data/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
@@ -140,8 +140,8 @@ Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.3.24f1/
 Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.3.24f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
 [Licensing::Client] Successfully resolved entitlement details
 Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.3.24f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll
-Registered in 0.006130 seconds.
-- Loaded All Assemblies, in  0.353 seconds
+Registered in 0.004359 seconds.
+- Loaded All Assemblies, in  0.611 seconds
 [usbmuxd] Start listen thread
 [usbmuxd] Listen thread started
 Native extension for iOS target not found
@@ -154,35 +154,35 @@ Package Manager log level set to [2]
 [Package Manager] Cannot connect to Unity Package Manager local server
 ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.340 seconds
-Domain Reload Profiling: 692ms
-	BeginReloadAssembly (123ms)
+- Finished resetting the current domain, in  0.853 seconds
+Domain Reload Profiling: 1462ms
+	BeginReloadAssembly (295ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (2ms)
-	RebuildCommonClasses (29ms)
-	RebuildNativeTypeToScriptingClass (10ms)
-	initialDomainReloadingComplete (43ms)
-	LoadAllAssembliesAndSetupDomain (147ms)
-		LoadAssemblies (120ms)
+		CreateAndSetChildDomain (3ms)
+	RebuildCommonClasses (36ms)
+	RebuildNativeTypeToScriptingClass (14ms)
+	initialDomainReloadingComplete (50ms)
+	LoadAllAssembliesAndSetupDomain (212ms)
+		LoadAssemblies (289ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (143ms)
-			TypeCache.Refresh (141ms)
-				TypeCache.ScanAssembly (127ms)
+		AnalyzeDomain (207ms)
+			TypeCache.Refresh (205ms)
+				TypeCache.ScanAssembly (191ms)
 			BuildScriptInfoCaches (0ms)
-			ResolveRequiredComponents (0ms)
-	FinalizeReload (340ms)
+			ResolveRequiredComponents (1ms)
+	FinalizeReload (854ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (295ms)
+		SetupLoadedEditorAssemblies (775ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (54ms)
-			SetLoadedEditorAssemblies (3ms)
-			BeforeProcessingInitializeOnLoad (62ms)
-			ProcessInitializeOnLoadAttributes (101ms)
-			ProcessInitializeOnLoadMethodAttributes (76ms)
+			InitializePlatformSupportModulesInManaged (77ms)
+			SetLoadedEditorAssemblies (4ms)
+			BeforeProcessingInitializeOnLoad (111ms)
+			ProcessInitializeOnLoadAttributes (256ms)
+			ProcessInitializeOnLoadMethodAttributes (326ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -194,14 +194,10 @@ Worker process is ready to serve import requests
 Import Worker Mode flag is 0x00
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file LoadedFromMemory is not a mono symbol file
-- Loaded All Assemblies, in  1.025 seconds
+- Loaded All Assemblies, in  6.885 seconds
 'Packages/com.coffee.ui-effect/Runtime/Timeline/Base/UIEffectTimelineUtils.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
 'Packages/com.coffee.ui-effect/Runtime/Timeline/Base/UIEffectTimelineUtils.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-Refreshing native plugins compatible for Editor in 42.17 ms, found 6 plugins.
+Refreshing native plugins compatible for Editor in 48.44 ms, found 4 plugins.
 Native extension for iOS target not found
 Native extension for Android target not found
 Native extension for WindowsStandalone target not found
@@ -209,256 +205,24 @@ Native extension for OSXStandalone target not found
 [Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] Unable to send message (not connected to server process).
 [Package Manager] Cannot connect to Unity Package Manager local server
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-Refreshing native plugins compatible for Editor in 16.11 ms, found 6 plugins.
-[MODES] ModeService[none].Initialize
-[MODES] ModeService[none].LoadModes
-[MODES] Loading mode Default (0) for mode-current-id-Sumo Robots Fighter 3D
-Unable to write to 'ProjectSettings\GvhProjectSettings.xml' (System.IO.IOException: Sharing violation on path C:\Users\Maksym\Projects\UnityProjects\Robot_Fighter_3D\ProjectSettings\GvhProjectSettings.xml
-  at System.IO.FileStream..ctor (System.String path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share, System.Int32 bufferSize, System.Boolean anonymous, System.IO.FileOptions options) [0x0019e] in <d49d4cb128564ee1b54a84338c98d353>:0 
-  at System.IO.FileStream..ctor (System.String path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share, System.Int32 bufferSize, System.IO.FileOptions options) [0x00000] in <d49d4cb128564ee1b54a84338c98d353>:0 
-  at System.IO.FileStream..ctor (System.String path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share, System.Int32 bufferSize, System.Boolean useAsync) [0x00000] in <d49d4cb128564ee1b54a84338c98d353>:0 
-  at (wrapper remoting-invoke-with-check) System.IO.FileStream..ctor(string,System.IO.FileMode,System.IO.FileAccess,System.IO.FileShare,int,bool)
-  at System.Xml.XmlWriterSettings.CreateWriter (System.String outputFileName) [0x00051] in <ae2b2912172c4200a45aa4412c4c7cdf>:0 
-  at System.Xml.XmlWriter.Create (System.String outputFileName, System.Xml.XmlWriterSettings settings) [0x0000a] in <ae2b2912172c4200a45aa4412c4c7cdf>:0 
-  at Google.ProjectSettings.Save () [0x0006d] in /Users/chkuang/Workspace/git/unity-jar-resolver/source/VersionHandlerImpl/src/ProjectSettings.cs:821 , Project settings were not saved!
+[BootLoader] Boot scene enabled. Play mode will start from Boot scene.
 UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
 UnityEngine.StackTraceUtility:ExtractStackTrace ()
 UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
 UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
 UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogError (object)
-Google.Logger:Log (string,Google.LogLevel) (at /Users/chkuang/Workspace/git/unity-jar-resolver/source/VersionHandlerImpl/src/Logger.cs:136)
-Google.ProjectSettings:Save () (at /Users/chkuang/Workspace/git/unity-jar-resolver/source/VersionHandlerImpl/src/ProjectSettings.cs:844)
-Google.ProjectSettings:SetBool (string,bool,Google.SettingsLocation) (at /Users/chkuang/Workspace/git/unity-jar-resolver/source/VersionHandlerImpl/src/ProjectSettings.cs:485)
-Google.ProjectSettings:SetBool (string,bool) (at /Users/chkuang/Workspace/git/unity-jar-resolver/source/VersionHandlerImpl/src/ProjectSettings.cs:497)
-Google.IOSResolver:set_VerboseLoggingEnabled (bool) (at /Users/chkuang/Workspace/git/unity-jar-resolver/source/IOSResolver/src/IOSResolver.cs:1040)
-Google.IOSResolver:.cctor () (at /Users/chkuang/Workspace/git/unity-jar-resolver/source/IOSResolver/src/IOSResolver.cs:726)
+UnityEngine.Debug:Log (object)
+BootLoader:UpdatePlayModeStartScene () (at Assets/Editor/BootLoader.cs:41)
+BootLoader:.cctor () (at Assets/Editor/BootLoader.cs:14)
 System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
 UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
 
-(Filename: /Users/chkuang/Workspace/git/unity-jar-resolver/source/VersionHandlerImpl/src/ProjectSettings.cs Line: 844)
+(Filename: Assets/Editor/BootLoader.cs Line: 41)
 
-[Licensing::Client] Error: Code 404 while processing request (status: Found 0 entitlement groups and 0 free entitlements matching requested entitlement ids)
-Refreshing native plugins compatible for Editor in 44.39 ms, found 6 plugins.
-ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  2.191 seconds
-Domain Reload Profiling: 3211ms
-	BeginReloadAssembly (137ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (5ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (29ms)
-	RebuildCommonClasses (28ms)
-	RebuildNativeTypeToScriptingClass (10ms)
-	initialDomainReloadingComplete (53ms)
-	LoadAllAssembliesAndSetupDomain (792ms)
-		LoadAssemblies (478ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (384ms)
-			TypeCache.Refresh (291ms)
-				TypeCache.ScanAssembly (270ms)
-			BuildScriptInfoCaches (79ms)
-			ResolveRequiredComponents (9ms)
-	FinalizeReload (2191ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (2085ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (8ms)
-			SetLoadedEditorAssemblies (5ms)
-			BeforeProcessingInitializeOnLoad (145ms)
-			ProcessInitializeOnLoadAttributes (1523ms)
-			ProcessInitializeOnLoadMethodAttributes (400ms)
-			AfterProcessingInitializeOnLoad (3ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (4ms)
-WARNING: Shader Unsupported: 'Hidden/Universal Render Pipeline/Terrain/Lit (Base Pass)' - All subshaders removed
-WARNING: Shader Did you use #pragma only_renderers and omit this platform?
-WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
-WARNING: Shader Unsupported: 'Hidden/Universal Render Pipeline/Terrain/Lit (Base Pass)' - All subshaders removed
-WARNING: Shader Did you use #pragma only_renderers and omit this platform?
-WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
-WARNING: Shader Unsupported: 'Universal Render Pipeline/Terrain/Lit' - All subshaders removed
-WARNING: Shader Did you use #pragma only_renderers and omit this platform?
-WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
-WARNING: Shader Unsupported: 'Universal Render Pipeline/Terrain/Lit' - All subshaders removed
-WARNING: Shader Did you use #pragma only_renderers and omit this platform?
-WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
-Refreshing native plugins compatible for Editor in 52.19 ms, found 6 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 62 Unused Serialized files (Serialized files now loaded: 0)
-Curl error 3: URL rejected: Malformed input to a URL function
-Unloading 9810 unused Assets / (10.7 MB). Loaded Objects now: 10453.
-Memory consumption went from 212.3 MB to 201.7 MB.
-Total: 51.234600 ms (FindLiveObjects: 2.129400 ms CreateObjectMapping: 2.069100 ms MarkObjects: 39.551600 ms  DeleteObjects: 7.482500 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 509808.229524 seconds.
-  path: Assets/_Scenes/Boot.unity
-  artifactKey: Guid(d40198f002edbf449920bf728bba5b32) Importer(2089858483,d624ce77472d68a35037170ec1d2d27e)
-Start importing Assets/_Scenes/Boot.unity using Guid(d40198f002edbf449920bf728bba5b32) Importer(2089858483,d624ce77472d68a35037170ec1d2d27e) (ScriptedImporter) -> (artifact id: '719474155543a0303265e0c2e4419d8d') in 0.0554835 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000025 seconds.
-  path: Assets/Resources/ProjectContext.prefab
-  artifactKey: Guid(8706743b6e3213247ac64ee5365cc6cf) Importer(2089858483,d624ce77472d68a35037170ec1d2d27e)
-Start importing Assets/Resources/ProjectContext.prefab using Guid(8706743b6e3213247ac64ee5365cc6cf) Importer(2089858483,d624ce77472d68a35037170ec1d2d27e) (ScriptedImporter) -> (artifact id: '12faa053f831546843586b5767f5bb44') in 0.0881717 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
-
-========================================================================
-Received Import Request.
-  Time since last request: 187.906095 seconds.
-  path: Assets/Modules/GlobalGameEventsModule/Core/GlobalGameEvents.Core.asmdef
-  artifactKey: Guid(0c18374c186a6eb4e853b0e3563da114) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Modules/GlobalGameEventsModule/Core/GlobalGameEvents.Core.asmdef using Guid(0c18374c186a6eb4e853b0e3563da114) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'cf6fa406312b0b39437550bd4f569c95') in 0.0012431 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.360693 seconds.
-  path: Assets/Modules/GlobalGameEventsModule/Editor/GlobalGameEvents.Editor.asmdef
-  artifactKey: Guid(3b2593b1479dcab4199ed026ee0c8680) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Modules/GlobalGameEventsModule/Editor/GlobalGameEvents.Editor.asmdef using Guid(3b2593b1479dcab4199ed026ee0c8680) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '1006fd6f6dc3988bac3e0149adac8932') in 0.0005247 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.078528 seconds.
-  path: Assets/Modules/GlobalGameEventsModule/Tests/GlobalGameEvents.Tests.asmdef
-  artifactKey: Guid(acf0d01240cc9364fb3deeb77de12e79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Modules/GlobalGameEventsModule/Tests/GlobalGameEvents.Tests.asmdef using Guid(acf0d01240cc9364fb3deeb77de12e79) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '737fa2c14d3b5b2e78671fcd49074a39') in 0.0006035 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.380722 seconds.
-  path: Assets/Modules/GlobalGameEventsModule/Zenject/GlobalGameEvents.Zenject.asmdef
-  artifactKey: Guid(e4349885f745efd4b92addf6c3aaa4b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Modules/GlobalGameEventsModule/Zenject/GlobalGameEvents.Zenject.asmdef using Guid(e4349885f745efd4b92addf6c3aaa4b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '772b051201887b93c1ba37cfb1541e64') in 0.0005614 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 13.921682 seconds.
-  path: Assets/Modules/GlobalGameEventsModule/Core/Api/IEventClock.cs
-  artifactKey: Guid(86013f843e721ff49b19b27b9ca8f032) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Modules/GlobalGameEventsModule/Core/Api/IEventClock.cs using Guid(86013f843e721ff49b19b27b9ca8f032) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '03839ce632ececb3c6a5438251947d5b') in 0.000685 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.467339 seconds.
-  path: Assets/Modules/GlobalGameEventsModule/Core/Api/IEventHistory.cs
-  artifactKey: Guid(c72d48276614352409225f859649d5be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Modules/GlobalGameEventsModule/Core/Api/IEventHistory.cs using Guid(c72d48276614352409225f859649d5be) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '49f00ad52e1032f0bca88294d89d31eb') in 0.0005641 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.562715 seconds.
-  path: Assets/Modules/GlobalGameEventsModule/Core/Api/IGameEvent.cs
-  artifactKey: Guid(2775f6914b4c0ca4ea74456db35781b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Modules/GlobalGameEventsModule/Core/Api/IGameEvent.cs using Guid(2775f6914b4c0ca4ea74456db35781b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '8e8535337c2e4b1c8646c684bc41ca0f') in 0.000522 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Prepare
-'Packages/com.coffee.ui-effect/Runtime/Timeline/Base/UIEffectTimelineUtils.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-'Packages/com.coffee.ui-effect/Runtime/Timeline/Base/UIEffectTimelineUtils.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-WARNING: Shader Unsupported: 'Hidden/Universal Render Pipeline/Terrain/Lit (Base Pass)' - All subshaders removed
-WARNING: Shader Did you use #pragma only_renderers and omit this platform?
-WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
-WARNING: Shader Unsupported: 'Hidden/Universal Render Pipeline/Terrain/Lit (Base Pass)' - All subshaders removed
-WARNING: Shader Did you use #pragma only_renderers and omit this platform?
-WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
-WARNING: Shader Unsupported: 'Universal Render Pipeline/Terrain/Lit' - All subshaders removed
-WARNING: Shader Did you use #pragma only_renderers and omit this platform?
-WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
-WARNING: Shader Unsupported: 'Universal Render Pipeline/Terrain/Lit' - All subshaders removed
-WARNING: Shader Did you use #pragma only_renderers and omit this platform?
-WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
-Refreshing native plugins compatible for Editor in 13.51 ms, found 6 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 61 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 9577 unused Assets / (9.8 MB). Loaded Objects now: 10456.
-Memory consumption went from 204.5 MB to 194.7 MB.
-Total: 305.752000 ms (FindLiveObjects: 3.046300 ms CreateObjectMapping: 1.038300 ms MarkObjects: 296.886400 ms  DeleteObjects: 4.778500 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Import Request.
-  Time since last request: 368.477529 seconds.
-  path: Assets/_Scenes/GamePlay.unity
-  artifactKey: Guid(039741d191f294d40ad14c22ac95eec0) Importer(2089858483,d624ce77472d68a35037170ec1d2d27e)
-Start importing Assets/_Scenes/GamePlay.unity using Guid(039741d191f294d40ad14c22ac95eec0) Importer(2089858483,d624ce77472d68a35037170ec1d2d27e) (ScriptedImporter) -> (artifact id: 'ba5fa1571c8b1b108019c6e5031034e1') in 0.158364 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000455 seconds.
-  path: Assets/BeatEmUp_GameTemplate3D/Scripts/Other/ATMBreak.cs
-  artifactKey: Guid(8c648c3023758074a85001802b15a850) Importer(2089858483,d624ce77472d68a35037170ec1d2d27e)
-Start importing Assets/BeatEmUp_GameTemplate3D/Scripts/Other/ATMBreak.cs using Guid(8c648c3023758074a85001802b15a850) Importer(2089858483,d624ce77472d68a35037170ec1d2d27e) (ScriptedImporter) -> (artifact id: '2f6e8f0d9ac17bb0f9918dbbba2b97f7') in 0.0339773 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000051 seconds.
-  path: Assets/BeatEmUp_GameTemplate3D/Scripts/Player/PlayerSpawnPoint.cs
-  artifactKey: Guid(98eda79dab49cfe44b6074347dc5d0bb) Importer(2089858483,d624ce77472d68a35037170ec1d2d27e)
-Start importing Assets/BeatEmUp_GameTemplate3D/Scripts/Player/PlayerSpawnPoint.cs using Guid(98eda79dab49cfe44b6074347dc5d0bb) Importer(2089858483,d624ce77472d68a35037170ec1d2d27e) (ScriptedImporter) -> (artifact id: '02dc123ceb1becd1d66f830a7ef49ce0') in 0.0098666 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000057 seconds.
-  path: Assets/_Scripts/Menu/MissionSelection.cs
-  artifactKey: Guid(05f9ba8f9e1a1454582b535309f25e73) Importer(2089858483,d624ce77472d68a35037170ec1d2d27e)
-Start importing Assets/_Scripts/Menu/MissionSelection.cs using Guid(05f9ba8f9e1a1454582b535309f25e73) Importer(2089858483,d624ce77472d68a35037170ec1d2d27e) (ScriptedImporter) -> (artifact id: '0285a828a0109f6fe2fb6e2a0f61927c') in 0.0113383 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000096 seconds.
-  path: Assets/_Scripts/Events
-  artifactKey: Guid(a0cb06eba98e3d24a90a03cb3b492e35) Importer(2089858483,d624ce77472d68a35037170ec1d2d27e)
-Start importing Assets/_Scripts/Events using Guid(a0cb06eba98e3d24a90a03cb3b492e35) Importer(2089858483,d624ce77472d68a35037170ec1d2d27e) (ScriptedImporter) -> (artifact id: '15cac98193cd9496788e4e5523239154') in 0.0107081 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Prepare
-[Licensing::Client] Successfully resolved entitlement details
-Begin MonoManager ReloadAssembly
-[Licensing::Client] Successfully resolved entitlement details
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file LoadedFromMemory is not a mono symbol file
-- Loaded All Assemblies, in  2.103 seconds
-'Packages/com.coffee.ui-effect/Runtime/Timeline/Base/UIEffectTimelineUtils.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-'Packages/com.coffee.ui-effect/Runtime/Timeline/Base/UIEffectTimelineUtils.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-Refreshing native plugins compatible for Editor in 17.03 ms, found 6 plugins.
-Native extension for iOS target not found
-Native extension for Android target not found
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
 [Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] Unable to send message (not connected to server process).
 [Package Manager] Cannot connect to Unity Package Manager local server
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
+Refreshing native plugins compatible for Editor in 49.52 ms, found 4 plugins.
 Error saving file Library/StateCache/LayerSettings/9e/9ecc5c3c162a7aba29bafa64c8b94b7c.json. Error: System.IO.IOException: Sharing violation on path C:\Users\Maksym\Projects\UnityProjects\Robot_Fighter_3D\Library\StateCache\LayerSettings\9e\9ecc5c3c162a7aba29bafa64c8b94b7c.json
   at System.IO.FileStream..ctor (System.String path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share, System.Int32 bufferSize, System.Boolean anonymous, System.IO.FileOptions options) [0x0019e] in <d49d4cb128564ee1b54a84338c98d353>:0 
   at System.IO.FileStream..ctor (System.String path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share, System.Int32 bufferSize, System.IO.FileOptions options) [0x00000] in <d49d4cb128564ee1b54a84338c98d353>:0 
@@ -491,108 +255,7 @@ UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
 
 [MODES] ModeService[none].Initialize
 [MODES] ModeService[none].LoadModes
-[Licensing::Client] Error: Code 404 while processing request (status: Found 0 entitlement groups and 0 free entitlements matching requested entitlement ids)
-ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  2.069 seconds
-Domain Reload Profiling: 4173ms
-	BeginReloadAssembly (890ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (40ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (1ms)
-		CreateAndSetChildDomain (491ms)
-	RebuildCommonClasses (31ms)
-	RebuildNativeTypeToScriptingClass (11ms)
-	initialDomainReloadingComplete (64ms)
-	LoadAllAssembliesAndSetupDomain (1107ms)
-		LoadAssemblies (844ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (360ms)
-			TypeCache.Refresh (32ms)
-				TypeCache.ScanAssembly (3ms)
-			BuildScriptInfoCaches (303ms)
-			ResolveRequiredComponents (11ms)
-	FinalizeReload (2069ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (1924ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (8ms)
-			SetLoadedEditorAssemblies (6ms)
-			BeforeProcessingInitializeOnLoad (149ms)
-			ProcessInitializeOnLoadAttributes (1298ms)
-			ProcessInitializeOnLoadMethodAttributes (459ms)
-			AfterProcessingInitializeOnLoad (4ms)
-			EditorAssembliesLoaded (1ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (11ms)
-WARNING: Shader Unsupported: 'Hidden/Universal Render Pipeline/Terrain/Lit (Base Pass)' - All subshaders removed
-WARNING: Shader Did you use #pragma only_renderers and omit this platform?
-WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
-WARNING: Shader Unsupported: 'Hidden/Universal Render Pipeline/Terrain/Lit (Base Pass)' - All subshaders removed
-WARNING: Shader Did you use #pragma only_renderers and omit this platform?
-WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
-WARNING: Shader Unsupported: 'Universal Render Pipeline/Terrain/Lit' - All subshaders removed
-WARNING: Shader Did you use #pragma only_renderers and omit this platform?
-WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
-WARNING: Shader Unsupported: 'Universal Render Pipeline/Terrain/Lit' - All subshaders removed
-WARNING: Shader Did you use #pragma only_renderers and omit this platform?
-WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
-Refreshing native plugins compatible for Editor in 40.84 ms, found 6 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 61 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 9808 unused Assets / (10.7 MB). Loaded Objects now: 10460.
-Memory consumption went from 216.1 MB to 205.4 MB.
-Total: 36.021500 ms (FindLiveObjects: 1.049700 ms CreateObjectMapping: 1.042600 ms MarkObjects: 28.767400 ms  DeleteObjects: 5.160500 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-'Packages/com.coffee.ui-effect/Runtime/Timeline/Base/UIEffectTimelineUtils.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-'Packages/com.coffee.ui-effect/Runtime/Timeline/Base/UIEffectTimelineUtils.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-WARNING: Shader Unsupported: 'Hidden/Universal Render Pipeline/Terrain/Lit (Base Pass)' - All subshaders removed
-WARNING: Shader Did you use #pragma only_renderers and omit this platform?
-WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
-WARNING: Shader Unsupported: 'Hidden/Universal Render Pipeline/Terrain/Lit (Base Pass)' - All subshaders removed
-WARNING: Shader Did you use #pragma only_renderers and omit this platform?
-WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
-WARNING: Shader Unsupported: 'Universal Render Pipeline/Terrain/Lit' - All subshaders removed
-WARNING: Shader Did you use #pragma only_renderers and omit this platform?
-WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
-WARNING: Shader Unsupported: 'Universal Render Pipeline/Terrain/Lit' - All subshaders removed
-WARNING: Shader Did you use #pragma only_renderers and omit this platform?
-WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
-Refreshing native plugins compatible for Editor in 11.42 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 61 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 9568 unused Assets / (10.0 MB). Loaded Objects now: 10455.
-Memory consumption went from 210.0 MB to 200.0 MB.
-Total: 41.612300 ms (FindLiveObjects: 1.508300 ms CreateObjectMapping: 1.082400 ms MarkObjects: 33.525100 ms  DeleteObjects: 5.494500 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-[Licensing::Client] Successfully resolved entitlement details
-Begin MonoManager ReloadAssembly
-[Licensing::Client] Successfully resolved entitlement details
-Symbol file LoadedFromMemory is not a mono symbol file
-- Loaded All Assemblies, in  2.532 seconds
-'Packages/com.coffee.ui-effect/Runtime/Timeline/Base/UIEffectTimelineUtils.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-'Packages/com.coffee.ui-effect/Runtime/Timeline/Base/UIEffectTimelineUtils.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-Refreshing native plugins compatible for Editor in 28.29 ms, found 4 plugins.
-Native extension for iOS target not found
-Native extension for Android target not found
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-[MODES] ModeService[none].Initialize
-[MODES] ModeService[none].LoadModes
+[MODES] Loading mode Default (0) for mode-current-id-Sumo Robots Fighter 3D
 Unable to write to 'ProjectSettings\GvhProjectSettings.xml' (System.IO.IOException: Sharing violation on path C:\Users\Maksym\Projects\UnityProjects\Robot_Fighter_3D\ProjectSettings\GvhProjectSettings.xml
   at System.IO.FileStream..ctor (System.String path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share, System.Int32 bufferSize, System.Boolean anonymous, System.IO.FileOptions options) [0x0019e] in <d49d4cb128564ee1b54a84338c98d353>:0 
   at System.IO.FileStream..ctor (System.String path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share, System.Int32 bufferSize, System.IO.FileOptions options) [0x00000] in <d49d4cb128564ee1b54a84338c98d353>:0 
@@ -619,41 +282,42 @@ UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
 (Filename: /Users/chkuang/Workspace/git/unity-jar-resolver/source/VersionHandlerImpl/src/ProjectSettings.cs Line: 844)
 
 [Licensing::Client] Error: Code 404 while processing request (status: Found 0 entitlement groups and 0 free entitlements matching requested entitlement ids)
+Refreshing native plugins compatible for Editor in 53.49 ms, found 4 plugins.
 ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  2.137 seconds
-Domain Reload Profiling: 4678ms
-	BeginReloadAssembly (953ms)
+- Finished resetting the current domain, in  5.280 seconds
+Domain Reload Profiling: 12150ms
+	BeginReloadAssembly (242ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (72ms)
+		DisableScriptedObjects (10ms)
 		BackupInstance (0ms)
-		ReleaseScriptingObjects (2ms)
-		CreateAndSetChildDomain (409ms)
-	RebuildCommonClasses (31ms)
-	RebuildNativeTypeToScriptingClass (11ms)
-	initialDomainReloadingComplete (81ms)
-	LoadAllAssembliesAndSetupDomain (1465ms)
-		LoadAssemblies (1091ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (43ms)
+	RebuildCommonClasses (46ms)
+	RebuildNativeTypeToScriptingClass (15ms)
+	initialDomainReloadingComplete (77ms)
+	LoadAllAssembliesAndSetupDomain (6488ms)
+		LoadAssemblies (5869ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (534ms)
-			TypeCache.Refresh (296ms)
-				TypeCache.ScanAssembly (217ms)
-			BuildScriptInfoCaches (217ms)
-			ResolveRequiredComponents (13ms)
-	FinalizeReload (2138ms)
+		AnalyzeDomain (755ms)
+			TypeCache.Refresh (598ms)
+				TypeCache.ScanAssembly (566ms)
+			BuildScriptInfoCaches (139ms)
+			ResolveRequiredComponents (11ms)
+	FinalizeReload (5281ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (1998ms)
+		SetupLoadedEditorAssemblies (4921ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (10ms)
-			SetLoadedEditorAssemblies (7ms)
-			BeforeProcessingInitializeOnLoad (148ms)
-			ProcessInitializeOnLoadAttributes (1313ms)
-			ProcessInitializeOnLoadMethodAttributes (516ms)
+			InitializePlatformSupportModulesInManaged (14ms)
+			SetLoadedEditorAssemblies (10ms)
+			BeforeProcessingInitializeOnLoad (298ms)
+			ProcessInitializeOnLoadAttributes (3621ms)
+			ProcessInitializeOnLoadMethodAttributes (974ms)
 			AfterProcessingInitializeOnLoad (4ms)
 			EditorAssembliesLoaded (1ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (9ms)
+		AwakeInstancesAfterBackupRestoration (35ms)
 WARNING: Shader Unsupported: 'Hidden/Universal Render Pipeline/Terrain/Lit (Base Pass)' - All subshaders removed
 WARNING: Shader Did you use #pragma only_renderers and omit this platform?
 WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
@@ -666,259 +330,60 @@ WARNING: Shader If subshaders removal was intentional, you may have forgotten tu
 WARNING: Shader Unsupported: 'Universal Render Pipeline/Terrain/Lit' - All subshaders removed
 WARNING: Shader Did you use #pragma only_renderers and omit this platform?
 WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
-Refreshing native plugins compatible for Editor in 31.08 ms, found 4 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
+Refreshing native plugins compatible for Editor in 118.40 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 61 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 9690 unused Assets / (10.2 MB). Loaded Objects now: 10459.
-Memory consumption went from 215.3 MB to 205.2 MB.
-Total: 39.620900 ms (FindLiveObjects: 1.065500 ms CreateObjectMapping: 1.055000 ms MarkObjects: 32.238500 ms  DeleteObjects: 5.166400 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Import Request.
-  Time since last request: 563.942148 seconds.
-  path: Assets/_Effects/Realistic Effects Pack/Prefabs/Projectiles/BlackFireball1.prefab
-  artifactKey: Guid(ece72d8f88edbed4f8dd5aa75a690ea3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Effects/Realistic Effects Pack/Prefabs/Projectiles/BlackFireball1.prefab using Guid(ece72d8f88edbed4f8dd5aa75a690ea3) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '1e504e5a34e6d5087ad3781f2f79efe4') in 0.8177105 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 30
+Unloading 62 Unused Serialized files (Serialized files now loaded: 0)
+Curl error 3: URL rejected: Malformed input to a URL function
+Unloading 9741 unused Assets / (10.0 MB). Loaded Objects now: 10496.
+Memory consumption went from 211.5 MB to 201.4 MB.
+Total: 115.729200 ms (FindLiveObjects: 10.360500 ms CreateObjectMapping: 2.070600 ms MarkObjects: 95.651000 ms  DeleteObjects: 7.462600 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000027 seconds.
-  path: Assets/_Effects/Realistic Effects Pack/Materials/Environment/Fire/Fire1/Fire1.png
-  artifactKey: Guid(ce516a77ce4aca7449b514cdae31c1e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Effects/Realistic Effects Pack/Materials/Environment/Fire/Fire1/Fire1.png using Guid(ce516a77ce4aca7449b514cdae31c1e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'ad7c5118b3ffd0619c95ffc6f921b4e4') in 0.0437787 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+  Time since last request: 513172.928715 seconds.
+  path: Assets/Modules/AnalyticsModule/Gameplay/TrackingPlan.cs
+  artifactKey: Guid(87ed6852ceaf5924e8238e7706d4090f) Importer(2089858483,d624ce77472d68a35037170ec1d2d27e)
+Start importing Assets/Modules/AnalyticsModule/Gameplay/TrackingPlan.cs using Guid(87ed6852ceaf5924e8238e7706d4090f) Importer(2089858483,d624ce77472d68a35037170ec1d2d27e) (ScriptedImporter) -> (artifact id: '33cf2d099530710104db8daf3366e3a0') in 0.4405273 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000024 seconds.
-  path: Assets/Plugins/Zenject/OptionalExtras/SampleGame1 (Beginner)/Media/Imported/Textures/Campfireright.psd
-  artifactKey: Guid(f6a7e4120ea5b4ca39d145c3f3b9669d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Plugins/Zenject/OptionalExtras/SampleGame1 (Beginner)/Media/Imported/Textures/Campfireright.psd using Guid(f6a7e4120ea5b4ca39d145c3f3b9669d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '28652da8ca71a6291c8380d6c52165dd') in 0.0171169 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+  Time since last request: 0.002489 seconds.
+  path: Assets/Modules/AnalyticsModule/Gameplay/LevelAnalyticsTracker.cs
+  artifactKey: Guid(fa8644899471bea4ab741d6d18d1503b) Importer(2089858483,d624ce77472d68a35037170ec1d2d27e)
+Start importing Assets/Modules/AnalyticsModule/Gameplay/LevelAnalyticsTracker.cs using Guid(fa8644899471bea4ab741d6d18d1503b) Importer(2089858483,d624ce77472d68a35037170ec1d2d27e) (ScriptedImporter) -> (artifact id: '174e7219d1e856e55211e129fb8ba760') in 0.0179678 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000019 seconds.
-  path: Assets/_Effects/Realistic Effects Pack/Prefabs/Projectiles/FireMeteor1.prefab
-  artifactKey: Guid(7d8fcd6e061e23b4b917d190196ba003) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Effects/Realistic Effects Pack/Prefabs/Projectiles/FireMeteor1.prefab using Guid(7d8fcd6e061e23b4b917d190196ba003) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '6d94d974ba427b32334eb03621c46436') in 0.1699755 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 56
+  Time since last request: 30.250578 seconds.
+  path: Assets/Modules/AnalyticsModule/Gameplay/LevelAnalyticsTracker.cs
+  artifactKey: Guid(fa8644899471bea4ab741d6d18d1503b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modules/AnalyticsModule/Gameplay/LevelAnalyticsTracker.cs using Guid(fa8644899471bea4ab741d6d18d1503b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '3847b46b3a532bbfca926afabbc9dc67') in 0.0023673 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000016 seconds.
-  path: Assets/_Effects/Realistic Effects Pack/Prefabs/Projectiles/Mobile/BlueFireball1Mobile.prefab
-  artifactKey: Guid(3899e734c79cc104f89f74fc32e84bd7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Effects/Realistic Effects Pack/Prefabs/Projectiles/Mobile/BlueFireball1Mobile.prefab using Guid(3899e734c79cc104f89f74fc32e84bd7) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '33eb0eaad6c40b3375297ace594c43e5') in 0.0536224 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 51
+  Time since last request: 4.860292 seconds.
+  path: Assets/Modules/AnalyticsModule/Gameplay/TrackingPlan.cs
+  artifactKey: Guid(87ed6852ceaf5924e8238e7706d4090f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modules/AnalyticsModule/Gameplay/TrackingPlan.cs using Guid(87ed6852ceaf5924e8238e7706d4090f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '897c28ee2f9e9c9c17c4645e72ecc70a') in 0.0011306 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000026 seconds.
-  path: Assets/Plugins/Zenject/OptionalExtras/SampleGame1 (Beginner)/Media/Imported/Textures/CampfireLeft.psd
-  artifactKey: Guid(a72df340b82eb4fd2afbb9dbe634f4bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Plugins/Zenject/OptionalExtras/SampleGame1 (Beginner)/Media/Imported/Textures/CampfireLeft.psd using Guid(a72df340b82eb4fd2afbb9dbe634f4bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '72216ab755958d0c9fb0ad978b86d0d5') in 0.0135732 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+  Time since last request: 6.051044 seconds.
+  path: Assets/Modules/AnalyticsModule/Gameplay/GameplayAnalyticsInstaller.cs
+  artifactKey: Guid(0e5d92cecc08734408d15cea22555795) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modules/AnalyticsModule/Gameplay/GameplayAnalyticsInstaller.cs using Guid(0e5d92cecc08734408d15cea22555795) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '5e2826a08ac57921d288737e7e1d6e72') in 0.0015305 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000026 seconds.
-  path: Assets/_Effects/Realistic Effects Pack/Prefabs/Projectiles/GreenFireball1.prefab
-  artifactKey: Guid(35f04f37149ef234ab5e6230f0802a75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Effects/Realistic Effects Pack/Prefabs/Projectiles/GreenFireball1.prefab using Guid(35f04f37149ef234ab5e6230f0802a75) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '9a9d194274002b67c948410fd7b92295') in 0.0232593 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 58
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000019 seconds.
-  path: Assets/_Effects/Realistic Effects Pack/Materials/Buffs/FireShield/fire.png
-  artifactKey: Guid(2183d4a3fc7d072429bf5921e23f8d80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Effects/Realistic Effects Pack/Materials/Buffs/FireShield/fire.png using Guid(2183d4a3fc7d072429bf5921e23f8d80) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'b498d95c5f1ea92127abfc0b92a5b9ec') in 0.0230879 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000024 seconds.
-  path: Assets/_Effects/My Effects/Effects/StylizedExplosion/materials/fire/fire_glow.mat
-  artifactKey: Guid(b810e364761fa9545a68e25d3ca650d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Effects/My Effects/Effects/StylizedExplosion/materials/fire/fire_glow.mat using Guid(b810e364761fa9545a68e25d3ca650d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '1d496ae2372ce4ff557cea543865dcb5') in 0.0621438 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000019 seconds.
-  path: Assets/_Effects/Realistic Effects Pack/Prefabs/Projectiles/Mobile/BlueFireball2Mobile.prefab
-  artifactKey: Guid(bc82823988e4aa8458c7b07037eb73e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Effects/Realistic Effects Pack/Prefabs/Projectiles/Mobile/BlueFireball2Mobile.prefab using Guid(bc82823988e4aa8458c7b07037eb73e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '469bb14aa43f08a10352220c0a39ce62') in 0.020497 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 41
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/_Effects/Realistic Effects Pack/Materials/Buffs/FireShield/Fire.mat
-  artifactKey: Guid(b4e4b72aed5a35c47a392db31e999374) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Effects/Realistic Effects Pack/Materials/Buffs/FireShield/Fire.mat using Guid(b4e4b72aed5a35c47a392db31e999374) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'a9fe4adb1b079ea48029f4f888d96268') in 0.0166959 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000015 seconds.
-  path: Assets/_Effects/Realistic Effects Pack/Prefabs/Projectiles/Fireball2.prefab
-  artifactKey: Guid(19d7f76af0512e14c91c7a2486e3724f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Effects/Realistic Effects Pack/Prefabs/Projectiles/Fireball2.prefab using Guid(19d7f76af0512e14c91c7a2486e3724f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'b97f50f6c2d934e4ba1401e1421fa1c5') in 0.0344007 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 45
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000017 seconds.
-  path: Assets/_Effects/Realistic Effects Pack/Prefabs/Buffs/FireForceShield.prefab
-  artifactKey: Guid(4e6f8a894812d0641b89f6952b797a5f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Effects/Realistic Effects Pack/Prefabs/Buffs/FireForceShield.prefab using Guid(4e6f8a894812d0641b89f6952b797a5f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '30473f97410de801bd06fc48f0cee07a') in 0.0543261 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 36
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000034 seconds.
-  path: Assets/_Effects/Realistic Effects Pack/Prefabs/Buffs/Mobile/OptimizedDistortion/FireForceShieldMobileDistortion.prefab
-  artifactKey: Guid(10f521daf78e8444c9bfb36eed3d0369) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Effects/Realistic Effects Pack/Prefabs/Buffs/Mobile/OptimizedDistortion/FireForceShieldMobileDistortion.prefab using Guid(10f521daf78e8444c9bfb36eed3d0369) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '32af705f5edd2bf5544f686e6216da3b') in 0.0212748 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 35
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000017 seconds.
-  path: Assets/_Effects/Realistic Effects Pack/Materials/Environment/Fire/Fire3/Fire2.png
-  artifactKey: Guid(ae8a4004b6a1b5f4db525aaa15d0056e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Effects/Realistic Effects Pack/Materials/Environment/Fire/Fire3/Fire2.png using Guid(ae8a4004b6a1b5f4db525aaa15d0056e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '0203601d3297789df0de8d572a31411f') in 0.0155884 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000016 seconds.
-  path: Assets/_Effects/Realistic Effects Pack/Prefabs/Environment/Fire/Fire4.prefab
-  artifactKey: Guid(e288a0999ca16d94a8ca72ee2d63d699) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Effects/Realistic Effects Pack/Prefabs/Environment/Fire/Fire4.prefab using Guid(e288a0999ca16d94a8ca72ee2d63d699) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '5649b1b4cff11597b83e6e2a9a208882') in 0.0330092 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 41
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000024 seconds.
-  path: Assets/BeatEmUp_GameTemplate3D/Audio/Fire.wav
-  artifactKey: Guid(48cdc1707bd95194bbde78c587fae1e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/BeatEmUp_GameTemplate3D/Audio/Fire.wav using Guid(48cdc1707bd95194bbde78c587fae1e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '90137d1ab003866e3c9d1163d06ddb4f') in 0.1261383 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000029 seconds.
-  path: Assets/_Effects/Realistic Effects Pack/Materials/Buffs/FireShield/EffectFire.mat
-  artifactKey: Guid(35d7311fa69e0c64098c84f33f37eb35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Effects/Realistic Effects Pack/Materials/Buffs/FireShield/EffectFire.mat using Guid(35d7311fa69e0c64098c84f33f37eb35) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'd2f12f1b1320b066774f454cba32433e') in 0.0155929 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/_Effects/Realistic Effects Pack/Prefabs/Environment/Fire/Fire2.prefab
-  artifactKey: Guid(ecd52cbea21129b408571c4e10233cc9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Effects/Realistic Effects Pack/Prefabs/Environment/Fire/Fire2.prefab using Guid(ecd52cbea21129b408571c4e10233cc9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'b28c8507ee00c091b4f87f03efff79a1') in 0.0163172 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 44
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000014 seconds.
-  path: Assets/_Effects/Realistic Effects Pack/Prefabs/Projectiles/Mobile/Fireball1Mobile.prefab
-  artifactKey: Guid(c8b289cda08e21845a73bee70cb963fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Effects/Realistic Effects Pack/Prefabs/Projectiles/Mobile/Fireball1Mobile.prefab using Guid(c8b289cda08e21845a73bee70cb963fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '7d8d2471e12f32c3b05058e54b3b5ffc') in 0.0162273 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 52
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000016 seconds.
-  path: Assets/_Effects/My Effects/Effects/JMO Particles/TEXTURES 1/CFX3_T_FireSparkle.png
-  artifactKey: Guid(52c1a422bfc04b543adc653b160af1e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Effects/My Effects/Effects/JMO Particles/TEXTURES 1/CFX3_T_FireSparkle.png using Guid(52c1a422bfc04b543adc653b160af1e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '37458a95509c6deef56d9059bfb00058') in 0.0134674 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000016 seconds.
-  path: Assets/_Effects/Realistic Effects Pack/Materials/Projectiles/FireMeteor1/FireBall13.png
-  artifactKey: Guid(c5db176e15fdbac4c82da2ad86d7698e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Effects/Realistic Effects Pack/Materials/Projectiles/FireMeteor1/FireBall13.png using Guid(c5db176e15fdbac4c82da2ad86d7698e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '4e9b9784f2eacd963c827901863d06ba') in 0.0130755 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000016 seconds.
-  path: Assets/_Effects/Realistic Effects Pack/Prefabs/Buffs/Mobile/FireForceShieldMobile.prefab
-  artifactKey: Guid(3ecf0184413580c4799ac4fc231d0799) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Effects/Realistic Effects Pack/Prefabs/Buffs/Mobile/FireForceShieldMobile.prefab using Guid(3ecf0184413580c4799ac4fc231d0799) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '102662ad54c848a9d7e2dbbcfa482abb') in 0.1417607 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 152
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000020 seconds.
-  path: Assets/_Effects/My Effects/Effects/JMO Particles/TEXTURES 1/CFX3_T_FireBulk.png
-  artifactKey: Guid(e6d1dbabd3135d546b6c48db6a6879f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Effects/My Effects/Effects/JMO Particles/TEXTURES 1/CFX3_T_FireBulk.png using Guid(e6d1dbabd3135d546b6c48db6a6879f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'd358d7f85a3797a7219dab54e3206fde') in 0.0143668 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000032 seconds.
-  path: Assets/_Effects/Realistic Effects Pack/Materials/Environment/Fire/Fire3/Fire.png
-  artifactKey: Guid(38a77663462d4cb4c90311bed6c6d63c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Effects/Realistic Effects Pack/Materials/Environment/Fire/Fire3/Fire.png using Guid(38a77663462d4cb4c90311bed6c6d63c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '9d83a7a0b1061e6a78c7d65c87b46521') in 0.0141611 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000037 seconds.
-  path: Assets/_Effects/Realistic Effects Pack/Prefabs/Environment/Fire/Fire3.prefab
-  artifactKey: Guid(b195b8a5f0de48f488616423f0798e7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Effects/Realistic Effects Pack/Prefabs/Environment/Fire/Fire3.prefab using Guid(b195b8a5f0de48f488616423f0798e7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '9bef9b3ed3e7065701e1ca3e21b724a9') in 0.0177353 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 33
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000013 seconds.
-  path: Assets/_Effects/Realistic Effects Pack/Materials/Projectiles/Firebolt1/FireBall8.png
-  artifactKey: Guid(2ddc9a132ce07f54189c1413376b083a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Effects/Realistic Effects Pack/Materials/Projectiles/Firebolt1/FireBall8.png using Guid(2ddc9a132ce07f54189c1413376b083a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '53891f1ddc255c9edf9c820ff18fe177') in 0.0131181 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000015 seconds.
-  path: Assets/_Effects/My Effects/Effects/StylizedExplosion/materials/fire/fire_additive.mat
-  artifactKey: Guid(d0b519d6c7eee694c84ffc2cc4c16e8c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Effects/My Effects/Effects/StylizedExplosion/materials/fire/fire_additive.mat using Guid(d0b519d6c7eee694c84ffc2cc4c16e8c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '8b8bb02ab8e1f9ac164a43c433bb5206') in 0.0267859 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000038 seconds.
-  path: Assets/_Effects/Realistic Effects Pack/Materials/Environment/Fire/Fire4/Fire4.png
-  artifactKey: Guid(a54dde16f2bb35f45a8c972c757ae191) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Effects/Realistic Effects Pack/Materials/Environment/Fire/Fire4/Fire4.png using Guid(a54dde16f2bb35f45a8c972c757ae191) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'a9f5f339ec1655ce99d9961567dc75d8') in 0.0177507 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000016 seconds.
-  path: Assets/_Effects/Realistic Effects Pack/Prefabs/Projectiles/BlueFireball1.prefab
-  artifactKey: Guid(66e8a174b22af7042ae563ef614daf28) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Effects/Realistic Effects Pack/Prefabs/Projectiles/BlueFireball1.prefab using Guid(66e8a174b22af7042ae563ef614daf28) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'db9e413cfb72109d99374ab2bd16c8c0') in 0.0134524 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 51
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000015 seconds.
-  path: Assets/_Effects/My Effects/Effects/StylizedExplosion/textures/fire.psd
-  artifactKey: Guid(fa7813d26a19c644b8b07514309c297d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Effects/My Effects/Effects/StylizedExplosion/textures/fire.psd using Guid(fa7813d26a19c644b8b07514309c297d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '52cef231dad4127b1f4075085f338712') in 0.0121423 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+  Time since last request: 1.283556 seconds.
+  path: Assets/Modules/AnalyticsModule/Gameplay/AnalyticsTracker.cs
+  artifactKey: Guid(6f2af74db8dde9242a9e46c9092d015f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modules/AnalyticsModule/Gameplay/AnalyticsTracker.cs using Guid(6f2af74db8dde9242a9e46c9092d015f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '19dd5fad1b660574d37763bdc42d4c86') in 0.0014551 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
 

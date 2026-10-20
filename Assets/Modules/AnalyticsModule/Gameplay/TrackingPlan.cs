@@ -28,10 +28,10 @@ namespace Game.Analytics.Gameplay
             public const string Level = "level";
         }
 
-        /// <summary>The hierarchy segment of a started level: <c>Level_Start3</c> for level index 3.</summary>
+        /// <summary>The hierarchy segment of a started level: <c>Level_Start_3</c> for level index 3.</summary>
         public static string LevelStartSegment(int levelIndex)
         {
-            return "Level_Start" + levelIndex.ToString(CultureInfo.InvariantCulture);
+            return "Level_Start_" + levelIndex.ToString(CultureInfo.InvariantCulture);
         }
 
         /// <summary>The hierarchy segment of a completed level: <c>Level_Complete3</c> for level index 3.</summary>

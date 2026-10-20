@@ -62,7 +62,7 @@ namespace Game.Analytics.Tests
             Assert.That(started.Name, Is.EqualTo(TrackingPlan.Names.LevelStart));
             Assert.That(started.Category, Is.EqualTo(AnalyticsCategory.Progression));
             Assert.That(started.ProgressionStatus, Is.EqualTo(ProgressionStatus.Start));
-            Assert.That(started.HierarchyPath, Is.EqualTo("Level_Start2"));
+            Assert.That(started.HierarchyPath, Is.EqualTo("Level_Start_2"));
             Assert.That(started.Source, Is.EqualTo("Level.Started"));
             Assert.That(Integer(started, TrackingPlan.Keys.Level), Is.EqualTo(2));
         }

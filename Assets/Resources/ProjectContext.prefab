@@ -33,6 +33,7 @@ Transform:
   - {fileID: 1130986622241621717}
   - {fileID: 4400100000000000002}
   - {fileID: 4901192403277795784}
+  - {fileID: 1347601089203741180}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3005528024640845504
@@ -52,6 +53,7 @@ MonoBehaviour:
   - {fileID: 263903718506978565}
   - {fileID: 4400100000000000003}
   - {fileID: 6873698918793930328}
+  - {fileID: 5857590933998863450}
   _installerPrefabs: []
   _parentNewObjectsUnderContext: 1
   _editorReflectionBakingCoverageMode: 0
@@ -66,6 +68,50 @@ MonoBehaviour:
       _missingHandlerDefaultResponse: 2
       _requireStrictUnsubscribe: 0
       _defaultAsyncTickPriority: 1
+--- !u!1 &1254144123563633579
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1347601089203741180}
+  - component: {fileID: 5857590933998863450}
+  m_Layer: 0
+  m_Name: Gamepaly Analytics
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1347601089203741180
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1254144123563633579}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1371441942350454989}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5857590933998863450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1254144123563633579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e5d92cecc08734408d15cea22555795, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Game.Analytics.Gameplay.GameplayAnalyticsInstaller
 --- !u!1 &4400100000000000001
 GameObject:
   m_ObjectHideFlags: 0
@@ -173,6 +219,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4901192403277795784}
   - component: {fileID: 6873698918793930328}
+  - component: {fileID: 9078482501524687255}
   m_Layer: 0
   m_Name: Analytics
   m_TagString: Untagged
@@ -208,3 +255,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Game.Analytics.DI.AnalyticsInstaller
   _config: {fileID: 11400000, guid: 780e25f72d634ed42ba5d1ab050e1249, type: 2}
+--- !u!114 &9078482501524687255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8126821617939498924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e5d92cecc08734408d15cea22555795, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Game.Analytics.Gameplay.GameplayAnalyticsInstaller
