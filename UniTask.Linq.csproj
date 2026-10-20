@@ -47,7 +47,6 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.3.24f1\Editor\Data\Tools\BuildPipeline\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Plugins\UniTask\Runtime\Linq\Publish.cs" />
     <Compile Include="Assets\Plugins\UniTask\Runtime\Linq\Zip.cs" />
     <Compile Include="Assets\Plugins\UniTask\Runtime\Linq\GroupBy.cs" />
     <Compile Include="Assets\Plugins\UniTask\Runtime\Linq\SequenceEqual.cs" />
@@ -109,8 +108,8 @@
     <Compile Include="Assets\Plugins\UniTask\Runtime\Linq\SkipWhile.cs" />
     <Compile Include="Assets\Plugins\UniTask\Runtime\Linq\Subscribe.cs" />
     <Compile Include="Assets\Plugins\UniTask\Runtime\Linq\Aggregate.cs" />
-    <Compile Include="Assets\Plugins\UniTask\Runtime\Linq\Empty.cs" />
     <Compile Include="Assets\Plugins\UniTask\Runtime\Linq\MinMax.cs" />
+    <Compile Include="Assets\Plugins\UniTask\Runtime\Linq\Empty.cs" />
     <Compile Include="Assets\Plugins\UniTask\Runtime\Linq\ToHashSet.cs" />
     <Compile Include="Assets\Plugins\UniTask\Runtime\Linq\DistinctUntilChanged.cs" />
     <Compile Include="Assets\Plugins\UniTask\Runtime\Linq\DefaultIfEmpty.cs" />
@@ -120,6 +119,7 @@
     <Compile Include="Assets\Plugins\UniTask\Runtime\Linq\Never.cs" />
     <Compile Include="Assets\Plugins\UniTask\Runtime\Linq\First.cs" />
     <Compile Include="Assets\Plugins\UniTask\Runtime\Linq\ToList.cs" />
+    <Compile Include="Assets\Plugins\UniTask\Runtime\Linq\Publish.cs" />
     <None Include="Assets\Plugins\UniTask\Runtime\Linq\UniTask.Linq.asmdef" />
     <Reference Include="UnityEngine">
       <HintPath>C:\Program Files\Unity\Hub\Editor\6000.3.24f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
@@ -490,11 +490,11 @@
     <Reference Include="JMOAssets_MatCapWelcome">
       <HintPath>C:\Users\Maksym\Projects\UnityProjects\Robot_Fighter_3D\Assets\JMO Assets\Editor\JMOAssets_MatCapWelcome.dll</HintPath>
     </Reference>
-    <Reference Include="Firebase.Analytics">
-      <HintPath>C:\Users\Maksym\Projects\UnityProjects\Robot_Fighter_3D\Assets\Firebase\Plugins\Firebase.Analytics.dll</HintPath>
-    </Reference>
     <Reference Include="GoogleMobileAds.Common">
       <HintPath>C:\Users\Maksym\Projects\UnityProjects\Robot_Fighter_3D\Assets\GoogleMobileAds\GoogleMobileAds.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Collections.LowLevel.ILSupport">
+      <HintPath>C:\Users\Maksym\Projects\UnityProjects\Robot_Fighter_3D\Library\PackageCache\com.unity.collections@84e8eb3fc12e\Unity.Collections.LowLevel.ILSupport\Unity.Collections.LowLevel.ILSupport.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
       <HintPath>C:\Users\Maksym\Projects\UnityProjects\Robot_Fighter_3D\Library\PackageCache\com.unity.ext.nunit@d8c07649098d\net40\unity-custom\nunit.framework.dll</HintPath>
@@ -508,17 +508,11 @@
     <Reference Include="Google.JarResolver">
       <HintPath>C:\Users\Maksym\Projects\UnityProjects\Robot_Fighter_3D\Assets\ExternalDependencyManager\Editor\1.2.176\Google.JarResolver.dll</HintPath>
     </Reference>
-    <Reference Include="Firebase.App">
-      <HintPath>C:\Users\Maksym\Projects\UnityProjects\Robot_Fighter_3D\Assets\Firebase\Plugins\Firebase.App.dll</HintPath>
-    </Reference>
     <Reference Include="Sirenix.Serialization.Config">
       <HintPath>C:\Users\Maksym\Projects\UnityProjects\Robot_Fighter_3D\Assets\Plugins\Sirenix\Assemblies\Sirenix.Serialization.Config.dll</HintPath>
     </Reference>
     <Reference Include="Sirenix.OdinInspector.Editor">
       <HintPath>C:\Users\Maksym\Projects\UnityProjects\Robot_Fighter_3D\Assets\Plugins\Sirenix\Assemblies\Sirenix.OdinInspector.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Firebase.TaskExtension">
-      <HintPath>C:\Users\Maksym\Projects\UnityProjects\Robot_Fighter_3D\Assets\Firebase\Plugins\Firebase.TaskExtension.dll</HintPath>
     </Reference>
     <Reference Include="GoogleMobileAds.Core">
       <HintPath>C:\Users\Maksym\Projects\UnityProjects\Robot_Fighter_3D\Assets\GoogleMobileAds\GoogleMobileAds.Core.dll</HintPath>
@@ -550,6 +544,9 @@
     <Reference Include="PackageManagerAssembly">
       <HintPath>C:\Users\Maksym\Projects\UnityProjects\Robot_Fighter_3D\Assets\_Effects\EffectExamples\Editor\PackageManagerAssembly\PackageManagerAssembly.dll</HintPath>
     </Reference>
+    <Reference Include="Coffee.UIEffect.R">
+      <HintPath>C:\Users\Maksym\Projects\UnityProjects\Robot_Fighter_3D\Library\PackageCache\com.coffee.ui-effect@5913675f7f05\Runtime\Coffee.UIEffect.R.dll</HintPath>
+    </Reference>
     <Reference Include="GoogleMobileAds.Unity">
       <HintPath>C:\Users\Maksym\Projects\UnityProjects\Robot_Fighter_3D\Assets\GoogleMobileAds\GoogleMobileAds.Unity.dll</HintPath>
     </Reference>
@@ -565,29 +562,14 @@
     <Reference Include="Newtonsoft.Json">
       <HintPath>C:\Users\Maksym\Projects\UnityProjects\Robot_Fighter_3D\Library\PackageCache\com.unity.nuget.newtonsoft-json@4dfd81071c64\Runtime\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="Firebase.Platform">
-      <HintPath>C:\Users\Maksym\Projects\UnityProjects\Robot_Fighter_3D\Assets\Firebase\Plugins\Firebase.Platform.dll</HintPath>
-    </Reference>
-    <Reference Include="Google.MiniJson">
-      <HintPath>C:\Users\Maksym\Projects\UnityProjects\Robot_Fighter_3D\Assets\Firebase\Plugins\Google.MiniJson.dll</HintPath>
-    </Reference>
-    <Reference Include="Zenject.ReflectionBaking.Mono.Cecil">
-      <HintPath>C:\Users\Maksym\Projects\UnityProjects\Robot_Fighter_3D\Assets\Plugins\Zenject\OptionalExtras\ReflectionBaking\Lib\Zenject.ReflectionBaking.Mono.Cecil.dll</HintPath>
-    </Reference>
-    <Reference Include="Firebase.Editor">
-      <HintPath>C:\Users\Maksym\Projects\UnityProjects\Robot_Fighter_3D\Assets\Firebase\Editor\Firebase.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Coffee.UIEffect.R">
-      <HintPath>C:\Users\Maksym\Projects\UnityProjects\Robot_Fighter_3D\Library\PackageCache\com.coffee.ui-effect@5913675f7f05\Runtime\Coffee.UIEffect.R.dll</HintPath>
-    </Reference>
     <Reference Include="AiEditorToolsSdk">
       <HintPath>C:\Users\Maksym\Projects\UnityProjects\Robot_Fighter_3D\Library\PackageCache\com.unity.ai.assistant@c0127625258e\Modules\Unity.AI.Toolkit.Sdk\Editor\AiEditorToolsSdk.dll</HintPath>
     </Reference>
     <Reference Include="Mono.Cecil">
       <HintPath>C:\Users\Maksym\Projects\UnityProjects\Robot_Fighter_3D\Library\PackageCache\com.unity.nuget.mono-cecil@ecb9724e46ff\Mono.Cecil.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Collections.LowLevel.ILSupport">
-      <HintPath>C:\Users\Maksym\Projects\UnityProjects\Robot_Fighter_3D\Library\PackageCache\com.unity.collections@84e8eb3fc12e\Unity.Collections.LowLevel.ILSupport\Unity.Collections.LowLevel.ILSupport.dll</HintPath>
+    <Reference Include="Zenject.ReflectionBaking.Mono.Cecil">
+      <HintPath>C:\Users\Maksym\Projects\UnityProjects\Robot_Fighter_3D\Assets\Plugins\Zenject\OptionalExtras\ReflectionBaking\Lib\Zenject.ReflectionBaking.Mono.Cecil.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
       <HintPath>C:\Program Files\Unity\Hub\Editor\6000.3.24f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>

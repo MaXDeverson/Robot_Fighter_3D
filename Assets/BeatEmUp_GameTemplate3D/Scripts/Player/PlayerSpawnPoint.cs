@@ -1,10 +1,13 @@
-﻿using Firebase.Analytics;
+﻿using Game.Events;
+using Game.Gameplay.Events;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
+using Zenject;
 
 public class PlayerSpawnPoint : MonoBehaviour
 {
+    [Inject] private IEventPublisher _events;
 
     //public GameObject defaultPlayerPrefab;
     [SerializeField] private Transform _playerSpawnPosiiton;
@@ -55,8 +58,7 @@ public class PlayerSpawnPoint : MonoBehaviour
 
     public void TakeWeapon(int index)
     {
-        string log = "weapon_" + index;
-        FirebaseAnalytics.LogEvent(log, log, 0);
+        _events.Publish(new WeaponTaken { WeaponIndex = index });
         if (!MyMobileAds.ShowRewardedSucssesCheck(() => { _currentPlayer.GetComponent<PlayerCombat>().equipWeapon(_weapons[index]); _manager.HideWeaponChoice();}))
         {
             _manager.ShowDialogWindow("No internet connection :(");

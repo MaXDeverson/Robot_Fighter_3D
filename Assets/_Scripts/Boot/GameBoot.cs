@@ -1,10 +1,13 @@
 using Cysharp.Threading.Tasks;
+using Game.Events;
+using Game.Gameplay.Events;
 using UnityEngine;
 using Zenject;
 
 public class GameBoot : MonoBehaviour
 {
     [Inject] private SceneLoader _sceneLoader;
+    [Inject] private IGlobalGameEvents _events;
 
     private void Start()
     {
@@ -25,6 +28,9 @@ public class GameBoot : MonoBehaviour
     {
         //await config.InternalLoad();
         //await save.InternalLoad();
+
+        // The service itself is installed by the ProjectContext; this is where boot confirms it is up.
+        _events.Publish(new GameBooted());
 
         _sceneLoader.LoadScene(SceneLoader.SceneType.MenuScene);
     }

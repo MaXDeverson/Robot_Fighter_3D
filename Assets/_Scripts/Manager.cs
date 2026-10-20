@@ -1,12 +1,15 @@
-﻿using Firebase.Analytics;
+﻿using Game.Events;
+using Game.Gameplay.Events;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering.PostProcessing;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using Zenject;
 public class Manager : MonoBehaviour
 {
+    [Inject] private IEventPublisher _events;
     [SerializeField] private UIManager _uiManager;
     public GameObject barish;
     public static Manager instance;
@@ -248,7 +251,7 @@ public class Manager : MonoBehaviour
     }
     public void DoubleCash()
     {
-        if(!MyMobileAds.ShowRewardedSucssesCheck(() => { _uiManager.DisableDoubleCash(); FirebaseAnalytics.LogEvent("double_cash", "double_cash", 0); PlayerData.GetPlayerData().DoubleCash(); }))
+        if(!MyMobileAds.ShowRewardedSucssesCheck(() => { _uiManager.DisableDoubleCash(); _events.Publish(new CashDoubled()); PlayerData.GetPlayerData().DoubleCash(); }))
         {
             ShowDialogWindow("No Internet connection :(");
         }

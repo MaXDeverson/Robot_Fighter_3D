@@ -3,10 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using Firebase.Analytics;
+using Game.Events;
+using Game.Gameplay.Events;
+using Zenject;
 
 public class MissionSelection : MonoBehaviour {
     public static MissionSelection instance;
+
+    [Inject] private IEventPublisher _events;
 
     public GameObject iconAd,SelectionPanel;
     public GameObject loadingUI, unlockallBtn, p1, p2;//, p3;
@@ -169,16 +173,7 @@ public class MissionSelection : MonoBehaviour {
         StartCoroutine(AsynchronousLoad("GamePlay"));
         loadingUI.SetActive(true);
         GetComponent<MissionSelection>().enabled = false;
-        string log = "level_" + num;
-        if (Application.isEditor)
-        {
-            Debug.Log(log);
-        }
-        else
-        {
-            FirebaseAnalytics.LogEvent(log, log, 0);
-            FirebaseAnalytics.LogEvent("level_up", "level_up", 0);
-        }
+        _events.Publish(new LevelSelected { LevelIndex = num });
         //MyMobileAds.ShowAd(()=> {
 
         //        GameObject.Find("ClickSound").GetComponent<AudioSource>().Play();

@@ -69,10 +69,7 @@
     <None Include="Assets\ExternalDependencyManager\Editor\external-dependency-manager_version-1.2.176_manifest.txt" />
     <None Include="Assets\_Models\SCI_FI INDUSTRIAL\_SNAPS_PrototypingAssets\Scripts\Editor\PackageChecker\settings\PackageImportList_ShaderGraph.txt" />
     <None Include="Assets\_Models\SCI_FI INDUSTRIAL\_SNAPS_PrototypingAssets\Scripts\Editor\PackageChecker\PackageImportList.txt" />
-    <None Include="Assets\Firebase\Editor\AppDependencies.xml" />
-    <None Include="Assets\Firebase\Editor\FirebaseAnalytics_version-11.1.0_manifest.txt" />
     <None Include="Assets\_Effects\EffectExamples\Editor\PackageManagerAssembly\PackageImportList.txt" />
-    <None Include="Assets\Firebase\Editor\AnalyticsDependencies.xml" />
     <Reference Include="UnityEngine">
       <HintPath>C:\Program Files\Unity\Hub\Editor\6000.3.24f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
@@ -508,11 +505,11 @@
     <Reference Include="JMOAssets_MatCapWelcome">
       <HintPath>C:\Users\Maksym\Projects\UnityProjects\Robot_Fighter_3D\Assets\JMO Assets\Editor\JMOAssets_MatCapWelcome.dll</HintPath>
     </Reference>
-    <Reference Include="Firebase.Analytics">
-      <HintPath>C:\Users\Maksym\Projects\UnityProjects\Robot_Fighter_3D\Assets\Firebase\Plugins\Firebase.Analytics.dll</HintPath>
-    </Reference>
     <Reference Include="GoogleMobileAds.Common">
       <HintPath>C:\Users\Maksym\Projects\UnityProjects\Robot_Fighter_3D\Assets\GoogleMobileAds\GoogleMobileAds.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Collections.LowLevel.ILSupport">
+      <HintPath>C:\Users\Maksym\Projects\UnityProjects\Robot_Fighter_3D\Library\PackageCache\com.unity.collections@84e8eb3fc12e\Unity.Collections.LowLevel.ILSupport\Unity.Collections.LowLevel.ILSupport.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
       <HintPath>C:\Users\Maksym\Projects\UnityProjects\Robot_Fighter_3D\Library\PackageCache\com.unity.ext.nunit@d8c07649098d\net40\unity-custom\nunit.framework.dll</HintPath>
@@ -526,17 +523,11 @@
     <Reference Include="Google.JarResolver">
       <HintPath>C:\Users\Maksym\Projects\UnityProjects\Robot_Fighter_3D\Assets\ExternalDependencyManager\Editor\1.2.176\Google.JarResolver.dll</HintPath>
     </Reference>
-    <Reference Include="Firebase.App">
-      <HintPath>C:\Users\Maksym\Projects\UnityProjects\Robot_Fighter_3D\Assets\Firebase\Plugins\Firebase.App.dll</HintPath>
-    </Reference>
     <Reference Include="Sirenix.Serialization.Config">
       <HintPath>C:\Users\Maksym\Projects\UnityProjects\Robot_Fighter_3D\Assets\Plugins\Sirenix\Assemblies\Sirenix.Serialization.Config.dll</HintPath>
     </Reference>
     <Reference Include="Sirenix.OdinInspector.Editor">
       <HintPath>C:\Users\Maksym\Projects\UnityProjects\Robot_Fighter_3D\Assets\Plugins\Sirenix\Assemblies\Sirenix.OdinInspector.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Firebase.TaskExtension">
-      <HintPath>C:\Users\Maksym\Projects\UnityProjects\Robot_Fighter_3D\Assets\Firebase\Plugins\Firebase.TaskExtension.dll</HintPath>
     </Reference>
     <Reference Include="GoogleMobileAds.Core">
       <HintPath>C:\Users\Maksym\Projects\UnityProjects\Robot_Fighter_3D\Assets\GoogleMobileAds\GoogleMobileAds.Core.dll</HintPath>
@@ -568,6 +559,9 @@
     <Reference Include="PackageManagerAssembly">
       <HintPath>C:\Users\Maksym\Projects\UnityProjects\Robot_Fighter_3D\Assets\_Effects\EffectExamples\Editor\PackageManagerAssembly\PackageManagerAssembly.dll</HintPath>
     </Reference>
+    <Reference Include="Coffee.UIEffect.R">
+      <HintPath>C:\Users\Maksym\Projects\UnityProjects\Robot_Fighter_3D\Library\PackageCache\com.coffee.ui-effect@5913675f7f05\Runtime\Coffee.UIEffect.R.dll</HintPath>
+    </Reference>
     <Reference Include="GoogleMobileAds.Unity">
       <HintPath>C:\Users\Maksym\Projects\UnityProjects\Robot_Fighter_3D\Assets\GoogleMobileAds\GoogleMobileAds.Unity.dll</HintPath>
     </Reference>
@@ -583,29 +577,14 @@
     <Reference Include="Newtonsoft.Json">
       <HintPath>C:\Users\Maksym\Projects\UnityProjects\Robot_Fighter_3D\Library\PackageCache\com.unity.nuget.newtonsoft-json@4dfd81071c64\Runtime\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="Firebase.Platform">
-      <HintPath>C:\Users\Maksym\Projects\UnityProjects\Robot_Fighter_3D\Assets\Firebase\Plugins\Firebase.Platform.dll</HintPath>
-    </Reference>
-    <Reference Include="Google.MiniJson">
-      <HintPath>C:\Users\Maksym\Projects\UnityProjects\Robot_Fighter_3D\Assets\Firebase\Plugins\Google.MiniJson.dll</HintPath>
-    </Reference>
-    <Reference Include="Zenject.ReflectionBaking.Mono.Cecil">
-      <HintPath>C:\Users\Maksym\Projects\UnityProjects\Robot_Fighter_3D\Assets\Plugins\Zenject\OptionalExtras\ReflectionBaking\Lib\Zenject.ReflectionBaking.Mono.Cecil.dll</HintPath>
-    </Reference>
-    <Reference Include="Firebase.Editor">
-      <HintPath>C:\Users\Maksym\Projects\UnityProjects\Robot_Fighter_3D\Assets\Firebase\Editor\Firebase.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Coffee.UIEffect.R">
-      <HintPath>C:\Users\Maksym\Projects\UnityProjects\Robot_Fighter_3D\Library\PackageCache\com.coffee.ui-effect@5913675f7f05\Runtime\Coffee.UIEffect.R.dll</HintPath>
-    </Reference>
     <Reference Include="AiEditorToolsSdk">
       <HintPath>C:\Users\Maksym\Projects\UnityProjects\Robot_Fighter_3D\Library\PackageCache\com.unity.ai.assistant@c0127625258e\Modules\Unity.AI.Toolkit.Sdk\Editor\AiEditorToolsSdk.dll</HintPath>
     </Reference>
     <Reference Include="Mono.Cecil">
       <HintPath>C:\Users\Maksym\Projects\UnityProjects\Robot_Fighter_3D\Library\PackageCache\com.unity.nuget.mono-cecil@ecb9724e46ff\Mono.Cecil.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Collections.LowLevel.ILSupport">
-      <HintPath>C:\Users\Maksym\Projects\UnityProjects\Robot_Fighter_3D\Library\PackageCache\com.unity.collections@84e8eb3fc12e\Unity.Collections.LowLevel.ILSupport\Unity.Collections.LowLevel.ILSupport.dll</HintPath>
+    <Reference Include="Zenject.ReflectionBaking.Mono.Cecil">
+      <HintPath>C:\Users\Maksym\Projects\UnityProjects\Robot_Fighter_3D\Assets\Plugins\Zenject\OptionalExtras\ReflectionBaking\Lib\Zenject.ReflectionBaking.Mono.Cecil.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
       <HintPath>C:\Program Files\Unity\Hub\Editor\6000.3.24f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
@@ -1018,11 +997,11 @@
     <Reference Include="Unity.Postprocessing.Runtime">
       <HintPath>C:\Users\Maksym\Projects\UnityProjects\Robot_Fighter_3D\Library\ScriptAssemblies\Unity.Postprocessing.Runtime.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Services.Core">
-      <HintPath>C:\Users\Maksym\Projects\UnityProjects\Robot_Fighter_3D\Library\ScriptAssemblies\Unity.Services.Core.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.Rendering.LightTransport.Editor">
       <HintPath>C:\Users\Maksym\Projects\UnityProjects\Robot_Fighter_3D\Library\ScriptAssemblies\Unity.Rendering.LightTransport.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Services.Core">
+      <HintPath>C:\Users\Maksym\Projects\UnityProjects\Robot_Fighter_3D\Library\ScriptAssemblies\Unity.Services.Core.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
       <HintPath>C:\Users\Maksym\Projects\UnityProjects\Robot_Fighter_3D\Library\ScriptAssemblies\Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
@@ -1051,8 +1030,11 @@
     <Reference Include="Unity.AI.Assistant.Tools.Editor">
       <HintPath>C:\Users\Maksym\Projects\UnityProjects\Robot_Fighter_3D\Library\ScriptAssemblies\Unity.AI.Assistant.Tools.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Purchasing.Stores">
-      <HintPath>C:\Users\Maksym\Projects\UnityProjects\Robot_Fighter_3D\Library\ScriptAssemblies\Unity.Purchasing.Stores.dll</HintPath>
+    <Reference Include="Unity.AI.MCP.Runtime">
+      <HintPath>C:\Users\Maksym\Projects\UnityProjects\Robot_Fighter_3D\Library\ScriptAssemblies\Unity.AI.MCP.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Bindings.OpenImageIO.Editor">
+      <HintPath>C:\Users\Maksym\Projects\UnityProjects\Robot_Fighter_3D\Library\ScriptAssemblies\Unity.Bindings.OpenImageIO.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Recorder.Base">
       <HintPath>C:\Users\Maksym\Projects\UnityProjects\Robot_Fighter_3D\Library\ScriptAssemblies\Unity.Recorder.Base.dll</HintPath>
@@ -1060,11 +1042,8 @@
     <Reference Include="Unity.Services.Core.Components">
       <HintPath>C:\Users\Maksym\Projects\UnityProjects\Robot_Fighter_3D\Library\ScriptAssemblies\Unity.Services.Core.Components.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.AI.MCP.Runtime">
-      <HintPath>C:\Users\Maksym\Projects\UnityProjects\Robot_Fighter_3D\Library\ScriptAssemblies\Unity.AI.MCP.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Bindings.OpenImageIO.Editor">
-      <HintPath>C:\Users\Maksym\Projects\UnityProjects\Robot_Fighter_3D\Library\ScriptAssemblies\Unity.Bindings.OpenImageIO.Editor.dll</HintPath>
+    <Reference Include="Unity.Purchasing.Stores">
+      <HintPath>C:\Users\Maksym\Projects\UnityProjects\Robot_Fighter_3D\Library\ScriptAssemblies\Unity.Purchasing.Stores.dll</HintPath>
     </Reference>
     <Reference Include="Unity.UnifiedRayTracing.Runtime">
       <HintPath>C:\Users\Maksym\Projects\UnityProjects\Robot_Fighter_3D\Library\ScriptAssemblies\Unity.UnifiedRayTracing.Runtime.dll</HintPath>
@@ -1300,13 +1279,13 @@
       <Project>{cc1ebf0e-f1c8-4556-3b6a-4c7474c1ad54}</Project>
       <Name>Boxophobic.Utils.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="GlobalGameEvents.Zenject.csproj">
-      <Project>{cde67d99-ee83-c186-ebae-850f09dbec6e}</Project>
-      <Name>GlobalGameEvents.Zenject</Name>
-    </ProjectReference>
     <ProjectReference Include="UniTask.Addressables.csproj">
       <Project>{923e5799-d4cf-4040-4915-98e36dc7cc78}</Project>
       <Name>UniTask.Addressables</Name>
+    </ProjectReference>
+    <ProjectReference Include="GlobalGameEvents.Zenject.csproj">
+      <Project>{cde67d99-ee83-c186-ebae-850f09dbec6e}</Project>
+      <Name>GlobalGameEvents.Zenject</Name>
     </ProjectReference>
     <ProjectReference Include="Zenject-PoolMonitor-Editor.csproj">
       <Project>{cd6b9f47-2c62-b7d6-aba9-f80a736a2823}</Project>

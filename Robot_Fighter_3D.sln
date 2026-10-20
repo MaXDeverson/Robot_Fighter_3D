@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Boxophobic.Utils.Editor", "Boxophobic.Utils.Editor.csproj", "{cc1ebf0e-f1c8-4556-3b6a-4c7474c1ad54}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UniTask.Linq", "UniTask.Linq.csproj", "{30c2dc44-7943-8089-48bd-5c6658bda4f6}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zenject", "Zenject.csproj", "{c3bb592e-70f6-ce30-a122-c1af1d6e579a}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zenject-IntegrationTests-Editor", "Zenject-IntegrationTests-Editor.csproj", "{8d099912-dcf5-28fe-cab2-eca7da3bc031}"
@@ -14,6 +12,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{0ac137b7-ce99-428f-1ca2-b3f5629c9b6f}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zenject-ReflectionBaking-Editor", "Zenject-ReflectionBaking-Editor.csproj", "{9875d106-a919-3322-c182-946ce29e0496}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UniTask.Linq", "UniTask.Linq.csproj", "{30c2dc44-7943-8089-48bd-5c6658bda4f6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zenject-UnitTests-Editor", "Zenject-UnitTests-Editor.csproj", "{69d2b02c-b353-ec6d-9a0f-0db2ae4ccf0e}"
 EndProject
@@ -62,8 +62,6 @@ Global
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{cc1ebf0e-f1c8-4556-3b6a-4c7474c1ad54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{cc1ebf0e-f1c8-4556-3b6a-4c7474c1ad54}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{30c2dc44-7943-8089-48bd-5c6658bda4f6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{30c2dc44-7943-8089-48bd-5c6658bda4f6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{c3bb592e-70f6-ce30-a122-c1af1d6e579a}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{c3bb592e-70f6-ce30-a122-c1af1d6e579a}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8d099912-dcf5-28fe-cab2-eca7da3bc031}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -74,6 +72,8 @@ Global
 		{0ac137b7-ce99-428f-1ca2-b3f5629c9b6f}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9875d106-a919-3322-c182-946ce29e0496}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9875d106-a919-3322-c182-946ce29e0496}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30c2dc44-7943-8089-48bd-5c6658bda4f6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30c2dc44-7943-8089-48bd-5c6658bda4f6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{69d2b02c-b353-ec6d-9a0f-0db2ae4ccf0e}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{69d2b02c-b353-ec6d-9a0f-0db2ae4ccf0e}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ac38b405-e053-0c86-cb10-6a76265073d0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU

@@ -3,10 +3,12 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using GoogleMobileAds.Api;
-using Firebase.Analytics;
+using Game.Events;
+using Game.Gameplay.Events;
 
 public static class MyMobileAds
 {
+    private static IEventPublisher _events;
     private static string _adUnitId = "ca-app-pub-9558178408201758/2219575169";
     private static string _adRewardID = "ca-app-pub-9558178408201758/1246308808";
     private static string _adBannerID = "ca-app-pub-9558178408201758/4595449650";
@@ -19,8 +21,9 @@ public static class MyMobileAds
     private static Action _interstitialAction;
     private static Action _rewardAction;
 
-    public static void Init()
+    public static void Init(IEventPublisher events)
     {
+        _events = events;
         MobileAds.Initialize(initStatus => { });
         LoadInterstitialAd();
         if (PlayerPrefs.GetInt("ADSUNLOCK") == 0)
@@ -69,7 +72,7 @@ public static class MyMobileAds
                 if (error != null || ad == null)
                 {
                     _isError = true;
-                    FirebaseAnalytics.LogEvent("interstitial_load_isError", "interstitial_load_isError", 0);
+                    _events?.Publish(new InterstitialLoadFailed());
                     return;
                 }
                 interstitialAd = ad;
@@ -93,7 +96,7 @@ public static class MyMobileAds
                 if (error != null || ad == null)
                 {
                     _isRewardError = true;
-                    FirebaseAnalytics.LogEvent("rewarded_load_isError", "rewarded_load_isError", 0);
+                    _events?.Publish(new RewardedLoadFailed());
                     return;
                 }
                 _isRewardError = false;
@@ -237,14 +240,14 @@ public static class MyMobileAds
         // Raised when the ad closed full screen content.
         ad.OnAdFullScreenContentClosed += () =>
         {
-            FirebaseAnalytics.LogEvent("interstitial_closed", "interstitial_closed", 0);
+            _events?.Publish(new InterstitialClosed());
             LoadInterstitialAd();
             _interstitialAction?.Invoke();
         };
         // Raised when the ad failed to open full screen content.
         ad.OnAdFullScreenContentFailed += (AdError error) =>
         {
-            FirebaseAnalytics.LogEvent("interstitial_content_failed", "interstitial_content_failed", 0);
+            _events?.Publish(new InterstitialContentFailed());
             LoadInterstitialAd();
             _interstitialAction?.Invoke();
         };
@@ -254,14 +257,14 @@ public static class MyMobileAds
         // Raised when the ad closed full screen content.
         ad.OnAdFullScreenContentClosed += () =>
         {
-            FirebaseAnalytics.LogEvent("rewarded_closed", "rewarded_closed", 0);
+            _events?.Publish(new RewardedClosed());
             LoadRewardedAd();
             _rewardAction?.Invoke();
         };
         //// Raised when the ad failed to open full screen content.
         ad.OnAdFullScreenContentFailed += (AdError error) =>
         {
-            FirebaseAnalytics.LogEvent("rewarded_content_failed", "rewarded_content_failed", 0);
+            _events?.Publish(new RewardedContentFailed());
             _rewardAction?.Invoke();
             LoadRewardedAd();
         };

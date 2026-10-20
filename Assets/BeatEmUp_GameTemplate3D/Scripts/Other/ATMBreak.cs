@@ -1,10 +1,14 @@
-using Firebase.Analytics;
+using Game.Events;
+using Game.Gameplay.Events;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Zenject;
 
 public class ATMBreak : MonoBehaviour,IDamagable<DamageObject>
 {
+	[Inject] private IEventPublisher _events;
+
 	public string hitSFX = "";
 
 	[Header("Gameobject Destroyed")]
@@ -49,7 +53,7 @@ public class ATMBreak : MonoBehaviour,IDamagable<DamageObject>
 				BrokenGO.transform.rotation = Quaternion.LookRotation(Vector3.forward * dir);
 			}
 		}
-		FirebaseAnalytics.LogEvent("atm_crush", "atm_crush", 0);
+		_events.Publish(new AtmCrushed());
         if (!_isSpawned)
 		{
 			_isSpawned = true;

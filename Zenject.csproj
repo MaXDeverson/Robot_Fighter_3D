@@ -60,9 +60,9 @@
     <Compile Include="Assets\Plugins\Zenject\Source\Providers\ComponentProviders\GetFromGameObjectComponentProvider.cs" />
     <Compile Include="Assets\Plugins\Zenject\Source\Binding\BindInfo\BindInfo.cs" />
     <Compile Include="Assets\Plugins\Zenject\Source\Internal\PreserveAttribute.cs" />
-    <Compile Include="Assets\Plugins\Zenject\Source\Validation\IValidatable.cs" />
     <Compile Include="Assets\Plugins\Zenject\OptionalExtras\SampleGame1 (Beginner)\Scripts\Util\UnityExtensionMethods.cs" />
     <Compile Include="Assets\Plugins\Zenject\Source\Util\ZenAutoInjecter.cs" />
+    <Compile Include="Assets\Plugins\Zenject\Source\Validation\IValidatable.cs" />
     <Compile Include="Assets\Plugins\Zenject\Source\Providers\SubContainerCreators\ISubContainerCreator.cs" />
     <Compile Include="Assets\Plugins\Zenject\OptionalExtras\SampleGame2 (Advanced)\Scripts\Installers\EnemyInstaller.cs" />
     <Compile Include="Assets\Plugins\Zenject\Source\Binding\Binders\Factory\FactoryToChoiceBinder\FactoryToChoiceBinder10.cs" />
@@ -100,8 +100,8 @@
     <Compile Include="Assets\Plugins\Zenject\OptionalExtras\SampleGame2 (Advanced)\Scripts\Player\PlayerDamageHandler.cs" />
     <Compile Include="Assets\Plugins\Zenject\OptionalExtras\SampleGame2 (Advanced)\Scripts\Player\PlayerHealthWatcher.cs" />
     <Compile Include="Assets\Plugins\Zenject\Source\Factories\Pooling\IMemoryPool.cs" />
-    <Compile Include="Assets\Plugins\Zenject\OptionalExtras\Signals\Main\SignalDeclarationAsyncInitializer.cs" />
     <Compile Include="Assets\Plugins\Zenject\Source\Binding\Binders\Factory\FactoryArgumentsToChoiceBinder\FactoryArgumentsToChoiceBinder1.cs" />
+    <Compile Include="Assets\Plugins\Zenject\OptionalExtras\Signals\Main\SignalDeclarationAsyncInitializer.cs" />
     <Compile Include="Assets\Plugins\Zenject\Source\Util\TypeAnalyzer.cs" />
     <Compile Include="Assets\Plugins\Zenject\Source\Providers\PrefabProviders\PrefabProviderCustom.cs" />
     <Compile Include="Assets\Plugins\Zenject\Source\Providers\GameObjectProviders\EmptyGameObjectProvider.cs" />
@@ -204,9 +204,9 @@
     <Compile Include="Assets\Plugins\Zenject\Source\Binding\Binders\Factory\FactoryArgumentsToChoiceBinder\FactoryArgumentsToChoiceBinder2.cs" />
     <Compile Include="Assets\Plugins\Zenject\Source\Providers\MethodMultipleProviderUntyped.cs" />
     <Compile Include="Assets\Plugins\Zenject\Source\Binding\Binders\ScopeConcreteIdArgConditionCopyNonLazyBinder.cs" />
-    <Compile Include="Assets\Plugins\Zenject\Source\Util\DefaultGameObjectParentInstaller.cs" />
     <Compile Include="Assets\Plugins\Zenject\Source\Binding\Finalizers\PrefabResourceBindingFinalizer.cs" />
     <Compile Include="Assets\Plugins\Zenject\Source\Providers\PrefabCreators\PrefabInstantiatorCached.cs" />
+    <Compile Include="Assets\Plugins\Zenject\Source\Util\DefaultGameObjectParentInstaller.cs" />
     <Compile Include="Assets\Plugins\Zenject\Source\Binding\Binders\Factory\FactoryToChoiceIdBinder\FactoryToChoiceIdBinder3.cs" />
     <Compile Include="Assets\Plugins\Zenject\Source\Runtime\InitializableManager.cs" />
     <Compile Include="Assets\Plugins\Zenject\Source\Runtime\Kernels\MonoKernel.cs" />
@@ -223,8 +223,8 @@
     <Compile Include="Assets\Plugins\Zenject\Source\Util\DisposeBlock.cs" />
     <Compile Include="Assets\Plugins\Zenject\Source\Binding\Binders\FromBinders\FromBinderGeneric.cs" />
     <Compile Include="Assets\Plugins\Zenject\OptionalExtras\SampleGame2 (Advanced)\Scripts\Enemy\GameEvents.cs" />
-    <Compile Include="Assets\Plugins\Zenject\Source\Binding\Binders\Factory\FactoryArgumentsToChoiceBinder\FactoryArgumentsToChoiceBinder4.cs" />
     <Compile Include="Assets\Plugins\Zenject\Source\Binding\Binders\Conventions\ConventionFilterTypesBinder.cs" />
+    <Compile Include="Assets\Plugins\Zenject\Source\Binding\Binders\Factory\FactoryArgumentsToChoiceBinder\FactoryArgumentsToChoiceBinder4.cs" />
     <Compile Include="Assets\Plugins\Zenject\Source\Providers\PrefabCreators\IPrefabInstantiator.cs" />
     <Compile Include="Assets\Plugins\Zenject\Source\Binding\Finalizers\ScopableBindingFinalizer.cs" />
     <Compile Include="Assets\Plugins\Zenject\OptionalExtras\SampleGame1 (Beginner)\Scripts\Misc\GuiHandler.cs" />
@@ -235,11 +235,11 @@
     <Compile Include="Assets\Plugins\Zenject\Source\Providers\ComponentProviders\AddToGameObjectComponentProviders\AddToExistingGameObjectComponentProvider.cs" />
     <Compile Include="Assets\Plugins\Zenject\Source\Factories\PlaceholderFactoryBase.cs" />
     <Compile Include="Assets\Plugins\Zenject\Source\Binding\Finalizers\ProviderBindingFinalizer.cs" />
+    <Compile Include="Assets\Plugins\Zenject\Source\Binding\Binders\Factory\FactoryFromBinder\FactoryFromBinder10.cs" />
     <Compile Include="Assets\Plugins\Zenject\Source\Providers\MethodProviderMultiple.cs" />
     <Compile Include="Assets\Plugins\Zenject\OptionalExtras\Signals\Internal\Binders\SignalTickPriorityCopyBinder.cs" />
-    <Compile Include="Assets\Plugins\Zenject\Source\Factories\Pooling\Util\StaticMemoryPoolRegistry.cs" />
-    <Compile Include="Assets\Plugins\Zenject\Source\Binding\Binders\Factory\FactoryFromBinder\FactoryFromBinder10.cs" />
     <Compile Include="Assets\Plugins\Zenject\Source\Runtime\AnimatorInterfaces\AnimatorIkHandlerManager.cs" />
+    <Compile Include="Assets\Plugins\Zenject\Source\Factories\Pooling\Util\StaticMemoryPoolRegistry.cs" />
     <Compile Include="Assets\Plugins\Zenject\OptionalExtras\Signals\Internal\SignalDeclaration.cs" />
     <Compile Include="Assets\Plugins\Zenject\OptionalExtras\Signals\Internal\Binders\DeclareSignal\SignalBindingBindInfo.cs" />
     <Compile Include="Assets\Plugins\Zenject\OptionalExtras\SampleGame2 (Advanced)\Scripts\Misc\GameRestartHandler.cs" />
@@ -345,9 +345,9 @@
     <Compile Include="Assets\Plugins\Zenject\Source\Binding\Binders\Factory\FactoryToChoiceIdBinder\FactoryToChoiceIdBinder2.cs" />
     <Compile Include="Assets\Plugins\Zenject\Source\Util\ValidationUtil.cs" />
     <Compile Include="Assets\Plugins\Zenject\OptionalExtras\SampleGame2 (Advanced)\Scripts\Enemy\States\EnemyStateAttack.cs" />
-    <Compile Include="Assets\Plugins\Zenject\OptionalExtras\SampleGame1 (Beginner)\Scripts\Ship\States\ShipStateWaitingToStart.cs" />
     <Compile Include="Assets\Plugins\Zenject\Source\Factories\Pooling\PoolableMemoryPool.cs" />
     <Compile Include="Assets\Plugins\Zenject\Source\Binding\Binders\Factory\FactoryToChoiceBinder\FactoryToChoiceBinder0.cs" />
+    <Compile Include="Assets\Plugins\Zenject\OptionalExtras\SampleGame1 (Beginner)\Scripts\Ship\States\ShipStateWaitingToStart.cs" />
     <Compile Include="Assets\Plugins\Zenject\Source\Factories\Pooling\Util\HashSetPool.cs" />
     <Compile Include="Assets\Plugins\Zenject\Source\Install\Contexts\SceneContext.cs" />
     <Compile Include="Assets\Plugins\Zenject\OptionalExtras\SampleGame1 (Beginner)\Scripts\Asteroid\AsteroidManager.cs" />
@@ -740,11 +740,11 @@
     <Reference Include="JMOAssets_MatCapWelcome">
       <HintPath>C:\Users\Maksym\Projects\UnityProjects\Robot_Fighter_3D\Assets\JMO Assets\Editor\JMOAssets_MatCapWelcome.dll</HintPath>
     </Reference>
-    <Reference Include="Firebase.Analytics">
-      <HintPath>C:\Users\Maksym\Projects\UnityProjects\Robot_Fighter_3D\Assets\Firebase\Plugins\Firebase.Analytics.dll</HintPath>
-    </Reference>
     <Reference Include="GoogleMobileAds.Common">
       <HintPath>C:\Users\Maksym\Projects\UnityProjects\Robot_Fighter_3D\Assets\GoogleMobileAds\GoogleMobileAds.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Collections.LowLevel.ILSupport">
+      <HintPath>C:\Users\Maksym\Projects\UnityProjects\Robot_Fighter_3D\Library\PackageCache\com.unity.collections@84e8eb3fc12e\Unity.Collections.LowLevel.ILSupport\Unity.Collections.LowLevel.ILSupport.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
       <HintPath>C:\Users\Maksym\Projects\UnityProjects\Robot_Fighter_3D\Library\PackageCache\com.unity.ext.nunit@d8c07649098d\net40\unity-custom\nunit.framework.dll</HintPath>
@@ -758,17 +758,11 @@
     <Reference Include="Google.JarResolver">
       <HintPath>C:\Users\Maksym\Projects\UnityProjects\Robot_Fighter_3D\Assets\ExternalDependencyManager\Editor\1.2.176\Google.JarResolver.dll</HintPath>
     </Reference>
-    <Reference Include="Firebase.App">
-      <HintPath>C:\Users\Maksym\Projects\UnityProjects\Robot_Fighter_3D\Assets\Firebase\Plugins\Firebase.App.dll</HintPath>
-    </Reference>
     <Reference Include="Sirenix.Serialization.Config">
       <HintPath>C:\Users\Maksym\Projects\UnityProjects\Robot_Fighter_3D\Assets\Plugins\Sirenix\Assemblies\Sirenix.Serialization.Config.dll</HintPath>
     </Reference>
     <Reference Include="Sirenix.OdinInspector.Editor">
       <HintPath>C:\Users\Maksym\Projects\UnityProjects\Robot_Fighter_3D\Assets\Plugins\Sirenix\Assemblies\Sirenix.OdinInspector.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Firebase.TaskExtension">
-      <HintPath>C:\Users\Maksym\Projects\UnityProjects\Robot_Fighter_3D\Assets\Firebase\Plugins\Firebase.TaskExtension.dll</HintPath>
     </Reference>
     <Reference Include="GoogleMobileAds.Core">
       <HintPath>C:\Users\Maksym\Projects\UnityProjects\Robot_Fighter_3D\Assets\GoogleMobileAds\GoogleMobileAds.Core.dll</HintPath>
@@ -800,6 +794,9 @@
     <Reference Include="PackageManagerAssembly">
       <HintPath>C:\Users\Maksym\Projects\UnityProjects\Robot_Fighter_3D\Assets\_Effects\EffectExamples\Editor\PackageManagerAssembly\PackageManagerAssembly.dll</HintPath>
     </Reference>
+    <Reference Include="Coffee.UIEffect.R">
+      <HintPath>C:\Users\Maksym\Projects\UnityProjects\Robot_Fighter_3D\Library\PackageCache\com.coffee.ui-effect@5913675f7f05\Runtime\Coffee.UIEffect.R.dll</HintPath>
+    </Reference>
     <Reference Include="GoogleMobileAds.Unity">
       <HintPath>C:\Users\Maksym\Projects\UnityProjects\Robot_Fighter_3D\Assets\GoogleMobileAds\GoogleMobileAds.Unity.dll</HintPath>
     </Reference>
@@ -815,29 +812,14 @@
     <Reference Include="Newtonsoft.Json">
       <HintPath>C:\Users\Maksym\Projects\UnityProjects\Robot_Fighter_3D\Library\PackageCache\com.unity.nuget.newtonsoft-json@4dfd81071c64\Runtime\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="Firebase.Platform">
-      <HintPath>C:\Users\Maksym\Projects\UnityProjects\Robot_Fighter_3D\Assets\Firebase\Plugins\Firebase.Platform.dll</HintPath>
-    </Reference>
-    <Reference Include="Google.MiniJson">
-      <HintPath>C:\Users\Maksym\Projects\UnityProjects\Robot_Fighter_3D\Assets\Firebase\Plugins\Google.MiniJson.dll</HintPath>
-    </Reference>
-    <Reference Include="Zenject.ReflectionBaking.Mono.Cecil">
-      <HintPath>C:\Users\Maksym\Projects\UnityProjects\Robot_Fighter_3D\Assets\Plugins\Zenject\OptionalExtras\ReflectionBaking\Lib\Zenject.ReflectionBaking.Mono.Cecil.dll</HintPath>
-    </Reference>
-    <Reference Include="Firebase.Editor">
-      <HintPath>C:\Users\Maksym\Projects\UnityProjects\Robot_Fighter_3D\Assets\Firebase\Editor\Firebase.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Coffee.UIEffect.R">
-      <HintPath>C:\Users\Maksym\Projects\UnityProjects\Robot_Fighter_3D\Library\PackageCache\com.coffee.ui-effect@5913675f7f05\Runtime\Coffee.UIEffect.R.dll</HintPath>
-    </Reference>
     <Reference Include="AiEditorToolsSdk">
       <HintPath>C:\Users\Maksym\Projects\UnityProjects\Robot_Fighter_3D\Library\PackageCache\com.unity.ai.assistant@c0127625258e\Modules\Unity.AI.Toolkit.Sdk\Editor\AiEditorToolsSdk.dll</HintPath>
     </Reference>
     <Reference Include="Mono.Cecil">
       <HintPath>C:\Users\Maksym\Projects\UnityProjects\Robot_Fighter_3D\Library\PackageCache\com.unity.nuget.mono-cecil@ecb9724e46ff\Mono.Cecil.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Collections.LowLevel.ILSupport">
-      <HintPath>C:\Users\Maksym\Projects\UnityProjects\Robot_Fighter_3D\Library\PackageCache\com.unity.collections@84e8eb3fc12e\Unity.Collections.LowLevel.ILSupport\Unity.Collections.LowLevel.ILSupport.dll</HintPath>
+    <Reference Include="Zenject.ReflectionBaking.Mono.Cecil">
+      <HintPath>C:\Users\Maksym\Projects\UnityProjects\Robot_Fighter_3D\Assets\Plugins\Zenject\OptionalExtras\ReflectionBaking\Lib\Zenject.ReflectionBaking.Mono.Cecil.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
       <HintPath>C:\Program Files\Unity\Hub\Editor\6000.3.24f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
