@@ -17,22 +17,44 @@ namespace Game.Ads
     /// <c>ITickable</c> and <c>IDisposable</c>, so the context drives it.
     /// </para>
     /// <para>
-    /// The provider is the <see cref="BaseAdsProvider"/> stub, created from its prefab on a GameObject of its own under
-    /// this one — unless an installer earlier in the <b>Mono Installers</b> list has bound an <see cref="IAdsProvider"/>
-    /// already, which is how a real ad network replaces the stub. Storage, clock and pause are bound with
-    /// <c>IfNotBound</c> the same way.
+    /// The provider is picked in the Inspector: <see cref="ProviderChoice.Base"/> is the <see cref="BaseAdsProvider"/>
+    /// stub, <see cref="ProviderChoice.Network"/> a real ad network's prefab (AdMob's lives in an assembly of its own,
+    /// which this module cannot name, so any prefab with an <see cref="IAdsProvider"/> on its root is taken). Either one
+    /// is created from its prefab on a GameObject of its own under this one. An installer earlier in the
+    /// <b>Mono Installers</b> list that has bound an <see cref="IAdsProvider"/> already still wins over the choice.
+    /// Storage, clock and pause are bound with <c>IfNotBound</c> the same way.
     /// </para>
     /// </remarks>
     internal sealed class AdsManagerInstaller : MonoInstaller
     {
+        /// <summary>Which ad network the manager uses.</summary>
+        internal enum ProviderChoice
+        {
+            /// <summary>The stub: black screens with a timer, nothing loaded from anywhere.</summary>
+            Base = 0,
+
+            /// <summary>The real ad network in <c>_networkProviderPrefab</c>.</summary>
+            Network = 1,
+        }
+
         [SerializeField]
         [Tooltip("Levels, cooldown, pausing and logging. Without one the defaults are used.")]
         private AdsConfig _config;
 
         [SerializeField]
-        [Tooltip("The stub ad network, created on a GameObject of its own under this one. Not used when another " +
-                 "installer has bound a provider already.")]
+        [Tooltip("Which ad network the manager uses. Base: the stub from Base Provider Prefab, black screens with a " +
+                 "timer. Network: the real network from Network Provider Prefab.")]
+        private ProviderChoice _provider = ProviderChoice.Base;
+
+        [SerializeField]
+        [Tooltip("The stub ad network (Prefabs/BaseAdsProvider), created on a GameObject of its own under this one " +
+                 "when Provider is Base.")]
         private BaseAdsProvider _baseProviderPrefab;
+
+        [SerializeField]
+        [Tooltip("The real ad network (Prefabs/AdmobAdsProvider): a prefab with an ads provider on its root, created on " +
+                 "a GameObject of its own under this one when Provider is Network.")]
+        private GameObject _networkProviderPrefab;
 
         /// <inheritdoc />
         public override void InstallBindings()
@@ -84,21 +106,71 @@ namespace Game.Ads
                 return;
             }
 
-            if (_baseProviderPrefab == null)
+            GameObject prefab = ChooseProviderPrefab();
+            if (prefab == null)
             {
-                Debug.LogError(
-                    "[Ads] No provider prefab assigned on '" + name + "' and no other provider bound, so no ad will " +
-                    "ever be shown. Assign Prefabs/BaseAdsProvider.", this);
                 Container.Bind<IAdsProvider>().To<NullAdsProvider>().AsSingle();
                 return;
             }
 
             Container.Bind<IAdsProvider>()
-                .To<BaseAdsProvider>()
-                .FromComponentInNewPrefab(_baseProviderPrefab)
-                .WithGameObjectName("BaseAdsProvider")
+                .FromComponentInNewPrefab(prefab)
+                .WithGameObjectName(prefab.name)
                 .UnderTransform(transform)
                 .AsSingle();
+        }
+
+        private GameObject ChooseProviderPrefab()
+        {
+            if (_provider != ProviderChoice.Network)
+            {
+                if (_baseProviderPrefab == null)
+                {
+                    Debug.LogError(
+                        "[Ads] No provider prefab assigned on '" + name + "' for Base, and no other provider bound, so " +
+                        "no ad will ever be shown. Assign Prefabs/BaseAdsProvider to Base Provider Prefab.", this);
+                    return null;
+                }
+
+                return _baseProviderPrefab.gameObject;
+            }
+
+            // No quiet fall back to the stub: a release build would show players black screens instead of ads.
+            if (_networkProviderPrefab == null)
+            {
+                Debug.LogError(
+                    "[Ads] No provider prefab assigned on '" + name + "' for Network, and no other provider bound, so " +
+                    "no ad will ever be shown. Assign the network's prefab to Network Provider Prefab, or switch " +
+                    "Provider to Base.", this);
+                return null;
+            }
+
+            if (!IsProvider(_networkProviderPrefab))
+            {
+                Debug.LogError(
+                    "[Ads] '" + _networkProviderPrefab.name + "', the Network Provider Prefab on '" + name + "', has " +
+                    "no ads provider on its root, so no ad will ever be shown. Assign the network's prefab " +
+                    "(Prefabs/AdmobAdsProvider), or switch Provider to Base.", this);
+                return null;
+            }
+
+            return _networkProviderPrefab;
+        }
+
+        private void OnValidate()
+        {
+            // The field takes any GameObject: the network's type is in an assembly this module cannot reference.
+            if (_networkProviderPrefab != null && !IsProvider(_networkProviderPrefab))
+            {
+                Debug.LogWarning(
+                    "[Ads] '" + _networkProviderPrefab.name + "' has no ads provider on its root, so it cannot be the " +
+                    "Network Provider Prefab on '" + name + "'.", this);
+            }
+        }
+
+        private static bool IsProvider(GameObject prefab)
+        {
+            return prefab.GetComponent<IAdsProvider>() != null;
         }
     }
 }

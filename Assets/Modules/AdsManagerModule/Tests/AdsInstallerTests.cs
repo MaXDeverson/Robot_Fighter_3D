@@ -9,7 +9,7 @@ using Zenject;
 namespace Game.Ads.Tests
 {
     /// <summary>
-    /// The module the way the game gets it: the installer, the config asset and the stub prefab in a real
+    /// The module the way the game gets it: the installer, the config asset and the provider prefabs in a real
     /// <see cref="DiContainer"/>.
     /// </summary>
     /// <remarks>
@@ -91,6 +91,40 @@ namespace Game.Ads.Tests
         }
 
         [Test]
+        public void NetworkCreatesTheProviderFromTheNetworkPrefab()
+        {
+            // Any prefab with a provider on its root will do; the stub's stands in for AdMob's.
+            GameObject network = AssetDatabase.LoadAssetAtPath<GameObject>(ProviderPrefabPath);
+            GameObject host = Install(Container, false, AdsManagerInstaller.ProviderChoice.Network, network);
+
+            BaseAdsProvider provider = Container.Resolve<IAdsProvider>() as BaseAdsProvider;
+            Assert.That(provider, Is.Not.Null);
+            Assert.That(provider.gameObject.name, Is.EqualTo(network.name));
+            Assert.That(provider.transform.parent, Is.SameAs(host.transform), "a GameObject of its own under the installer");
+        }
+
+        [Test]
+        public void NetworkWithoutAPrefabDoesNotFallBackToTheStub()
+        {
+            LogAssert.Expect(LogType.Error, new Regex("No provider prefab assigned .* for Network"));
+            Install(Container, true, AdsManagerInstaller.ProviderChoice.Network);
+
+            Assert.That(Container.Resolve<IAdsProvider>(), Is.TypeOf<NullAdsProvider>());
+        }
+
+        [Test]
+        public void NetworkWithAPrefabThatIsNoProviderShowsNoAd()
+        {
+            GameObject notAProvider = new GameObject("NotAProvider");
+            _spawned.Add(notAProvider);
+
+            LogAssert.Expect(LogType.Error, new Regex("'NotAProvider'.* has no ads provider"));
+            Install(Container, true, AdsManagerInstaller.ProviderChoice.Network, notAProvider);
+
+            Assert.That(Container.Resolve<IAdsProvider>(), Is.TypeOf<NullAdsProvider>());
+        }
+
+        [Test]
         public void ASecondManagerInAChildContextIsSkipped()
         {
             Container.Bind<IAdsProvider>().FromInstance(new FakeAdsProvider());
@@ -137,7 +171,11 @@ namespace Game.Ads.Tests
             Assert.That(canvas.sortingOrder, Is.GreaterThanOrEqualTo(30000), "over every screen of the game");
         }
 
-        private GameObject Install(DiContainer container, bool withPrefab)
+        private GameObject Install(
+            DiContainer container,
+            bool withBasePrefab,
+            AdsManagerInstaller.ProviderChoice provider = AdsManagerInstaller.ProviderChoice.Base,
+            GameObject networkPrefab = null)
         {
             GameObject host = new GameObject("Ads");
             _spawned.Add(host);
@@ -145,8 +183,10 @@ namespace Game.Ads.Tests
 
             SerializedObject serialized = new SerializedObject(installer);
             serialized.FindProperty("_config").objectReferenceValue = AssetDatabase.LoadAssetAtPath<AdsConfig>(ConfigPath);
+            serialized.FindProperty("_provider").enumValueIndex = (int)provider;
             serialized.FindProperty("_baseProviderPrefab").objectReferenceValue =
-                withPrefab ? AssetDatabase.LoadAssetAtPath<BaseAdsProvider>(ProviderPrefabPath) : null;
+                withBasePrefab ? AssetDatabase.LoadAssetAtPath<BaseAdsProvider>(ProviderPrefabPath) : null;
+            serialized.FindProperty("_networkProviderPrefab").objectReferenceValue = networkPrefab;
             serialized.ApplyModifiedPropertiesWithoutUndo();
 
             container.Inject(installer);

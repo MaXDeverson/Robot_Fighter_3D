@@ -3,8 +3,8 @@ using System;
 namespace Game.Ads
 {
     /// <summary>
-    /// Whether the player's privacy choices let the game request ads — the privacy notice accepted and, where the law
-    /// requires it, the consent form answered.
+    /// Whether the player's privacy choices let the game request ads — the consent platform has answered and, where the
+    /// law requires it, the player has answered its form.
     /// </summary>
     /// <remarks>
     /// Implemented outside the module, over the game's privacy service, and bound in the <c>ProjectContext</c>. The ad
