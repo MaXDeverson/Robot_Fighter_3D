@@ -48,6 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Modules\AnalyticsModule\Editor\AnalyticsDebuggerWindow.cs" />
+    <Compile Include="Assets\Editor\ToolBar\MainToolbarTimescaleSlider.cs" />
     <Compile Include="Assets\PE2D\Particle Effects\Editor\ParticleEmitterInRandomDirectionEditor.cs" />
     <Compile Include="Assets\_Effects\EffectExamples\TutorialInfo\Scripts\Editor\ReadmeEditor.cs" />
     <Compile Include="Assets\PE2D\Editor\ImageEffects\VignetteAndChromaticAberrationEditor.cs" />
@@ -56,6 +57,7 @@
     <Compile Include="Assets\PE2D\Particle Effects\Editor\ParticleEffectorEditor.cs" />
     <Compile Include="Assets\BeatEmUp_GameTemplate3D\Scripts\Settings\Editor\GameSettingsEditor.cs" />
     <Compile Include="Assets\PE2D\Editor\ImageEffects\DepthOfFieldDeprecatedEditor.cs" />
+    <Compile Include="Assets\Editor\ToolBar\MainToolbarCheckbox.cs" />
     <Compile Include="Assets\PE2D\Editor\ImageEffects\BloomEditor.cs" />
     <Compile Include="Assets\PE2D\Editor\ImageEffects\ColorCorrectionLookupEditor.cs" />
     <Compile Include="Assets\PE2D\Editor\ImageEffects\BloomAndFlaresEditor.cs" />
@@ -68,6 +70,9 @@
     <Compile Include="Assets\PE2D\Editor\ImageEffects\ColorCorrectionCurvesEditor.cs" />
     <Compile Include="Assets\PE2D\Editor\ImageEffects\EdgeDetectionEditor.cs" />
     <Compile Include="Assets\_Models\SCI_FI INDUSTRIAL\_SNAPS_PrototypingAssets\Scripts\Editor\PackageChecker\PackageChecker.cs" />
+    <Compile Include="Assets\Editor\ToolBar\MainToolbarButtons.cs" />
+    <Compile Include="Assets\Editor\ToolBar\MainToolbarElementStyler.cs" />
+    <Compile Include="Assets\Editor\BootLoader.cs" />
     <None Include="Assets\ExternalDependencyManager\Editor\external-dependency-manager_version-1.2.176_manifest.txt" />
     <None Include="Assets\_Models\SCI_FI INDUSTRIAL\_SNAPS_PrototypingAssets\Scripts\Editor\PackageChecker\settings\PackageImportList_ShaderGraph.txt" />
     <None Include="Assets\_Models\SCI_FI INDUSTRIAL\_SNAPS_PrototypingAssets\Scripts\Editor\PackageChecker\PackageImportList.txt" />
