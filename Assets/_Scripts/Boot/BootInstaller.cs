@@ -14,6 +14,7 @@ public class BootInstaller : MonoInstaller
         _sceneLoader = new SceneLoader();
 
         Container.Bind<SceneLoader>().FromInstance(_sceneLoader).AsSingle().NonLazy();
+        Container.BindInterfacesTo<AdsGameBridge>().AsSingle();
 
         Log("Install bindings completed");
     }

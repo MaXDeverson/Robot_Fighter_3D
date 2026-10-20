@@ -5,9 +5,12 @@ using UnityEngine;
 using UnityEngine.Purchasing;
 using System;
 using UnityEngine.Purchasing.Extension;
+using Game.Ads;
+using Zenject;
 
 public class Purchaser : MonoBehaviour
 {
+    [Inject] private IAdsManagerService _ads;
     [SerializeField] private InAppScr _inApp;
 
     private void Start()
@@ -56,7 +59,8 @@ public class Purchaser : MonoBehaviour
     }
     private void PurchaseAdBlock()
     {
-        PlayerPrefs.SetInt("ADSUNLOCK", 1);
+        PlayerPrefs.SetInt(AdsGameBridge.AdsUnlockKey, 1);
+        _ads.AddPermanentAdBlock();
     }
 
     private void All()

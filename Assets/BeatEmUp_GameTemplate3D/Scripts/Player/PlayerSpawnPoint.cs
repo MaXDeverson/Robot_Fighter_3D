@@ -1,4 +1,5 @@
-﻿using Game.Events;
+﻿using Game.Ads;
+using Game.Events;
 using Game.Gameplay.Events;
 using System.Collections;
 using UnityEngine;
@@ -8,6 +9,7 @@ using Zenject;
 public class PlayerSpawnPoint : MonoBehaviour
 {
     [Inject] private IEventPublisher _events;
+    [Inject] private IAdsManagerService _ads;
 
     //public GameObject defaultPlayerPrefab;
     [SerializeField] private Transform _playerSpawnPosiiton;
@@ -59,10 +61,18 @@ public class PlayerSpawnPoint : MonoBehaviour
     public void TakeWeapon(int index)
     {
         _events.Publish(new WeaponTaken { WeaponIndex = index });
-        if (!MyMobileAds.ShowRewardedSucssesCheck(() => { _currentPlayer.GetComponent<PlayerCombat>().equipWeapon(_weapons[index]); _manager.HideWeaponChoice();}))
+        _ads.ShowRewarded(result =>
         {
-            _manager.ShowDialogWindow("No internet connection :(");
-        }
+            if (result.IsSuccess)
+            {
+                _currentPlayer.GetComponent<PlayerCombat>().equipWeapon(_weapons[index]);
+                _manager.HideWeaponChoice();
+            }
+            else if (result.Status != AdStatus.Cancelled)
+            {
+                _manager.ShowDialogWindow("No internet connection :(");
+            }
+        }, "weapon_choice");
 
     }
 }

@@ -1,4 +1,5 @@
-﻿using Game.Events;
+﻿using Game.Ads;
+using Game.Events;
 using Game.Gameplay.Events;
 using System.Collections;
 using System.Collections.Generic;
@@ -10,6 +11,7 @@ using Zenject;
 public class Manager : MonoBehaviour
 {
     [Inject] private IEventPublisher _events;
+    [Inject] private IAdsManagerService _ads;
     [SerializeField] private UIManager _uiManager;
     public GameObject barish;
     public static Manager instance;
@@ -82,7 +84,11 @@ public class Manager : MonoBehaviour
     {
         if(General.CurrentLevel > 0)
         {
-            MyMobileAds.LoadBannerAd();
+            _ads.ShowBanner();
+        }
+        else
+        {
+            _ads.HideBanner();
         }
         HUD.SetActive(true);
         TouchPanel.SetActive(InputManager.ShowTouchControls);
@@ -202,36 +208,36 @@ public class Manager : MonoBehaviour
 
     public void Btn_Paused()
     {
-        MyMobileAds.ShowAd(()=> {
+        _ads.ShowInterstitial(_ => {
             AudioListener.pause = true;
             GameObject.Find("AudioSource").GetComponent<AudioSource>().enabled = false;
 
             PauseFunction();
-        });
+        }, "pause");
 
     }
 
     public void Btn_Restart()
     {
-        MyMobileAds.ShowAd(()=>
+        _ads.ShowInterstitial(_ =>
         {
             Time.timeScale = 1f;
             StartCoroutine(AsynchronousLoad("GamePlay"));
             loadingScreenBG.SetActive(true);
             AudioListener.pause = false;
-        });
+        }, "restart");
 
 
     }
 
     public void Btn_Resume()
     {
-        MyMobileAds.ShowAd(()=> {
+        _ads.ShowInterstitial(_ => {
             AudioListener.pause = false;
             GameObject.Find("AudioSource").GetComponent<AudioSource>().enabled = true;
             Time.timeScale = 1;
             dia_pause.SetActive(false);
-        });
+        }, "resume");
 
 
     }
@@ -239,7 +245,7 @@ public class Manager : MonoBehaviour
     public void Btn_Next()
     {
         loadingScreenBG.SetActive(true);
-        MyMobileAds.ShowAd(() =>
+        _ads.ShowInterstitial(_ =>
         {
             Time.timeScale = 1;
             EnableRespectivePanel.menuPanelNum = 3;
@@ -247,15 +253,24 @@ public class Manager : MonoBehaviour
             StartCoroutine(AsynchronousLoad("GamePlay"));
             AudioListener.pause = false;
             PlayerData.GetPlayerData().RessetLevelCash();
-        });
+        }, "next_level");
 
     }
     public void DoubleCash()
     {
-        if(!MyMobileAds.ShowRewardedSucssesCheck(() => { _uiManager.DisableDoubleCash(); _events.Publish(new CashDoubled()); PlayerData.GetPlayerData().DoubleCash(); }))
+        _ads.ShowRewarded(result =>
         {
-            ShowDialogWindow("No Internet connection :(");
-        }
+            if (result.IsSuccess)
+            {
+                _uiManager.DisableDoubleCash();
+                _events.Publish(new CashDoubled());
+                PlayerData.GetPlayerData().DoubleCash();
+            }
+            else if (result.Status != AdStatus.Cancelled)
+            {
+                ShowDialogWindow("No Internet connection :(");
+            }
+        }, "double_cash");
     }
     public void HideWeaponChoice()
     {
