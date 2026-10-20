@@ -14,6 +14,9 @@ namespace Game.Analytics.Gameplay
         /// <summary>Event names.</summary>
         public static class Names
         {
+            /// <summary>The game was launched.</summary>
+            public const string GameLaunched = "game_launched";
+
             /// <summary>A level was loaded and is being played.</summary>
             public const string LevelStart = "level_start";
 
@@ -27,6 +30,9 @@ namespace Game.Analytics.Gameplay
             /// <summary>Index of the level, as the game counts them: 0 for the first.</summary>
             public const string Level = "level";
         }
+
+        /// <summary>The hierarchy segment of the game launch.</summary>
+        public const string GameLaunchedSegment = "Game_Launched";
 
         /// <summary>The hierarchy segment of a started level: <c>Level_Start_3</c> for level index 3.</summary>
         public static string LevelStartSegment(int levelIndex)

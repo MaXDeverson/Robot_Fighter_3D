@@ -4,7 +4,7 @@ using Zenject;
 namespace Game.Analytics.Gameplay
 {
     /// <summary>
-    /// Installs this game's tracking plan: the level tracker.
+    /// Installs this game's tracking plan: the game and level trackers.
     /// </summary>
     /// <remarks>
     /// <para>
@@ -31,6 +31,7 @@ namespace Game.Analytics.Gameplay
 
             // Registers as IInitializable, because it subscribes in Start, and as IDisposable, so the context's
             // DisposableManager unsubscribes it.
+            Container.BindInterfacesAndSelfTo<GameAnalyticsTracker>().AsSingle();
             Container.BindInterfacesAndSelfTo<LevelAnalyticsTracker>().AsSingle();
         }
     }

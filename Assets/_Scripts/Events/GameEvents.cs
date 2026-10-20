@@ -5,9 +5,15 @@ namespace Game.Gameplay.Events
     // Analytics events of the game. Each one keeps the meaning of the event name it replaced
     // (the old name is noted next to it).
 
-    /// <summary>Published once by <c>GameBoot</c>, when the event service is ready and the first scene is about to load.</summary>
+    /// <summary>Published once by <c>GameBoot</c>, when boot starts its initialization.</summary>
     [EventPath("Game.Booted")]
     public struct GameBooted : IGameEvent
+    {
+    }
+
+    /// <summary>Published once by <c>GameBoot</c>, when boot is done and the menu scene starts loading.</summary>
+    [EventPath("Game.Launched")]
+    public struct GameLaunched : IGameEvent
     {
     }
 

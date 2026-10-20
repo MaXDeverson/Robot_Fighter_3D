@@ -15,6 +15,9 @@ public class GameBoot : MonoBehaviour
     }
     public void Initialize()
     {
+        // The service itself is installed by the ProjectContext; this is where boot confirms it is up.
+        _events.Publish(new GameBooted());
+
         InitProjectAdjustments();
         RunBoot().Forget();
     }
@@ -29,9 +32,7 @@ public class GameBoot : MonoBehaviour
         //await config.InternalLoad();
         //await save.InternalLoad();
 
-        // The service itself is installed by the ProjectContext; this is where boot confirms it is up.
-        _events.Publish(new GameBooted());
-
+        _events.Publish(new GameLaunched());
         _sceneLoader.LoadScene(SceneLoader.SceneType.MenuScene);
     }
 
