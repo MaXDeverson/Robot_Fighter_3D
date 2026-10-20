@@ -54,6 +54,7 @@ MonoBehaviour:
   - {fileID: 4400100000000000003}
   - {fileID: 6873698918793930328}
   - {fileID: 5857590933998863450}
+  - {fileID: 7316402958817465031}
   _installerPrefabs: []
   _parentNewObjectsUnderContext: 1
   _editorReflectionBakingCoverageMode: 0
@@ -220,6 +221,7 @@ GameObject:
   - component: {fileID: 4901192403277795784}
   - component: {fileID: 6873698918793930328}
   - component: {fileID: 9078482501524687255}
+  - component: {fileID: 7316402958817465031}
   m_Layer: 0
   m_Name: Analytics
   m_TagString: Untagged
@@ -267,3 +269,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e5d92cecc08734408d15cea22555795, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Game.Analytics.Gameplay.GameplayAnalyticsInstaller
+--- !u!114 &7316402958817465031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8126821617939498924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1ee7063dee549b49aebf06026a2457c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Game.Analytics.Backends.GameAnalyticsSinkInstaller
+  _enabled: 1
