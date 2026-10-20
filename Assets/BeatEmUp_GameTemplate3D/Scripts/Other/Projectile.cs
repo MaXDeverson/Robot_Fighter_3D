@@ -12,7 +12,7 @@ public class Projectile : MonoBehaviour {
 	private DamageObject damage;
 
 	void Start () {
-		GetComponent<Rigidbody>().velocity = new Vector2((int)direction * speed, 0);
+		GetComponent<Rigidbody>().linearVelocity = new Vector2((int)direction * speed, 0);
 		GetComponent<Collider>().isTrigger = true;
 
 		//turn projectile to travel direction

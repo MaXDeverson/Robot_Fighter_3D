@@ -46,7 +46,7 @@ public class BreakableObject : MonoBehaviour, IDamagable<DamageObject> {
 				GameObject item = GameObject.Instantiate (spawnItem, transform.position,Quaternion.identity);
 				//item.transform.localPosition = transform.position;
 				//add up force to object
-				item.GetComponent<Rigidbody>().velocity = Vector3.up * 8f;
+				item.GetComponent<Rigidbody>().linearVelocity = Vector3.up * 8f;
 			}
 		}
 

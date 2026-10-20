@@ -162,7 +162,7 @@ public class EnemyActions : MonoBehaviour
     {
         if (updateVelocity)
         {
-            rb.velocity = fixedVelocity;
+            rb.linearVelocity = fixedVelocity;
             updateVelocity = false;
         }
     }
@@ -428,7 +428,7 @@ public class EnemyActions : MonoBehaviour
         //    _isDropped = true;
         //}
         //going up...
-        while (rb.velocity.y >= 0) yield return new WaitForFixedUpdate();
+        while (rb.linearVelocity.y >= 0) yield return new WaitForFixedUpdate();
 
         //going down
        
@@ -462,10 +462,10 @@ public class EnemyActions : MonoBehaviour
         //stop sliding
         float t = 0;
         float speed = 2;
-        Vector3 fromVelocity = rb.velocity;
+        Vector3 fromVelocity = rb.linearVelocity;
         while (t < 1)
         {
-            SetVelocity(Vector3.Lerp(new Vector3(fromVelocity.x, rb.velocity.y + Physics.gravity.y * Time.fixedDeltaTime, fromVelocity.z), new Vector3(0, rb.velocity.y, 0), t));
+            SetVelocity(Vector3.Lerp(new Vector3(fromVelocity.x, rb.linearVelocity.y + Physics.gravity.y * Time.fixedDeltaTime, fromVelocity.z), new Vector3(0, rb.linearVelocity.y, 0), t));
             t += Time.deltaTime * speed;
             yield return new WaitForFixedUpdate();
         }
@@ -519,7 +519,7 @@ public class EnemyActions : MonoBehaviour
             if (IsGrounded() && !WallSpotted() && !PitfallSpotted())
             {
                 Move(moveDirection.normalized, walkSpeed);
-                animator.SetAnimatorFloat("MovementSpeed", rb.velocity.sqrMagnitude);
+                animator.SetAnimatorFloat("MovementSpeed", rb.linearVelocity.sqrMagnitude);
                 return;
             }
         }
@@ -531,7 +531,7 @@ public class EnemyActions : MonoBehaviour
             if (IsGrounded() && !WallSpotted() && !PitfallSpotted())
             {
                 Move(moveDirection.normalized, walkBackwardSpeed);
-                animator.SetAnimatorFloat("MovementSpeed", -rb.velocity.sqrMagnitude);
+                animator.SetAnimatorFloat("MovementSpeed", -rb.linearVelocity.sqrMagnitude);
                 return;
             }
         }
@@ -546,7 +546,7 @@ public class EnemyActions : MonoBehaviour
     {
         if (!NoMovementStates.Contains(enemyState))
         {
-            SetVelocity(new Vector3(vector.x * speed, rb.velocity.y + Physics.gravity.y * Time.fixedDeltaTime, vector.z * speed));
+            SetVelocity(new Vector3(vector.x * speed, rb.linearVelocity.y + Physics.gravity.y * Time.fixedDeltaTime, vector.z * speed));
         }
         else
         {

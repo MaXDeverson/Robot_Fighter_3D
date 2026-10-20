@@ -36,7 +36,7 @@ public class TrainingDummy : MonoBehaviour, IDamagable<DamageObject>{
 	//add force on physics update
 	void FixedUpdate(){
 		if(addForce.magnitude>0){
-			GetComponent<Rigidbody>().velocity = addForce;
+			GetComponent<Rigidbody>().linearVelocity = addForce;
 			addForce = Vector3.zero;
 		}
 	}

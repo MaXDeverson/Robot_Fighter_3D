@@ -131,13 +131,13 @@ public class PlayerMovement : MonoBehaviour {
 			//set movement speed to run speed or walk speed depending on the current state
 			float movementSpeed = playerState.currentState == UNITSTATE.RUN? runSpeed : walkSpeed;
 
-			rb.velocity = new Vector3( inputDirection.x * -movementSpeed, rb.velocity.y + Physics.gravity.y * Time.fixedDeltaTime, inputDirection.y * -ZSpeed);
-			if(animator) animator.SetAnimatorFloat("MovementSpeed", rb.velocity.magnitude);
+			rb.linearVelocity = new Vector3( inputDirection.x * -movementSpeed, rb.linearVelocity.y + Physics.gravity.y * Time.fixedDeltaTime, inputDirection.y * -ZSpeed);
+			if(animator) animator.SetAnimatorFloat("MovementSpeed", rb.linearVelocity.magnitude);
 
 		} else {
 
 			//stop moving, but still apply gravity
-			rb.velocity = new Vector3(0, rb.velocity.y + Physics.gravity.y * Time.fixedDeltaTime, 0);
+			rb.linearVelocity = new Vector3(0, rb.linearVelocity.y + Physics.gravity.y * Time.fixedDeltaTime, 0);
 
 			if(animator) animator.SetAnimatorFloat("MovementSpeed", 0);
 			playerState.SetState(UNITSTATE.IDLE);
@@ -151,20 +151,20 @@ public class PlayerMovement : MonoBehaviour {
 	void MoveAirborne(){
 
 		//falling down
-		if(rb.velocity.y < 0.1f && playerState.currentState != UNITSTATE.KNOCKDOWN)	animator.SetAnimatorBool("Falling", true);
+		if(rb.linearVelocity.y < 0.1f && playerState.currentState != UNITSTATE.KNOCKDOWN)	animator.SetAnimatorBool("Falling", true);
 
 		if(!WallInFront()) {
 
 			//movement direction based on current input
 			int dir = Mathf.Clamp(Mathf.RoundToInt(-inputDirection.x), -1, 1);
-			float xpeed = Mathf.Clamp(rb.velocity.x + AirMaxSpeed * dir * Time.fixedDeltaTime * AirAcceleration, -AirMaxSpeed, AirMaxSpeed);
-			float downForce = rb.velocity.y>0? 0 : jumpDownwardsForce; //adds a small downwards force when going down 
+			float xpeed = Mathf.Clamp(rb.linearVelocity.x + AirMaxSpeed * dir * Time.fixedDeltaTime * AirAcceleration, -AirMaxSpeed, AirMaxSpeed);
+			float downForce = rb.linearVelocity.y>0? 0 : jumpDownwardsForce; //adds a small downwards force when going down 
 
 			//apply movement
 			if(AllowDepthJumping) {
-				rb.velocity = new Vector3(xpeed, rb.velocity.y - downForce, -inputDirection.y * ZSpeed);
+				rb.linearVelocity = new Vector3(xpeed, rb.linearVelocity.y - downForce, -inputDirection.y * ZSpeed);
 			} else {
-				rb.velocity = new Vector3(xpeed, rb.velocity.y - downForce, 0);
+				rb.linearVelocity = new Vector3(xpeed, rb.linearVelocity.y - downForce, 0);
 			}
 		}
 	}
@@ -174,7 +174,7 @@ public class PlayerMovement : MonoBehaviour {
 		playerState.SetState(UNITSTATE.JUMPING);
 		JumpNextFixedUpdate = false;
 		jumpInProgress = true;
-		rb.velocity = Vector3.up * JumpForce;
+		rb.linearVelocity = Vector3.up * JumpForce;
 
 		//play animation
 		animator.SetAnimatorBool("JumpInProgress", true);
@@ -190,7 +190,7 @@ public class PlayerMovement : MonoBehaviour {
 	void HasLanded(){
 		jumpInProgress = false;
 		playerState.SetState(UNITSTATE.LAND);
-		rb.velocity = Vector2.zero;
+		rb.linearVelocity = Vector2.zero;
 		landTime = Time.time;
 
 		//set animator properties
@@ -278,7 +278,7 @@ public class PlayerMovement : MonoBehaviour {
 	//the player has died
 	void Death() {
 		isDead = true;
-		rb.velocity = Vector3.zero;
+		rb.linearVelocity = Vector3.zero;
 	}
 
 	//returns true if there is a environment collider in front of us

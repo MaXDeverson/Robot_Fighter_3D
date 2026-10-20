@@ -121,7 +121,7 @@ public class UnitAnimator : MonoBehaviour {
 
 		while (t < 1) {
 			yield return new WaitForFixedUpdate();
-			rb.velocity = Vector2.right * (int)startDir * Mathf.Lerp (force, rb.velocity.y, MathUtilities.Sinerp (0, 1, t));
+			rb.linearVelocity = Vector2.right * (int)startDir * Mathf.Lerp (force, rb.linearVelocity.y, MathUtilities.Sinerp (0, 1, t));
 			t += Time.fixedDeltaTime * speed;
 			yield return null;
 		}

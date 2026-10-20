@@ -168,7 +168,7 @@ public class PlayerCombat : MonoBehaviour, IDamagable<DamageObject> {
 	//physics update
 	void FixedUpdate(){
 		if (updateVelocity){
-			rb.velocity = fixedVelocity;
+			rb.linearVelocity = fixedVelocity;
 			updateVelocity = false;
 		}
 	}
@@ -689,7 +689,7 @@ public class PlayerCombat : MonoBehaviour, IDamagable<DamageObject> {
 		}
 
 		//going up...
-		while(rb.velocity.y >= 0) yield return new WaitForFixedUpdate();
+		while(rb.linearVelocity.y >= 0) yield return new WaitForFixedUpdate();
 
 		//going down
 		animator.SetAnimatorTrigger ("KnockDown_Down");
@@ -707,9 +707,9 @@ public class PlayerCombat : MonoBehaviour, IDamagable<DamageObject> {
 		//ground slide
 		float t = 0;
 		float speed = 2;
-		Vector3 fromVelocity = rb.velocity;
+		Vector3 fromVelocity = rb.linearVelocity;
 		while (t<1){
-			SetVelocity(Vector3.Lerp (new Vector3(fromVelocity.x, rb.velocity.y + Physics.gravity.y * Time.fixedDeltaTime, fromVelocity.z), new Vector3(0, rb.velocity.y, 0), t));
+			SetVelocity(Vector3.Lerp (new Vector3(fromVelocity.x, rb.linearVelocity.y + Physics.gravity.y * Time.fixedDeltaTime, fromVelocity.z), new Vector3(0, rb.linearVelocity.y, 0), t));
 			t += Time.deltaTime * speed;
 			yield return null;
 		}

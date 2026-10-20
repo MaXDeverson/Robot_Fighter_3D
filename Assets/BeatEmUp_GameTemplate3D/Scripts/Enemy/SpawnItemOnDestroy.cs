@@ -36,6 +36,6 @@ public class SpawnItemOnDestroy : MonoBehaviour {
 
 		//add an up force to this item
 		Rigidbody rb = item.GetComponent<Rigidbody>();
-		if(rb) rb.velocity = new Vector3(0, spawnUpForce, 0);
+		if(rb) rb.linearVelocity = new Vector3(0, spawnUpForce, 0);
 	}
 }
