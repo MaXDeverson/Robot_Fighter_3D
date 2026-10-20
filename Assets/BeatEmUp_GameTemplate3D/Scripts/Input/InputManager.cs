@@ -26,6 +26,7 @@ public class InputManager : MonoBehaviour {
 	[Space(15)]
 	public static bool defendKeyDown;
 	private float doubleTapTime;
+	private Vector2 touchScreenJoystickDir; //last direction of the touch screen thumb-stick
 
 	void Start(){
 
@@ -114,7 +115,10 @@ public class InputManager : MonoBehaviour {
 		{
 			onInputEvent("Jump", BUTTONSTATE.PRESS);
 		}
-    	DirectionEvent(new Vector2(x,y), doubleTapState);
+		//when no direction key is pressed, keep the touch screen joystick direction instead of overwriting it with zero
+		Vector2 dir = new Vector2(x,y);
+		if(dir == Vector2.zero) dir = touchScreenJoystickDir;
+    	DirectionEvent(dir, doubleTapState);
 	}
 
 	void JoyPadControls(){
@@ -146,7 +150,8 @@ public class InputManager : MonoBehaviour {
 
 	//this function is used for the touch screen thumb-stick
 	public void OnTouchScreenJoystickEvent(Vector2 joystickDir){
-		DirectionEvent(joystickDir.normalized, false);
+		touchScreenJoystickDir = joystickDir.normalized;
+		DirectionEvent(touchScreenJoystickDir, false);
 	}
 
 	//returns true if a key double tap is detected
