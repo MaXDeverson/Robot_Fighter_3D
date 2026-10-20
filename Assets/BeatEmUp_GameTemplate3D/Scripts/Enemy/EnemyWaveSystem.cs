@@ -1,10 +1,14 @@
-﻿using UnityEngine;
+﻿using Game.Events;
+using Game.Gameplay.Events;
+using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
 using System.Collections.Generic;
+using Zenject;
 
 public class EnemyWaveSystem : MonoBehaviour
 {
+    [Inject] private IEventPublisher _events;
 
     public int MaxAttackers = 3; //the maximum number of enemies that can attack the player simultaneously 
 
@@ -234,6 +238,8 @@ public class EnemyWaveSystem : MonoBehaviour
         {
             Destroy(p);
         }
+
+        _events.Publish(new LevelCompleted { LevelIndex = General.CurrentLevel });
 
         //Go to next level or show GAMEOVER screen
         if (loadNewLevel)

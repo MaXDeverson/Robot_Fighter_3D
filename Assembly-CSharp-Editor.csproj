@@ -47,10 +47,12 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.3.24f1\Editor\Data\Tools\BuildPipeline\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Modules\AnalyticsModule\Editor\AnalyticsDebuggerWindow.cs" />
     <Compile Include="Assets\PE2D\Particle Effects\Editor\ParticleEmitterInRandomDirectionEditor.cs" />
     <Compile Include="Assets\_Effects\EffectExamples\TutorialInfo\Scripts\Editor\ReadmeEditor.cs" />
     <Compile Include="Assets\PE2D\Editor\ImageEffects\VignetteAndChromaticAberrationEditor.cs" />
     <Compile Include="Assets\PE2D\Editor\ImageEffects\AntialiasingEditor.cs" />
+    <Compile Include="Assets\Modules\AnalyticsModule\Editor\AnalyticsInstallerEditor.cs" />
     <Compile Include="Assets\PE2D\Particle Effects\Editor\ParticleEffectorEditor.cs" />
     <Compile Include="Assets\BeatEmUp_GameTemplate3D\Scripts\Settings\Editor\GameSettingsEditor.cs" />
     <Compile Include="Assets\PE2D\Editor\ImageEffects\DepthOfFieldDeprecatedEditor.cs" />

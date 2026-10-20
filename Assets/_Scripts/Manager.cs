@@ -108,6 +108,7 @@ public class Manager : MonoBehaviour
             ShowWeaponChoice();
         }
         Debug.Log("Current Level:" + General.CurrentLevel);
+        _events.Publish(new LevelStarted { LevelIndex = General.CurrentLevel });
     }
 
     void Update()

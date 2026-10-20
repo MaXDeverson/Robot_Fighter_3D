@@ -18,6 +18,20 @@ namespace Game.Gameplay.Events
         public int LevelIndex;
     }
 
+    /// <summary>A level was loaded and the fight begins. <c>LevelIndex</c> is the level the player is on.</summary>
+    [EventPath("Level.Started")]
+    public struct LevelStarted : IGameEvent
+    {
+        public int LevelIndex;
+    }
+
+    /// <summary>The last wave of a level was beaten and the level complete screen is about to show.</summary>
+    [EventPath("Level.Completed")]
+    public struct LevelCompleted : IGameEvent
+    {
+        public int LevelIndex;
+    }
+
     /// <summary>The player picked a weapon from the rewarded choice (was <c>weapon_N</c>).</summary>
     [EventPath("Weapon.Taken")]
     public struct WeaponTaken : IGameEvent
