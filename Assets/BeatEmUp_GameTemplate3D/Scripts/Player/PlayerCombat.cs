@@ -162,7 +162,7 @@ public class PlayerCombat : MonoBehaviour, IDamagable<DamageObject> {
 		if (animator) isGrounded = animator.animator.GetBool("isGrounded");
 
 		//update defence state every frame
-		Defend(Input.GetKey(KeyCode.K) || InputManager.defendKeyDown);
+		Defend(InputManager.defendKeyDown);
 	}
 
 	//physics update

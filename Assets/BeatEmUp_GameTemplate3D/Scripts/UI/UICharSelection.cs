@@ -10,7 +10,7 @@ public class UICharSelection : UISceneLoader {
 	}
 
 	void OnDisable() {
-		InputManager.onInputEvent += OnInputEvent;
+		InputManager.onInputEvent -= OnInputEvent;
 	}
 
 	void Start(){

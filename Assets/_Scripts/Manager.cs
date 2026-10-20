@@ -82,7 +82,11 @@ public class Manager : MonoBehaviour
             MyMobileAds.LoadBannerAd();
         }
         HUD.SetActive(true);
-        TouchPanel.SetActive(true);
+        TouchPanel.SetActive(InputManager.ShowTouchControls);
+
+        // the pause button and the touch controls are used with touch / mouse; the gamepad uses its own buttons for them
+        GamepadMenuNavigator.ExcludeFromNavigation(TouchPanel);
+        GamepadMenuNavigator.ExcludeFromNavigation(btn_pause);
 
         AudioListener.pause = false;
         loadingScreenBG.SetActive(false);
@@ -101,6 +105,26 @@ public class Manager : MonoBehaviour
             ShowWeaponChoice();
         }
         Debug.Log("Current Level:" + General.CurrentLevel);
+    }
+
+    void Update()
+    {
+        // Esc / P / gamepad Start toggles the pause screen, Back (Esc / gamepad B) closes it
+        if (GameInput.WasPressedThisFrame(GameInput.Pause))
+        {
+            if (dia_pause.activeSelf) Btn_Resume();
+            else if (CanPause()) Btn_Paused();
+        }
+        else if (GameInput.WasPressedThisFrame(GameInput.Back) && dia_pause.activeSelf)
+        {
+            Btn_Resume();
+        }
+    }
+
+    // pause only during the fight, not while a dialog, the loading screen or the end screens are shown
+    bool CanPause()
+    {
+        return Time.timeScale > 0f && HUD.activeInHierarchy && btn_pause.activeInHierarchy && !loadingScreenBG.activeSelf;
     }
 
     void MissionCompleteSound()

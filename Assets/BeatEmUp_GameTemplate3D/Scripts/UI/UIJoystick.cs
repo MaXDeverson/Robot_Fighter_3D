@@ -40,26 +40,10 @@ public class UIJoystick : MonoBehaviour, IPointerDownHandler, IDragHandler, IPoi
                 returnToStartPos = false;
             }
         }
-        if (_withKeyboardVisualization)
+        if (_withKeyboardVisualization && GameInput.IsReady)
         {
-            Vector2 visualDirection = new Vector2();
-            if (Input.GetKey(KeyCode.S))
-            {
-                visualDirection.y = -1;
-            }
-            if (Input.GetKey(KeyCode.W))
-            {
-                visualDirection.y = 1;
-            }
-            if (Input.GetKey(KeyCode.D))
-            {
-                visualDirection.x = 1;
-            }
-            if (Input.GetKey(KeyCode.A))
-            {
-                visualDirection.x = -1;
-            }
-            Visualizate(visualDirection);
+            // shows the keyboard / gamepad direction of the Move action on the thumb-stick
+            Visualizate(GameInput.Move.ReadValue<Vector2>());
         }
     }
 

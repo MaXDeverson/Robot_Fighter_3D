@@ -66,7 +66,7 @@ public class MissionSelection : MonoBehaviour {
     
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKeyDown(KeyCode.Escape))
+		if (GameInput.WasPressedThisFrame(GameInput.Back)) // Esc, Android back, gamepad B
 		{
 			GameObject.Find ("ClickSound").GetComponent<AudioSource> ().Play ();
 			GetComponent<MissionSelection> ().enabled = false;

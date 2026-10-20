@@ -232,7 +232,7 @@ public class PlayerMovement : MonoBehaviour {
 		if(action == "Jump" && buttonState == BUTTONSTATE.PRESS && IsGrounded() && playerState.currentState != UNITSTATE.JUMPING) JumpNextFixedUpdate = true;
 
 		//start running when a run button is pressed (e.g. Joypad controls)
-		if(action == "Run") playerState.SetState(UNITSTATE.RUN);
+		if(action == "Run" && buttonState == BUTTONSTATE.PRESS) playerState.SetState(UNITSTATE.RUN);
 	}
 
 	#endregion

@@ -87,7 +87,7 @@ public class Main_Menu : MonoBehaviour {
     }
     void Update()
 	{
-		if (Input.GetKeyDown(KeyCode.Escape))
+		if (GameInput.WasPressedThisFrame(GameInput.Back)) // Esc, Android back, gamepad B
 		{
 			GameObject.Find ("ClickSound").GetComponent<AudioSource> ().Play ();
 			settingsPanel.SetActive (false);

@@ -10,6 +10,16 @@ public class UIManager : MonoBehaviour {
 
 	[Header("LevelComplate UI")]
 	[SerializeField] private Text _finishLevelCash;
+	private bool touchControlsWanted = true; //the current screen wants the touch screen controls
+
+	void OnEnable(){
+		InputManager.onInputTypeChanged += OnInputTypeChanged;
+	}
+
+	void OnDisable(){
+		InputManager.onInputTypeChanged -= OnInputTypeChanged;
+	}
+
     private void Start()
     {
 	    if(_cashBalance != null)_cashBalance.text = PlayerData.GetPlayerData().AllCash + "$";
@@ -88,13 +98,20 @@ public class UIManager : MonoBehaviour {
 	//show or hide touch screen controls
 	void SetTouchScreenControls(UI_Screen UI){
 		if(UI.UI_Name == "TouchScreenControls") return;
-		InputManager inputManager = GameObject.FindObjectOfType<InputManager>();
-		if(inputManager != null && inputManager.inputType == INPUTTYPE.TOUCHSCREEN){
-			if(UI.showTouchControls){
-				ShowMenu("TouchScreenControls", false);
-			} else {
-				CloseMenu("TouchScreenControls");
-			}
+		touchControlsWanted = UI.showTouchControls;
+		UpdateTouchScreenControls();
+	}
+
+	//the player switched between touch screen, keyboard and gamepad
+	void OnInputTypeChanged(INPUTTYPE inputType){
+		UpdateTouchScreenControls();
+	}
+
+	//touch screen controls are visible when the current screen wants them and the player is not using a gamepad
+	void UpdateTouchScreenControls(){
+		bool visible = touchControlsWanted && InputManager.ShowTouchControls;
+		foreach (UI_Screen UI in UIMenus){
+			if(UI.UI_Name == "TouchScreenControls" && UI.UI_Gameobject != null) UI.UI_Gameobject.SetActive(visible);
 		}
 	}
 

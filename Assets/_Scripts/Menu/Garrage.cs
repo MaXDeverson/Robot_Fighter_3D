@@ -42,7 +42,7 @@ public class Garrage : MonoBehaviour {
 	}
     
 	void Update () {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (GameInput.WasPressedThisFrame(GameInput.Back)) // Esc, Android back, gamepad B
 		{
 			GameObject.Find ("ClickSound").GetComponent<AudioSource> ().Play ();
 			GetComponent<Garrage> ().enabled = false;

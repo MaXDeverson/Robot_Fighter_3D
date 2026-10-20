@@ -52,8 +52,8 @@ public class GameOverScrn : UISceneLoader {
 			text.color = ColorTransition.Evaluate(t);
 		}
 
-		//alternative input events
-		if(Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Return)){ 
+		//alternative input events (click, tap, Enter, gamepad A / Start)
+		if(GameInput.WasPressedThisFrame(GameInput.Submit)){
 			OnInputEvent("AnyKey", BUTTONSTATE.PRESS);
 		}
 	}
