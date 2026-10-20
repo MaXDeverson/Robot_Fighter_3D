@@ -1,12 +1,43 @@
-/Library/*
-/Logs/
-/Temp/
-/obj/
-/UserSettings/
-.vs/
-.gradle/
-ExportedObj/
+# Каталоги, які генерує Unity.
+# Слеш на початку обов'язковий: без нього патерн матчиться на будь-якій
+# глибині і з'їдає папки з реальними ассетами (напр. Assets/_Scripts/UI/Logs/).
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Ll]ogs/
+/[Bb]uild/
+/[Bb]uilds/
+/[Uu]serSettings/
+/[Mm]emoryCaptures/
+/ProfilerCaptures/
+/Recordings/
+
+# Тимчасові файли збірки нативних плагінів (Android/CMake) та Gradle.
+/.utmp/
+/.gradle/
+
+# IDE та рішення, які Unity перегенерує сама.
+/.vs/
+/.idea/
+*.csproj
 *.unityproj
+*.sln
+*.user
+*.userprefs
+*.pidb
+*.suo
+*.svd
+*.opendb
+*.ilk
+
+# Артефакти збірок та імпортовані пакети.
+*.apk
 *.aab
 *.unitypackage
+*.unitypackage.meta
+sysinfo.txt
 crashlytics-build.properties
+
+# Запобіжник: .meta ніколи не ігноруються, інакше Unity перегенерує GUID
+# і посилання на скрипти й префаби ламаються.
+!/[Aa]ssets/**/*.meta
