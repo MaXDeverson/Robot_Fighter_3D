@@ -595,6 +595,21 @@
     <Reference Include="Firebase.Editor">
       <HintPath>C:\Users\Maksym\Projects\UnityProjects\Robot_Fighter_3D\Assets\Firebase\Editor\Firebase.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Zenject.ReflectionBaking.Mono.Cecil.Rocks">
+      <HintPath>C:\Users\Maksym\Projects\UnityProjects\Robot_Fighter_3D\Assets\Plugins\Zenject\OptionalExtras\ReflectionBaking\Lib\Zenject.ReflectionBaking.Mono.Cecil.Rocks.dll</HintPath>
+    </Reference>
+    <Reference Include="Zenject.ReflectionBaking.Mono.Cecil.Pdb">
+      <HintPath>C:\Users\Maksym\Projects\UnityProjects\Robot_Fighter_3D\Assets\Plugins\Zenject\OptionalExtras\ReflectionBaking\Lib\Zenject.ReflectionBaking.Mono.Cecil.Pdb.dll</HintPath>
+    </Reference>
+    <Reference Include="Zenject-usage">
+      <HintPath>C:\Users\Maksym\Projects\UnityProjects\Robot_Fighter_3D\Assets\Plugins\Zenject\Source\Usage\Zenject-usage.dll</HintPath>
+    </Reference>
+    <Reference Include="Zenject.ReflectionBaking.Mono.Cecil">
+      <HintPath>C:\Users\Maksym\Projects\UnityProjects\Robot_Fighter_3D\Assets\Plugins\Zenject\OptionalExtras\ReflectionBaking\Lib\Zenject.ReflectionBaking.Mono.Cecil.dll</HintPath>
+    </Reference>
+    <Reference Include="Zenject.ReflectionBaking.Mono.Cecil.Mdb">
+      <HintPath>C:\Users\Maksym\Projects\UnityProjects\Robot_Fighter_3D\Assets\Plugins\Zenject\OptionalExtras\ReflectionBaking\Lib\Zenject.ReflectionBaking.Mono.Cecil.Mdb.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
       <HintPath>C:\Program Files\Unity\Hub\Editor\6000.3.24f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
     </Reference>
@@ -1108,11 +1123,11 @@
     <Reference Include="Unity.Purchasing.Stores.XboxCloudServices">
       <HintPath>C:\Users\Maksym\Projects\UnityProjects\Robot_Fighter_3D\Library\ScriptAssemblies\Unity.Purchasing.Stores.XboxCloudServices.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Postprocessing.Editor">
-      <HintPath>C:\Users\Maksym\Projects\UnityProjects\Robot_Fighter_3D\Library\ScriptAssemblies\Unity.Postprocessing.Editor.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.VisualScripting.State">
       <HintPath>C:\Users\Maksym\Projects\UnityProjects\Robot_Fighter_3D\Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Postprocessing.Editor">
+      <HintPath>C:\Users\Maksym\Projects\UnityProjects\Robot_Fighter_3D\Library\ScriptAssemblies\Unity.Postprocessing.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection">
       <HintPath>C:\Users\Maksym\Projects\UnityProjects\Robot_Fighter_3D\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll</HintPath>
@@ -1142,6 +1157,14 @@
       <Project>{0cd21242-f82b-5502-8397-56ad214b3292}</Project>
       <Name>GoogleMobileAds.Editor</Name>
     </ProjectReference>
+    <ProjectReference Include="Zenject-Editor.csproj">
+      <Project>{ac38b405-e053-0c86-cb10-6a76265073d0}</Project>
+      <Name>Zenject-Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Zenject.csproj">
+      <Project>{c3bb592e-70f6-ce30-a122-c1af1d6e579a}</Project>
+      <Name>Zenject</Name>
+    </ProjectReference>
     <ProjectReference Include="Boxophobic.Utils.Scripts.csproj">
       <Project>{301f20ce-a25c-67e9-ca00-223761e6b79c}</Project>
       <Name>Boxophobic.Utils.Scripts</Name>
@@ -1149,6 +1172,14 @@
     <ProjectReference Include="Boxophobic.Utils.Editor.csproj">
       <Project>{cc1ebf0e-f1c8-4556-3b6a-4c7474c1ad54}</Project>
       <Name>Boxophobic.Utils.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Zenject-ReflectionBaking-Editor.csproj">
+      <Project>{9875d106-a919-3322-c182-946ce29e0496}</Project>
+      <Name>Zenject-ReflectionBaking-Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Zenject-PoolMonitor-Editor.csproj">
+      <Project>{cd6b9f47-2c62-b7d6-aba9-f80a736a2823}</Project>
+      <Name>Zenject-PoolMonitor-Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Boxophobic.SkyboxCubemapExtended.Editor.csproj">
       <Project>{84964bab-3195-0438-0231-2b5ca9afd2e3}</Project>
