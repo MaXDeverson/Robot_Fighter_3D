@@ -1,17 +1,19 @@
 {
   "dependencies": {
-    "com.unity.inputsystem": "1.20.0",
-    "com.unity.postprocessing": "3.5.4",
-    "com.unity.purchasing": "5.4.4",
     "com.coffee.ui-effect": "https://github.com/mob-sakai/UIEffect.git?path=Packages/src",
     "com.coffee.ui-particle": "https://github.com/mob-sakai/ParticleEffectForUGUI.git#4.9.0",
+    "com.gameanalytics.sdk": "8.3.0",
     "com.gitamend.unityutils": "https://github.com/adammyhre/Unity-Utils.git",
+    "com.google.ads.mobile": "11.6.0",
     "com.unity.2d.sprite": "1.0.0",
     "com.unity.ai.assistant": "2.18.0-pre.2",
     "com.unity.animation.rigging": "1.4.1",
     "com.unity.cinemachine": "2.10.6",
     "com.unity.ide.rider": "3.0.40",
+    "com.unity.inputsystem": "1.20.0",
     "com.unity.nuget.newtonsoft-json": "3.2.2",
+    "com.unity.postprocessing": "3.5.4",
+    "com.unity.purchasing": "5.4.4",
     "com.unity.recorder": "5.1.5",
     "com.unity.render-pipelines.universal": "17.4.0",
     "com.unity.shadergraph": "17.4.0",
@@ -32,8 +34,7 @@
     "com.unity.modules.tilemap": "1.0.0",
     "com.unity.modules.ui": "1.0.0",
     "com.unity.modules.uielements": "1.0.0",
-    "com.unity.modules.unitywebrequest": "1.0.0",
-    "com.gameanalytics.sdk": "8.3.0"
+    "com.unity.modules.unitywebrequest": "1.0.0"
   },
   "scopedRegistries": [
     {
@@ -41,6 +42,13 @@
       "url": "https://package.openupm.com",
       "scopes": [
         "com.gameanalytics"
+      ]
+    },
+    {
+      "name": "OpenUPM",
+      "url": "https://package.openupm.com",
+      "scopes": [
+        "com.google"
       ]
     }
   ]

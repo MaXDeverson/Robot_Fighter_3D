@@ -33,6 +33,16 @@
       "dependencies": {},
       "hash": "a6416dda307ebfcd0243c58876a101af9a6e5d14"
     },
+    "com.google.ads.mobile": {
+      "version": "11.6.0",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.external-dependency-manager": "2.1.0",
+        "com.unity.modules.androidjni": "1.0.0"
+      },
+      "url": "https://package.openupm.com"
+    },
     "com.unity.2d.sprite": {
       "version": "1.0.0",
       "depth": 0,
@@ -110,6 +120,15 @@
       "depth": 1,
       "source": "builtin",
       "dependencies": {}
+    },
+    "com.unity.external-dependency-manager": {
+      "version": "2.1.0",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.modules.uielements": "1.0.0"
+      },
+      "url": "https://packages.unity.com"
     },
     "com.unity.ide.rider": {
       "version": "3.0.40",
