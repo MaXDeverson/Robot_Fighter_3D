@@ -1,9 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Game.Ads;
+using Zenject;
 
 public class EnableRespectivePanel : MonoBehaviour {
-    
+
+    [Inject] private IAdsManagerService _ads;
+
     public static int menuPanelNum;
 
     public GameObject MenuPanel, GunSelectionPanel, MissionSelectionPanel;
@@ -14,6 +18,8 @@ public class EnableRespectivePanel : MonoBehaviour {
     }
     private void Start()
     {
+        // no banner in the menu
+        _ads.HideBanner();
     }
     private void OnEnable()
     {
