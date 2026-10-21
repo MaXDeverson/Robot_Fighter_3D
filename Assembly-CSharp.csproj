@@ -370,7 +370,6 @@
     <None Include="Assets\_Effects\Realistic Effects Pack\Shaders\Mobile\Distortion\DistortionCullBack.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
     <None Include="Assets\PE2D\Standard Assets\Effects\ImageEffects\Shaders\_DepthOfField\DepthOfFieldDX11.shader" />
-    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
     <None Include="Assets\_Effects\Realistic Effects Pack\Shaders\ParticleAddNoSmooth.shader" />
     <None Include="Assets\_Effects\My Effects\Effects\StylizedExplosion\shader\alphaBlend_glow.shader" />
@@ -393,7 +392,6 @@
     <None Include="Assets\PE2D\Standard Assets\Effects\ImageEffects\Shaders\PrepareSunShaftsBlur.shader" />
     <None Include="Assets\PE2D\Standard Assets\Effects\ImageEffects\Shaders\ShowAlphaChannel.shader" />
     <None Include="Assets\PE2D\Standard Assets\Effects\ImageEffects\Shaders\GrayscaleEffect.shader" />
-    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\JMO Assets\MatCap Shaders\Shaders\MatCap_TextureAdd.shader" />
     <None Include="Assets\Shaders\Shaders\Shadow.shader" />
     <None Include="Assets\PE2D\Standard Assets\Effects\ImageEffects\Shaders\ChromaticAberrationShader.shader" />
@@ -1524,6 +1522,10 @@
       <Project>{09610557-cc54-4b8a-199e-448a56e1e534}</Project>
       <Name>UniTask.DOTween</Name>
     </ProjectReference>
+    <ProjectReference Include="Game.Cheating.csproj">
+      <Project>{9d0ff150-78fe-0bad-cbf1-e4d64186c085}</Project>
+      <Name>Game.Cheating</Name>
+    </ProjectReference>
     <ProjectReference Include="Zenject-Editor.csproj">
       <Project>{ac38b405-e053-0c86-cb10-6a76265073d0}</Project>
       <Name>Zenject-Editor</Name>
@@ -1555,6 +1557,10 @@
     <ProjectReference Include="Game.Ads.AdmobImplementation.csproj">
       <Project>{4b96fbe5-3d6a-2b57-3bad-4466f24c3441}</Project>
       <Name>Game.Ads.AdmobImplementation</Name>
+    </ProjectReference>
+    <ProjectReference Include="Game.Cheating.UI.csproj">
+      <Project>{37fd051f-cac1-82bd-0a09-2649d54eb00d}</Project>
+      <Name>Game.Cheating.UI</Name>
     </ProjectReference>
     <ProjectReference Include="UniTask.csproj">
       <Project>{d6a6cbff-885e-8b18-712f-8707bb7f42f9}</Project>
