@@ -1,4 +1,5 @@
 using Cysharp.Threading.Tasks;
+using Game.Cheating;
 using Game.Events;
 using Game.Gameplay.Events;
 using UnityEngine;
@@ -8,6 +9,7 @@ public class GameBoot : MonoBehaviour
 {
     [Inject] private SceneLoader _sceneLoader;
     [Inject] private IGlobalGameEvents _events;
+    [Inject] private ICheatingService _cheating;
 
     private void Start()
     {
@@ -19,6 +21,7 @@ public class GameBoot : MonoBehaviour
         _events.Publish(new GameBooted());
 
         InitProjectAdjustments();
+        InitCheating();
         RunBoot().Forget();
     }
 
@@ -26,6 +29,14 @@ public class GameBoot : MonoBehaviour
     {
         QualitySettings.vSyncCount = 0;
         Application.targetFrameRate = 120;
+    }
+
+    // The service is created with the ProjectContext and reads the admin switch and the device's access there; boot
+    // makes sure it is up before the menu, where the switch lives.
+    private void InitCheating()
+    {
+        Debug.Log($"[Boot] Admin mode: {(_cheating.IsAdminEnabled ? "on" : "off")} " +
+                  $"({(_cheating.IsAdminAvailable ? _cheating.Access.ToString() : "not available")}).");
     }
     async UniTask RunBoot()
     {

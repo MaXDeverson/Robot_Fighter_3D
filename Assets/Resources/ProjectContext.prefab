@@ -35,6 +35,7 @@ Transform:
   - {fileID: 4901192403277795784}
   - {fileID: 1347601089203741180}
   - {fileID: 2307261175089678920}
+  - {fileID: 4730979361568898343}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3005528024640845504
@@ -57,6 +58,7 @@ MonoBehaviour:
   - {fileID: 5857590933998863450}
   - {fileID: 7316402958817465031}
   - {fileID: 2487956555685718877}
+  - {fileID: 6922521285408739429}
   _installerPrefabs: []
   _parentNewObjectsUnderContext: 1
   _editorReflectionBakingCoverageMode: 0
@@ -163,6 +165,51 @@ MonoBehaviour:
   _provider: 1
   _baseProviderPrefab: {fileID: 2777999918641073154, guid: a981b74035b087547b549bc136cfa30a, type: 3}
   _networkProviderPrefab: {fileID: 5196273590533489164, guid: f6635615bb7750d429c9cd2bd7e71289, type: 3}
+--- !u!1 &3252286367538305488
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4730979361568898343}
+  - component: {fileID: 6922521285408739429}
+  m_Layer: 0
+  m_Name: Cheating
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4730979361568898343
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3252286367538305488}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1371441942350454989}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6922521285408739429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3252286367538305488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef0595eed61b26044ae86ecd2e3d9383, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Game.Cheating::Game.Cheating.DI.CheatingInstaller
+  _config: {fileID: 11400000, guid: 7ad8cff85fd8f664880be4c40db27c2d, type: 2}
 --- !u!1 &4400100000000000001
 GameObject:
   m_ObjectHideFlags: 0

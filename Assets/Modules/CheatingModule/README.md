@@ -49,7 +49,7 @@ No store app may read it: Android 10+ gives it only to system apps, iOS has no A
 | `Game.Cheating.Tests` | EditMode suite. | all of the above |
 
 The game side lives in `Assets/_Scripts/Cheats/` (Assembly-CSharp, which no module can see): the handlers that do the
-cheats with the game's own classes.
+cheats with the game's own classes, and UI the module's components do not cover.
 
 ---
 
@@ -57,17 +57,17 @@ cheats with the game's own classes.
 
 Already done:
 
-* `Assets/Resources/ProjectContext.prefab` has a `Cheating` child (`_Pefabs/GlobalServices/Cheating.prefab`) with
-  `CheatingInstaller`, last in the **Mono Installers** list. Its config is
-  `Assets/Resources/Cheating/CheatingConfig.asset`.
-* **Settings window** (`SettingsUI.prefab`): the `ADMIN` row in the bottom left (`AdminToggle`), and a
-  `CheatingContentActivator` on the root that shows *Show console*, *Reset game* and *Adaptive performance* only in the
-  admin mode. `ConsoleManager` shows the debug console only while both *Show console* and the admin mode are on.
-* **Device ID panel**: 5 quick taps on the game version in the settings (`MultiTapReveal` → `DeviceIdView`). Works on
-  every device, the admin mode is not needed.
-* **Win level**: `Assets/Resources/Cheating/Cheats/WinLevel.asset` (hotkey **W**), handled by `WinLevelCheatHandler`
-  on `SceneContext.prefab/Cheats`, run by the `WinLevelCheatButton` in the top left corner of the HUD
-  (`GameplayUI.prefab`).
+* `Assets/Resources/ProjectContext.prefab` has a `Cheating` child with `CheatingInstaller`, last in the
+  **Mono Installers** list. Its config is `Assets/Resources/Configs/CheatingConfig.asset`.
+* **Boot**: `GameBoot` (Boot scene) takes `ICheatingService` and writes the admin mode to the log before the menu loads.
+* **Settings** (`Menu` scene, `Canvas/MainMenu/Settings`): the `ADMIN` checkbox in the bottom left (`IsAdminToggle`,
+  `AdminToggle`), and a `CheatingContentActivator` on `Settings` that shows the `Admin` object (*Add 10K*,
+  *Reset Game*, *Ad Block*) only in the admin mode.
+* **Device ID panel**: 5 quick taps on the game version in the bottom right of the settings (`GameVersion`:
+  `GameVersionText` + `MultiTapReveal` → `DeviceIdPanel`). Works on every device, the admin mode is not needed. The menu
+  is built on legacy `Text`, so it uses the game's `DeviceIdPanel` (`Assets/_Scripts/Cheats/`) in place of the module's
+  TextMeshPro `DeviceIdView`.
+* No cheats yet: the admin buttons call `Main_Menu` directly.
 
 ## Adding a phone
 
