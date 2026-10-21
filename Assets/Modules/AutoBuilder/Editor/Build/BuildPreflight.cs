@@ -1,7 +1,9 @@
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using UnityEditor;
+using UnityEditor.Android;
 using UnityEditor.Build;
 using UnityEditor.SceneManagement;
 
@@ -98,11 +100,34 @@ namespace Game.AutoBuilder
         public static string[] BuildScenes() =>
             EditorBuildSettings.scenes.Where(scene => scene.enabled).Select(scene => scene.path).ToArray();
 
-        /// <summary>The keystore as Player Settings names it, resolved against the project root.</summary>
-        public static string KeystorePath() =>
-            string.IsNullOrEmpty(PlayerSettings.Android.keystoreName)
+        /// <summary>
+        /// The keystore as Player Settings names it. A keystore in the dedicated location (Preferences > External Tools)
+        /// is stored as <c>{dedicated}: name</c> and resolved against that folder, but
+        /// <see cref="PlayerSettings.Android.keystoreName"/> drops the prefix, so it is read from the asset itself.
+        /// Any other relative name is resolved against the project root.
+        /// </summary>
+        public static string KeystorePath()
+        {
+            string name = PlayerSettings.Android.keystoreName;
+            if (string.IsNullOrEmpty(name))
+                return string.Empty;
+
+            string root = RawKeystoreName().StartsWith(DedicatedKeystorePrefix, StringComparison.Ordinal)
+                ? AndroidExternalToolsSettings.keystoresDedicatedLocation
+                : AutoBuilderPaths.ProjectRoot;
+            return Path.GetFullPath(Path.Combine(root, name));
+        }
+
+        private const string DedicatedKeystorePrefix = "{dedicated}:";
+
+        private static string RawKeystoreName()
+        {
+            PlayerSettings settings = AssetDatabase.LoadAllAssetsAtPath("ProjectSettings/ProjectSettings.asset")
+                .OfType<PlayerSettings>().FirstOrDefault();
+            return settings == null
                 ? string.Empty
-                : Path.GetFullPath(Path.Combine(AutoBuilderPaths.ProjectRoot, PlayerSettings.Android.keystoreName));
+                : new SerializedObject(settings).FindProperty("AndroidKeystoreName")?.stringValue ?? string.Empty;
+        }
 
         private static void CheckSigning(AabBuildRequest request, List<PreflightIssue> issues)
         {
@@ -118,7 +143,8 @@ namespace Game.AutoBuilder
 
             string keystore = KeystorePath();
             if (string.IsNullOrEmpty(keystore) || !File.Exists(keystore))
-                issues.Add(Error($"Keystore not found: {PlayerSettings.Android.keystoreName}", PreflightFix.OpenPlayerSettings));
+                issues.Add(Error($"Keystore not found: {(string.IsNullOrEmpty(keystore) ? "none is chosen" : keystore)}",
+                    PreflightFix.OpenPlayerSettings));
 
             if (string.IsNullOrEmpty(PlayerSettings.Android.keyaliasName))
                 issues.Add(Error("No key alias is chosen in Publishing Settings.", PreflightFix.OpenPlayerSettings));
