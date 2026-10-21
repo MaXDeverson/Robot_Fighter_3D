@@ -1,5 +1,7 @@
-﻿using UnityEngine;
+﻿using Game.GamepadSupport;
+using UnityEngine;
 using UnityEngine.InputSystem;
+using Zenject;
 
 // Bridges the new Input System (GameInput / Resources/GameControls.inputactions) and the touch screen controls
 // to the template's input events. Keyboard, gamepad and touch all end up in onInputEvent / onDirectionInputEvent.
@@ -10,8 +12,9 @@ public class InputManager : MonoBehaviour {
 	public INPUTTYPE inputType;
 	[Tooltip("Follow the device the player used last (touch, keyboard or gamepad). Turn off to force the input type above.")]
 	public bool autoDetectInputType = true;
-	[Tooltip("Hide the touch screen controls while the player uses a gamepad. They come back on the next touch, key press or click.")]
-	public bool hideTouchControlsWithGamepad = true;
+	[Tooltip("Hide the touch screen controls while the player uses a gamepad. They come back on the next touch, key press or click. " +
+	         "Off: they stay, each with the gamepad button that does the same (GamepadPromptBadge).")]
+	public bool hideTouchControlsWithGamepad = false;
 
 	[Header("Double Tap Settings")]
 	public float doubleTapSpeed = .3f;
@@ -32,6 +35,7 @@ public class InputManager : MonoBehaviour {
 	private bool doubleTapState;
 	private Vector2 touchScreenJoystickDir; //last direction of the touch screen thumb-stick
 	private Vector2 lastDigitalDir; //Move action as -1/0/1 per axis in the previous frame
+	private GamepadNavigation gamepadNavigation; //the menus walked with the gamepad (Modules/GamepadModule)
 
 	private static InputManager instance;
 
@@ -40,7 +44,7 @@ public class InputManager : MonoBehaviour {
 		get { return instance != null ? instance.inputType : GameInput.CurrentInputType; }
 	}
 
-	//the touch screen controls are shown on touch screens and on PC (they can be clicked with the mouse), only a gamepad hides them
+	//the touch screen controls are shown on touch screens and on PC (they can be clicked with the mouse), only a gamepad can hide them
 	public static bool ShowTouchControls {
 		get {
 			if(CurrentInputType != INPUTTYPE.JOYPAD) return true;
@@ -57,6 +61,9 @@ public class InputManager : MonoBehaviour {
 		instance = this;
 		if(autoDetectInputType) SetInputType(GameInput.CurrentInputType);
 		GameInput.onInputTypeChanged += OnDeviceChanged;
+
+		//created from Resources by LevelInit, so not injected
+		if(gamepadNavigation == null && ProjectContext.HasInstance) gamepadNavigation = ProjectContext.Instance.Container.TryResolve<GamepadNavigation>();
 
 		if(!GameInput.IsReady) return;
 		foreach(InputAction action in ButtonActions){
@@ -84,8 +91,8 @@ public class InputManager : MonoBehaviour {
 	void Update(){
 		if(!GameInput.IsReady) return;
 
-		//keyboard (WASD / arrows) and gamepad (left stick / d-pad) direction
-		Vector2 moveDir = GameInput.Move.ReadValue<Vector2>().normalized;
+		//keyboard (WASD / arrows) and gamepad (left stick / d-pad) direction, not while the stick walks a menu
+		Vector2 moveDir = MenuHasFocus()? Vector2.zero : GameInput.Move.ReadValue<Vector2>().normalized;
 		SendDirectionButtonEvents(moveDir);
 
 		//when no direction is pressed, keep the touch screen joystick direction instead of overwriting it with zero
@@ -94,12 +101,18 @@ public class InputManager : MonoBehaviour {
 		doubleTapState = false;
 
 		//defend is a hold action, its state is checked every frame
-		defendKeyDown = touchDefendDown || GameInput.Defend.IsPressed();
+		defendKeyDown = touchDefendDown || (!MenuHasFocus() && GameInput.Defend.IsPressed());
+	}
+
+	//a menu with buttons is open (pause, level complete, game over...): gamepad and keyboard presses belong to it,
+	//the button that confirms Next must not make the player jump as well
+	bool MenuHasFocus(){
+		return gamepadNavigation != null && gamepadNavigation.Focused != null;
 	}
 
 	//input action pressed (keyboard / gamepad)
 	void OnButtonPerformed(InputAction.CallbackContext context){
-		if(Time.timeScale <= 0f) return; //the game is paused or a dialog is open, the button belongs to the UI
+		if(Time.timeScale <= 0f || MenuHasFocus()) return; //the game is paused or a menu is open, the button belongs to the UI
 		DetectDoubleTap(context.action.name);
 		SendButtonEvent(context.action.name, BUTTONSTATE.PRESS);
 	}

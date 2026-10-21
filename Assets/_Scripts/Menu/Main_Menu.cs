@@ -89,15 +89,9 @@ public class Main_Menu : MonoBehaviour {
         //PlayerPrefs.SetInt("jetPrice_03", 18000);
         //PlayerPrefs.SetInt("jetPrice_04", 28500); PlayerPrefs.SetInt("jetPrice_05", 35000);
     }
+    // Esc, Android back and gamepad B press the Back button of the open panel (GamepadButtonShortcut)
     void Update()
 	{
-		if (GameInput.WasPressedThisFrame(GameInput.Back)) // Esc, Android back, gamepad B
-		{
-			GameObject.Find ("ClickSound").GetComponent<AudioSource> ().Play ();
-			settingsPanel.SetActive (false);
-			quitPanel.SetActive (true);
-		}
-
         AudioListener.volume = soundB.fillAmount;
         music.volume = musicB.fillAmount;
         PlayerPrefs.SetFloat("Volume", soundB.fillAmount);

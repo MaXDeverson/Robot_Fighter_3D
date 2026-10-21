@@ -234,7 +234,6 @@
     <Compile Include="Assets\Modules\AnalyticsModule\Core\Runtime\AnalyticsConsent.cs" />
     <Compile Include="Assets\_Scripts\Menu\audio_pause.cs" />
     <Compile Include="Assets\BeatEmUp_GameTemplate3D\Scripts\Camera\CamSlowMotionDelay.cs" />
-    <Compile Include="Assets\_Scripts\Input\GamepadMenuNavigator.cs" />
     <Compile Include="Assets\PE2D\Standard Assets\Effects\ImageEffects\Scripts\NoiseAndScratches.cs" />
     <Compile Include="Assets\_Scripts\Menu\General.cs" />
     <Compile Include="Assets\Modules\AnalyticsModule\Zenject\AnalyticsApplicationHooks.cs" />
@@ -309,6 +308,7 @@
     <None Include="Assets\BeatEmUp_GameTemplate3D\Shaders\UnlitCubemap.shader" />
     <None Include="Assets\Resources\BillingMode.json" />
     <None Include="Assets\PE2D\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\MultiPassHollywoodFlares.shader" />
+    <None Include="Assets\Modules\GamepadModule\Art\Glyphs\License_Kenney_InputPrompts.txt" />
     <None Include="Assets\PE2D\Standard Assets\Effects\ImageEffects\Shaders\SSAOShader.shader" />
     <None Include="Assets\_Effects\Realistic Effects Pack\Shaders\WaterFree.shader" />
     <None Include="Assets\PE2D\Standard Assets\Effects\ImageEffects\Shaders\ColorCorrectionCurvesSimple.shader" />
@@ -1498,6 +1498,10 @@
     <ProjectReference Include="Game.Privacy.csproj">
       <Project>{82c8fc00-92d5-0168-ef93-214442c646f6}</Project>
       <Name>Game.Privacy</Name>
+    </ProjectReference>
+    <ProjectReference Include="Game.GamepadSupport.csproj">
+      <Project>{9946b1ae-6f6e-49e2-ce1a-46f7262d8671}</Project>
+      <Name>Game.GamepadSupport</Name>
     </ProjectReference>
     <ProjectReference Include="Boxophobic.Utils.Scripts.csproj">
       <Project>{301f20ce-a25c-67e9-ca00-223761e6b79c}</Project>

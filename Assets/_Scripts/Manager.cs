@@ -93,10 +93,6 @@ public class Manager : MonoBehaviour
         HUD.SetActive(true);
         TouchPanel.SetActive(InputManager.ShowTouchControls);
 
-        // the pause button and the touch controls are used with touch / mouse; the gamepad uses its own buttons for them
-        GamepadMenuNavigator.ExcludeFromNavigation(TouchPanel);
-        GamepadMenuNavigator.ExcludeFromNavigation(btn_pause);
-
         AudioListener.pause = false;
         loadingScreenBG.SetActive(false);
 
@@ -115,26 +111,6 @@ public class Manager : MonoBehaviour
         }
         Debug.Log("Current Level:" + General.CurrentLevel);
         _events.Publish(new LevelStarted { LevelIndex = General.CurrentLevel });
-    }
-
-    void Update()
-    {
-        // Esc / P / gamepad Start toggles the pause screen, Back (Esc / gamepad B) closes it
-        if (GameInput.WasPressedThisFrame(GameInput.Pause))
-        {
-            if (dia_pause.activeSelf) Btn_Resume();
-            else if (CanPause()) Btn_Paused();
-        }
-        else if (GameInput.WasPressedThisFrame(GameInput.Back) && dia_pause.activeSelf)
-        {
-            Btn_Resume();
-        }
-    }
-
-    // pause only during the fight, not while a dialog, the loading screen or the end screens are shown
-    bool CanPause()
-    {
-        return Time.timeScale > 0f && HUD.activeInHierarchy && btn_pause.activeInHierarchy && !loadingScreenBG.activeSelf;
     }
 
     void MissionCompleteSound()
@@ -206,6 +182,8 @@ public class Manager : MonoBehaviour
 
     }
 
+    // Esc / P / gamepad Start press the pause button, and Resume in the pause screen (Esc / gamepad B too):
+    // a GamepadButtonShortcut on each. The pause button answers only while no screen with buttons is open.
     public void Btn_Paused()
     {
         _ads.ShowInterstitial(_ => {

@@ -37,6 +37,7 @@ Transform:
   - {fileID: 2307261175089678920}
   - {fileID: 4730979361568898343}
   - {fileID: 1191756872937865268}
+  - {fileID: 9123459855579080060}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3005528024640845504
@@ -61,6 +62,7 @@ MonoBehaviour:
   - {fileID: 7316402958817465031}
   - {fileID: 2487956555685718877}
   - {fileID: 6922521285408739429}
+  - {fileID: 2263099677697247223}
   _installerPrefabs: []
   _parentNewObjectsUnderContext: 1
   _editorReflectionBakingCoverageMode: 0
@@ -381,6 +383,79 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Game.Analytics.Backends.GameAnalyticsSinkInstaller
   _enabled: 1
+--- !u!1001 &4393584769788699379
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1371441942350454989}
+    m_Modifications:
+    - target: {fileID: 4783997595456472975, guid: 4fdbdaa9934bc9142a1d0a5fae5e898c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4783997595456472975, guid: 4fdbdaa9934bc9142a1d0a5fae5e898c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4783997595456472975, guid: 4fdbdaa9934bc9142a1d0a5fae5e898c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4783997595456472975, guid: 4fdbdaa9934bc9142a1d0a5fae5e898c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4783997595456472975, guid: 4fdbdaa9934bc9142a1d0a5fae5e898c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4783997595456472975, guid: 4fdbdaa9934bc9142a1d0a5fae5e898c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4783997595456472975, guid: 4fdbdaa9934bc9142a1d0a5fae5e898c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4783997595456472975, guid: 4fdbdaa9934bc9142a1d0a5fae5e898c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4783997595456472975, guid: 4fdbdaa9934bc9142a1d0a5fae5e898c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4783997595456472975, guid: 4fdbdaa9934bc9142a1d0a5fae5e898c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7283649481598646740, guid: 4fdbdaa9934bc9142a1d0a5fae5e898c, type: 3}
+      propertyPath: m_Name
+      value: Gamepad
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4fdbdaa9934bc9142a1d0a5fae5e898c, type: 3}
+--- !u!114 &2263099677697247223 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2562833216929031428, guid: 4fdbdaa9934bc9142a1d0a5fae5e898c, type: 3}
+  m_PrefabInstance: {fileID: 4393584769788699379}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0914fac038d06b744ad23876b4b5da8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Game.GamepadSupport::Game.GamepadSupport.DI.GamepadInstaller
+--- !u!4 &9123459855579080060 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4783997595456472975, guid: 4fdbdaa9934bc9142a1d0a5fae5e898c, type: 3}
+  m_PrefabInstance: {fileID: 4393584769788699379}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6274364506856586069
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using Game.Events;
+using Game.GamepadSupport;
 using Game.Gameplay.Events;
 using Zenject;
 
@@ -50,6 +51,12 @@ public class MissionSelection : MonoBehaviour {
 
         if (PlayerPrefs.GetInt("UnlockedLevels") >= 19)
             unlockallBtn.SetActive(false);
+
+        // the gamepad starts on the last unlocked level, so the buttons are unlocked right away, not on the next Update
+        unlockedLevels = Mathf.Min(PlayerPrefs.GetInt("UnlockedLevels"), Buttons.Length - 1);
+        UnlockLevelButtons();
+        if (TryGetComponent(out GamepadNavigationScope gamepadScope))
+            gamepadScope.FirstSelected = Buttons[unlockedLevels].GetComponent<Button>();
     }
 
 	// Use this for initialization
@@ -69,31 +76,19 @@ public class MissionSelection : MonoBehaviour {
     }
     
 	// Update is called once per frame
+	// Esc, Android back and gamepad B press the Back button (GamepadButtonShortcut)
 	void Update () {
-		if (GameInput.WasPressedThisFrame(GameInput.Back)) // Esc, Android back, gamepad B
-		{
-			GameObject.Find ("ClickSound").GetComponent<AudioSource> ().Play ();
-			GetComponent<MissionSelection> ().enabled = false;
-			gameObject.SetActive (false);
-			SelectionPanel.SetActive (true);
-            SelectionPanel.GetComponent<Garrage> ().enabled = true;
-
-            if (PlayerPrefs.GetInt("ADSUNLOCK") == 0)
-            {
-                //UnityAdsManager.Instance.ShowUnityVideoAd();
-               // MobileAds.Instance.Show_InterstitialAd();
-                //      McFairyAdsMediation.Instance.ShowInterstitialAd(0);
-
-            }
-            //GameObject.Find("Canvas").gameObject.GetComponent<Canvas>().renderMode = RenderMode.ScreenSpaceCamera;
-        }
 		TotalEarning.text = PlayerData.GetPlayerData().CurrentCash + "$";
 
         foreach (var item in characters)
         {
             item.SetActive(false);
         }
-        
+
+        UnlockLevelButtons();
+	}
+
+	void UnlockLevelButtons () {
         for (int i = 0; i < Buttons.Length; i++)
 		{
 			if (i <= unlockedLevels) {

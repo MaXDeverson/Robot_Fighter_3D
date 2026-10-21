@@ -1707,6 +1707,7 @@ GameObject:
   - component: {fileID: 111974711}
   - component: {fileID: 111974710}
   - component: {fileID: 111974709}
+  - component: {fileID: 111974713}
   m_Layer: 5
   m_Name: Back
   m_TagString: Untagged
@@ -1911,6 +1912,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 111974706}
   m_CullTransparentMesh: 0
+--- !u!114 &111974713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 111974706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ce604f7a2ddbf747bd3b25c80c8eb52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Game.GamepadSupport::Game.GamepadSupport.GamepadButtonShortcut
+  _actions:
+  - {fileID: 8487900035690157588, guid: 1b06f40cf1d94884b9ccafbe71502384, type: 3}
 --- !u!1 &113145733
 GameObject:
   m_ObjectHideFlags: 0
@@ -4262,6 +4277,7 @@ GameObject:
   - component: {fileID: 236978248}
   - component: {fileID: 236978247}
   - component: {fileID: 236978249}
+  - component: {fileID: 236978250}
   m_Layer: 5
   m_Name: MissionsPanel
   m_TagString: Untagged
@@ -4383,6 +4399,19 @@ MonoBehaviour:
   - {fileID: 1452926910}
   - {fileID: 630504621}
   - {fileID: 1765289363}
+--- !u!114 &236978250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 236978245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c02ccae4edb8a2649a35758502afaf87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Game.GamepadSupport::Game.GamepadSupport.GamepadNavigationScope
+  _firstSelected: {fileID: 0}
 --- !u!1 &241573966
 GameObject:
   m_ObjectHideFlags: 0
@@ -10780,7 +10809,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -11626,6 +11655,7 @@ GameObject:
   - component: {fileID: 534778242}
   - component: {fileID: 534778241}
   - component: {fileID: 534778240}
+  - component: {fileID: 534778244}
   m_Layer: 5
   m_Name: Back
   m_TagString: Untagged
@@ -11830,6 +11860,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 534778238}
   m_CullTransparentMesh: 0
+--- !u!114 &534778244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 534778238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ce604f7a2ddbf747bd3b25c80c8eb52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Game.GamepadSupport::Game.GamepadSupport.GamepadButtonShortcut
+  _actions:
+  - {fileID: 8487900035690157588, guid: 1b06f40cf1d94884b9ccafbe71502384, type: 3}
 --- !u!1 &540414891
 GameObject:
   m_ObjectHideFlags: 0
@@ -12034,6 +12078,7 @@ GameObject:
   - component: {fileID: 568751917}
   - component: {fileID: 568751916}
   - component: {fileID: 568751915}
+  - component: {fileID: 568751918}
   m_Layer: 5
   m_Name: DeviceIdPanel
   m_TagString: Untagged
@@ -12117,6 +12162,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 568751913}
   m_CullTransparentMesh: 1
+--- !u!114 &568751918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 568751913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c02ccae4edb8a2649a35758502afaf87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Game.GamepadSupport::Game.GamepadSupport.GamepadNavigationScope
+  _firstSelected: {fileID: 0}
 --- !u!1 &568795301
 GameObject:
   m_ObjectHideFlags: 0
@@ -13729,7 +13787,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 2105880740}
+  m_Material: {fileID: 683132371}
   m_Color: {r: 0, g: 0.68867886, b: 0.6886792, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -15349,6 +15407,54 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 681989786}
   m_CullTransparentMesh: 0
+--- !u!21 &683132371
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 2DxFX/Standard/Shiny_Reflect
+  m_Shader: {fileID: 4800000, guid: 6fc94ae14d17d3642b09718b5b932fd2, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex2:
+        m_Texture: {fileID: 2800000, guid: 6ed1aafd335608e48aa3198044a161df, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _Alpha: 0
+    - _ColorMask: 15
+    - _Distortion: -0.5582801
+    - _Stencil: 0
+    - _StencilComp: 8
+    - _StencilOp: 0
+    - _StencilReadMask: 255
+    - _StencilWriteMask: 255
+    - _Value2: 0.526
+    - _Value3: 0.141
+    - _Value4: 0
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1
 --- !u!1 &683176004
 GameObject:
   m_ObjectHideFlags: 0
@@ -15909,6 +16015,7 @@ GameObject:
   - component: {fileID: 713604083}
   - component: {fileID: 713604082}
   - component: {fileID: 713604084}
+  - component: {fileID: 713604085}
   m_Layer: 5
   m_Name: SelectionPanel
   m_TagString: Untagged
@@ -16032,6 +16139,19 @@ MonoBehaviour:
   price: {fileID: 1826475458}
   TotalEarning: {fileID: 679293091}
   cashDialog: {fileID: 931262528}
+--- !u!114 &713604085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 713604080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c02ccae4edb8a2649a35758502afaf87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Game.GamepadSupport::Game.GamepadSupport.GamepadNavigationScope
+  _firstSelected: {fileID: 1025435720}
 --- !u!1 &714431921
 GameObject:
   m_ObjectHideFlags: 0
@@ -18850,7 +18970,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -20835,6 +20955,7 @@ GameObject:
   - component: {fileID: 901673453}
   - component: {fileID: 901673455}
   - component: {fileID: 901673456}
+  - component: {fileID: 901673457}
   m_Layer: 5
   m_Name: OK
   m_TagString: Untagged
@@ -21040,6 +21161,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &901673457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 901673451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ce604f7a2ddbf747bd3b25c80c8eb52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Game.GamepadSupport::Game.GamepadSupport.GamepadButtonShortcut
+  _actions:
+  - {fileID: 8487900035690157588, guid: 1b06f40cf1d94884b9ccafbe71502384, type: 3}
 --- !u!1 &908697091
 GameObject:
   m_ObjectHideFlags: 0
@@ -21053,6 +21188,7 @@ GameObject:
   - component: {fileID: 908697093}
   - component: {fileID: 908697095}
   - component: {fileID: 908697096}
+  - component: {fileID: 908697097}
   m_Layer: 5
   m_Name: Settings
   m_TagString: Untagged
@@ -21155,6 +21291,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PrivacySettingsUI
   _privacyPolicyButton: {fileID: 344027057}
   _privacyOptionsButton: {fileID: 2071800662}
+--- !u!114 &908697097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 908697091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c02ccae4edb8a2649a35758502afaf87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Game.GamepadSupport::Game.GamepadSupport.GamepadNavigationScope
+  _firstSelected: {fileID: 0}
 --- !u!1 &908706637
 GameObject:
   m_ObjectHideFlags: 0
@@ -21901,54 +22050,6 @@ SkinnedMeshRenderer:
     m_Center: {x: -28.89946, y: 44.769905, z: -1.5718498}
     m_Extent: {x: 47.82257, y: 32.29384, z: 42.822285}
   m_DirtyAABB: 0
---- !u!21 &928075665
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 2DxFX/Standard/Shiny_Reflect
-  m_Shader: {fileID: 4800000, guid: 6fc94ae14d17d3642b09718b5b932fd2, type: 3}
-  m_Parent: {fileID: 0}
-  m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
-  m_InvalidKeywords: []
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_LockedProperties: 
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MainTex2:
-        m_Texture: {fileID: 2800000, guid: 6ed1aafd335608e48aa3198044a161df, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Ints: []
-    m_Floats:
-    - _Alpha: 1
-    - _ColorMask: 15
-    - _Distortion: 0
-    - _Stencil: 0
-    - _StencilComp: 8
-    - _StencilOp: 0
-    - _StencilReadMask: 255
-    - _StencilWriteMask: 255
-    - _Value2: 0
-    - _Value3: 0
-    - _Value4: 0
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-  m_BuildTextureStacks: []
-  m_AllowLocking: 1
 --- !u!1 &931262528
 GameObject:
   m_ObjectHideFlags: 0
@@ -21960,6 +22061,7 @@ GameObject:
   - component: {fileID: 931262531}
   - component: {fileID: 931262530}
   - component: {fileID: 931262529}
+  - component: {fileID: 931262532}
   m_Layer: 5
   m_Name: cashDialog
   m_TagString: Untagged
@@ -22025,6 +22127,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &931262532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 931262528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c02ccae4edb8a2649a35758502afaf87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Game.GamepadSupport::Game.GamepadSupport.GamepadNavigationScope
+  _firstSelected: {fileID: 901673456}
 --- !u!1 &932070320
 GameObject:
   m_ObjectHideFlags: 0
@@ -22997,6 +23112,7 @@ GameObject:
   - component: {fileID: 1006806627}
   - component: {fileID: 1006806626}
   - component: {fileID: 1006806625}
+  - component: {fileID: 1006806629}
   m_Layer: 5
   m_Name: Back
   m_TagString: Untagged
@@ -23201,6 +23317,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1006806622}
   m_CullTransparentMesh: 0
+--- !u!114 &1006806629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1006806622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ce604f7a2ddbf747bd3b25c80c8eb52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Game.GamepadSupport::Game.GamepadSupport.GamepadButtonShortcut
+  _actions:
+  - {fileID: 8487900035690157588, guid: 1b06f40cf1d94884b9ccafbe71502384, type: 3}
 --- !u!1 &1006974379
 GameObject:
   m_ObjectHideFlags: 0
@@ -24366,7 +24496,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 1891989724}
+  m_Material: {fileID: 1656706102}
   m_Color: {r: 1, g: 0.50980395, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -24787,7 +24917,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 1338915535}
+  m_Material: {fileID: 1906866103}
   m_Color: {r: 0.5845618, g: 1, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -29994,54 +30124,6 @@ SkinnedMeshRenderer:
     m_Center: {x: -71.26387, y: 10.951279, z: -1.3453884}
     m_Extent: {x: 25.80656, y: 25.818607, z: 19.613245}
   m_DirtyAABB: 0
---- !u!21 &1338915535
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 2DxFX/Standard/Shiny_Reflect
-  m_Shader: {fileID: 4800000, guid: 6fc94ae14d17d3642b09718b5b932fd2, type: 3}
-  m_Parent: {fileID: 0}
-  m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
-  m_InvalidKeywords: []
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_LockedProperties: 
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MainTex2:
-        m_Texture: {fileID: 2800000, guid: 6ed1aafd335608e48aa3198044a161df, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Ints: []
-    m_Floats:
-    - _Alpha: 1
-    - _ColorMask: 15
-    - _Distortion: 0
-    - _Stencil: 0
-    - _StencilComp: 8
-    - _StencilOp: 0
-    - _StencilReadMask: 255
-    - _StencilWriteMask: 255
-    - _Value2: 0
-    - _Value3: 0
-    - _Value4: 0
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-  m_BuildTextureStacks: []
-  m_AllowLocking: 1
 --- !u!1 &1339309485
 GameObject:
   m_ObjectHideFlags: 0
@@ -30250,54 +30332,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1344287885}
   m_CullTransparentMesh: 0
---- !u!21 &1345182578
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 2DxFX/Standard/Shiny_Reflect
-  m_Shader: {fileID: 4800000, guid: 6fc94ae14d17d3642b09718b5b932fd2, type: 3}
-  m_Parent: {fileID: 0}
-  m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
-  m_InvalidKeywords: []
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_LockedProperties: 
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MainTex2:
-        m_Texture: {fileID: 2800000, guid: 6ed1aafd335608e48aa3198044a161df, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Ints: []
-    m_Floats:
-    - _Alpha: 1
-    - _ColorMask: 15
-    - _Distortion: 0
-    - _Stencil: 0
-    - _StencilComp: 8
-    - _StencilOp: 0
-    - _StencilReadMask: 255
-    - _StencilWriteMask: 255
-    - _Value2: 0
-    - _Value3: 0
-    - _Value4: 0
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-  m_BuildTextureStacks: []
-  m_AllowLocking: 1
 --- !u!1 &1346549152
 GameObject:
   m_ObjectHideFlags: 0
@@ -35001,7 +35035,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 1345182578}
+  m_Material: {fileID: 1943884236}
   m_Color: {r: 0, g: 0.68867886, b: 0.6886792, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -35719,6 +35753,7 @@ GameObject:
   - component: {fileID: 1511196805}
   - component: {fileID: 1511196804}
   - component: {fileID: 1511196806}
+  - component: {fileID: 1511196807}
   m_Layer: 5
   m_Name: MainMenu
   m_TagString: Untagged
@@ -35852,6 +35887,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1511196807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1511196800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c02ccae4edb8a2649a35758502afaf87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Game.GamepadSupport::Game.GamepadSupport.GamepadNavigationScope
+  _firstSelected: {fileID: 1048570370}
 --- !u!1 &1512409679
 GameObject:
   m_ObjectHideFlags: 0
@@ -35863,6 +35911,7 @@ GameObject:
   - component: {fileID: 1512409680}
   - component: {fileID: 1512409682}
   - component: {fileID: 1512409681}
+  - component: {fileID: 1512409683}
   m_Layer: 5
   m_Name: LoadingPanel
   m_TagString: Untagged
@@ -35931,6 +35980,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1512409679}
   m_CullTransparentMesh: 0
+--- !u!114 &1512409683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1512409679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c02ccae4edb8a2649a35758502afaf87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Game.GamepadSupport::Game.GamepadSupport.GamepadNavigationScope
+  _firstSelected: {fileID: 0}
 --- !u!1 &1512411360
 GameObject:
   m_ObjectHideFlags: 0
@@ -36042,6 +36104,7 @@ GameObject:
   - component: {fileID: 1515804462}
   - component: {fileID: 1515804461}
   - component: {fileID: 1515804460}
+  - component: {fileID: 1515804465}
   m_Layer: 5
   m_Name: InAppOffer
   m_TagString: Untagged
@@ -36147,6 +36210,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1515804465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1515804459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c02ccae4edb8a2649a35758502afaf87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Game.GamepadSupport::Game.GamepadSupport.GamepadNavigationScope
+  _firstSelected: {fileID: 0}
 --- !u!1 &1516487806
 GameObject:
   m_ObjectHideFlags: 0
@@ -37942,7 +38018,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 928075665}
+  m_Material: {fileID: 1683468859}
   m_Color: {r: 0, g: 0.68867886, b: 0.6886792, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -39288,6 +39364,54 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5726755725236165220, guid: 5f2ffbd3363140b4da22fd7e8c1ec01d, type: 3}
   m_PrefabInstance: {fileID: 2036357239}
   m_PrefabAsset: {fileID: 0}
+--- !u!21 &1656706102
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 2DxFX/Standard/Shiny_Reflect
+  m_Shader: {fileID: 4800000, guid: 6fc94ae14d17d3642b09718b5b932fd2, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex2:
+        m_Texture: {fileID: 2800000, guid: 6ed1aafd335608e48aa3198044a161df, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _Alpha: 0
+    - _ColorMask: 15
+    - _Distortion: -0.5582801
+    - _Stencil: 0
+    - _StencilComp: 8
+    - _StencilOp: 0
+    - _StencilReadMask: 255
+    - _StencilWriteMask: 255
+    - _Value2: 0.526
+    - _Value3: 0.141
+    - _Value4: 0
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1
 --- !u!1 &1668329687
 GameObject:
   m_ObjectHideFlags: 0
@@ -39620,6 +39744,54 @@ SkinnedMeshRenderer:
     m_Center: {x: -31.982391, y: 2.5145874, z: 0.0000019073486}
     m_Extent: {x: 51.12609, y: 46.604404, z: 27.749142}
   m_DirtyAABB: 0
+--- !u!21 &1683468859
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 2DxFX/Standard/Shiny_Reflect
+  m_Shader: {fileID: 4800000, guid: 6fc94ae14d17d3642b09718b5b932fd2, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex2:
+        m_Texture: {fileID: 2800000, guid: 6ed1aafd335608e48aa3198044a161df, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _Alpha: 0
+    - _ColorMask: 15
+    - _Distortion: -0.5582801
+    - _Stencil: 0
+    - _StencilComp: 8
+    - _StencilOp: 0
+    - _StencilReadMask: 255
+    - _StencilWriteMask: 255
+    - _Value2: 0.526
+    - _Value3: 0.141
+    - _Value4: 0
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1
 --- !u!1 &1687601095
 GameObject:
   m_ObjectHideFlags: 0
@@ -43979,7 +44151,7 @@ Material:
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
---- !u!21 &1891989724
+--- !u!21 &1899462309
 Material:
   serializedVersion: 8
   m_ObjectHideFlags: 0
@@ -44012,16 +44184,16 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Alpha: 1
+    - _Alpha: 0
     - _ColorMask: 15
-    - _Distortion: 0
+    - _Distortion: -0.5582801
     - _Stencil: 0
     - _StencilComp: 8
     - _StencilOp: 0
     - _StencilReadMask: 255
     - _StencilWriteMask: 255
-    - _Value2: 0
-    - _Value3: 0
+    - _Value2: 0.526
+    - _Value3: 0.141
     - _Value4: 0
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
@@ -44244,6 +44416,54 @@ MonoBehaviour:
   OnlyLight: 0
   LightBump: -0.225
   ShaderChange: 0
+--- !u!21 &1906866103
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 2DxFX/Standard/Shiny_Reflect
+  m_Shader: {fileID: 4800000, guid: 6fc94ae14d17d3642b09718b5b932fd2, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex2:
+        m_Texture: {fileID: 2800000, guid: 6ed1aafd335608e48aa3198044a161df, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _Alpha: 0
+    - _ColorMask: 15
+    - _Distortion: -0.5582801
+    - _Stencil: 0
+    - _StencilComp: 8
+    - _StencilOp: 0
+    - _StencilReadMask: 255
+    - _StencilWriteMask: 255
+    - _Value2: 0.526
+    - _Value3: 0.141
+    - _Value4: 0
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1
 --- !u!1 &1912327987
 GameObject:
   m_ObjectHideFlags: 0
@@ -44390,6 +44610,7 @@ GameObject:
   - component: {fileID: 1915248959}
   - component: {fileID: 1915248958}
   - component: {fileID: 1915248957}
+  - component: {fileID: 1915248961}
   m_Layer: 5
   m_Name: Back
   m_TagString: Untagged
@@ -44594,6 +44815,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1915248954}
   m_CullTransparentMesh: 0
+--- !u!114 &1915248961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1915248954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ce604f7a2ddbf747bd3b25c80c8eb52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Game.GamepadSupport::Game.GamepadSupport.GamepadButtonShortcut
+  _actions:
+  - {fileID: 8487900035690157588, guid: 1b06f40cf1d94884b9ccafbe71502384, type: 3}
 --- !u!1 &1917904152
 GameObject:
   m_ObjectHideFlags: 0
@@ -45824,6 +46059,54 @@ Transform:
   - {fileID: 379224498}
   m_Father: {fileID: 1960971290}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!21 &1943884236
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 2DxFX/Standard/Shiny_Reflect
+  m_Shader: {fileID: 4800000, guid: 6fc94ae14d17d3642b09718b5b932fd2, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex2:
+        m_Texture: {fileID: 2800000, guid: 6ed1aafd335608e48aa3198044a161df, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _Alpha: 0
+    - _ColorMask: 15
+    - _Distortion: -0.5582801
+    - _Stencil: 0
+    - _StencilComp: 8
+    - _StencilOp: 0
+    - _StencilReadMask: 255
+    - _StencilWriteMask: 255
+    - _Value2: 0.526
+    - _Value3: 0.141
+    - _Value4: 0
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1
 --- !u!1 &1955127495
 GameObject:
   m_ObjectHideFlags: 0
@@ -46263,54 +46546,6 @@ Transform:
   - {fileID: 1723469592}
   m_Father: {fileID: 1417924645}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!21 &1973357138
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 2DxFX/Standard/Shiny_Reflect
-  m_Shader: {fileID: 4800000, guid: 6fc94ae14d17d3642b09718b5b932fd2, type: 3}
-  m_Parent: {fileID: 0}
-  m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
-  m_InvalidKeywords: []
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_LockedProperties: 
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MainTex2:
-        m_Texture: {fileID: 2800000, guid: 6ed1aafd335608e48aa3198044a161df, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Ints: []
-    m_Floats:
-    - _Alpha: 1
-    - _ColorMask: 15
-    - _Distortion: 0
-    - _Stencil: 0
-    - _StencilComp: 8
-    - _StencilOp: 0
-    - _StencilReadMask: 255
-    - _StencilWriteMask: 255
-    - _Value2: 0
-    - _Value3: 0
-    - _Value4: 0
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-  m_BuildTextureStacks: []
-  m_AllowLocking: 1
 --- !u!1 &1975958536
 GameObject:
   m_ObjectHideFlags: 0
@@ -46794,7 +47029,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 1973357138}
+  m_Material: {fileID: 1899462309}
   m_Color: {r: 0, g: 0.68867886, b: 0.6886792, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -48254,6 +48489,7 @@ GameObject:
   - component: {fileID: 2052466388}
   - component: {fileID: 2052466387}
   - component: {fileID: 2052466386}
+  - component: {fileID: 2052466389}
   m_Layer: 5
   m_Name: CloseButton
   m_TagString: Untagged
@@ -48363,6 +48599,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2052466384}
   m_CullTransparentMesh: 1
+--- !u!114 &2052466389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2052466384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ce604f7a2ddbf747bd3b25c80c8eb52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Game.GamepadSupport::Game.GamepadSupport.GamepadButtonShortcut
+  _actions:
+  - {fileID: 8487900035690157588, guid: 1b06f40cf1d94884b9ccafbe71502384, type: 3}
 --- !u!1 &2059269569
 GameObject:
   m_ObjectHideFlags: 0
@@ -49785,54 +50035,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2105028565}
   m_CullTransparentMesh: 0
---- !u!21 &2105880740
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 2DxFX/Standard/Shiny_Reflect
-  m_Shader: {fileID: 4800000, guid: 6fc94ae14d17d3642b09718b5b932fd2, type: 3}
-  m_Parent: {fileID: 0}
-  m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
-  m_InvalidKeywords: []
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_LockedProperties: 
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MainTex2:
-        m_Texture: {fileID: 2800000, guid: 6ed1aafd335608e48aa3198044a161df, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Ints: []
-    m_Floats:
-    - _Alpha: 1
-    - _ColorMask: 15
-    - _Distortion: 0
-    - _Stencil: 0
-    - _StencilComp: 8
-    - _StencilOp: 0
-    - _StencilReadMask: 255
-    - _StencilWriteMask: 255
-    - _Value2: 0
-    - _Value3: 0
-    - _Value4: 0
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-  m_BuildTextureStacks: []
-  m_AllowLocking: 1
 --- !u!1 &2106190010
 GameObject:
   m_ObjectHideFlags: 0

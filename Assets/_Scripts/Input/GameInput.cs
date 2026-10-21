@@ -11,6 +11,7 @@ using UnityEngine.SceneManagement;
 /// Loads Resources/GameControls.inputactions, keeps its action maps enabled in every scene,
 /// tracks which kind of device the player used last (touch, keyboard or gamepad)
 /// and makes sure every EventSystem runs on InputSystemUIInputModule.
+/// Walking the menus with a gamepad and the gamepad prompts are in Modules/GamepadModule.
 /// </summary>
 public static class GameInput
 {
@@ -91,7 +92,6 @@ public static class GameInput
         GameObject runner = new GameObject("[GameInput]");
         UnityEngine.Object.DontDestroyOnLoad(runner);
         runner.AddComponent<GameInputRunner>();
-        runner.AddComponent<GamepadMenuNavigator>();
     }
 
     // switch the input type to the device the player actually pressed something on

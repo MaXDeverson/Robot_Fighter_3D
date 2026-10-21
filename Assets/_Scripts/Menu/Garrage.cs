@@ -27,6 +27,8 @@ public class Garrage : MonoBehaviour {
         EnableRespectivePanel.menuPanelNum = 2;
         count = 0;
         ActiveVehicles(count);
+        // right away, not on the next Update: the gamepad selects Play when the panel opens
+        UpdateBuyButtons();
 
         characters[count].transform.GetChild(0).transform.eulerAngles = POS_ROT.transform.eulerAngles;
         characters[count].transform.GetChild(0).transform.localPosition = POS_ROT.transform.position;
@@ -41,19 +43,13 @@ public class Garrage : MonoBehaviour {
 		PlayerPrefs.SetInt ("SelectedCharacter", 0);
 	}
     
+	// Esc, Android back and gamepad B press the Back button (GamepadButtonShortcut)
 	void Update () {
-        if (GameInput.WasPressedThisFrame(GameInput.Back)) // Esc, Android back, gamepad B
-		{
-			GameObject.Find ("ClickSound").GetComponent<AudioSource> ().Play ();
-			GetComponent<Garrage> ().enabled = false;
-			HideAllVehicles ();
-			gameObject.SetActive (false);
-			MainMenuPanel.SetActive (true);
-			MainMenuPanel.GetComponent<Main_Menu> ().enabled = true;
-
-            //GameObject.Find("Canvas").gameObject.GetComponent<Canvas>().renderMode = RenderMode.ScreenSpaceOverlay;
-        }
 		TotalEarning.text = PlayerData.GetPlayerData().AllCash + "$";
+        UpdateBuyButtons();
+	}
+
+	void UpdateBuyButtons () {
         prices[0] = 0; prices[1] = PlayerPrefs.GetInt("jetPrice_01"); prices[2] = PlayerPrefs.GetInt("jetPrice_02");
         prices[3] = PlayerPrefs.GetInt("jetPrice_03");
         prices[4] = PlayerPrefs.GetInt("jetPrice_04");
