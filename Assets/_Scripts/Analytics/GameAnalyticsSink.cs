@@ -15,11 +15,20 @@ namespace Game.Analytics.Backends
     /// </para>
     /// <para>
     /// The keys are read from the GameAnalytics settings asset (<b>Window &gt; GameAnalytics &gt; Select Settings</b>).
-    /// The SDK comes up synchronously in <see cref="Initialize"/>, so nothing is queued here.
+    /// </para>
+    /// <para>
+    /// The SDK is initialized the first time the service says collection is allowed — at the start of the project
+    /// context when the player's answer is already saved, or when they answer the consent form — and never before:
+    /// <c>GameAnalytics.Initialize()</c> reads the advertising ID and talks to the GameAnalytics servers even with event
+    /// submission off. The service holds the events back until then, so <c>game_launch</c> still reaches an SDK that is
+    /// up. A player who refuses has nothing sent, not even the session start; one who withdraws later has event
+    /// submission switched off (the SDK itself cannot be stopped before the game restarts).
     /// </para>
     /// </remarks>
     public sealed class GameAnalyticsSink : IAnalyticsSink
     {
+        private bool _sdkInitialized;
+
         /// <inheritdoc />
         public string Name
         {
@@ -29,15 +38,12 @@ namespace Game.Analytics.Backends
         /// <inheritdoc />
         public void Initialize()
         {
-            // The component ends the session on quit and forwards Unity logs; GameAnalytics expects exactly one.
+            // The component ends the session on quit and forwards Unity logs; GameAnalytics expects exactly one. It does
+            // not start the SDK: that waits for the first SetCollectionEnabled(true), which the service sends right after
+            // this call when collection is already allowed.
             if (Object.FindFirstObjectByType<GameAnalytics>() == null)
             {
                 new GameObject("GameAnalytics").AddComponent<GameAnalytics>();
-            }
-
-            if (!GameAnalytics.Initialized)
-            {
-                GameAnalytics.Initialize();
             }
         }
 
@@ -63,7 +69,23 @@ namespace Game.Analytics.Backends
         /// <inheritdoc />
         public void SetCollectionEnabled(bool enabled)
         {
-            GameAnalytics.SetEnabledEventSubmission(enabled);
+            if (_sdkInitialized || GameAnalytics.Initialized)
+            {
+                _sdkInitialized = true;
+                GameAnalytics.SetEnabledEventSubmission(enabled);
+                return;
+            }
+
+            if (!enabled)
+            {
+                // Not started, and it stays that way.
+                return;
+            }
+
+            GameAnalytics.SetEnabledEventSubmission(true);
+            GameAnalytics.Initialize();
+            _sdkInitialized = true;
+            Debug.Log("[Analytics] GameAnalytics initialized: the player's consent allows collection.");
         }
 
         /// <inheritdoc />

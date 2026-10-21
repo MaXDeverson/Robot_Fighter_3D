@@ -2,9 +2,13 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using Game.Privacy;
+using Zenject;
 
 public class Main_Menu : MonoBehaviour {
-    
+
+    [Inject] private IPrivacyService _privacy;
+
     public GameObject removeAdBtn, unlockallBtn, SelectionPanel;
 	public GameObject MissionSelectionPanel;
 	public GameObject quitPanel;
@@ -121,7 +125,7 @@ public class Main_Menu : MonoBehaviour {
     public void Privacy()
     {
         GameObject.Find("ClickSound").GetComponent<AudioSource>().Play();
-        Application.OpenURL("https://doc-hosting.flycricket.io/sumo-robots-fight-wresling-3d-privacy-policy/a4309460-c91c-4296-b51d-8ffa1a3e9eef/privacy");
+        _privacy.OpenPrivacyPolicy();
     }
 
     public void RateUs()
