@@ -520,5 +520,43 @@ namespace Game.Ads.Tests
 
             Assert.That(Provider.BannerShows, Is.EqualTo(1));
         }
+
+        [Test]
+        public void TheBannerAreaIsTheProvidersWhileTheBannerIsUp()
+        {
+            Rect strip = new Rect(0, 980, 1920, 100);
+            Provider.BannerArea = strip;
+            AdsManagerService ads = Create();
+
+            Assert.That(ads.BannerScreenArea, Is.EqualTo(Rect.zero), "not asked for yet");
+
+            ads.ShowBanner();
+            Assert.That(ads.BannerScreenArea, Is.EqualTo(strip));
+
+            ads.HideBanner();
+            Assert.That(ads.BannerScreenArea, Is.EqualTo(Rect.zero));
+        }
+
+        [Test]
+        public void TheBannerAreaIsEmptyWhileTheRulesHoldTheBannerBack()
+        {
+            Levels.Level = 9;
+            Provider.BannerArea = new Rect(0, 980, 1920, 100);
+            AdsManagerService ads = Create();
+            ads.ShowBanner();
+
+            Assert.That(ads.BannerScreenArea, Is.EqualTo(Rect.zero));
+        }
+
+        [Test]
+        public void AProviderThatFailsToPlaceTheBannerLeavesTheScreenFree()
+        {
+            Provider.ThrowOnBannerArea = true;
+            AdsManagerService ads = Create();
+            ads.ShowBanner();
+
+            LogAssert.Expect(LogType.Exception, new Regex("fell over"));
+            Assert.That(ads.BannerScreenArea, Is.EqualTo(Rect.zero));
+        }
     }
 }

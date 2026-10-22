@@ -141,8 +141,8 @@
     <Compile Include="Assets\PE2D\Particle Effects\Scripts\Particles\ParticleFactory.cs" />
     <Compile Include="Assets\_Scripts\Openable.cs" />
     <Compile Include="Assets\BeatEmUp_GameTemplate3D\Scripts\Other\Projectile.cs" />
-    <Compile Include="Assets\BeatEmUp_GameTemplate3D\Scripts\UI\UIButtonEvents.cs" />
     <Compile Include="Assets\_Scripts\RandomLight.cs" />
+    <Compile Include="Assets\BeatEmUp_GameTemplate3D\Scripts\UI\UIButtonEvents.cs" />
     <Compile Include="Assets\_Scripts\Menu\PrivacySettingsUI.cs" />
     <Compile Include="Assets\_Effects\Realistic Effects Pack\Scripts\Share\UVTextureAnimator.cs" />
     <Compile Include="Assets\Modules\AnalyticsModule\Core\Api\IAnalyticsStorage.cs" />
@@ -167,6 +167,7 @@
     <Compile Include="Assets\BeatEmUp_GameTemplate3D\Scripts\UI\UICharSelection.cs" />
     <Compile Include="Assets\PE2D\Standard Assets\Effects\ImageEffects\Scripts\ScreenSpaceAmbientObscurance.cs" />
     <Compile Include="Assets\PE2D\Standard Assets\Effects\ImageEffects\Scripts\CreaseShading.cs" />
+    <Compile Include="Assets\_Scripts\UI\SafeAreaFitter.cs" />
     <Compile Include="Assets\PE2D\Standard Assets\Effects\ImageEffects\Scripts\ColorCorrectionLookup.cs" />
     <Compile Include="Assets\_Effects\Realistic Effects Pack\Scripts\Prefabs\Buffs\ShieldCollisionBehaviour.cs" />
     <Compile Include="Assets\_Scripts\Services\Purchaser.cs" />
@@ -176,8 +177,8 @@
     <Compile Include="Assets\PE2D\Standard Assets\Effects\ImageEffects\Scripts\Blur.cs" />
     <Compile Include="Assets\_Effects\EffectExamples\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\PE2D\Standard Assets\Effects\ImageEffects\Scripts\NoiseAndGrain.cs" />
-    <Compile Include="Assets\_Scripts\PlayerData.cs" />
     <Compile Include="Assets\BeatEmUp_GameTemplate3D\Scripts\Audio\AudioPlayer.cs" />
+    <Compile Include="Assets\_Scripts\PlayerData.cs" />
     <Compile Include="Assets\BeatEmUp_GameTemplate3D\Scripts\Camera\CameraFollow.cs" />
     <Compile Include="Assets\BeatEmUp_GameTemplate3D\Scripts\UI\UICharSelectionPortrait.cs" />
     <Compile Include="Assets\JMO Assets\MatCap Shaders\Creator\Assets\MC_CreateMatCap.cs" />
@@ -1309,11 +1310,11 @@
     <Reference Include="Unity.Rider.Editor">
       <HintPath>C:\Users\Maksym\Projects\UnityProjects\Robot_Fighter_3D\Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.AI.Assistant.Bridge.Editor">
-      <HintPath>C:\Users\Maksym\Projects\UnityProjects\Robot_Fighter_3D\Library\ScriptAssemblies\Unity.AI.Assistant.Bridge.Editor.dll</HintPath>
-    </Reference>
     <Reference Include="GameAnalyticsSDK">
       <HintPath>C:\Users\Maksym\Projects\UnityProjects\Robot_Fighter_3D\Library\ScriptAssemblies\GameAnalyticsSDK.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.AI.Assistant.Bridge.Editor">
+      <HintPath>C:\Users\Maksym\Projects\UnityProjects\Robot_Fighter_3D\Library\ScriptAssemblies\Unity.AI.Assistant.Bridge.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Recorder">
       <HintPath>C:\Users\Maksym\Projects\UnityProjects\Robot_Fighter_3D\Library\ScriptAssemblies\Unity.Recorder.dll</HintPath>
