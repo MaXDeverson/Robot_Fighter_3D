@@ -24,7 +24,9 @@ namespace Game.Ads.AdmobImplementation
     /// <para>
     /// The banner is an anchored adaptive one. Its view is created and loaded the first time the manager shows it, and
     /// is only hidden, not destroyed, when the manager takes it away. Once it has an ad, AdMob refreshes it at the rate
-    /// set for its ad unit in the AdMob console.
+    /// set for its ad unit in the AdMob console. The SDK does not tell where on screen it is, so
+    /// <see cref="BannerScreenArea"/> works it out the way the SDK places it: its size in pixels against the edge of
+    /// <see cref="Screen.safeArea"/> that <b>Banner Position</b> names.
     /// </para>
     /// </remarks>
     internal sealed class AdmobAdsProvider : MonoBehaviour, IAdsProvider
@@ -104,6 +106,9 @@ namespace Game.Ads.AdmobImplementation
         private BannerView _bannerView;
         private bool _bannerLoaded;
 
+        // Read from the view on every load, so that BannerScreenArea does not call into the SDK every frame.
+        private Vector2 _bannerSizeInPixels;
+
         public string Network
         {
             get { return "admob"; }
@@ -163,6 +168,60 @@ namespace Game.Ads.AdmobImplementation
             {
                 // Hidden, not destroyed: it comes back at once, and AdMob does not refresh a banner that is off screen.
                 _bannerView.Hide();
+            }
+        }
+
+        public Rect BannerScreenArea
+        {
+            get
+            {
+                if (_bannerView == null || !_bannerWanted || !_bannerLoaded)
+                {
+                    return Rect.zero;
+                }
+
+                // Where the SDK puts it: against an edge of the safe area — under the display cutout on Android, inside
+                // the safe area layout guide on iOS — centred along that edge unless the position names a corner.
+                Rect safe = Screen.safeArea;
+                float width = Mathf.Min(_bannerSizeInPixels.x, safe.width);
+                float height = Mathf.Min(_bannerSizeInPixels.y, safe.height);
+
+                float x;
+                float y;
+                switch (_bannerPosition)
+                {
+                    case AdPosition.Top:
+                        x = safe.center.x - width / 2f;
+                        y = safe.yMax - height;
+                        break;
+                    case AdPosition.TopLeft:
+                        x = safe.xMin;
+                        y = safe.yMax - height;
+                        break;
+                    case AdPosition.TopRight:
+                        x = safe.xMax - width;
+                        y = safe.yMax - height;
+                        break;
+                    case AdPosition.BottomLeft:
+                        x = safe.xMin;
+                        y = safe.yMin;
+                        break;
+                    case AdPosition.BottomRight:
+                        x = safe.xMax - width;
+                        y = safe.yMin;
+                        break;
+                    case AdPosition.Center:
+                        x = safe.center.x - width / 2f;
+                        y = safe.center.y - height / 2f;
+                        break;
+                    case AdPosition.Bottom:
+                    default:
+                        x = safe.center.x - width / 2f;
+                        y = safe.yMin;
+                        break;
+                }
+
+                return new Rect(x, y, width, height);
             }
         }
 
@@ -278,6 +337,7 @@ namespace Game.Ads.AdmobImplementation
             _bannerLoading = false;
             _bannerLoaded = true;
             _bannerRetry.Succeeded();
+            _bannerSizeInPixels = new Vector2(_bannerView.GetWidthInPixels(), _bannerView.GetHeightInPixels());
 
             // Raised on every refresh too. The manager may have taken the banner away while it was loading.
             if (_bannerWanted)

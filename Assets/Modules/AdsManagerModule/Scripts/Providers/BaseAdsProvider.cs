@@ -43,6 +43,9 @@ namespace Game.Ads
         private const string InterstitialTitle = "Interstitial Ad";
         private const string RewardedTitle = "Rewarded Ad";
 
+        // Filled by GetWorldCorners: bottom left, top left, top right, bottom right.
+        private static readonly Vector3[] Corners = new Vector3[4];
+
         [Header("Timer")]
         [SerializeField]
         [Min(0f)]
@@ -110,6 +113,21 @@ namespace Game.Ads
         public void HideBanner()
         {
             SetActive(_banner, false);
+        }
+
+        public Rect BannerScreenArea
+        {
+            get
+            {
+                if (_banner == null || !_banner.activeInHierarchy)
+                {
+                    return Rect.zero;
+                }
+
+                // The strip is on a Screen Space Overlay canvas, where world space is screen pixels.
+                ((RectTransform)_banner.transform).GetWorldCorners(Corners);
+                return Rect.MinMaxRect(Corners[0].x, Corners[0].y, Corners[2].x, Corners[2].y);
+            }
         }
 
         public void ShowInterstitial(Action<AdStatus> onClosed)

@@ -58,8 +58,8 @@
     <Compile Include="Assets\Plugins\Zenject\Source\Providers\ComponentProviders\GetFromGameObjectComponentProvider.cs" />
     <Compile Include="Assets\Plugins\Zenject\Source\Binding\BindInfo\BindInfo.cs" />
     <Compile Include="Assets\Plugins\Zenject\Source\Internal\PreserveAttribute.cs" />
-    <Compile Include="Assets\Plugins\Zenject\Source\Util\ZenAutoInjecter.cs" />
     <Compile Include="Assets\Plugins\Zenject\Source\Validation\IValidatable.cs" />
+    <Compile Include="Assets\Plugins\Zenject\Source\Util\ZenAutoInjecter.cs" />
     <Compile Include="Assets\Plugins\Zenject\Source\Providers\SubContainerCreators\ISubContainerCreator.cs" />
     <Compile Include="Assets\Plugins\Zenject\Source\Binding\Binders\Factory\FactoryToChoiceBinder\FactoryToChoiceBinder10.cs" />
     <Compile Include="Assets\Plugins\Zenject\Source\Binding\Binders\Factory\FactoryToChoiceBinder\FactoryToChoiceBinder6.cs" />
@@ -1144,11 +1144,11 @@
     <Reference Include="System.Xml.Serialization">
       <HintPath>C:\Program Files\Unity\Hub\Editor\6000.3.24f1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.Xml.Serialization.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.UI">
-      <HintPath>C:\Users\Maksym\Projects\UnityProjects\Robot_Fighter_3D\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>C:\Users\Maksym\Projects\UnityProjects\Robot_Fighter_3D\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>C:\Users\Maksym\Projects\UnityProjects\Robot_Fighter_3D\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
