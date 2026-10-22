@@ -122,28 +122,6 @@ namespace Game.Ads
         }
 
         /// <inheritdoc />
-        public Rect BannerScreenArea
-        {
-            get
-            {
-                if (_disposed || !_bannerVisible)
-                {
-                    return Rect.zero;
-                }
-
-                try
-                {
-                    return _provider.BannerScreenArea;
-                }
-                catch (Exception exception)
-                {
-                    Debug.LogException(exception);
-                    return Rect.zero;
-                }
-            }
-        }
-
-        /// <inheritdoc />
         public bool IsShowingFullscreenAd
         {
             get { return _fullscreen != null; }

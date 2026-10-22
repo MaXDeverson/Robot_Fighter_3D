@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using UnityEngine;
 
 namespace Game.Ads.Tests
 {
@@ -30,26 +29,6 @@ namespace Game.Ads.Tests
         internal int BannerShows { get; private set; }
 
         internal bool BannerOnScreen { get; private set; }
-
-        /// <summary>
-        /// Where the banner is; reported whether it is on screen or not, so the tests see the manager's own check.
-        /// </summary>
-        internal Rect BannerArea { get; set; }
-
-        internal bool ThrowOnBannerArea { get; set; }
-
-        public Rect BannerScreenArea
-        {
-            get
-            {
-                if (ThrowOnBannerArea)
-                {
-                    throw new InvalidOperationException("The network fell over.");
-                }
-
-                return BannerArea;
-            }
-        }
 
         /// <summary>The callback of the ad on screen, kept after <see cref="Close"/> to answer twice.</summary>
         internal Action<AdStatus> LastCallback { get; private set; }

@@ -41,13 +41,6 @@ namespace Game.Ads
         /// <summary>Takes the banner off screen.</summary>
         void HideBanner();
 
-        /// <summary>
-        /// The part of the screen the banner covers, in pixels from the bottom left corner like
-        /// <see cref="UnityEngine.Screen.safeArea"/>: while it is on screen with an ad in it, empty otherwise. Asked every
-        /// frame by the UI that keeps clear of it, so keep it cheap — no call into the SDK.
-        /// </summary>
-        UnityEngine.Rect BannerScreenArea { get; }
-
         /// <summary>Shows an interstitial.</summary>
         /// <param name="onClosed">
         /// <see cref="AdStatus.Completed"/> once it was on screen and has closed, however it was closed;

@@ -1,5 +1,4 @@
 using System;
-using UnityEngine;
 
 namespace Game.Ads
 {
@@ -33,17 +32,6 @@ namespace Game.Ads
 
         /// <summary>Whether a banner is on screen now.</summary>
         bool IsBannerVisible { get; }
-
-        /// <summary>
-        /// The part of the screen the banner covers now, in pixels from the bottom left corner like
-        /// <see cref="Screen.safeArea"/>; empty while there is none. For UI that has to keep clear of it.
-        /// </summary>
-        /// <remarks>
-        /// Empty until the network has an ad to put in the banner, which can be a while after
-        /// <see cref="IsBannerVisible"/> turned true; and it moves with the device's safe area. Nothing announces either,
-        /// so look at it every frame — it is cheap.
-        /// </remarks>
-        Rect BannerScreenArea { get; }
 
         /// <summary>Whether an interstitial or a rewarded ad is on screen now.</summary>
         bool IsShowingFullscreenAd { get; }

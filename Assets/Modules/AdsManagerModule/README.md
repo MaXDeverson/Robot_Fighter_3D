@@ -70,9 +70,6 @@ _watchAdButton.SetActive(_ads.IsAdAvailable(AdType.Rewarded));
 _ads.ShowBanner();
 _ads.HideBanner();
 
-// Where it is, to keep UI clear of it: screen pixels like Screen.safeArea, empty while there is none.
-Rect banner = _ads.BannerScreenArea;
-
 // Ad block: the "remove ads" purchase, a promo code, a reward.
 _ads.AddPermanentAdBlock();
 _ads.AddAdBlock(days: 7);
@@ -173,11 +170,6 @@ minutes at most.
 it waits below its level and during an ad block, and appears on its own when the player gets there or the block ends.
 The rules are looked at again once a second. `HideBanner` withdraws the request.
 
-`BannerScreenArea` is the part of the screen the banner covers, in pixels from the bottom left corner like
-`Screen.safeArea`, and an empty `Rect` while there is none. It stays empty until the network has an ad to put in the
-banner — later than `IsBannerVisible` turns true — and nothing announces when it changes, so UI that keeps clear of it
-looks every frame. In this game that is `SafeAreaFitter` (`Assets/_Scripts/UI/`), on the HUD and the pause button.
-
 ### Pausing
 
 While an interstitial or a rewarded ad is up, `Time.timeScale` is 0 and the sound is muted (`AudioListener.volume`);
@@ -254,7 +246,6 @@ A network is one more implementation of `IAdsProvider`, inside the module:
 | `Initialize()` | Called once, before anything else. Bring the SDK up, start loading ads. |
 | `IsAdAvailable(type)` | Whether an ad of this type is loaded now. Asked for full screen ads only. |
 | `ShowBanner()`, `HideBanner()` | Put the banner up, take it down. |
-| `BannerScreenArea` | Where the banner is while it is on screen with an ad, in screen pixels; empty otherwise. Asked every frame: no SDK call. |
 | `ShowInterstitial(onClosed)` | `Completed` once it was on screen and closed; `NotReady`; `Failed`. |
 | `ShowRewarded(onClosed)` | `Completed` when the reward is earned; `Cancelled` when closed before; `NotReady`; `Failed`. |
 
@@ -295,7 +286,6 @@ PlayerPrefs, `Time.timeScale` or the audio listener.
 
 * `Assets/_Scripts/Ads/ProgressionAdsLevelSource.cs` — the game's `IAdsLevelSource`.
 * `Assets/_Scripts/Ads/PrivacyAdsConsentSource.cs` — the game's `IAdsConsentSource`, over the privacy module.
-* `Assets/_Scripts/UI/SafeAreaFitter.cs` — keeps the gameplay HUD inside the safe area and clear of the banner.
 * `Assets/_Scripts/Ads/AdsEventsPublisher.cs` — puts `FullscreenAdFinished` on the global event bus as `Ads.*`
   (`Assets/_Scripts/Events/Meta/AdEvents.cs`).
 * `LevelsProgressionController.ReachedLevelIndex` — the furthest level reached, zero based.

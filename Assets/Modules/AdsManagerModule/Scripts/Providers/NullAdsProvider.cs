@@ -1,5 +1,4 @@
 using System;
-using UnityEngine;
 
 namespace Game.Ads
 {
@@ -29,11 +28,6 @@ namespace Game.Ads
 
         public void HideBanner()
         {
-        }
-
-        public Rect BannerScreenArea
-        {
-            get { return Rect.zero; }
         }
 
         public void ShowInterstitial(Action<AdStatus> onClosed)
