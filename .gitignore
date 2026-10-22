@@ -41,3 +41,8 @@ crashlytics-build.properties
 # Запобіжник: .meta ніколи не ігноруються, інакше Unity перегенерує GUID
 # і посилання на скрипти й префаби ламаються.
 !/[Aa]ssets/**/*.meta
+
+# Performance Testing package кладе ці файли в Resources під час збірки.
+# Стоїть після правила для .meta, щоб ігнорувати і їхні .meta теж.
+/[Aa]ssets/[Rr]esources/PerformanceTestRun*.json
+/[Aa]ssets/[Rr]esources/PerformanceTestRun*.json.meta
