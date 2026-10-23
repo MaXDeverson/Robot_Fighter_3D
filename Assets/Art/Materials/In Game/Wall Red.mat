@@ -8,15 +8,18 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Wall Red
-  m_Shader: {fileID: 4800000, guid: f0cccdafb395d2b468b5224d11ce5985, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: edd7abf643fa4bc4e8561d4c280c97cf, type: 3}
   m_Parent: {fileID: 2100000, guid: cca7c25252b31eb4287f47d393a20efc, type: 2}
-  m_ModifiedSerializedProperties: 0
+  m_ModifiedSerializedProperties: 2
   m_ValidKeywords:
-  - USE_CUBEMAP_NO
-  - USE_FOG_NO
-  - USE_GLOW
-  m_InvalidKeywords: []
-  m_LightmapFlags: 4
+  - TCP2_MOBILE
+  - TCP2_REFLECTIONS_FRESNEL
+  - TCP2_SHADOW_LIGHT_COLOR
+  - TCP2_SPECULAR_STYLIZED
+  - _EMISSION
+  m_InvalidKeywords:
+  - TCP2_UV_NORMALS_FULL
+  m_LightmapFlags: 1
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
@@ -28,13 +31,11 @@ Material:
     m_TexEnvs: []
     m_Ints: []
     m_Floats:
-    - USE_FOG: 0
-    - _CubemapPower: 1
-    - _GlowPower: 0
-    - _Roughness: 1
-    - _SpecularMultiplier: 3
+    - _UseEmission: 1
+    - _UseRim: 0
     - _UseSpecular: 0
     m_Colors:
-    - _Color: {r: 0.5019608, g: 0.08235294, b: 0.08235294, a: 1}
-    - _GlowColor: {r: 0.5, g: 0.08254716, b: 0.08254716, a: 1}
+    - _BaseColor: {r: 0, g: 0, b: 0, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []
+  m_AllowLocking: 1

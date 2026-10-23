@@ -10,16 +10,18 @@ Material:
   m_Name: Flor 3
   m_Shader: {fileID: 4800000, guid: 587ee841abd1a3440add653fbc24c428, type: 3}
   m_Parent: {fileID: 2100000, guid: a1e0b60ca0c951646bc34fc9ba1633a9, type: 2}
-  m_ModifiedSerializedProperties: 0
+  m_ModifiedSerializedProperties: 16
   m_ValidKeywords: []
   m_InvalidKeywords:
+  - TCP2_MOBILE
   - USE_CUBEMAP_NO
-  - USE_FOG_NO
+  - _ALPHAPREMULTIPLY_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
+  m_CustomRenderQueue: 3000
+  stringTagMap:
+    RenderType: Transparent
   disabledShaderPasses: []
   m_LockedProperties: 
   m_SavedProperties:
@@ -27,9 +29,7 @@ Material:
     m_TexEnvs: []
     m_Ints: []
     m_Floats:
-    - _GlowPower: 3.73
-    m_Colors:
-    - _Color: {r: 0.2980598, g: 0.3202985, b: 0.3207547, a: 1}
-    - _CubemapColor: {r: 1, g: 1, b: 1, a: 1}
-    - _GlowColor: {r: 0.990566, g: 0.023362402, b: 0.5798917, a: 1}
+    - _DstBlend: 10
+    m_Colors: []
   m_BuildTextureStacks: []
+  m_AllowLocking: 1
