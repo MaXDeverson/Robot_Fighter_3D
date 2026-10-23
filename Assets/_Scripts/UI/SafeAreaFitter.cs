@@ -92,8 +92,9 @@ public sealed class SafeAreaFitter : MonoBehaviour
     {
         Rect area = _deviceSafeArea ? Screen.safeArea : new Rect(0f, 0f, Screen.width, Screen.height);
 
+        // Only its height counts: the edge it is on is kept clear across, however wide it is said to be.
         Rect banner = _ads != null ? _ads.BannerScreenArea : Rect.zero;
-        if (banner.width <= 0f || banner.height <= 0f)
+        if (banner.height <= 0f)
             return area;
 
         // Canvas units to pixels. Not known before the canvas scaler's first update; the next frame puts it right.

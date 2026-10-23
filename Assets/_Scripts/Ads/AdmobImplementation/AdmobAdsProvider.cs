@@ -42,6 +42,12 @@ namespace Game.Ads.AdmobImplementation
         // AdMob lets a loaded full screen ad expire after an hour; one kept a little shorter is thrown away and reloaded.
         private static readonly TimeSpan AdLifetime = TimeSpan.FromMinutes(55);
 
+#if UNITY_EDITOR
+        // The screen height the canvas of Google's editor placeholder banner (PlaceholderAds/Banners/ADAPTIVE in the
+        // package) is scaled to.
+        private const float PlaceholderCanvasHeight = 1440f;
+#endif
+
         [Header("Banner ad units")]
         [SerializeField]
         [Tooltip("The banner ad unit ID for Android, from the AdMob console: ca-app-pub-XXXXXXXXXXXXXXXX/NNNNNNNNNN.")]
@@ -183,8 +189,16 @@ namespace Game.Ads.AdmobImplementation
                 // Where the SDK puts it: against an edge of the safe area — under the display cutout on Android, inside
                 // the safe area layout guide on iOS — centred along that edge unless the position names a corner.
                 Rect safe = Screen.safeArea;
-                float width = Mathf.Min(_bannerSizeInPixels.x, safe.width);
-                float height = Mathf.Min(_bannerSizeInPixels.y, safe.height);
+                Vector2 size = _bannerSizeInPixels;
+#if UNITY_EDITOR
+                // No SDK in the editor: Google's placeholder stands in, a strip across the whole screen, safe area or
+                // not, that reports its size in the units of its own canvas — a width of 0, for stretched, and a height
+                // of 100 on a screen PlaceholderCanvasHeight tall — rather than in pixels.
+                safe = new Rect(0f, 0f, Screen.width, Screen.height);
+                size = new Vector2(Screen.width, size.y * Screen.height / PlaceholderCanvasHeight);
+#endif
+                float width = Mathf.Min(size.x, safe.width);
+                float height = Mathf.Min(size.y, safe.height);
 
                 float x;
                 float y;

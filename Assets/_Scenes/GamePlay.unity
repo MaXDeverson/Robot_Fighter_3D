@@ -64835,6 +64835,7 @@ GameObject:
   - component: {fileID: 1991364984}
   - component: {fileID: 1991364983}
   - component: {fileID: 1991364986}
+  - component: {fileID: 1991364987}
   m_Layer: 5
   m_Name: PauseBtn
   m_TagString: Untagged
@@ -64971,6 +64972,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: Game.GamepadSupport::Game.GamepadSupport.GamepadButtonShortcut
   _actions:
   - {fileID: 2133507530855372129, guid: 1b06f40cf1d94884b9ccafbe71502384, type: 3}
+--- !u!114 &1991364987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1991364981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b91edca8aeb1e24f9a6dccd8ecad931, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SafeAreaFitter
+  _deviceSafeArea: 1
+  _bannerGap: 10
 --- !u!1 &1993632487
 GameObject:
   m_ObjectHideFlags: 0
@@ -69614,6 +69629,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3630146513950021182}
   - component: {fileID: 3634301552006239248}
+  - component: {fileID: 3634301552006239249}
   m_Layer: 5
   m_Name: HUD
   m_TagString: Untagged
@@ -71366,6 +71382,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3564770998326954854}
   m_CullTransparentMesh: 0
+--- !u!114 &3634301552006239249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3564770998326954854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b91edca8aeb1e24f9a6dccd8ecad931, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SafeAreaFitter
+  _deviceSafeArea: 1
+  _bannerGap: 10
 --- !u!222 &3634301552038379968
 CanvasRenderer:
   m_ObjectHideFlags: 0
